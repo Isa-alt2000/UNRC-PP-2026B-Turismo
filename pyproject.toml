@@ -1,0 +1,3 @@
+# Raíz del workspace de uv: un solo uv.lock y un solo .venv para todo el proyecto.
+[tool.uv.workspace]
+members = ["data_science"]
