@@ -1,5 +1,5 @@
 # Ciencia de datos
-Datos, limpieza y modelos del recomendador turístico de Michoacán. Es independiente del backend y del frontend, lo único que sale de aquí hacia la app son los modelos entrenados como artefactos (`ml/modelos/`).
+Datos, limpieza y modelos del recomendador turístico de Michoacán. Es independiente del backend y del frontend, lo único que sale de aquí hacia la app son los modelos entrenados como artefactos (`ml/artifacts/`).
 
 ## Instalación
 Desde la raíz del repositorio:
@@ -12,11 +12,11 @@ uv sync --all-packages
 
 | Ruta | Contenido |
 |---|---|
-| `config.py` | Sirve como directorio de rutas compartidas (`CRUDOS`, `PROCESADOS`, `MODELOS`) y la ruta de la encuesta procesada (`ENCUESTA_PROCESADA`) |
+| `config.py` | Sirve como directorio de rutas compartidas (`CRUDOS`, `PROCESADOS`, `ARTIFACTS`) y la ruta de la encuesta procesada (`ENCUESTA_PROCESADA`) |
 | `datos/crudos/` | Datos tal como se descargaron o capturaron. Ningún script escribe aquí |
 | `datos/procesados/` | Datos limpios o derivados |
 | `pipeline/` | Limpieza por fuente: `inah/` y `encuesta/` |
-| `ml/` | Entrenamiento de modelos, con sus salidas en `modelos/` |
+| `ml/` | Entrenamiento de modelos, con sus salidas en `artifacts/` |
 | `docs/` | Encuesta (`encuesta.md`), modelo de interés (`modelo_interes.md`) y fuentes de datos (`fuentes_datos.md`) |
 
 ## Ejecución
@@ -41,7 +41,7 @@ Junta los dos formularios (`crudos/encuesta/encuesta_parte_a.csv` y `_parte_b.cs
    ```
 
 3. **Modelos**:
-Leen `procesados/encuesta_procesada.csv`, separan entrenamiento y prueba por persona y guardan en `ml/modelos/` ver `docs/modelo_interes.md`
+Leen `procesados/encuesta_procesada.csv`, separan entrenamiento y prueba por persona y guardan en `ml/artifacts/` ver `docs/modelo_interes.md`
 
    ```bash
    uv run python -m ml.regresion_logistica   # interés, con escalado       -> interes
