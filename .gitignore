@@ -14,3 +14,7 @@ data_science/ml/artifacts/*
 
 # Base de datos local del backend
 *.db
+
+# Logs
+*.log
+*.log.*
