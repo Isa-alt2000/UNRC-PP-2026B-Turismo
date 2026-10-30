@@ -7,7 +7,7 @@ from fastapi import FastAPI
 from fastapi.testclient import TestClient
 from pydantic import ValidationError
 
-from app.core.config import Settings
+from app.core.config import BACKEND, Settings
 from app.core.exceptions import ErrorApp, RecursoNoEncontrado, registrar_manejadores
 from app.core.logging import LOGGERS_CON_ARCHIVO, configurar_logging
 
@@ -105,3 +105,50 @@ def test_error_inesperado_no_expone_detalles(cliente: TestClient) -> None:
     respuesta = cliente.get("/inesperado")
     assert respuesta.status_code == 500
     assert respuesta.json() == {"detail": "Error interno del servidor"}
+
+
+# Configuración: variables vacías y obligatorias
+
+def test_obligatoria_vacia_falla(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.delenv("DATABASE_URL")
+    env = tmp_path / ".env"
+    env.write_text("DATABASE_URL=\n", encoding="utf-8")
+    with pytest.raises(ValidationError, match="database_url"):
+        Settings(_env_file=env)
+
+
+def test_opcional_vacia_usa_el_valor_por_defecto(tmp_path: Path) -> None:
+    env = tmp_path / ".env"
+    env.write_text("LOG_LEVEL=\n", encoding="utf-8")
+    assert Settings(_env_file=env).log_level == "INFO"
+
+
+# Configuración: prefijo de la API
+
+@pytest.mark.parametrize("prefijo", ["api/v1", "/api/v1/", "/"])
+def test_prefijo_mal_formado_falla(prefijo: str) -> None:
+    with pytest.raises(ValidationError, match="debe empezar con '/'"):
+        Settings(_env_file=None, api_prefix=prefijo)
+
+
+# Configuración: archivo de logs
+
+def test_log_relativo_se_resuelve_desde_backend() -> None:
+    assert Settings(_env_file=None, log_file="registro.log").log_file == BACKEND / "registro.log"
+
+
+def test_log_absoluto_no_cambia(tmp_path: Path) -> None:
+    archivo = tmp_path / "api.log"
+    assert Settings(_env_file=None, log_file=archivo).log_file == archivo
+
+
+# Configuración: rutas de SQLite
+
+def test_sqlite_relativa_se_resuelve_desde_backend() -> None:
+    config = Settings(_env_file=None, database_url="sqlite:///./datos.db")
+    assert config.database_url == f"sqlite:///{BACKEND / 'datos.db'}"
+
+
+@pytest.mark.parametrize("url", ["sqlite://", "sqlite:///:memory:", "sqlite:////ruta/absoluta/datos.db"])
+def test_sqlite_en_memoria_o_absoluta_no_cambia(url: str) -> None:
+    assert Settings(_env_file=None, database_url=url).database_url == url
