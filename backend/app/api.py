@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 
 from app.core.config import settings
+from app.gustos.router import router as gustos_router
 
 api_router = APIRouter(prefix=settings.api_prefix)
-
+api_router.include_router(gustos_router)
