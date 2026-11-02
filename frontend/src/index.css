@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+/* Tokens de diseño. Tailwind genera clases a partir de ellos: bg-rojo, text-texto-2, font-display, shadow-suave… */
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Inter Tight', 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  /* Paleta base */
+  --color-marino: #232f3f; /* texto principal */
+  --color-rojo: #9f2241; /* acción principal, foco */
+  --color-guinda: #691c32; /* títulos, rojo presionado */
+  --color-dorado: #ddc9a3; /* fondos suaves, bordes decorativos */
+  --color-arena: #d4af8d;
+
+  /* Derivados (mezcla con blanco) */
+  --color-texto-2: color-mix(in srgb, #232f3f 72%, #ffffff); /* texto secundario, 5.6:1 */
+  --color-borde: color-mix(in srgb, #232f3f 13%, #ffffff);
+  --color-borde-fuerte: color-mix(in srgb, #232f3f 32%, #ffffff);
+  --color-marino-50: color-mix(in srgb, #232f3f 5%, #ffffff);
+  --color-rojo-50: color-mix(in srgb, #9f2241 6%, #ffffff);
+  --color-dorado-50: color-mix(in srgb, #ddc9a3 32%, #ffffff);
+  --color-arena-50: color-mix(in srgb, #d4af8d 16%, #ffffff);
+
+  /* Sombras muy suaves */
+  --shadow-suave: 0 1px 2px rgba(35, 47, 63, 0.06);
+  --shadow-tarjeta: 0 1px 2px rgba(35, 47, 63, 0.04), 0 8px 24px rgba(35, 47, 63, 0.07);
+
+  /* Movimiento */
+  --ease-salida: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@layer base {
+  body {
+    @apply text-marino bg-white font-sans text-[15px] leading-normal antialiased;
+  }
+  h1,
+  h2 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    @apply outline-rojo outline-2 outline-offset-2;
+  }
+}
