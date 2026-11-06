@@ -53,7 +53,9 @@ export default defineConfig([
       'lib/api',
       'components/layouts',
       'components/shared',
-      'components/inicio'
+      'components/inicio',
+      'components/gustos',
+      'components/recomendaciones'
     ),
   },
   {

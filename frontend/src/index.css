@@ -75,12 +75,106 @@
     padding: 24px 20px 40px;
   }
 
-  /* Entrada de pantalla */
+  /* Entrada de pantalla: hacia adelante al avanzar, hacia atrás al volver */
   .enter-fwd {
     animation: enter-fwd var(--dur-2) var(--ease-salida) both;
   }
+  .enter-back {
+    animation: enter-back var(--dur-2) var(--ease-salida) both;
+  }
+
+  /* Marco del flujo: barra superior con progreso y barra inferior con la acción */
+  .topbar {
+    flex: none;
+    background: #ffffff;
+    border-bottom: 1px solid var(--color-borde);
+  }
+  .topbar-in {
+    max-width: 1120px;
+    margin: 0 auto;
+    /* El relleno derecho iguala al botón de volver para centrar la barra de progreso. */
+    padding: 8px 56px 8px 12px;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .icon-btn {
+    width: 44px;
+    height: 44px;
+    flex: none;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    cursor: pointer;
+    transition:
+      transform var(--dur-1) var(--ease-salida),
+      background-color var(--dur-1) var(--ease-salida);
+  }
+  .icon-btn:active {
+    transform: scale(var(--presion));
+    background: var(--color-marino-50);
+  }
+  .progress {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-right: 8px;
+  }
+  .progress-label {
+    font-size: 13px;
+    color: var(--color-texto-2);
+    line-height: 1.3;
+    text-align: center;
+  }
+  .progress-label strong {
+    color: var(--color-marino);
+    font-weight: 600;
+  }
+  .progress-track {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
+  }
+  .seg {
+    height: 4px;
+    border-radius: 999px;
+    background: var(--color-borde);
+  }
+  .seg-on {
+    background: var(--color-rojo);
+  }
+  .actionbar {
+    flex: none;
+    background: #ffffff;
+    border-top: 1px solid var(--color-borde);
+  }
+  .actionbar-in {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 12px 20px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .action-hint {
+    font-size: 13px;
+    color: var(--color-texto-2);
+    line-height: 1.35;
+    min-width: 0;
+  }
 
   /* Tipografía */
+  .h1 {
+    font-family: var(--font-display);
+    font-size: 28px;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    font-weight: 650;
+    color: var(--color-guinda);
+  }
   .h2 {
     font-family: var(--font-display);
     font-size: 20px;
@@ -163,6 +257,185 @@
     border-radius: 14px;
   }
 
+  /* Campos de formulario */
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .field-label {
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .select-wrap {
+    position: relative;
+  }
+  .select {
+    appearance: none;
+    width: 100%;
+    min-height: 52px;
+    padding: 0 44px 0 14px;
+    border: 1px solid var(--color-borde-fuerte);
+    border-radius: 12px;
+    background: #ffffff;
+    font: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: border-color var(--dur-1) var(--ease-salida);
+  }
+  .select-chev {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  .opts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .opt {
+    position: relative;
+    display: block;
+  }
+  .opt input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .opt-face {
+    min-height: 52px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid var(--color-borde-fuerte);
+    border-radius: 12px;
+    font-weight: 500;
+    transition:
+      transform var(--dur-1) var(--ease-salida),
+      border-color var(--dur-1) var(--ease-salida),
+      background-color var(--dur-1) var(--ease-salida);
+  }
+  .opt-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    border: 1.5px solid var(--color-borde-fuerte);
+    flex: none;
+    display: grid;
+    place-items: center;
+  }
+  .opt-dot::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--color-rojo);
+    opacity: 0;
+    transform: scale(0.6);
+    transition:
+      opacity var(--dur-1) var(--ease-salida),
+      transform var(--dur-1) var(--ease-salida);
+  }
+  .opt input:checked + .opt-face {
+    border-color: var(--color-rojo);
+    background: var(--color-rojo-50);
+    color: var(--color-guinda);
+    box-shadow: inset 0 0 0 1px var(--color-rojo);
+    font-weight: 600;
+  }
+  .opt input:checked + .opt-face .opt-dot {
+    border-color: var(--color-rojo);
+  }
+  .opt input:checked + .opt-face .opt-dot::after {
+    opacity: 1;
+    transform: none;
+  }
+  .opt input:focus-visible + .opt-face {
+    outline: 2px solid var(--color-rojo);
+    outline-offset: 2px;
+  }
+  .opt:active .opt-face {
+    transform: scale(var(--presion));
+  }
+  .switch-row {
+    width: 100%;
+    min-height: 72px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    text-align: left;
+    background: #ffffff;
+    border: 1px solid var(--color-borde);
+    border-radius: 16px;
+    cursor: pointer;
+    transition:
+      transform var(--dur-1) var(--ease-salida),
+      border-color var(--dur-1) var(--ease-salida);
+  }
+  .switch-row:active {
+    transform: scale(0.985);
+  }
+  .switch-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .switch-title {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.3;
+  }
+  .switch-track {
+    width: 52px;
+    height: 32px;
+    flex: none;
+    border-radius: 999px;
+    background: var(--color-borde-fuerte);
+    position: relative;
+    transition: background-color var(--dur-2) var(--ease-salida);
+  }
+  .switch-thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(35, 47, 63, 0.25);
+    transition: transform var(--dur-2) var(--ease-salida);
+  }
+  .switch-row[aria-checked='true'] {
+    border-color: var(--color-rojo);
+  }
+  .switch-row[aria-checked='true'] .switch-track {
+    background: var(--color-rojo);
+  }
+  .switch-row[aria-checked='true'] .switch-thumb {
+    transform: translateX(20px);
+  }
+
+  /* Cargando: bloques que laten con la forma del contenido */
+  .sk {
+    background: var(--color-marino-50);
+    border-radius: 8px;
+    animation: pulse 1.1s ease-in-out infinite alternate;
+  }
+
   /* Cintillo */
   .greca {
     flex: none;
@@ -240,6 +513,17 @@
       transform: translateX(16px);
     }
   }
+  @keyframes enter-back {
+    from {
+      opacity: 0;
+      transform: translateX(-16px);
+    }
+  }
+  @keyframes pulse {
+    from {
+      opacity: 0.55;
+    }
+  }
   @keyframes fade-in {
     from {
       opacity: 0;
@@ -274,11 +558,33 @@
       background: var(--color-rojo-50);
       border-color: var(--color-rojo);
     }
+    .icon-btn:hover {
+      background: var(--color-marino-50);
+    }
+    .opt:hover .opt-face,
+    .select:hover {
+      border-color: var(--color-marino);
+    }
+    .switch-row:hover {
+      border-color: var(--color-borde-fuerte);
+    }
   }
 
   @media (min-width: 900px) {
     .wrap {
       padding: 40px 32px 56px;
+    }
+    .topbar-in {
+      padding: 8px 76px 8px 32px;
+      min-height: 72px;
+    }
+    .actionbar-in {
+      padding: 14px 32px;
+      justify-content: center;
+      gap: 40px;
+    }
+    .h1 {
+      font-size: 36px;
     }
     .lead {
       font-size: 19px;
@@ -288,12 +594,23 @@
 
   @media (prefers-reduced-motion: reduce) {
     .enter-fwd,
+    .enter-back,
     .revelar-izquierda,
     .revelar-derecha {
       animation: fade-in var(--dur-1) linear both;
     }
-    .btn:active:not(:disabled) {
+    .sk {
+      animation: none;
+    }
+    .btn:active:not(:disabled),
+    .icon-btn:active,
+    .opt:active .opt-face,
+    .switch-row:active {
       transform: none;
+    }
+    .switch-thumb,
+    .opt-dot::after {
+      transition: none;
     }
   }
 }

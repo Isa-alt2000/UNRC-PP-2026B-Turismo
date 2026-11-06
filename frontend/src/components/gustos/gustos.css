@@ -1,0 +1,197 @@
+@layer components {
+  .prefs {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .two-col {
+    display: grid;
+    gap: 32px;
+  }
+
+  /* Tarjeta de un gusto con deslizador 1–5 */
+  .gustos-list {
+    display: grid;
+    gap: 10px;
+  }
+  .gusto-s {
+    padding: 14px 14px 10px;
+    border: 1px solid var(--color-borde);
+    border-radius: 16px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition:
+      border-color var(--dur-1) var(--ease-salida),
+      background-color var(--dur-1) var(--ease-salida),
+      box-shadow var(--dur-1) var(--ease-salida);
+  }
+  .gusto-s.is-on {
+    border-color: var(--color-rojo);
+    background: var(--color-rojo-50);
+    box-shadow: inset 0 0 0 1px var(--color-rojo);
+  }
+  .gusto-s-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .gusto-ico {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: var(--color-dorado-50);
+    transition:
+      background-color var(--dur-1) var(--ease-salida),
+      color var(--dur-1) var(--ease-salida);
+  }
+  .gusto-s.is-on .gusto-ico {
+    background: #ffffff;
+    color: var(--color-rojo);
+  }
+  .gusto-label {
+    flex: 1;
+    min-width: 0;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.25;
+    cursor: pointer;
+  }
+  .nivel {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 26px;
+    padding: 0 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    background: var(--color-marino-50);
+    color: var(--color-texto-2);
+    border: 1px solid var(--color-borde);
+  }
+  .gusto-s.is-on .nivel {
+    background: #ffffff;
+    color: var(--color-guinda);
+    border-color: var(--color-rojo);
+  }
+
+  /* Deslizador: el input nativo es transparente y se dibuja encima de una pista propia. */
+  .rango-wrap {
+    position: relative;
+    height: 44px;
+  }
+  .rango-track {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    top: 50%;
+    height: 6px;
+    margin-top: -3px;
+    border-radius: 999px;
+    background: var(--color-borde);
+    overflow: hidden;
+  }
+  .rango-fill {
+    height: 100%;
+    background: var(--color-rojo);
+    border-radius: 999px;
+  }
+  .rango {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 44px;
+    margin: 0;
+    background: transparent;
+    appearance: none;
+    cursor: pointer;
+    touch-action: pan-y;
+  }
+  .rango::-webkit-slider-runnable-track {
+    height: 44px;
+    background: transparent;
+  }
+  .rango::-moz-range-track {
+    height: 44px;
+    background: transparent;
+  }
+  .rango::-webkit-slider-thumb {
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    margin-top: 8px;
+    border-radius: 999px;
+    background: #ffffff;
+    border: 2px solid var(--color-rojo);
+    box-shadow: 0 1px 3px rgba(35, 47, 63, 0.25);
+    transition: transform var(--dur-1) var(--ease-salida);
+  }
+  .rango::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    background: #ffffff;
+    border: 2px solid var(--color-rojo);
+    box-shadow: 0 1px 3px rgba(35, 47, 63, 0.25);
+  }
+  .rango:active::-webkit-slider-thumb {
+    transform: scale(1.08);
+  }
+  .rango:focus-visible {
+    outline: none;
+  }
+  .rango:focus-visible::-webkit-slider-thumb {
+    box-shadow:
+      0 0 0 3px #ffffff,
+      0 0 0 5px var(--color-rojo);
+  }
+  .rango:focus-visible::-moz-range-thumb {
+    box-shadow:
+      0 0 0 3px #ffffff,
+      0 0 0 5px var(--color-rojo);
+  }
+  .rango-scale {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+    font-size: 12px;
+    color: var(--color-texto-2);
+    font-variant-numeric: tabular-nums;
+  }
+  .rango-scale span {
+    width: 12px;
+    text-align: center;
+  }
+  .rango-scale .cur {
+    color: var(--color-marino);
+    font-weight: 700;
+  }
+
+  @media (min-width: 900px) {
+    .prefs {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .gustos-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .gusto-s {
+      padding: 16px 18px 12px;
+    }
+    .two-col {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rango:active::-webkit-slider-thumb {
+      transform: none;
+    }
+  }
+}
