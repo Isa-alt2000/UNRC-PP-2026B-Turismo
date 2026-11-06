@@ -1,9 +1,14 @@
-import { createBrowserRouter, Outlet } from 'react-router-dom'
+import { createBrowserRouter } from 'react-router'
+import { RouteError } from '@/components/layouts'
+import { InicioPage } from '@/pages/inicio-page'
+import { NotFoundPage } from '@/pages/not-found-page'
 
-// Mapa de URLs. Cada pantalla nueva se agrega como hija de la ruta raíz.
 export const router = createBrowserRouter([
   {
-    element: <Outlet />,
-    children: [],
+    errorElement: <RouteError />,
+    children: [
+      { path: '/', element: <InicioPage /> },
+      { path: '*', element: <NotFoundPage /> },
+    ],
   },
 ])

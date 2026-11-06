@@ -1,12 +1,12 @@
 import js from '@eslint/js'
-import prettier from 'eslint-plugin-prettier'
+import prettier from 'eslint-config-prettier'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
-// Cada capa declara lo que NO puede importar. Ver la regla de dependencias en arquitectura.md.
+// Cada capa declara lo que NO puede importar: las dependencias solo van hacia capas inferiores.
 const prohibir = (...capas) => ({
   'no-restricted-imports': [
     'error',
@@ -23,11 +23,11 @@ export default defineConfig([
       tseslint.configs.recommended,
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
+      // Apaga las reglas de estilo que chocan con Prettier; el formato lo revisa npm run format:check.
+      prettier,
     ],
-    plugins: { prettier },
     languageOptions: { globals: globals.browser },
     rules: {
-      'prettier/prettier': 'error',
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       '@typescript-eslint/consistent-type-imports': [
         'error',
@@ -44,8 +44,17 @@ export default defineConfig([
   { files: ['src/hooks/**'], rules: prohibir('components', 'pages', 'routes') },
   {
     files: ['src/components/ui/**'],
-    // Agrega aquí cada carpeta de dominio nueva (por ejemplo, 'components/gustos').
-    rules: prohibir('pages', 'routes', 'stores', 'hooks', 'lib/api'),
+    // ui no conoce el negocio. Agrega aquí cada carpeta de dominio nueva.
+    rules: prohibir(
+      'pages',
+      'routes',
+      'stores',
+      'hooks',
+      'lib/api',
+      'components/layouts',
+      'components/shared',
+      'components/inicio'
+    ),
   },
   {
     files: ['src/components/**'],

@@ -1,7 +1,8 @@
 @import 'tailwindcss';
 
-/* Tokens de diseño. Tailwind genera clases a partir de ellos: bg-rojo, text-texto-2, font-display, shadow-suave… */
-@theme {
+/* Tokens de diseño. Tailwind genera clases a partir de ellos (bg-rojo, text-texto-2, font-display…).
+   static: se emiten todos como variables CSS, porque los estilos de cada sección también los usan. */
+@theme static {
   --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-display: 'Inter Tight', 'Inter', ui-sans-serif, system-ui, sans-serif;
 
@@ -9,8 +10,10 @@
   --color-marino: #232f3f; /* texto principal */
   --color-rojo: #9f2241; /* acción principal, foco */
   --color-guinda: #691c32; /* títulos, rojo presionado */
+  --color-oro: #bc955c; /* cornisas, bordes del cintillo */
   --color-dorado: #ddc9a3; /* fondos suaves, bordes decorativos */
   --color-arena: #d4af8d;
+  --color-crema: #f9f4ef; /* fondo de la portada */
 
   /* Derivados (mezcla con blanco) */
   --color-texto-2: color-mix(in srgb, #232f3f 72%, #ffffff); /* texto secundario, 5.6:1 */
@@ -18,8 +21,14 @@
   --color-borde-fuerte: color-mix(in srgb, #232f3f 32%, #ffffff);
   --color-marino-50: color-mix(in srgb, #232f3f 5%, #ffffff);
   --color-rojo-50: color-mix(in srgb, #9f2241 6%, #ffffff);
+  --color-rojo-hover: color-mix(in srgb, #9f2241 90%, #ffffff);
   --color-dorado-50: color-mix(in srgb, #ddc9a3 32%, #ffffff);
   --color-arena-50: color-mix(in srgb, #d4af8d 16%, #ffffff);
+
+  /* Afluencia */
+  --color-afluencia-baja: #28b4e7;
+  --color-afluencia-media: #fcbb6b;
+  --color-afluencia-alta: #232f3f;
 
   /* Sombras muy suaves */
   --shadow-suave: 0 1px 2px rgba(35, 47, 63, 0.06);
@@ -27,11 +36,19 @@
 
   /* Movimiento */
   --ease-salida: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-portada: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+:root {
+  --dur-1: 150ms; /* respuesta al toque */
+  --dur-2: 200ms; /* fundidos, entrada de pantalla */
+  --presion: 0.97; /* escala de un botón presionado */
 }
 
 @layer base {
   body {
-    @apply text-marino bg-white font-sans text-[15px] leading-normal antialiased;
+    @apply bg-white font-sans text-[15px] leading-normal text-marino antialiased;
+    font-feature-settings: 'cv11', 'ss01';
   }
   h1,
   h2 {
@@ -40,7 +57,243 @@
   p {
     text-wrap: pretty;
   }
+  :focus {
+    outline: none;
+  }
+  [tabindex='-1']:focus-visible {
+    outline: none;
+  }
   :focus-visible {
-    @apply outline-rojo outline-2 outline-offset-2;
+    @apply outline-2 outline-offset-2 outline-rojo;
+  }
+}
+
+@layer components {
+  .wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 24px 20px 40px;
+  }
+
+  /* Entrada de pantalla */
+  .enter-fwd {
+    animation: enter-fwd var(--dur-2) var(--ease-salida) both;
+  }
+
+  /* Tipografía */
+  .h2 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    font-weight: 600;
+  }
+  .lead {
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  .lead-sm {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .help {
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--color-texto-2);
+  }
+  .source {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--color-texto-2);
+  }
+  /* Botones */
+  .btn {
+    min-height: 48px;
+    padding: 0 20px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: -0.005em;
+    cursor: pointer;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    transition:
+      transform var(--dur-1) var(--ease-salida),
+      background-color var(--dur-1) var(--ease-salida),
+      border-color var(--dur-1) var(--ease-salida);
+  }
+  .btn:active:not(:disabled) {
+    transform: scale(var(--presion));
+  }
+  .btn-primary {
+    background: var(--color-rojo);
+    color: #ffffff;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.14),
+      0 1px 2px rgba(105, 28, 50, 0.25);
+  }
+  .btn-primary:active:not(:disabled) {
+    background: var(--color-guinda);
+  }
+  .btn-primary:disabled {
+    background: var(--color-marino-50);
+    color: var(--color-texto-2);
+    border-color: var(--color-borde);
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+  .btn-secondary {
+    background: #ffffff;
+    color: var(--color-rojo);
+    border-color: var(--color-borde-fuerte);
+  }
+  .btn-secondary:active:not(:disabled) {
+    background: var(--color-rojo-50);
+  }
+  .btn-lg {
+    min-height: 56px;
+    padding: 0 24px;
+    font-size: 16px;
+    border-radius: 14px;
+  }
+
+  /* Cintillo */
+  .greca {
+    flex: none;
+    position: relative;
+    z-index: 1;
+    display: block;
+    box-sizing: content-box;
+    border-top: 3px solid var(--color-oro);
+    border-bottom: 3px solid var(--color-oro);
+  }
+
+  /* Etiqueta de afluencia: siempre ícono + texto */
+  .afl {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 28px;
+    padding: 0 10px 0 8px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .afl-baja {
+    background: var(--color-afluencia-baja);
+  }
+  .afl-media {
+    background: var(--color-afluencia-media);
+  }
+  .afl-alta {
+    background: var(--color-afluencia-alta);
+    color: #ffffff;
+  }
+  .afl-sd {
+    background: #ffffff;
+    border: 1.5px dashed var(--color-marino);
+    padding: 0 10px 0 7px;
+  }
+
+  /* Error y página no encontrada */
+  .state-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    padding: 24px 20px;
+    border: 1px solid var(--color-borde);
+    border-radius: 20px;
+  }
+  .state-ico {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: var(--color-arena-50);
+    border: 1px solid var(--color-dorado);
+  }
+
+  /* Revelado al llegar a la pantalla (ver use-revelar-una-vez) */
+  .revelar-oculto {
+    opacity: 0;
+  }
+  .revelar-izquierda {
+    animation: desde-izquierda 0.7s var(--ease-portada) both;
+  }
+  .revelar-derecha {
+    animation: desde-derecha 0.7s var(--ease-portada) both;
+  }
+
+  @keyframes enter-fwd {
+    from {
+      opacity: 0;
+      transform: translateX(16px);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes desde-izquierda {
+    from {
+      opacity: 0;
+      transform: translateX(-100vw);
+    }
+  }
+  @keyframes desde-derecha {
+    from {
+      opacity: 0;
+      transform: translateX(100vw);
+    }
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .btn-primary:hover:not(:disabled) {
+      background: var(--color-rojo-hover);
+    }
+    .btn-primary:active:not(:disabled) {
+      background: var(--color-guinda);
+    }
+    .btn-secondary:hover:not(:disabled) {
+      background: var(--color-rojo-50);
+      border-color: var(--color-rojo);
+    }
+  }
+
+  @media (min-width: 900px) {
+    .wrap {
+      padding: 40px 32px 56px;
+    }
+    .lead {
+      font-size: 19px;
+      max-width: 30em;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .enter-fwd,
+    .revelar-izquierda,
+    .revelar-derecha {
+      animation: fade-in var(--dur-1) linear both;
+    }
+    .btn:active:not(:disabled) {
+      transform: none;
+    }
   }
 }
