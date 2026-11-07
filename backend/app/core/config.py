@@ -1,7 +1,7 @@
 from pathlib import Path
 from typing import Literal
 
-from pydantic import field_validator
+from pydantic import Field, SecretStr, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from sqlalchemy.engine import make_url
 
@@ -12,7 +12,9 @@ NivelLog = Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
 
 class Settings(BaseSettings):
 
-    model_config = SettingsConfigDict(env_file=BACKEND / ".env", env_ignore_empty=True, extra="ignore")
+    model_config = SettingsConfigDict(
+        env_file=BACKEND / ".env", env_ignore_empty=True, extra="ignore"
+    )
     app_name: str = "API Turismo Michoacán"
 
     api_prefix: str
@@ -20,6 +22,8 @@ class Settings(BaseSettings):
     cors_origins: list[str]
     log_level: NivelLog = "INFO"
     log_file: Path
+    # SecretStr evita que la llave aparezca en logs o al imprimir la configuración.
+    admin_api_key: SecretStr = Field(min_length=32)
 
     @field_validator("api_prefix")
     @classmethod

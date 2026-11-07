@@ -24,7 +24,7 @@ def session() -> Iterator[Session]:
     engine = crear_engine("sqlite://")
     SQLModel.metadata.create_all(engine)
     with Session(engine) as sesion:
-        sesion.add(Recinto(id="paricutin", nombre="Paricutín", latitud=19.49, longitud=-102.25, tamano=3))
+        sesion.add(Recinto(id=1, nombre="Paricutín", latitud=19.49, longitud=-102.25, tamano=3))
         sesion.commit()
         yield sesion
 
@@ -49,38 +49,38 @@ def test_rechaza_dos_gustos_con_el_mismo_orden(session: Session) -> None:
 
 
 def test_guarda_los_valores_de_un_recinto(session: Session) -> None:
-    session.add(RecintoValores(recinto_id="paricutin", **VALORES_PARICUTIN))
+    session.add(RecintoValores(recinto_id=1, **VALORES_PARICUTIN))
     session.commit()
 
-    assert session.get(RecintoValores, "paricutin").naturaleza == 3
+    assert session.get(RecintoValores, 1).naturaleza == 3
 
 
 @pytest.mark.parametrize("codigo", CODIGOS_GUSTOS)
 @pytest.mark.parametrize("valor", [-1, 4])
 def test_rechaza_valor_fuera_de_0_a_3(session: Session, codigo: str, valor: int) -> None:
-    session.add(RecintoValores(recinto_id="paricutin", **{**VALORES_PARICUTIN, codigo: valor}))
+    session.add(RecintoValores(recinto_id=1, **{**VALORES_PARICUTIN, codigo: valor}))
     with pytest.raises(IntegrityError):
         session.commit()
 
 
 @pytest.mark.parametrize("tamano", [0, 4])
 def test_rechaza_tamano_fuera_de_1_a_3(session: Session, tamano: int) -> None:
-    session.add(Recinto(id="otro", nombre="Otro", latitud=19.7, longitud=-101.2, tamano=tamano))
+    session.add(Recinto(nombre="Otro", latitud=19.7, longitud=-101.2, tamano=tamano))
     with pytest.raises(IntegrityError):
         session.commit()
 
 
 def test_rechaza_valores_de_un_recinto_inexistente(session: Session) -> None:
-    session.add(RecintoValores(recinto_id="no_existe", **VALORES_PARICUTIN))
+    session.add(RecintoValores(recinto_id=999, **VALORES_PARICUTIN))
     with pytest.raises(IntegrityError):
         session.commit()
 
 
 def test_borrar_un_recinto_borra_sus_valores(session: Session) -> None:
-    session.add(RecintoValores(recinto_id="paricutin", **VALORES_PARICUTIN))
+    session.add(RecintoValores(recinto_id=1, **VALORES_PARICUTIN))
     session.commit()
 
-    session.delete(session.get(Recinto, "paricutin"))
+    session.delete(session.get(Recinto, 1))
     session.commit()
 
     assert session.exec(select(RecintoValores)).all() == []

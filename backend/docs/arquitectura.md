@@ -12,7 +12,7 @@ El código se organiza por módulos de dominio (`gustos`, `recintos`, `recomenda
 
 Lo compartido vive aparte:
 
-- `app/core/`: configuración, base de datos, manejo de errores y logging.
+- `app/core/`: configuración, base de datos, manejo de errores, logging y seguridad. Las rutas que modifican datos piden la llave `ADMIN_API_KEY` en el encabezado `X-API-Key`; las de lectura son públicas.
 - `app/models/`: tablas de la base de datos.
 - `app/ml/`: carga de los modelos entrenados en `data_science` (en `artifacts/`).
 

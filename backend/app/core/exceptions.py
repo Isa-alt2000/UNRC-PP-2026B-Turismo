@@ -16,6 +16,12 @@ class RecursoNoEncontrado(ErrorApp):
     codigo = status.HTTP_404_NOT_FOUND
 
 
+class NoAutorizado(ErrorApp):
+    """Falta la credencial o no es válida."""
+
+    codigo = status.HTTP_401_UNAUTHORIZED
+
+
 async def manejar_error_app(_: Request, error: Exception) -> JSONResponse:
     assert isinstance(error, ErrorApp)
     return JSONResponse(status_code=error.codigo, content={"detail": str(error)})

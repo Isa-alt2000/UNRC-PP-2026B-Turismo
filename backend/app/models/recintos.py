@@ -1,5 +1,5 @@
-from sqlalchemy import CheckConstraint
-from sqlmodel import Field, SQLModel
+from sqlalchemy import CheckConstraint, true
+from sqlmodel import Field, Relationship, SQLModel
 
 CODIGOS_GUSTOS = (
     "historia",
@@ -11,24 +11,6 @@ CODIGOS_GUSTOS = (
 )
 
 
-class Recinto(SQLModel, table=True):
-    """Lugar del catálogo turístico y sus datos descriptivos."""
-
-    __tablename__ = "recintos"
-    __table_args__ = (
-        CheckConstraint("tamano BETWEEN 1 AND 3", name="tamano_1_a_3"),
-        CheckConstraint("latitud BETWEEN -90 AND 90", name="latitud_valida"),
-        CheckConstraint("longitud BETWEEN -180 AND 180", name="longitud_valida"),
-    )
-
-    id: str = Field(primary_key=True, description="Identificador")
-    nombre: str
-    descripcion: str | None = None
-    latitud: float
-    longitud: float
-    tamano: int = Field(description="1 chico, 2 mediano, 3 grande. Lo usa el modelo de minutos")
-
-
 class RecintoValores(SQLModel, table=True):
     """0 no, 1 secundario, 2 importante, 3 razon principal"""
 
@@ -38,10 +20,42 @@ class RecintoValores(SQLModel, table=True):
         for codigo in CODIGOS_GUSTOS
     )
 
-    recinto_id: str = Field(foreign_key="recintos.id", primary_key=True, ondelete="CASCADE")
+    recinto_id: int = Field(foreign_key="recintos.id", primary_key=True, ondelete="CASCADE")
     historia: int
     artes_artesanias: int
     arquitectura: int
     gastronomia: int
     naturaleza: int
     aventura: int
+
+    recinto: Recinto = Relationship(back_populates="valores")
+
+
+class Recinto(SQLModel, table=True):
+    """Lugar del catálogo turístico y sus datos descriptivos."""
+
+    __tablename__ = "recintos"
+    __table_args__ = (
+        CheckConstraint("tamano BETWEEN 1 AND 3", name="tamano_1_a_3"),
+        CheckConstraint("latitud BETWEEN -90 AND 90", name="latitud_valida"),
+        CheckConstraint("longitud BETWEEN -180 AND 180", name="longitud_valida"),
+        {"sqlite_autoincrement": True},
+    )
+
+    # id asignado por R000X.
+    id: int | None = Field(default=None, primary_key=True)
+    nombre: str
+    descripcion: str | None = None
+    latitud: float
+    longitud: float
+    tamano: int = Field(description="1 chico, 2 mediano, 3 grande. Lo usa el modelo de minutos")
+    es_apto_dependientes: bool = Field(
+        default=True,
+        sa_column_kwargs={"server_default": true()},
+        description="Si es adecuado para niñas, niños o personas mayores",
+    )
+
+    valores: RecintoValores | None = Relationship(
+        back_populates="recinto",
+        sa_relationship_kwargs={"cascade": "all, delete-orphan", "passive_deletes": True},
+    )
