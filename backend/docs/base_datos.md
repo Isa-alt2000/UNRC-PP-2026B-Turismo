@@ -32,6 +32,13 @@ erDiagram
         int aventura
     }
     recintos ||--o| recinto_valores : "tiene"
+    puntos_partida {
+        str id PK
+        str nombre
+        float latitud
+        float longitud
+        int orden UK
+    }
 ```
 
 ## Diccionario de datos
@@ -66,3 +73,14 @@ Valores para comparar con los gustos que ingrese la persona. Se envían junto co
 |---|---|---|---|
 | `recinto_id` | entero, PK y FK | Recinto al que pertenecen los valores. Si se borra el recinto, se borran sus valores | El `id` del recinto |
 | `historia` … `aventura` | entero, 0 a 3 | Cuánto ofrece el recinto de cada gusto: 0 nada, 1 secundario, 2 importante, 3 razón principal | Manual, determinado a ojo e investigación. |
+
+### puntos_partida
+Ciudades desde las que sale el turista. No se visitan ni se recomiendan, solo sirven como catalogo para iniciar la ruta.
+
+| Columna | Tipo | Para qué sirve | Cómo se puebla |
+|---|---|---|---|
+| `id` | texto, PK | Identifica el punto, como `morelia`. Es la misma clave que usa el frontend | Pendiente de definir. |
+| `nombre` | texto | Nombre que se muestra | Pendiente de definir. |
+| `latitud` | decimal, -90 a 90 | Ubicación de salida | Pendiente de definir. |
+| `longitud` | decimal, -180 a 180 | Ubicación de salida | Pendiente de definir. |
+| `orden` | entero, único | Posición en la que se muestra | Pendiente de definir. |

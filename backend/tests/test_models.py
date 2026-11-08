@@ -1,11 +1,12 @@
 from collections.abc import Iterator
+from typing import Any
 
 import pytest
 from sqlalchemy.exc import IntegrityError
 from sqlmodel import Session, SQLModel, select
 
 from app.core.db import crear_engine
-from app.models import Gusto, Recinto, RecintoValores
+from app.models import Gusto, PuntoPartida, Recinto, RecintoValores
 from app.models.recintos import CODIGOS_GUSTOS
 
 VALORES_PARICUTIN = {
@@ -84,3 +85,35 @@ def test_borrar_un_recinto_borra_sus_valores(session: Session) -> None:
     session.commit()
 
     assert session.exec(select(RecintoValores)).all() == []
+
+
+# Puntos de partida
+
+def morelia(**cambios: Any) -> PuntoPartida:
+    return PuntoPartida(
+        **{"id": "morelia", "nombre": "Morelia", "latitud": 19.70, "longitud": -101.19, "orden": 1}
+        | cambios
+    )
+
+
+def test_guarda_un_punto_de_partida(session: Session) -> None:
+    session.add(morelia())
+    session.commit()
+
+    assert session.get(PuntoPartida, "morelia").nombre == "Morelia"
+
+
+def test_rechaza_dos_puntos_con_el_mismo_orden(session: Session) -> None:
+    session.add(morelia())
+    session.add(morelia(id="uruapan", nombre="Uruapan"))
+    with pytest.raises(IntegrityError):
+        session.commit()
+
+
+@pytest.mark.parametrize("coordenadas", [{"latitud": 91}, {"longitud": -181}])
+def test_rechaza_coordenadas_fuera_de_rango(
+    session: Session, coordenadas: dict[str, float]
+) -> None:
+    session.add(morelia(**coordenadas))
+    with pytest.raises(IntegrityError):
+        session.commit()
