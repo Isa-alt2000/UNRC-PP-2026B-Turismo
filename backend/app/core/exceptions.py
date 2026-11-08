@@ -22,6 +22,12 @@ class NoAutorizado(ErrorApp):
     codigo = status.HTTP_401_UNAUTHORIZED
 
 
+class ServicioNoDisponible(ErrorApp):
+    """Falta algo que el servicio necesita para responder, como un modelo entrenado."""
+
+    codigo = status.HTTP_503_SERVICE_UNAVAILABLE
+
+
 async def manejar_error_app(_: Request, error: Exception) -> JSONResponse:
     assert isinstance(error, ErrorApp)
     return JSONResponse(status_code=error.codigo, content={"detail": str(error)})

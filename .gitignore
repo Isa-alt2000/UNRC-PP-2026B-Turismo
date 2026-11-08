@@ -8,6 +8,8 @@ __pycache__/
 # Modelos entrenados: se regeneran con los scripts de ml/ (se conserva la carpeta con .gitkeep)
 data_science/ml/artifacts/*
 !data_science/ml/artifacts/.gitkeep
+backend/artifacts/*
+!backend/artifacts/.gitkeep
 
 # Entorno y configuración local
 .env

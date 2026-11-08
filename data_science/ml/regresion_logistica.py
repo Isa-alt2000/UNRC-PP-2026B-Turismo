@@ -8,8 +8,10 @@ from sklearn.preprocessing import StandardScaler
 from config import ENCUESTA_PROCESADA
 from ml.artefactos import guardar_modelo
 
-# Lo genera pipeline.encuesta.limpiar_encuesta.
+# output
 RUTA_DATOS = ENCUESTA_PROCESADA
+
+UMBRAL = 0.4
 
 VARIABLES_ENTRADA = [
     'gusto_historia',
@@ -51,16 +53,13 @@ modelo = make_pipeline(StandardScaler(), LogisticRegression(max_iter=1000))
 modelo.fit(Xtr, ytr)
 proba = modelo.predict_proba(Xte)[:, 1]
 
-umbrales = [0.4]
-
-for t in umbrales:
-    cm, prec, rec, f1 = evaluar_umbral(yte, proba, t)
-    tn, fp, fn, tp = cm.ravel()
-    print(f"\nUmbral t={t}")
-    print("Matriz de confusión [[TN FP], [FN TP]]:\n", cm)
-    print(f"TN={tn}, FP={fp}, FN={fn}, TP={tp}")
-    print(f"Precision={prec:.3f}\nRecall={rec:.3f}\nF1={f1:.3f}")
+cm, prec, rec, f1 = evaluar_umbral(yte, proba, UMBRAL)
+tn, fp, fn, tp = cm.ravel()
+print(f"\nUmbral t={UMBRAL}")
+print("Matriz de confusión [[TN FP], [FN TP]]:\n", cm)
+print(f"TN={tn}, FP={fp}, FN={fn}, TP={tp}")
+print(f"Precision={prec:.3f}\nRecall={rec:.3f}\nF1={f1:.3f}")
 
 # Modelo final con todos los datos
 modelo.fit(X, y)
-guardar_modelo(modelo, 'interes', VARIABLES_ENTRADA, datos=RUTA_DATOS.name)
+guardar_modelo(modelo, 'interes', VARIABLES_ENTRADA, datos=RUTA_DATOS.name, umbral=UMBRAL)
