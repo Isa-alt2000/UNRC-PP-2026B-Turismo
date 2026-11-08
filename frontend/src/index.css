@@ -30,6 +30,10 @@
   --color-afluencia-media: #fcbb6b;
   --color-afluencia-alta: #232f3f;
 
+  /* Semáforo de afinidad: tonos oscuros para que el texto pequeño se lea sobre blanco */
+  --color-semaforo-verde: #1e7b4a; /* 5.3:1 */
+  --color-semaforo-naranja: #b45309; /* 5.0:1 */
+
   /* Sombras muy suaves */
   --shadow-suave: 0 1px 2px rgba(35, 47, 63, 0.06);
   --shadow-tarjeta: 0 1px 2px rgba(35, 47, 63, 0.04), 0 8px 24px rgba(35, 47, 63, 0.07);

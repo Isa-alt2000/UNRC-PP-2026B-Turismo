@@ -2,7 +2,7 @@ import { createBrowserRouter, Navigate } from 'react-router'
 import { RouteError, ViajeLayout } from '@/components/layouts'
 import { InicioPage } from '@/pages/inicio-page'
 import { NotFoundPage } from '@/pages/not-found-page'
-import { GustosDiferida } from './pantallas-diferidas'
+import { GustosDiferida, RecomendacionesDiferida } from './pantallas-diferidas'
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +15,7 @@ export const router = createBrowserRouter([
         children: [
           { index: true, element: <Navigate to="gustos" replace /> },
           { path: 'gustos', element: <GustosDiferida /> },
+          { path: 'lugares', element: <RecomendacionesDiferida /> },
         ],
       },
       { path: '*', element: <NotFoundPage /> },

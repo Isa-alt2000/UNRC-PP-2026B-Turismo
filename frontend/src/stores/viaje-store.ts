@@ -11,10 +11,13 @@ export const preferenciasIniciales: Preferencias = {
 
 interface ViajeState {
   preferencias: Preferencias
+  /** Claves de los recintos elegidos para la ruta, en el orden en que se eligieron. */
+  seleccion: string[]
   setNivel: (codigo: string, nivel: number) => void
   setMes: (mes: number | null) => void
   setSalida: (salida: string) => void
   setConDependientes: (conDependientes: boolean) => void
+  alternarRecinto: (id: string) => void
 }
 
 const actualizar = (cambio: Partial<Preferencias>) => (state: ViajeState) => ({
@@ -26,6 +29,7 @@ export const useViajeStore = create<ViajeState>()(
   persist(
     (set) => ({
       preferencias: preferenciasIniciales,
+      seleccion: [],
       setNivel: (codigo, nivel) =>
         set((state) => ({
           preferencias: {
@@ -36,12 +40,18 @@ export const useViajeStore = create<ViajeState>()(
       setMes: (mes) => set(actualizar({ mes })),
       setSalida: (salida) => set(actualizar({ salida })),
       setConDependientes: (conDependientes) => set(actualizar({ conDependientes })),
+      alternarRecinto: (id) =>
+        set((state) => ({
+          seleccion: state.seleccion.includes(id)
+            ? state.seleccion.filter((elegido) => elegido !== id)
+            : [...state.seleccion, id],
+        })),
     }),
     {
       name: 'viaje',
       // Sobrevive a recargar la página, pero cada pestaña nueva empieza un viaje desde cero.
       storage: createJSONStorage(() => sessionStorage),
-      partialize: ({ preferencias }) => ({ preferencias }),
+      partialize: ({ preferencias, seleccion }) => ({ preferencias, seleccion }),
     }
   )
 )

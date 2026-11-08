@@ -1,0 +1,194 @@
+@layer components {
+  .recs {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .lugares {
+    display: grid;
+    gap: 12px;
+  }
+
+  /* Cada grupo de lugares va en su contenedor pastel: afines en rosa, sugerencias en dorado. */
+  .recs-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 18px 14px;
+    border-radius: 20px;
+  }
+  .recs-afines {
+    background: var(--color-rojo-50);
+  }
+  .recs-extra {
+    background: var(--color-dorado-50);
+  }
+
+  /* Leyenda de afinidad en la esquina inferior derecha de la tarjeta, con color de semáforo */
+  .afinidad {
+    margin-top: auto;
+    align-self: flex-end;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .afinidad-punto {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: currentColor;
+  }
+  .afinidad-verde {
+    color: var(--color-semaforo-verde);
+  }
+  .afinidad-naranja {
+    color: var(--color-semaforo-naranja);
+  }
+  .afinidad-roja {
+    color: var(--color-rojo);
+  }
+
+  /* Tarjeta de un lugar: toda la tarjeta es la casilla */
+  .lugar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid var(--color-borde);
+    border-radius: 16px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition:
+      transform var(--dur-1) var(--ease-salida),
+      border-color var(--dur-1) var(--ease-salida),
+      box-shadow var(--dur-1) var(--ease-salida);
+  }
+  .lugar:active {
+    transform: scale(0.985);
+  }
+  .lugar.is-on {
+    border-color: var(--color-rojo);
+    box-shadow: inset 0 0 0 1px var(--color-rojo);
+  }
+  .lugar.is-off {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  .lugar:has(.lugar-input:focus-visible) {
+    outline: 2px solid var(--color-rojo);
+    outline-offset: 2px;
+  }
+  .lugar-input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+  }
+  .lugar-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .lugar-nombre {
+    flex: 1;
+    min-width: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  .lugar-desc {
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--color-texto-2);
+  }
+  .lugar-foot {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .checkmark {
+    width: 26px;
+    height: 26px;
+    flex: none;
+    border-radius: 8px;
+    border: 1.5px solid var(--color-borde-fuerte);
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    background: #ffffff;
+    transition:
+      background-color var(--dur-1) var(--ease-salida),
+      border-color var(--dur-1) var(--ease-salida);
+  }
+  .checkmark svg {
+    opacity: 0;
+    transform: scale(0.7);
+    transition:
+      opacity var(--dur-1) var(--ease-salida),
+      transform var(--dur-1) var(--ease-salida);
+  }
+  .lugar.is-on .checkmark {
+    background: var(--color-rojo);
+    border-color: var(--color-rojo);
+  }
+  .lugar.is-on .checkmark svg {
+    opacity: 1;
+    transform: none;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    padding: 0 10px;
+    border-radius: 999px;
+    background: var(--color-dorado-50);
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .lugar:not(.is-off):hover {
+      border-color: var(--color-borde-fuerte);
+      box-shadow: var(--shadow-suave);
+    }
+    .lugar.is-on:hover {
+      border-color: var(--color-rojo);
+    }
+  }
+
+  /* En dos columnas; una tarjeta sin pareja queda a la izquierda. */
+  @media (min-width: 900px) {
+    .recs {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .recs-grupo {
+      padding: 24px;
+    }
+    .lugares {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .lugares > * {
+      flex: 0 0 calc(50% - 8px);
+      min-width: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lugar:active {
+      transform: none;
+    }
+    .checkmark svg {
+      transition: none;
+    }
+  }
+}

@@ -7,6 +7,10 @@ export const NAVEGACION_ATRAS = { state: { direccion: 'atras' } }
 /** Desde este nivel (1 a 5), un gusto cuenta para las recomendaciones. */
 export const NIVEL_MINIMO = 3
 export const NIVEL_INICIAL = 1
+/** Lugares que se pueden elegir para la ruta: con menos no hay recorrido; con más no cabe en dos días. */
+export const MIN_LUGARES = 2
+export const MAX_LUGARES = 4
+
 export const PALABRAS_NIVEL = ['', 'No me interesa', 'Poco', 'Me interesa', 'Mucho', 'Me encanta']
 
 export const MESES = [
