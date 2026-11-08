@@ -27,10 +27,3 @@ export const MESES = [
   'Noviembre',
   'Diciembre',
 ]
-
-// Fijas por ahora; cuando el backend exponga los puntos de partida vendrán de la API.
-export const SALIDAS = [
-  { id: 'morelia', nombre: 'Morelia' },
-  { id: 'patzcuaro', nombre: 'Pátzcuaro' },
-  { id: 'uruapan', nombre: 'Uruapan' },
-]

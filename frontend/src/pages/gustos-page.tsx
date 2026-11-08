@@ -1,6 +1,6 @@
 import { useQueryClient } from '@tanstack/react-query'
 import { useNavigate } from 'react-router'
-import { GustosForm, GustosSkeleton, useGustos } from '@/components/gustos'
+import { GustosForm, GustosSkeleton, useGustos, usePuntosPartida } from '@/components/gustos'
 import { Screen } from '@/components/layouts'
 import { armarSolicitud, recomendacionesQuery } from '@/components/recomendaciones'
 import { ErrorConReintento } from '@/components/shared'
@@ -10,23 +10,30 @@ import { useViajeStore } from '@/stores'
 export function GustosPage() {
   const navigate = useNavigate()
   const queryClient = useQueryClient()
-  const { data: gustos, isPending, isError, isFetching, refetch } = useGustos()
+  // Los dos catálogos se piden en paralelo; la pantalla espera a ambos.
+  const gustos = useGustos()
+  const puntosPartida = usePuntosPartida()
 
-  if (isPending) return <GustosSkeleton />
+  if (gustos.isPending || puntosPartida.isPending) return <GustosSkeleton />
 
-  // Que la carga falle y que no haya gustos son casos distintos, pero en ambos no se puede avanzar.
-  if (isError || gustos.length === 0) {
+  // Que la carga falle y que un catálogo venga vacío son casos distintos, pero en ambos no se
+  // puede avanzar.
+  const fallo = gustos.isError || puntosPartida.isError
+  if (fallo || gustos.data.length === 0 || puntosPartida.data.length === 0) {
     return (
       <Screen>
         <div className="wrap">
           <ErrorConReintento
-            titulo={isError ? 'No pudimos cargar los gustos' : 'Aún no hay gustos disponibles'}
-            reintentando={isFetching}
-            onReintentar={() => void refetch()}
+            titulo={fallo ? 'No pudimos cargar tus opciones' : 'Aún no hay opciones disponibles'}
+            reintentando={gustos.isFetching || puntosPartida.isFetching}
+            onReintentar={() => {
+              if (gustos.isError) void gustos.refetch()
+              if (puntosPartida.isError) void puntosPartida.refetch()
+            }}
             textoSecundario="Volver al inicio"
             onSecundario={() => void navigate('/', NAVEGACION_ATRAS)}
           >
-            {isError
+            {fallo
               ? 'Revisa tu conexión e inténtalo de nuevo.'
               : 'Inténtalo de nuevo en unos minutos.'}
           </ErrorConReintento>
@@ -40,12 +47,14 @@ export function GustosPage() {
     const { preferencias } = useViajeStore.getState()
     const solicitud = armarSolicitud(
       preferencias,
-      gustos.map((g) => g.codigo)
+      gustos.data.map((g) => g.codigo)
     )
     if (!solicitud) return
     void queryClient.prefetchQuery(recomendacionesQuery(solicitud))
     void navigate('/viaje/lugares')
   }
 
-  return <GustosForm gustos={gustos} onEnviar={verLugares} />
+  return (
+    <GustosForm gustos={gustos.data} puntosPartida={puntosPartida.data} onEnviar={verLugares} />
+  )
 }

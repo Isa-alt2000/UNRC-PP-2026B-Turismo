@@ -1,24 +1,26 @@
 import { type FormEvent } from 'react'
 import { ActionBar, Screen } from '@/components/layouts'
 import { Button, RadioCards, Select, Switch } from '@/components/ui'
-import { MESES, SALIDAS } from '@/config/constants'
+import { MESES } from '@/config/constants'
 import { useFocusOnMount } from '@/hooks/use-focus-on-mount'
 import { nivelDe, preferenciasFaltantes, textoFaltantes } from '@/lib/preferencias'
 import { useViajeStore } from '@/stores'
 import { GustoSlider } from './gusto-slider'
 import { type Gusto } from './use-gustos'
+import { type PuntoPartida } from './use-puntos-partida'
 import './gustos.css'
 
 const OPCIONES_MES = MESES.map((label, i) => ({ value: i + 1, label }))
 
 interface GustosFormProps {
   gustos: Gusto[]
+  puntosPartida: PuntoPartida[]
   /** Se llama solo cuando las respuestas están completas. */
   onEnviar: () => void
 }
 
 /** Preguntas del primer paso. Cada respuesta se guarda al momento para conservarla al volver. */
-export function GustosForm({ gustos, onEnviar }: GustosFormProps) {
+export function GustosForm({ gustos, puntosPartida, onEnviar }: GustosFormProps) {
   const titulo = useFocusOnMount<HTMLHeadingElement>()
   const preferencias = useViajeStore((s) => s.preferencias)
   const { setNivel, setMes, setSalida, setConDependientes } = useViajeStore.getState()
@@ -72,7 +74,7 @@ export function GustosForm({ gustos, onEnviar }: GustosFormProps) {
               <RadioCards
                 legend="¿Desde dónde sales?"
                 help="Lo usamos para calcular el orden de tu ruta."
-                options={SALIDAS}
+                options={puntosPartida}
                 value={preferencias.salida}
                 onChange={setSalida}
               />

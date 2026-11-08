@@ -13,6 +13,18 @@ const GUSTOS = [
   { codigo: 'naturaleza', nombre: 'Naturaleza', pregunta: '¿Te gusta la naturaleza?' },
 ]
 
+const PUNTOS = [
+  { id: 'morelia', nombre: 'Morelia', latitud: 19.71, longitud: -101.21 },
+  { id: 'uruapan', nombre: 'Uruapan', latitud: 19.42, longitud: -102.05 },
+]
+
+/** Responde cada catálogo según la ruta, como el backend. */
+function responderCatalogos() {
+  mockApiFetch.mockImplementation((ruta) =>
+    Promise.resolve(ruta === '/puntos-partida' ? PUNTOS : GUSTOS)
+  )
+}
+
 beforeEach(() => {
   mockApiFetch.mockReset()
   useViajeStore.setState({ preferencias: preferenciasIniciales })
@@ -25,17 +37,27 @@ describe('GustosPage', () => {
     expect(screen.getByRole('status', { name: 'Cargando tus opciones' })).toBeInTheDocument()
   })
 
-  it('si la carga falla, permite reintentar', async () => {
-    mockApiFetch.mockRejectedValueOnce(new Error('500')).mockResolvedValue(GUSTOS)
+  it('si falla un catálogo, permite reintentar', async () => {
+    mockApiFetch.mockImplementation((ruta) =>
+      ruta === '/puntos-partida' ? Promise.reject(new Error('500')) : Promise.resolve(GUSTOS)
+    )
     renderApp(<GustosPage />)
-    expect(await screen.findByText('No pudimos cargar los gustos')).toBeInTheDocument()
+    expect(await screen.findByText('No pudimos cargar tus opciones')).toBeInTheDocument()
 
+    responderCatalogos()
     await userEvent.click(screen.getByRole('button', { name: 'Reintentar' }))
     expect(await screen.findByText('Historia')).toBeInTheDocument()
   })
 
+  it('muestra los puntos de partida que manda el backend', async () => {
+    responderCatalogos()
+    renderApp(<GustosPage />)
+    expect(await screen.findByRole('radio', { name: 'Uruapan' })).toBeInTheDocument()
+    expect(screen.getAllByRole('radio')).toHaveLength(2)
+  })
+
   it('pinta un deslizador por cada gusto del backend', async () => {
-    mockApiFetch.mockResolvedValue(GUSTOS)
+    responderCatalogos()
     renderApp(<GustosPage />)
     expect(await screen.findByRole('slider', { name: 'Historia' })).toHaveAccessibleDescription(
       '¿Te interesa la historia?'
@@ -44,7 +66,7 @@ describe('GustosPage', () => {
   })
 
   it('el botón se habilita cuando están el gusto, el mes y la salida', async () => {
-    mockApiFetch.mockResolvedValue(GUSTOS)
+    responderCatalogos()
     renderApp(<GustosPage />)
     const boton = await screen.findByRole('button', { name: 'Ver lugares para mí' })
     expect(boton).toBeDisabled()
@@ -58,7 +80,7 @@ describe('GustosPage', () => {
   })
 
   it('al enviar pide las recomendaciones con POST y todos los gustos', async () => {
-    mockApiFetch.mockResolvedValue(GUSTOS)
+    responderCatalogos()
     useViajeStore.setState({
       preferencias: {
         ...preferenciasIniciales,
