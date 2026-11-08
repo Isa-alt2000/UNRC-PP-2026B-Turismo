@@ -79,8 +79,8 @@ Ciudades desde las que sale el turista. No se visitan ni se recomiendan, solo si
 
 | Columna | Tipo | Para qué sirve | Cómo se puebla |
 |---|---|---|---|
-| `id` | texto, PK | Identifica el punto, como `morelia`. Es la misma clave que usa el frontend | Pendiente de definir. |
-| `nombre` | texto | Nombre que se muestra | Pendiente de definir. |
-| `latitud` | decimal, -90 a 90 | Ubicación de salida | Pendiente de definir. |
-| `longitud` | decimal, -180 a 180 | Ubicación de salida | Pendiente de definir. |
-| `orden` | entero, único | Posición en la que se muestra | Pendiente de definir. |
+| `id` | texto, PK | Identifica el punto, como `morelia`. Es la misma clave que usa el frontend | Migración, igual que en el frontend. |
+| `nombre` | texto | Nombre que se muestra | Migración. |
+| `latitud` | decimal, -90 a 90 | Ubicación de salida | Migración: punto medio entre el centro y la central de autobuses (OpenStreetMap). |
+| `longitud` | decimal, -180 a 180 | Ubicación de salida | Migración: punto medio entre el centro y la central de autobuses (OpenStreetMap). |
+| `orden` | entero, único | Posición en la que se muestra | Migración. |

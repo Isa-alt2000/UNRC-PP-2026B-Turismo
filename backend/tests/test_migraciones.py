@@ -9,7 +9,7 @@ from sqlalchemy import inspect
 from sqlmodel import Session, SQLModel, create_engine, select
 
 from app.core.config import BACKEND
-from app.models import Gusto
+from app.models import Gusto, PuntoPartida
 from app.models.recintos import CODIGOS_GUSTOS
 
 
@@ -43,6 +43,15 @@ def test_los_gustos_cargados_coinciden_con_las_columnas_de_valores(url: str) -> 
         codigos = session.exec(select(Gusto.codigo).order_by(Gusto.orden)).all()
 
     assert codigos == list(CODIGOS_GUSTOS)
+
+
+def test_los_puntos_de_partida_son_los_del_frontend(url: str) -> None:
+    command.upgrade(alembic(url), "head")
+
+    with Session(create_engine(url)) as session:
+        claves = session.exec(select(PuntoPartida.id).order_by(PuntoPartida.orden)).all()
+
+    assert claves == ["morelia", "patzcuaro", "uruapan"]
 
 
 def test_downgrade_borra_todas_las_tablas(url: str) -> None:
