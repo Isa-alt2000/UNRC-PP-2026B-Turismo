@@ -26,6 +26,7 @@ from app.ml.modelo_minutos import ModeloMinutos
 from app.models import PuntoPartida, Recinto
 from app.models.recintos import CODIGOS_GUSTOS
 from app.puntos_partida.schemas import PuntoPartidaPublico
+from app.recintos.imagenes import imagen_de, leer_creditos
 from app.recintos.schemas import a_clave
 from app.recintos.service import obtener_recinto
 
@@ -113,6 +114,7 @@ def armar_itinerario(
         f"jornadas={','.join(f'{j:.0f}' for j in plan.jornadas)} aproximada={aproximada}"
     )
 
+    creditos = leer_creditos()
     dias: list[Dia] = []
     excedidos = plan.excede(MINUTOS_POR_DIA)
     paso = 0  # tramo del camino completo: tramos[paso] va de camino[paso] a camino[paso + 1]
@@ -129,6 +131,7 @@ def armar_itinerario(
                     id=a_clave(recinto.id),
                     nombre=recinto.nombre,
                     descripcion=recinto.descripcion,
+                    imagen=imagen_de(a_clave(recinto.id), creditos),
                     latitud=recinto.latitud,
                     longitud=recinto.longitud,
                     km_desde_anterior=round(matriz.km[anterior][lugar], 1),

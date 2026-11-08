@@ -18,4 +18,6 @@ Lo compartido vive aparte:
 
 `/itinerarios` además usa OpenRouteService con la llave `ORS_API_KEY`; sin ella, calcula en línea recta. Cómo se decide el orden y el reparto en días está en [optimizador.md](optimizador.md).
 
+Las imágenes de los recintos van en `static/recintos/` con la clave como nombre (`R0002.webp`, `.png` o `.jpg`; si hay varias, se toma la primera en ese orden) y no se guardan en la base. Se sirven en `{API_PREFIX}/static/recintos/` y sus créditos, si los hay, van en `static/recintos/creditos.json` (`{"R0002": "Foto: autor, licencia"}`). Cada parada de `/itinerarios` trae `imagen` con su `url` y `credito`, o `"sin_imagen"`.
+
 Los nombres que son convención del framework o de las herramientas van en inglés (`core`, `models`, `router.py`, `tests`) y los del dominio, en español.

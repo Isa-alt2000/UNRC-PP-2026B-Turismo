@@ -278,3 +278,21 @@ def test_el_modelo_publicado_es_valido() -> None:
 
     fila = {f"gusto_{c}": 3 for c in CODIGOS_GUSTOS} | {f"recinto_{c}": 2 for c in CODIGOS_GUSTOS}
     assert modelo.minutos([fila | {"recinto_tamano": 2}])[0] > 0
+
+
+def test_cada_parada_trae_su_imagen_o_sin_imagen(
+    client: TestClient, usar: Any, tmp_path: Any, monkeypatch: Any
+) -> None:
+    monkeypatch.setattr("app.recintos.imagenes.CARPETA", tmp_path)
+    (tmp_path / "R0001.jpg").write_bytes(b"img")
+    (tmp_path / "creditos.json").write_text('{"R0001": "Foto: Autora"}', encoding="utf-8")
+    usar([60, 60])
+
+    cuerpo = pedir(client, ["R0001", "R0002"]).json()
+
+    imagenes = {p["id"]: p["imagen"] for dia in cuerpo["dias"] for p in dia["paradas"]}
+    assert imagenes["R0001"] == {
+        "url": f"{settings.api_prefix}/static/recintos/R0001.jpg",
+        "credito": "Foto: Autora",
+    }
+    assert imagenes["R0002"] == "sin_imagen"

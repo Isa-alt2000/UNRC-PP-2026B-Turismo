@@ -3,6 +3,7 @@ from typing import Annotated, Literal
 from pydantic import AfterValidator, BaseModel, ConfigDict, Field, StringConstraints
 
 from app.puntos_partida.schemas import PuntoPartidaPublico
+from app.recintos.imagenes import Imagen, SinImagen
 from app.recintos.schemas import PATRON_CLAVE
 from app.recomendaciones.schemas import Gustos
 
@@ -44,6 +45,9 @@ class Parada(BaseModel):
     id: str = Field(examples=["R0011"])
     nombre: str
     descripcion: str | None
+    imagen: Imagen | SinImagen = Field(
+        description="Foto de referencia con su crédito, o sin_imagen si el recinto no tiene"
+    )
     latitud: float
     longitud: float
     km_desde_anterior: float = Field(description="Desde la parada anterior o el punto de partida")
