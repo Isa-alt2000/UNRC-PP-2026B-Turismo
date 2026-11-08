@@ -1,32 +1,26 @@
-import json
 import logging
 from dataclasses import dataclass
 from functools import cache
 from pathlib import Path
 from typing import Annotated, Any
 
-import joblib
 import pandas as pd
-import sklearn
 from fastapi import Depends
 
-from app.core.config import BACKEND
 from app.core.exceptions import ServicioNoDisponible
+from app.ml.artefactos import CARPETA, ArtefactoInvalido, leer_artefacto
 from app.models.recintos import CODIGOS_GUSTOS
+
+__all__ = ["VARIABLES", "ArtefactoInvalido", "ModeloInteres", "leer_modelo", "modelo_interes"]
 
 log = logging.getLogger(__name__)
 
-CARPETA = BACKEND / "artifacts"
 NOMBRE = "interes"
 # primero gustos y luego afinidades como en entrenamiento
 VARIABLES = [
     *(f"gusto_{codigo}" for codigo in CODIGOS_GUSTOS),
     *(f"afinidad_{codigo}" for codigo in CODIGOS_GUSTOS),
 ]
-
-
-class ArtefactoInvalido(Exception):
-    """El modelo publicado falta o no corresponde con este backend."""
 
 
 @dataclass(frozen=True)
@@ -43,29 +37,11 @@ class ModeloInteres:
 
 def leer_modelo(carpeta: Path | None = None) -> ModeloInteres:
     """Lee y valida el modelo; falla con un mensaje claro si no se puede usar."""
-    carpeta = carpeta or CARPETA
-    ruta_json = carpeta / f"{NOMBRE}.json"
-    ruta_joblib = carpeta / f"{NOMBRE}.joblib"
-    if not ruta_json.exists() or not ruta_joblib.exists():
-        raise ArtefactoInvalido(
-            f"Faltan {ruta_json.name} o {ruta_joblib.name} en {carpeta}: "
-            "cópialos desde data_science/ml/artifacts"
-        )
-
-    metadatos = json.loads(ruta_json.read_text(encoding="utf-8"))
-    # revisar version de libreria sklearn
-    if metadatos.get("version_sklearn") != sklearn.__version__:
-        raise ArtefactoInvalido(
-            f"El modelo se entrenó con scikit-learn {metadatos.get('version_sklearn')} "
-            f"y el backend usa {sklearn.__version__}"
-        )
-    if metadatos.get("variables") != VARIABLES:
-        raise ArtefactoInvalido("Las variables del modelo no coinciden con las del backend")
+    estimador, metadatos = leer_artefacto(carpeta or CARPETA, NOMBRE, VARIABLES)
     umbral = metadatos.get("umbral")
     if not isinstance(umbral, int | float) or not 0 < umbral < 1:
         raise ArtefactoInvalido("El modelo no trae un umbral válido entre 0 y 1")
-
-    return ModeloInteres(estimador=joblib.load(ruta_joblib), umbral=float(umbral))
+    return ModeloInteres(estimador=estimador, umbral=float(umbral))
 
 
 @cache

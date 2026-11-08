@@ -14,6 +14,8 @@ Lo compartido vive aparte:
 
 - `app/core/`: configuración, base de datos, manejo de errores, logging y seguridad. Las rutas que modifican datos piden la llave `ADMIN_API_KEY` en el encabezado `X-API-Key`; las de lectura son públicas.
 - `app/models/`: tablas de la base de datos.
-- `app/ml/`: carga de los modelos entrenados en `data_science`. Después de entrenar, se copian `interes.joblib` e `interes.json` de `data_science/ml/artifacts/` a `backend/artifacts/` (no van a git). El modelo se lee la primera vez que se usa; si falta, solo `/recomendaciones` responde 503.
+- `app/ml/`: carga de los modelos entrenados en `data_science`. Después de entrenar, se copian el `.joblib` y el `.json` de cada modelo (`interes`, `minutos`) de `data_science/ml/artifacts/` a `backend/artifacts/` (no van a git). Cada modelo se lee la primera vez que se usa y si falta, solo responde 503 el endpoint que lo necesita (`/recomendaciones` o `/itinerarios`).
+
+`/itinerarios` además usa OpenRouteService con la llave `ORS_API_KEY`; sin ella, calcula en línea recta. Cómo se decide el orden y el reparto en días está en [optimizador.md](optimizador.md).
 
 Los nombres que son convención del framework o de las herramientas van en inglés (`core`, `models`, `router.py`, `tests`) y los del dominio, en español.

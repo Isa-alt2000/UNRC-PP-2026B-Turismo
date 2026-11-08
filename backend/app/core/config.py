@@ -24,6 +24,10 @@ class Settings(BaseSettings):
     log_file: Path
     # SecretStr evita que la llave aparezca en logs o al imprimir la configuración.
     admin_api_key: SecretStr = Field(min_length=32)
+    # Sin llave, las rutas se calculan en línea recta y se marcan como aproximadas
+    ors_api_key: SecretStr | None = None
+    ors_url: str = "https://api.heigit.org/openrouteservice"
+    ors_timeout: float = Field(default=10, gt=0, description="Segundos de espera por petición")
 
     @field_validator("api_prefix")
     @classmethod

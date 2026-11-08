@@ -1,6 +1,6 @@
 from typing import Annotated, Literal
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import AfterValidator, BaseModel, ConfigDict, Field
 
 from app.models.recintos import CODIGOS_GUSTOS
 
@@ -9,27 +9,32 @@ Afluencia = Literal["baja", "media", "alta", "sin_datos"]
 Etiqueta = Literal["familiar", "chico", "mediano", "grande"]
 
 
+def revisar_gustos(gustos: dict[str, int]) -> dict[str, int]:
+    """Exige exactamente los gustos del catálogo"""
+    faltan = set(CODIGOS_GUSTOS) - gustos.keys()
+    sobran = gustos.keys() - set(CODIGOS_GUSTOS)
+    if faltan or sobran:
+        detalle = [f"faltan: {', '.join(sorted(faltan))}"] if faltan else []
+        detalle += [f"no existen: {', '.join(sorted(sobran))}"] if sobran else []
+        raise ValueError("; ".join(detalle))
+    return gustos
+
+
+Gustos = Annotated[
+    dict[str, NivelGusto],
+    AfterValidator(revisar_gustos),
+    Field(description="Nivel de 1 a 5 de cada gusto del catálogo, por su codigo"),
+]
+
+
 class SolicitudRecomendaciones(BaseModel):
     """Respuestas del turista en la pantalla de gustos."""
 
     model_config = ConfigDict(extra="forbid")
 
-    gustos: dict[str, NivelGusto] = Field(
-        description="Nivel de 1 a 5 de cada gusto del catálogo, por su código"
-    )
+    gustos: Gustos
     mes: int = Field(ge=1, le=12, description="Mes del viaje, se usará para la afluencia")
     con_dependientes: bool = False
-
-    @field_validator("gustos")
-    @classmethod
-    def todos_los_gustos(cls, gustos: dict[str, int]) -> dict[str, int]:
-        faltan = set(CODIGOS_GUSTOS) - gustos.keys()
-        sobran = gustos.keys() - set(CODIGOS_GUSTOS)
-        if faltan or sobran:
-            detalle = [f"faltan: {', '.join(sorted(faltan))}"] if faltan else []
-            detalle += [f"no existen: {', '.join(sorted(sobran))}"] if sobran else []
-            raise ValueError("; ".join(detalle))
-        return gustos
 
 
 class RecintoRecomendado(BaseModel):

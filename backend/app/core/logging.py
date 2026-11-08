@@ -11,8 +11,8 @@ LOGGERS_CON_ARCHIVO = ("", "uvicorn", "uvicorn.access")
 
 
 def configurar_logging(nivel: str, archivo: Path) -> None:
-    """Configura el logger raíz. Cada módulo crea el suyo con `logging.getLogger(__name__)`.
-    Los mensajes salen en la terminal y se guardan en `archivo`.
+    """Configura el logger raíz. Cada módulo crea el suyo con logging.getLogger(__name__).
+    Los mensajes salen en la terminal y se guardan en archivo.
     """
     logging.basicConfig(format=FORMATO)
     raiz = logging.getLogger()

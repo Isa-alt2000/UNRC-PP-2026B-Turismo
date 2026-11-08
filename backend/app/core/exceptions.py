@@ -22,6 +22,12 @@ class NoAutorizado(ErrorApp):
     codigo = status.HTTP_401_UNAUTHORIZED
 
 
+class SolicitudInvalida(ErrorApp):
+    """La solicitud es válida, pero no se puede atender con los datos actuales."""
+
+    codigo = status.HTTP_422_UNPROCESSABLE_CONTENT
+
+
 class ServicioNoDisponible(ErrorApp):
     """Falta algo que el servicio necesita para responder, como un modelo entrenado."""
 
