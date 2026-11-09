@@ -18,6 +18,8 @@ interface ViajeState {
   setSalida: (salida: string) => void
   setConDependientes: (conDependientes: boolean) => void
   alternarRecinto: (id: string) => void
+  /** Reemplaza la selección, por ejemplo para quitar lugares que ya no se muestran. */
+  fijarSeleccion: (seleccion: string[]) => void
 }
 
 const actualizar = (cambio: Partial<Preferencias>) => (state: ViajeState) => ({
@@ -46,6 +48,7 @@ export const useViajeStore = create<ViajeState>()(
             ? state.seleccion.filter((elegido) => elegido !== id)
             : [...state.seleccion, id],
         })),
+      fijarSeleccion: (seleccion) => set({ seleccion }),
     }),
     {
       name: 'viaje',

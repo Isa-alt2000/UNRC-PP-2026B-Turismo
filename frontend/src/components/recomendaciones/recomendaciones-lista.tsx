@@ -17,6 +17,7 @@ export function RecomendacionesLista({ respuesta, onCrearRuta }: Recomendaciones
   const titulo = useFocusOnMount<HTMLHeadingElement>()
   const seleccionGuardada = useViajeStore((s) => s.seleccion)
   const alternarRecinto = useViajeStore((s) => s.alternarRecinto)
+  const fijarSeleccion = useViajeStore((s) => s.fijarSeleccion)
   const { recintos, recintos_por_afluencia: extra } = respuesta
 
   // Una selección de una búsqueda anterior puede incluir lugares que ya no aparecen.
@@ -84,7 +85,14 @@ export function RecomendacionesLista({ respuesta, onCrearRuta }: Recomendaciones
           {seleccion.length} de {MAX_LUGARES} lugares
           {seleccion.length < MIN_LUGARES && ` · elige al menos ${MIN_LUGARES}`}
         </p>
-        <Button disabled={seleccion.length < MIN_LUGARES} onClick={onCrearRuta}>
+        <Button
+          disabled={seleccion.length < MIN_LUGARES}
+          onClick={() => {
+            // La ruta usa solo los lugares que se ven, no los guardados de una búsqueda anterior.
+            fijarSeleccion(seleccion)
+            onCrearRuta()
+          }}
+        >
           Crear mi ruta
         </Button>
       </ActionBar>

@@ -260,6 +260,11 @@
     font-size: 16px;
     border-radius: 14px;
   }
+  .btn-sm {
+    min-height: 44px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
 
   /* Campos de formulario */
   .section {

@@ -9,6 +9,18 @@ function requerida(env: Record<string, string>, nombre: string) {
   return valor
 }
 
+/**
+ * Hosts externos que pueden abrir el servidor, separados por comas (ALLOWED_HOSTS en el .env).
+ * Un punto inicial acepta cualquier subdominio: .trycloudflare.com sirve para todos los túneles
+ * rápidos de Cloudflare. Vacía o ausente: solo localhost, como Vite por defecto.
+ */
+function hostsPermitidos(env: Record<string, string>) {
+  return (env.ALLOWED_HOSTS ?? '')
+    .split(',')
+    .map((host) => host.trim())
+    .filter(Boolean)
+}
+
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   // El backend ya expone sus rutas bajo el prefijo, así que el proxy reenvía la ruta tal cual.
@@ -18,11 +30,12 @@ export default defineConfig(({ mode }) => {
       changeOrigin: true,
     },
   }
+  const allowedHosts = hostsPermitidos(env)
 
   return {
     plugins: [react()],
     resolve: { alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) } },
-    server: { port: 5173, strictPort: true, proxy },
-    preview: { port: 5173, strictPort: true, proxy },
+    server: { port: 5173, strictPort: true, proxy, allowedHosts },
+    preview: { port: 5173, strictPort: true, proxy, allowedHosts },
   }
 })

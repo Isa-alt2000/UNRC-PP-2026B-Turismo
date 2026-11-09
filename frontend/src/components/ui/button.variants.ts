@@ -7,6 +7,7 @@ export const buttonVariants = cva('btn', {
       secondary: 'btn-secondary',
     },
     size: {
+      small: 'btn-sm',
       medium: '',
       large: 'btn-lg',
     },
