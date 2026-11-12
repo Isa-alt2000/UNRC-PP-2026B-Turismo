@@ -1,0 +1,1034 @@
+id,nombre,tipo,codigo_scian,tamano,telefono,sitio_web,direccion,localidad,municipio,latitud,longitud
+2570492,Estacionamiento Hotel Latino,Hotel,721112,micro,,https://www.hotellatinosahuayo.com,"Calle Constitución 205, Centro",Sahuayo de Morelos,Sahuayo,20.05726629,-102.71818235
+2576300,Hotel Posada Refugio Independencia,Casa de huéspedes,721311,micro,4433121955,https://reservacioneshoteldelrefugio.com,"Calle Andres del Rio 357, Ventura Puente",Morelia,Morelia,19.69507448,-101.1895042
+2588493,Posada Familiar San Felipe,Casa de huéspedes,721311,micro,3565670092,,"Calle Degollado 67, Centro",Tanhuato de Guerrero,Tanhuato,20.28628176,-102.33099159
+2596669,Calzada Inn Hotel,Hotel,721111,micro,,https://www.calzadainn.com.mx,"Avenida Francisco I. Madero Sur 1343, La Luneta",Zamora de Hidalgo,Zamora,19.97632615,-102.29189373
+2601072,Hotel Lucy,Hotel,721112,micro,,,"Calle Portal Jose Maria Morelos 3, Centro",Peribán de Ramos,Peribán,19.52040666,-102.41611329
+2606772,La Cabaña del Chato,Cabañas,721190,micro,,,"Otro(especifique) Arroyo 85, Nueva España",Santa Ana Maya,Santa Ana Maya,20.00461352,-101.01550965
+2615717,Posada de Belen,Casa de huéspedes,721311,micro,4431760408,,"Calle Calle del Transporte 196, Ampliacion Felix Arreguin",Morelia,Morelia,19.72057586,-101.22490477
+2615991,Auto Hotel el Cairo,Motel,721113,pequena,,,"Calle General Eduardo Aldasoro Suarez 280, Union Popular",Morelia,Morelia,19.70585633,-101.22312578
+2617779,Hotel Refugio del Angel,Hotel,721111,micro,,,"Calle Ramos 1, Centro",Pátzcuaro,Pátzcuaro,19.51590831,-101.60994987
+2617969,Estacionamiento y Pension Juarez,Hotel,721112,micro,,,"Calle Benito Juarez 40, Centro",Pátzcuaro,Pátzcuaro,19.51659689,-101.6142871
+2619144,Posada la Posadita,Casa de huéspedes,721311,micro,,,"Avenida Madero Poniente 369, Centro",Tacámbaro de Codallos,Tacámbaro,19.23591324,-101.4627669
+2619220,Hotel Posada Santo Niño,Casa de huéspedes,721311,micro,4593410351,,"Avenida Madero Poniente 39, Centro",Tacámbaro de Codallos,Tacámbaro,19.23607301,-101.45948603
+2619809,Auto Hotel Palladium,Motel,721113,micro,,,,Tacámbaro de Codallos,Tacámbaro,19.22770731,-101.46852321
+2620166,Hotel la Puerta del Nopal,Hotel,721112,micro,,,,Puruarán,Turicato,19.09336419,-101.51742598
+2621014,Hotel Peulla,Motel,721113,micro,4363632310,https://www.hotelpeulla.com.mx,"Calle Martires de Uruapan 1516, Tierras Blancas",Zacapu,Zacapu,19.82065852,-101.80839027
+2622120,Hotel Rancho el Nogal,Hotel,721112,micro,,https://hotelelnogal.negocio.site,"Calle 16 de Septiembre 366, San Juan",Huaniqueo de Morales,Huaniqueo,19.8965723,-101.499979
+2622142,Hotel el Porton,Hotel,721112,micro,4433606827,,"Calle Pastor Morales 39, Centro",Huaniqueo de Morales,Huaniqueo,19.89881381,-101.50533343
+2622493,Hotel los Alcatraces,Hotel,721112,micro,,,"Avenida Lazaro Cardenas s/n, Cuarto",Tzintzuntzan,Tzintzuntzan,19.63106192,-101.57150464
+2623131,Auto Hotel Venecia,Motel,721113,micro,,,"Avenida Acueducto 24, Valle de las Flores",Puerto de Buenavista (Lázaro Cárdenas),Morelia,19.68811479,-101.12253014
+2625642,Hotel Posada el Vergel,Hotel,721112,micro,4432314457,,"Calle Antigua Carretera a Patzcuaro 28, La Huerta",Morelia,Morelia,19.66556847,-101.22510149
+2631202,El Suburbio Hotel,Hotel,721112,micro,4431280307,,"Avenida Morelos Sur 740, Centro",Morelia,Morelia,19.6962287,-101.19184848
+2634084,Hotel Aves del Paraiso,Hotel,721112,micro,4432188704,,"Avenida Las Flores 7, El Abrojal",Bocaneo (San Pedro),Zinapécuaro,19.8327709,-100.81789619
+2635526,Hotel Alameda,Hotel,721112,micro,4471166407,,"Calle Alameda 251, Centro",Maravatío de Ocampo,Maravatío,19.89360071,-100.44144488
+2636455,Hotel Jardin,Departamento amueblado,721312,micro,,,"Calle Ignacio Lopez Rayon 19, Centro",Tlalpujahua de Rayón,Tlalpujahua,19.80426678,-100.1732836
+2636811,Hotel Posada Colin,Hotel,721112,micro,,,"Avenida General Lazaro Cardenas s/n, San Francisco de los Reyes",San Francisco de los Reyes,Tlalpujahua,19.77229842,-100.2275687
+2637814,Hotel Paraiso,Hotel,721112,micro,7861185093,,"Avenida Lazaro Cardenas 55, San Pedro Jácuaro (Las Joyas)",San Pedro Jácuaro (Las Joyas),Hidalgo,19.7141253,-100.64184687
+2640147,Hospedaje Casa Rogel,Casa de huéspedes,721311,micro,,,"Calle Aldama 3, Centro",Senguio,Senguio,19.73301804,-100.35165386
+2640153,Hospedaje Casa Roja,Casa de huéspedes,721311,micro,,,,Senguio,Senguio,19.73376741,-100.34948989
+2641124,Hotel Albergue Don Bruno,Hotel,721111,micro,,https://www.hotel-donbruno.com,"Avenida Insurgentes 92, El Rescate",Mineral de Angangueo,Angangueo,19.61415772,-100.29221164
+2643437,Hotel el Arco,Hotel,721112,micro,,,"Calle Miguel Hidalgo Oriente 69, Poetas",Heróica Zitácuaro,Zitácuaro,19.43526983,-100.35061263
+2643854,Auto Hotel Real Palace,Motel,721113,micro,,,"Calle Francisco Villa s/n, Las Camelinas",Vicente Riva Palacio,San Lucas,18.3745748,-100.65876426
+2644444,Auto Motel Eclipse,Motel,721113,micro,,,"Calle San Juan 50, San Antonio Tomatlán",Huetamo de Núñez,Huetamo,18.61892616,-100.89714525
+2644834,Renta de Cuarto Doña Cholita,Casa de huéspedes,721311,micro,,,"Avenida Hidalgo 4, Centro",Carácuaro de Morelos,Carácuaro,19.0170722,-101.1281956
+2647682,Bodega de Muebles Muebleria Uruapan,Cabañas,721190,micro,,,"Calle Nicolas Romero 24, Centro",Uruapan,Uruapan,19.4211943,-102.06030079
+2651086,Hotel Paraiso,Hotel,721112,micro,4521198705,,"Calle Francisco I Madero 7, San Francisco Uruapan",Uruapan,Uruapan,19.39170343,-102.02190871
+2654951,Hotel Erandi,Hotel,721112,micro,,,"Calle Lazaro Cardenas 536, Barrio de San Andrés",Charapan,Charapan,19.64887387,-102.25319698
+2656669,Parador Ecoturistico los Arcangeles,Cabañas,721190,micro,,,"Calle Kakatziro 111, La Esperanza",Cherán,Cherán,19.69116393,-101.96224384
+2657282,Hotel Isabelli,Departamento amueblado,721312,micro,4235942592,,"Calle David Alfaro Siqueiros 4, San Marcos",Cherán,Cherán,19.68227459,-101.95717886
+2659903,Hotel los Chalachos,Hotel,721112,micro,4341148331,,,Zirahuén,Salvador Escalante,19.45123723,-101.72665303
+2659953,Cabañas Sin Nombre,Cabañas,721190,micro,4341197870,,,Zirahuén,Salvador Escalante,19.44748297,-101.72765411
+2659956,Cabañas el Cerrito,Cabañas,721190,micro,,,"Calle Salida a Santa Clara s/n, Centro",Zirahuén,Salvador Escalante,19.44689951,-101.72692041
+2659963,Cabañas el Malecon,Cabañas,721190,micro,4341167794,,,Zirahuén,Salvador Escalante,19.44705004,-101.72794931
+2659968,Cabañas las Margaritas,Cabañas,721190,micro,4341006759,https://www.margaritaszirahuen.com,,Zirahuén,Salvador Escalante,19.44642897,-101.72756157
+2662417,Hotel Crystal,Hotel,721112,micro,,,"Calle José de San Martín 20, Santo Santiago",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.41568436,-102.12885541
+2664494,Casa de Huespedes Sin Nombre,Casa de huéspedes,721311,micro,,,"Calle Articulo 127 de la Constitucion s/n, Centro",Nueva Italia de Ruiz,Múgica,19.0197679,-102.09553263
+2668433,Motel Eclipse Lunar,Motel,721113,micro,4535343708,,"Avenida General Joaquin Amaro Norte 1261, Lazaro Cardenas",Apatzingán de la Constitución,Apatzingán,19.10488547,-102.34886729
+2670858,Hotel Sin Nombre,Hotel,721112,micro,,,"Calle Hidalgo s/n, José María Morelos",Infiernillo (Morelos de Infiernillo),Arteaga,18.29139598,-101.90365425
+2670867,Hotel Infiernillo,Hotel,721112,micro,4431324321,,"Calle Adolfo Lopez Mateos s/n, José María Morelos",Infiernillo (Morelos de Infiernillo),Arteaga,18.28765157,-101.90325309
+2671766,Cabaña de Eventos Sin Nombre,Cabañas,721190,micro,,,"Calle B s/n, Francisco Loyola",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.97535598,-102.21556997
+2672837,Motel la Cima,Motel,721113,micro,,,,Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.98073493,-102.21280315
+2672847,Motel la Isla,Motel,721113,micro,,,"Boulevard Boulevard de las Islas s/n, Turin",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.97281176,-102.20438511
+2673157,Cabaña el Delfincito,Cabañas,721190,micro,7531022925,,"Calle Nicolas Romero 58, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95953028,-102.18978593
+2673899,Auto Hotel Pecatos,Motel,721113,micro,7535414882,,"Avenida Las Palmas 3001, Paraiso",La Orilla,Lázaro Cárdenas,17.98850451,-102.21948805
+2688879,Hotel y Restaurant Bar Brisas de Chapala,Hotel,721111,pequena,,,"Calle Aldama 6, Centro",La Palma (La Palma de Jesús),Venustiano Carranza,20.15026317,-102.75989247
+2691960,Hostal Casa del Sol,Cabañas,721190,micro,,,"Calle Primera Michoacan 43, San Lazaro",Pátzcuaro,Pátzcuaro,19.50725503,-101.61206836
+2720957,El Pasajero,Casa de huéspedes,721311,micro,,,"Calle Francisco I Madero s/n, Centro",Coalcomán de Vázquez Pallares,Coalcomán de Vázquez Pallares,18.77877078,-103.15452005
+2729177,Residencias Casa Innovia,Departamento amueblado,721312,pequena,,,,Zacapu,Zacapu,19.84619704,-101.77944561
+2742223,Hotel Camelinas,Hotel,721112,micro,,,"Calle Lazaro Cardenas 1306, Centro",Purépero de Echáiz,Purépero,19.90563659,-101.99704464
+2743075,Motel Mi Ranchito,Motel,721113,micro,3514067485,,"Carretera Nacional s/n, Primer Cuartel",Carapan,Chilchota,19.85148936,-102.03202283
+2748938,Estacionamiento las Americas,Hotel,721111,micro,4433146638,,"Calle Educación Pública 54, Cinco de Diciembre",Morelia,Morelia,19.6855764,-101.16537736
+2749245,Autohotel la Cascada,Motel,721113,micro,,,"Boulevard Libramiento Norte s/n, La Cascada",Tacámbaro de Codallos,Tacámbaro,19.24315282,-101.45574023
+2755451,Pension Curiel,Casa de huéspedes,721311,micro,4361041619,,"Carretera Morelia Zamora 360, El Cuinato",Zacapu,Zacapu,19.80617184,-101.78137764
+2767743,Estacionamiento Auxiliar Hotel Don Julio,Hotel,721111,micro,,,"Calle Licenciado Verdad Arteaga 266, Centro",Puruándiro,Puruándiro,20.08995472,-101.51771947
+6158390,Atlac,Hotel,721112,micro,7531163210,https://www.atlac.mx,"Calle Volcán Ajusco 193, Isla del Cayacal",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.97444256,-102.18764201
+6260189,Holiday Inn Express,Hotel,721111,mediana,,,"Circuito Periférico Paseo de la República (Sector Nueva España) (Avenida Camelinas) 5000, Ejidal Ocolusen",Morelia,Morelia,19.68716357,-101.1538002
+6266939,Hotel de Casablanca,Hotel,721111,grande,,https://www.hcasablanca.com.mx,"Calle Nicolás Bravo 475, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95996967,-102.19523761
+6266942,Hotel Posada del Carmen,Casa de huéspedes,721311,micro,,,"Calle Ingeniero Baltazar Muñoz Lumier 13, Centro",Tlalpujahua de Rayón,Tlalpujahua,19.8042347,-100.17443409
+6266956,Hotel Holiday Inn Morelia,Hotel,721111,mediana,,,"Circuito Periférico Paseo de la República (Sector Nueva España) (Avenida Camelinas) 3466, Ejidal Ocolusen",Morelia,Morelia,19.6875084,-101.15704238
+6266957,Hotel San Carlos,Casa de huéspedes,721311,micro,,,"Calle Melchor Ocampo 11, Centro",Tlalpujahua de Rayón,Tlalpujahua,19.80455662,-100.17215715
+6266959,Hotel Posada Familiar San Jorge,Casa de huéspedes,721311,micro,,,"Calle El Refugio 43, Centro",Tlalpujahua de Rayón,Tlalpujahua,19.80347558,-100.17410104
+6266961,Hotel Holiday Inn la Piedad,Hotel,721111,mediana,,https://www.ihg.com/holidayinn,"Calle Carretera Federal Libre la Piedad Guadalajara Km 2+500 s/n, Las Margaritas",La Piedad de Cabadas,La Piedad,20.3553619,-102.05685569
+6266964,Hotel Mansion del Cupatitzio,Hotel,721111,pequena,,https://www.hotelmansiondelcupatitzio.com,"Callejon Fray Juan de San Miguel 20, La Quinta",Uruapan,Uruapan,19.42977222,-102.07388631
+6266968,Hotel el Recuerdo,Hotel,721112,micro,4474785045,,"Calle Aldama 2, Primero",Contepec,Contepec,19.95554007,-100.16405371
+6266971,Hotel y Restauran la Rosa de Jerico,Hotel,721111,pequena,4437007103,,"Calle Álvaro Obregón 174, Centro",Maravatío de Ocampo,Maravatío,19.89270352,-100.44494092
+6266976,Hotel Quinta Antigua,Hotel,721111,pequena,,https://www.quintaantigua.com,"Calle Nicolás Bravo 235, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.96171852,-102.19660141
+6266992,Hotel Villamonarca Inn,Hotel,721111,micro,,,"Carretera Carretera Federal 15 Zitacuaro-morelia s/n, San Felipe los Alzati",Puerto de San Felipe (El Trébol),Zitácuaro,19.4846745,-100.36195761
+6266994,Hotel de la Soledad,Hotel,721111,grande,,https://www.hoteldelasoledad.com,"Calle Ignacio Zaragoza 90, Centro",Morelia,Morelia,19.70375554,-101.19331478
+6266996,Hotel Juarez,Hotel,721111,micro,,,"Calle Nacional 12, Primera de Juárez (La Capilla)",Mineral de Angangueo,Angangueo,19.61964039,-100.28543754
+6266998,Hospedaje Doña Anita,Casa de huéspedes,721311,micro,7861288917,,"Calle La Soledad 1, Centro",Senguio,Senguio,19.73352344,-100.35142791
+6266999,Hotel Tuxpan,Hotel,721111,micro,7861550858,,"Avenida Morelos Norte 307, Centro",Tuxpan,Tuxpan,19.57013228,-100.46513157
+6267001,Hotel Jardin,Hotel,721112,micro,,,"Calzada Pueblita 36, Tuxpan",Tuxpan,Tuxpan,19.56885302,-100.46482778
+6267002,Hotel Villa del Sol,Hotel,721111,pequena,,https://www.hotelvilladelsol.com.mx,"Avenida Morelos Norte 3257, La Soledad",Morelia,Morelia,19.72543567,-101.18446303
+6267003,Hotel San Carlos,Hotel,721112,micro,7151315468,,"Calle Ignacio Zaragoza 8, Centro",Ocampo,Ocampo,19.5821982,-100.33875739
+6267005,Hotel Posada Partenon,Hotel,721112,micro,4431003611,,"Calle Jose Maria Morelos Sur 32, Alto",Cuitzeo del Porvenir,Cuitzeo,19.96734888,-101.13995482
+6267014,Hotel Ocampo,Hotel,721111,micro,4471463236,,"Calle 5 de Mayo 46, Centro",Maravatío de Ocampo,Maravatío,19.89246019,-100.44257948
+6267022,Hotel Real de Zinapecuaro,Hotel,721112,micro,4433880411,,"Calzada Lazaro Cardenas 22, Felix Ireta",Zinapécuaro de Figueroa,Zinapécuaro,19.86260117,-100.83619315
+6267023,Hotel Jardin,Hotel,721112,micro,,,"Avenida Hidalgo 28, Centro",Zinapécuaro de Figueroa,Zinapécuaro,19.8600772,-100.82709424
+6267024,Hotel Real de Mendoza,Hotel,721112,micro,,,"Calle Dalia 71, Los Parajes",Zinapécuaro de Figueroa,Zinapécuaro,19.86166026,-100.83209166
+6267025,Hotel Camelinas,Hotel,721112,micro,4439231984,,"Calle Fresno 25, Los Parajes",Zinapécuaro de Figueroa,Zinapécuaro,19.86110141,-100.83137473
+6267027,Hotel Posada la Salud,Hotel,721112,micro,4432858650,,"Calle Independencia 2, Centro",Zinapécuaro de Figueroa,Zinapécuaro,19.85978625,-100.82653956
+6267028,Hotel Casa del Sol,Hotel,721112,micro,,,"Calle Allende 529, Centro",Zinapécuaro de Figueroa,Zinapécuaro,19.85568922,-100.82886686
+6267035,Hotel Hacienda Monarca,Hotel,721112,micro,,https://www.hotelhaciendamonarca.com.mx,"Calzada Lazaro Cardenas s/n, Centro",Zinapécuaro de Figueroa,Zinapécuaro,19.8611619,-100.83272739
+6267037,Hotel Paraiso,Hotel,721112,micro,,,"Calle Portal Matamoros s/n, Valle de Juarez",Valle de Juárez (Jeráhuaro),Zinapécuaro,19.88121725,-100.64299311
+6267039,Hotel Imperial,Hotel,721112,micro,,,"Avenida Morelos 5, Centro",Queréndaro,Queréndaro,19.81006139,-100.88428089
+6267040,Hotel Lupitas,Casa de huéspedes,721311,micro,4513520024,,"Calle Melchor Ocampo 6, Centro",Indaparapeo,Indaparapeo,19.7885557,-100.96907968
+6267046,Hotel Quiroga,Hotel,721112,micro,4431165163,https://www.hotelquiroga.com,"Avenida Vasco de Quiroga Poniente 340, Centro",Quiroga,Quiroga,19.66660149,-101.52643898
+6267047,Hotel Tarasco,Hotel,721111,pequena,,https://www.hoteltarascoquiroga.mx,"Calle Vasco de Quiroga Oriente 49, Centro",Quiroga,Quiroga,19.66461067,-101.52277421
+6267049,Howard Johnson Calle Real Morelia,Hotel,721111,mediana,,https://www.hjmorelia.com,"Calle Francisco I Madero Oriente 766, Centro",Morelia,Morelia,19.70300442,-101.18421238
+6267052,Hotel los Juaninos,Hotel,721111,mediana,,https://www.hoteljuaninos.com.mx,"Avenida Morelos Sur 39, Centro",Morelia,Morelia,19.70260767,-101.19154148
+6267054,Hotel Ojo de Agua,Hotel,721111,pequena,,https://www.ojodeaguahotel.com,"Carretera Carretera Mexico Guadalajara 213, Las Fuentes",Ciudad Hidalgo,Hidalgo,19.691976,-100.56950939
+6267059,Hotel Plaza,Hotel,721112,micro,,,"Calle Leandro Valle 10, Centro",Ciudad Hidalgo,Hidalgo,19.69025082,-100.55537496
+6267061,Hotel las Fuentes,Hotel,721112,pequena,,,"Avenida Francisco I. Madero Oriente 5870, Ciudad Industrial",Morelia,Morelia,19.72535495,-101.14219594
+6267062,Hotel Susy,Hotel,721112,micro,7861293659,,"Avenida Morelos Oriente 1, Centro",Ciudad Hidalgo,Hidalgo,19.68851979,-100.55514427
+6267064,Bestwestern Hotel Posada de Don Vasco,Hotel,721111,mediana,,https://www.bestwesternpatzcuaro.com.mx,"Avenida Lázaro Cárdenas 450, Centro",Pátzcuaro,Pátzcuaro,19.53181828,-101.61161159
+6267066,Hotel Central,Hotel,721112,micro,,,"Calle Mariano Abasolo 12, Centro",Ciudad Hidalgo,Hidalgo,19.69002201,-100.554014
+6267067,Hotel San Carlos,Hotel,721112,micro,7861100193,,"Calle Cuauhtemoc Norte 22, Centro",Ciudad Hidalgo,Hidalgo,19.688871,-100.55496223
+6267068,Hotel Pacifico,Hotel,721112,micro,7861151250,,"Privada Ignacio Zaragoza 3, Centro",Ciudad Hidalgo,Hidalgo,19.68748932,-100.55367323
+6267070,Hotel Romo,Hotel,721111,micro,7861000619,https://www.hotelromo.mx,"Calle Mariano Abasolo 42, Centro",Ciudad Hidalgo,Hidalgo,19.68765155,-100.55414346
+6267071,Hotel Morenita,Hotel,721111,pequena,4433691102,https://www.hotelmorenita.com,"Avenida Juárez 60, Centro",Ciudad Hidalgo,Hidalgo,19.68925041,-100.55161039
+6267072,Hotel Fenix,Hotel,721112,micro,,,"Avenida Francisco I Madero Poniente 537, Centro",Morelia,Morelia,19.7030859,-101.19670091
+6267074,Hotel Alcatraz,Hotel,721112,micro,,,"Calle Morelos 1, Bella Vista de la Cruz",Tiquicheo,Tiquicheo de Nicolás Romero,18.90213997,-100.73738205
+6267077,Hotel Paraiso,Hotel,721112,micro,,,"Calle San Jose Purua s/n, Michoacana",Huetamo de Núñez,Huetamo,18.63990768,-100.8966244
+6267080,Hotel Cosmos,Hotel,721111,pequena,,,"Calle Allende 11, Colonia del Centro",Huetamo de Núñez,Huetamo,18.62771466,-100.900625
+6267087,Motel Caminos de Michoacan,Motel,721113,micro,7671312335,,"Avenida Batallon de Huetamo s/n, Loma de las Rosas",Huetamo de Núñez,Huetamo,18.6240046,-100.88722753
+6267089,Hotel Casa Magna,Hotel,721112,micro,4433247281,,"Calle Licenciado Carlos Galvez Betancourt 1020, Isaac Arriaga",Morelia,Morelia,19.71146738,-101.17015203
+6267090,Hotel del Angel,Hotel,721111,micro,,,"Avenida Francisco I. Madero Sur 63, San Antonio Tomatlán",Huetamo de Núñez,Huetamo,18.61826206,-100.89999316
+6267091,Hotel Monarca,Hotel,721111,pequena,,,"Avenida Vicente Riva Palacio s/n, Camelinas",Vicente Riva Palacio,San Lucas,18.37634157,-100.65689001
+6267093,Hotel Cuauhtemoc,Hotel,721112,micro,,,"Calle Cuauhtemoc Oriente 3, Cuauhtemoc",Heróica Zitácuaro,Zitácuaro,19.43904103,-100.35483045
+6267094,Hotel Plaza Uruapan,Hotel,721111,grande,,https://www.hotelplazauruapan.com,"Calle Ocampo 64, Centro",Uruapan,Uruapan,19.42176543,-102.0641862
+6267098,Hotel Campestre Torre Blanca,Hotel,721111,pequena,,https://www.campestretorreblanca.mx,"Avenida Periodismo (José Tocaven Lavín) 2555, Jardines de Torremolinos",Morelia,Morelia,19.67930901,-101.22564233
+6267100,Motel Montecarlo,Motel,721113,pequena,,,"Circuito Periferico Paseo de la Republica Sector Independencia 14125, La Huerta",Morelia,Morelia,19.67627738,-101.21827085
+6267104,Posada San Rafael,Casa de huéspedes,721311,micro,7151238821,,"Calle Ignacio Zaragoza Poniente 6, Ignacio Zaragoza",Heróica Zitácuaro,Zitácuaro,19.43488973,-100.35859459
+6267105,Hotel Lorenz,Hotel,721111,micro,,https://hotellorenz.com,"Calle Leandro Valle Norte 14, Cuauhtemoc",Heróica Zitácuaro,Zitácuaro,19.43720859,-100.35498897
+6267108,Hotel Punta Galeria,Hotel,721111,pequena,,https://www.hotelpuntagaleria,"Circuito Periférico Paseo de la República (Sector Nueva España) (Avenida Camelinas) 58, Lomas de Santa María",Morelia,Morelia,19.68217235,-101.19195704
+6267109,Hotel Carolina,Hotel,721112,micro,,,"Calle Lerdo de Tejada Poniente 8, Centro",Heróica Zitácuaro,Zitácuaro,19.43609729,-100.35711869
+6267119,Hotel Dorado,Hotel,721112,micro,4433161970,,"Avenida Francisco I Madero Poniente 3796, Adolfo Lopez Mateos",Morelia,Morelia,19.70308308,-101.2309324
+6267121,Motel Milan,Motel,721113,micro,,,"Calle Ingeniero Lauro Gallardo 147, Elias Perez Avalos",Morelia,Morelia,19.7133377,-101.16858579
+6267125,El Paraiso,Hotel,721111,micro,5584783977,,,Epitacio Huerta,Epitacio Huerta,20.1343144,-100.29632695
+6267134,Hotel Galeria Suites,Hotel,721112,micro,4433689039,https://www.galeriassuites.com,"Calle Doctor Miguel Silva G 71, Centro",Morelia,Morelia,19.70353309,-101.18668557
+6267140,Hotel San Marcos,Hotel,721112,micro,4432690936,,"Calle Vicente Riva Palacio 74, Centro",Morelia,Morelia,19.70370415,-101.20007367
+6267141,Turotel,Hotel,721111,pequena,,https://www.turotel.com.mx,"Avenida Acueducto (Salida a Mil Cumbres) 3805, Fray Antonio de Lisboa",Morelia,Morelia,19.69497058,-101.14898993
+6267153,Hostal Iurixeo,Cabañas,721190,micro,,,"Calle Madrigal de las Altas Torres s/n, Santa Fe de la Laguna",Santa Fe de la Laguna,Quiroga,19.67453099,-101.55587942
+6267157,Hotel Camino del Sol,Hotel,721112,micro,4474782307,,"Circuito Libramiento Sur 107, Francisco I Madero",Maravatío de Ocampo,Maravatío,19.89113071,-100.43673569
+6267158,Motel Monarca,Motel,721113,micro,,,,Morelos,Morelia,19.64600901,-101.24921639
+6267159,Hotel Jorges,Motel,721113,micro,,,"Circuito Periferico Paseo de la Republica Sector Revolucion 147, Elias Perez Avalos",Morelia,Morelia,19.7130423,-101.16894945
+6267160,Hotel el Mineral,Hotel,721112,micro,,,"Calle Libertad 47, Centro",Tlalpujahua de Rayón,Tlalpujahua,19.80409331,-100.17198622
+6267161,Hotel Restaurant Bar los Arcos,Hotel,721111,pequena,,https://www.hotellosarcostlalpujahua.com,"Calle Trigueros s/n, Trigueros",Tlalpujahua de Rayón,Tlalpujahua,19.80289487,-100.16851829
+6267163,Hotel Señor del Monte,Hotel,721112,micro,,,"Calle Ignacio Lopez Rayon 1, Trigueros",Tlalpujahua de Rayón,Tlalpujahua,19.80557604,-100.16822003
+6267164,Hotel Rancho San Cayetano,Hotel,721111,pequena,7151432310,,"Boulevard Carretera a Huetamo Km 2+300 s/n, Coatepec de Morelos",Heróica Zitácuaro,Zitácuaro,19.42641219,-100.38115703
+6267165,Hotel Casa Galeana,Hotel,721112,micro,4433114526,https://hotel-casa-galeana.michoacan.travel,"Calle Galeana 507, Centro",Morelia,Morelia,19.69846779,-101.19529786
+6267167,Motel Palmas Morelia,Motel,721113,micro,,,"Avenida Francisco I Madero Poniente 2000, Agustin Arriaga Rivera",Morelia,Morelia,19.70203056,-101.21322063
+6267172,Hotel Onix,Hotel,721112,micro,,,"Calle Calle del Transporte 188, Ampliacion Felix Arreguin",Morelia,Morelia,19.72062628,-101.22497742
+6267173,Auto Hotel Pie de la Sierra,Motel,721113,micro,,,"Circuito Periferico Paseo de la Republica Sector Republica 7180, La Quemada",Morelia,Morelia,19.70605029,-101.23929819
+6267175,Motel el Quinto Sol,Motel,721113,micro,4433709809,,"Circuito Periferico Paseo de la Republica Sector Republica 541, Ricardo Flores Magon",Morelia,Morelia,19.70468319,-101.24456402
+6267176,Hotel Rincon Tarasco,Hotel,721112,micro,4434428525,https://www.hotelrincontarasco.com,"Avenida Guadalupe Victoria 330, Centro",Morelia,Morelia,19.70592215,-101.19800154
+6267177,Hotel Plaza Mayor,Hotel,721112,micro,,,"Calle Portal el Triunfo 3, Centro",Tlalpujahua de Rayón,Tlalpujahua,19.80495303,-100.17337297
+6267178,Motel Mandarina,Motel,721113,micro,,,"Avenida Francisco I Madero Poniente 5455, Ciudad Jardin",Morelia,Morelia,19.6982111,-101.25272781
+6267179,Hotel Mansion Venus,Hotel,721112,micro,,,"Avenida Morelos Poniente 149, Barranca Seca",Ciudad Hidalgo,Hidalgo,19.69753914,-100.58740742
+6267180,Hotel Bar Villa Minera,Hotel,721111,micro,4471155010,https://www.villaminera.com,"Calle 5 de Mayo 7, Centro",Tlalpujahua de Rayón,Tlalpujahua,19.8050908,-100.1720695
+6267182,Hotel Restaurante de la Parroquia,Hotel,721111,pequena,7225462569,,"Otro(especifique) Del Fresno 15, Centro",Tlalpujahua de Rayón,Tlalpujahua,19.80440733,-100.17525904
+6267184,Hotel la Margarita,Hotel,721111,pequena,,,"Avenida Morelos 83, Primera el Rescate",Mineral de Angangueo,Angangueo,19.61362597,-100.29321793
+6267187,Hotel Franco,Hotel,721112,micro,,,"Calle Vicente Guerrero 155, Centro",Villa Madero,Madero,19.39310351,-101.27913115
+6267188,Hotel Panorama,Hotel,721112,micro,,,"Prolongacion Corregidora 300, Centro",Tacámbaro de Codallos,Tacámbaro,19.23782705,-101.46244908
+6267189,Hotel el Molino By Quinta Sauz,Hotel,721112,micro,4591240507,,"Calle Jose Maria Morelos 450, Centro",Tacámbaro de Codallos,Tacámbaro,19.23967419,-101.45953445
+6267190,Posada Madero,Casa de huéspedes,721311,micro,,,"Avenida Madero Poniente 213, Centro",Tacámbaro de Codallos,Tacámbaro,19.23591779,-101.46150819
+6267191,Hotel Posada Fatima,Hotel,721112,micro,,,"Calle General Nicolas de Regules 104, Centro",Tacámbaro de Codallos,Tacámbaro,19.23509527,-101.46052116
+6267192,Hotel del Bosque,Hotel,721112,micro,,,"Calle Francisco J Mugica 146, Centro",Tacámbaro de Codallos,Tacámbaro,19.23515432,-101.45668825
+6267193,Posada Florida Hotel,Casa de huéspedes,721311,micro,,,"Avenida General Lazaro Cardenas 419, Centro",Tacámbaro de Codallos,Tacámbaro,19.23500646,-101.45478013
+6267194,Hotel la Parroquia,Hotel,721112,micro,4591220738,,"Calle Portal Doctor Miguel Silva 34, Centro",Tacámbaro de Codallos,Tacámbaro,19.23549481,-101.45825268
+6267197,Hotel Pedraza,Hotel,721112,micro,,,"Avenida Morelos 3, Centro",Ario de Rosales,Ario,19.20865781,-101.70894544
+6267198,Hotel Meson de la Salud,Hotel,721112,micro,,,"Calle Madero 174, Centro",Ario de Rosales,Ario,19.20793578,-101.70738742
+6267200,Hotel Venus,Hotel,721112,micro,,,"Calle Emiliano Zapata 336, Lazaro Cardenas",Puruarán,Turicato,19.09686399,-101.51955158
+6267201,Hotel Beltran,Hotel,721112,micro,,,"Calle Alvaro Obregon s/n, La Huerta",Turicato,Turicato,19.05447336,-101.42085324
+6267202,Hotel la Parroquia,Hotel,721111,pequena,4431468519,,"Avenida José María Morelos Oriente s/n, Huaracha",Pedernales,Tacámbaro,19.14410479,-101.46395388
+6267203,Hostal Tzipekua,Cabañas,721190,micro,,,"Calle Portal Petambuti s/n, Santa Fe de la Laguna",Santa Fe de la Laguna,Quiroga,19.67290549,-101.55651501
+6267204,Hostal Echeri,Cabañas,721190,micro,,,"Calle Sicuirancha s/n, Santa Fe de la Laguna",Santa Fe de la Laguna,Quiroga,19.67284013,-101.55491947
+6267205,Hotel el Viajero,Hotel,721112,micro,,,"Calle Arista 145, Centro",Ario de Rosales,Ario,19.20593283,-101.70852009
+6267206,Hotel Posada San Pablo,Hotel,721112,micro,,,"Calle Silviano Carrillo Cardenas 15, Centro",Pátzcuaro,Pátzcuaro,19.51812129,-101.60738235
+6267207,Hotel Posada Ahumada,Hotel,721112,micro,,,"Calle Ahumada 76, Centro",Pátzcuaro,Pátzcuaro,19.51754146,-101.60670186
+6267208,Hotel Posada Janitzio,Hotel,721112,micro,,,"Calle Tejerias 2, Centro",Pátzcuaro,Pátzcuaro,19.51678324,-101.60749786
+6267209,Hotel Posada los Angeles,Hotel,721112,micro,,,"Callejon Titere 17, Centro",Pátzcuaro,Pátzcuaro,19.51769167,-101.60788269
+6267213,Hotel Mintzita,Hotel,721112,micro,,,"Calle Jose Maria Morelos 11, Ibarra",Pátzcuaro,Pátzcuaro,19.53799048,-101.61730398
+6267214,Hotel Oasis,Hotel,721112,micro,,,"Calle Portal Allende 144, Centro",Santa Clara del Cobre,Salvador Escalante,19.40608442,-101.63910308
+6267215,Hotel Restaurant Real del Cobre,Hotel,721111,micro,,,"Calle Ignacio Allende 19, Centro",Santa Clara del Cobre,Salvador Escalante,19.40588982,-101.63966684
+6267216,Hotel y Restaurante Camino Real de Santa Clara,Hotel,721111,pequena,,,"Avenida Generalísimo Morelos 213, Centro",Santa Clara del Cobre,Salvador Escalante,19.40502183,-101.64237883
+6267217,Hotel Posada de la Salud,Casa de huéspedes,721311,micro,4341001682,,"Calle Benigno Serrato 9, Centro",Pátzcuaro,Pátzcuaro,19.51426516,-101.6056385
+6267219,Hotel Estrella,Hotel,721112,micro,,,"Calle Privada de Lazaro Cardenas 2, Morelos",Pátzcuaro,Pátzcuaro,19.54028655,-101.61638178
+6267220,Hotel Posada de la Rosa,Hotel,721112,micro,,,"Calle Portal Benito Juarez 29, Centro",Pátzcuaro,Pátzcuaro,19.51622619,-101.60928743
+6267221,Hotel Concordia,Hotel,721112,micro,,,"Calle Portal Benito Juárez 31, Centro",Pátzcuaro,Pátzcuaro,19.51614847,-101.60931291
+6267222,Hotel Patzcuaro,Hotel,721112,micro,,,"Calle Dn Feliciano Ramos 9, Centro",Pátzcuaro,Pátzcuaro,19.51603341,-101.61042838
+6267223,Hotel Posada la Terraza,Hotel,721112,micro,,,"Calle Benito Juarez 46, Centro",Pátzcuaro,Pátzcuaro,19.51673897,-101.61479167
+6267224,Hotel Espejo,Hotel,721112,micro,4341009915,,"Calle Espejo 29, Centro",Pátzcuaro,Pátzcuaro,19.51546804,-101.61363105
+6267225,Hotel Pedregal de San Luis,Hotel,721112,micro,,,"Calle Benito Juarez 14, Centro",Pátzcuaro,Pátzcuaro,19.5159855,-101.61195664
+6267231,Hotel Valmen,Hotel,721112,micro,,https://www.patzcuaro.org,"Calle Padre Lloreda 34, Centro Patzcuaro",Pátzcuaro,Pátzcuaro,19.5162647,-101.60762639
+6267232,Hotel San Gabriel,Hotel,721112,micro,,,"Calle Navarrete 57, Centro",Pátzcuaro,Pátzcuaro,19.51182673,-101.61213107
+6267233,Hotel Posada San Rafael,Hotel,721112,micro,,,"Calle Ponce de Leon 13, Centro Patzcuaro",Pátzcuaro,Pátzcuaro,19.51300595,-101.60963402
+6267235,Motel Colibri,Motel,721113,micro,,,"Periferico Periferico a Sicartsa s/n, Ejidal 1Ro de Mayo",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.96111519,-102.21754983
+6267236,Hotel el Artillero,Hotel,721112,micro,,,"Calle Primera de Ibarra 22, Centro",Pátzcuaro,Pátzcuaro,19.51456773,-101.61141694
+6267237,Hotel Rincon de Josefa,Hotel,721112,micro,,,"Calle Iturbe 29, Centro",Pátzcuaro,Pátzcuaro,19.51514636,-101.6087987
+6267238,Hotel Real de Patzcuaro,Hotel,721112,micro,,,"Circuito General Ignacio Zaragoza 43, Centro",Pátzcuaro,Pátzcuaro,19.50973535,-101.61635897
+6267239,Hotel Maria Margarita,Hotel,721112,micro,,https://www.hotelmariamargarita.com,"Calle Corregidora 79, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95810692,-102.19459179
+6267240,Hotel Historia,Hotel,721111,micro,,https://www.hotelhistroria.com.mx,"Calle Allende 329, Centro",Morelia,Morelia,19.70191027,-101.19471245
+6267241,Hotel Sol del Pacifico,Hotel,721111,pequena,,https://www.hotelsoldelpacifico,"Calle General Francisco Javier Mina 178, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95755234,-102.19689939
+6267242,Hotel Reyna Pio,Hotel,721112,micro,,,"Calle Corregidora 78, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95805467,-102.19447041
+6267245,El Mezon,Hotel,721112,micro,,,"Avenida Vicente Guerrero 46, Centro",Puruándiro,Puruándiro,20.0882796,-101.5185758
+6267248,Hotel Delfin Playa Azul,Hotel,721112,micro,,,"Calle Venustiano Carranza s/n, Centro",Playa Azul,Lázaro Cárdenas,17.98313491,-102.35479473
+6267250,Hotel Ana,Hotel,721112,micro,,,"Calle Francisco J Mugica 700, Huandacareo",Huandacareo,Huandacareo,19.98420043,-101.28105982
+6267255,Hotel Galeana,Hotel,721112,micro,4531043488,,"Calle Doctor José María Cos 62, Centro",Apatzingán de la Constitución,Apatzingán,19.08485032,-102.35598865
+6267257,Motel Bugambilias,Motel,721113,micro,,,"Calle Embarcacion 82, El Lago I",Morelia,Morelia,19.72774899,-101.21044299
+6267258,Hotel 2000,Hotel,721112,micro,4433206344,,"Circuito Periferico Paseo de la Republica Sector Republica 2905, El Lago I",Morelia,Morelia,19.72651634,-101.21023911
+6267260,Hostal Purepecha,Cabañas,721190,micro,5536745002,,"Calle Ireticatame Oriente s/n, Santa Fe de la Laguna",Santa Fe de la Laguna,Quiroga,19.67134306,-101.55434069
+6267261,Hotel la Purisima,Hotel,721112,micro,,,"Boulevard Lazaro Cardenas 174, La Piedad",La Piedad de Cabadas,La Piedad,20.34366307,-102.02359262
+6267262,Hotel Posada del Sol,Hotel,721111,pequena,4535311341,,"Avenida Constitución de 1814 Norte 7, Centro",Apatzingán de la Constitución,Apatzingán,19.0882173,-102.35437524
+6267266,Hotel California,Hotel,721112,micro,,,"Avenida Camino Real 237, Lázaro Cárdenas",Pajacuarán,Pajacuarán,20.11914381,-102.5802872
+6267267,Hotel San Martin,Hotel,721112,micro,,,"Calle Guerrero 39, San Martín",Chavinda,Chavinda,20.00396194,-102.46354291
+6267268,Hotel Qualitel,Hotel,721111,micro,,,"Calle Eduardo Ruíz 531, Centro",Morelia,Morelia,19.70553705,-101.19634044
+6267270,Hotel Frontera,Hotel,721112,micro,,,"Avenida General Carlos Salazar Oriente 789, Las Colonias (Asentamiento Humano Irregular)",Tangancícuaro de Arista,Tangancícuaro,19.88561553,-102.20114669
+6267271,Posada Tzintzuntzan,Casa de huéspedes,721311,micro,,,"Avenida Lazaro Cardenas 89, Tercer",Tzintzuntzan,Tzintzuntzan,19.63090825,-101.5753026
+6267272,Hotel Posada las Rosas,Hotel,721112,micro,,,"Calle Nacional 599, Las Colonias (Asentamiento Humano Irregular)",Tangancícuaro de Arista,Tangancícuaro,19.89090889,-102.20121342
+6267273,Posadas los Olivos,Casa de huéspedes,721311,micro,,,"Avenida Lazaro Cardenas s/n, Centro",Tzintzuntzan,Tzintzuntzan,19.62490767,-101.57774313
+6267275,Hotel Paniagua,Hotel,721112,micro,,,"Calle Miguel Hidalgo 113, Centro",Arteaga,Arteaga,18.35781566,-102.29064703
+6267276,Hotel Sin Nombre,Hotel,721112,micro,,,"Calle Libramiento Sur 35, Lomas de Manantial",Jacona de Plancarte,Jacona,19.94107887,-102.32432832
+6267280,Cantera Diez Hotel Boutique,Hotel,721111,pequena,,https://www.hotelcanteradiez.com,"Calle Benito Juárez 63, Centro",Morelia,Morelia,19.70348023,-101.19250422
+6267283,Casa de Huespedes,Casa de huéspedes,721311,micro,3931059467,,"Avenida Vasco de Quiroga Sur 9, Centro",Vista Hermosa de Negrete,Vista Hermosa,20.273013,-102.47543536
+6267285,Hotel el Tarasco,Hotel,721111,pequena,,,"Avenida Independencia 2, Centro",Uruapan,Uruapan,19.42223453,-102.06424791
+6267286,Hotel Paradise,Hotel,721112,micro,,,"Calle Prolongacion Francisco J Mujica s/n, Lázaro Cárdenas",San Pedro Cahro,Venustiano Carranza,20.10971659,-102.6603529
+6267288,Grand Hotel de Sahuayo,Hotel,721112,micro,,,"Calle Guadalupe Victoria 64, Centro",Sahuayo de Morelos,Sahuayo,20.05746363,-102.72299397
+6267289,Hotel California,Hotel,721111,micro,,https://www.hotelcaliforniaupn.com,"Calzada Benito Juárez 297, Riyitos",Uruapan,Uruapan,19.43103385,-102.06821551
+6267293,Hotel Posada Mexico,Motel,721113,micro,,,"Calle Sor Juana Ines de la Cruz 167, Centro",Sahuayo de Morelos,Sahuayo,20.05508243,-102.72535711
+6267294,Hotel la Fuente Estacionamiento,Hotel,721111,micro,,,"Calle Francisco Sarabia 65, Ramón Farías",Uruapan,Uruapan,19.41817692,-102.05168079
+6267295,Hotel la Fuente,Hotel,721111,pequena,,https://www.hotellafuenteuruapan.com,"Calle Francisco Sarabia 67, Ramón Farías",Uruapan,Uruapan,19.41818127,-102.0517125
+6267298,Hotel Marbella,Hotel,721112,pequena,,,"Avenida Las Palmas s/n, 15 de Enero",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.98288716,-102.2147916
+6267301,Hotel Cotija,Hotel,721112,micro,,,"Calle Benito Juarez 80, Centro",Cotija de la Paz,Cotija,19.80964365,-102.70288354
+6267302,Hotel Continental,Hotel,721111,pequena,,,"Calle Nicolás Bravo 32, Centro",Uruapan,Uruapan,19.41781834,-102.06065339
+6267303,Hotel Regis,Hotel,721111,micro,,https://www.hotelregis.com.mx,"Calle Reforma 4, Centro",Uruapan,Uruapan,19.41756796,-102.06351967
+6267304,Hotel Principal,Hotel,721112,micro,3531243032,,"Avenida Presidente Lazaro Cardenas Norte 80, Centro",Jiquilpan de Juárez,Jiquilpan,19.99330135,-102.71745914
+6267305,Hotel Regis,Hotel,721111,pequena,,https://www.hotelregisuruapan.com,"Avenida Emilio Carranza (Portal Carrillo) 12, Centro",Uruapan,Uruapan,19.4208676,-102.0636871
+6267306,Hotel As de Oro,Hotel,721112,micro,7531020974,,"Calle Queretaro s/n, Del Carmen",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.97577485,-102.20851929
+6267309,Estacionamiento del Nuevo Hotel Alameda,Hotel,721112,micro,,https://www.nuevohotelalamedauruapan.com,"Calle Alvaro Obregon 6, Centro",Uruapan,Uruapan,19.42008338,-102.06094271
+6267310,Hotel Real de Uruapan,Hotel,721111,pequena,,https://www.hotelrealdeuruapan.com.mx,"Calle Nicolás Bravo 110, Centro",Uruapan,Uruapan,19.41840148,-102.06253436
+6267311,Hotel Presidente,Hotel,721112,micro,,,"Calle General Ornelas Poniente 116, Centro",Jiquilpan de Juárez,Jiquilpan,19.99072791,-102.72058681
+6267312,Hotel Villa Paraiso,Hotel,721112,micro,3531321316,,"Avenida Valle Nacional 2, Linda Vista",Jiquilpan de Juárez,Jiquilpan,19.98538546,-102.69817081
+6267313,Hotel la Cima,Hotel,721112,micro,,,"Calle Pinabetes 100, Jardines de San Juan",Los Reyes de Salgado,Los Reyes,19.5968848,-102.47021579
+6267315,Hotel Americas,Hotel,721112,micro,,,"Avenida Las Americas 43, Morelos",Uruapan,Uruapan,19.41606649,-102.05565939
+6267317,Hotel Plaza,Hotel,721112,micro,,,"Calle Francisco Javier Mina s/n, Centro",Los Reyes de Salgado,Los Reyes,19.58993871,-102.47502969
+6267318,Hotel Oasis,Hotel,721112,micro,,,"Calle Morelos 239, Centro",Los Reyes de Salgado,Los Reyes,19.58519621,-102.47043334
+6267319,Hotel San Jorge,Hotel,721112,pequena,,https://www.hotelsanjorgezamora.mx,"Avenida Virrey de Mendoza Oriente 702, Jardinada",Zamora de Hidalgo,Zamora,19.9753699,-102.2873254
+6267320,Hotel Zamora,Hotel,721112,micro,,,"Calle Martinez de Navarrete s/n, Jardines de Catedral",Zamora de Hidalgo,Zamora,19.97920503,-102.28603838
+6267321,Hotel 5 de Mayo,Hotel,721112,micro,,,"Avenida 5 de Mayo 352, Corregidora",Zamora de Hidalgo,Zamora,19.98171497,-102.28326305
+6267324,Hotel Corregidora,Hotel,721112,micro,3511338562,,"Calle Corregidora Poniente 106, Centro",Zamora de Hidalgo,Zamora,19.98270049,-102.285755
+6267327,Hotel Posada Fenix,Hotel,721112,micro,,,"Calle Corregidora Poniente 54, Centro",Zamora de Hidalgo,Zamora,19.98299994,-102.2868997
+6267328,Posada Juarez,Casa de huéspedes,721311,micro,,,"Calle Patzcuaro 413, Jardines de Catedral",Zamora de Hidalgo,Zamora,19.98085568,-102.28199307
+6267329,Hotel Amalia,Hotel,721112,micro,3515158424,,"Avenida Miguel Hidalgo Sur 194, Centro",Zamora de Hidalgo,Zamora,19.98487467,-102.28445379
+6267331,Posada Motel Baños el Refugio y Chon,Casa de huéspedes,721311,micro,3531061641,,"Calle Independencia 321, Centro",San José de Gracia,Marcos Castellanos,19.99255181,-103.02061814
+6267333,Hotel y Restaurante los Pinos,Hotel,721111,pequena,3511212572,,"Avenida Benito Juárez 838, La Lima",Zamora de Hidalgo,Zamora,19.97611115,-102.2710142
+6267335,Auto Hotel Campestre,Motel,721113,micro,3321543144,,,Maravatío de Ocampo,Maravatío,19.91091301,-100.46357434
+6267337,Magno Hotel y Suites,Motel,721113,pequena,4433230173,,"Avenida Francisco I Madero Oriente 5410, Ciudad Industrial",Morelia,Morelia,19.72167744,-101.14713964
+6267353,Hotel Lupita,Hotel,721112,micro,4713661119,,"Calle 5 de Mayo 31, Centro",Purépero de Echáiz,Purépero,19.90971403,-102.006565
+6267362,Hotel Fiesta Purepecha,Hotel,721112,micro,,,"Calle Guadalupe Victoria 105, Centro",Quiroga,Quiroga,19.66286782,-101.52331349
+6267363,Hotel Royal Imperio,Hotel,721112,micro,,,"Calle Lazaro Cardenas Sur 463, Quiroga",Quiroga,Quiroga,19.66100722,-101.52515631
+6267365,Hotel Avenida,Hotel,721112,micro,4433481506,,"Calle General Negrete 365, Centro",Zacapu,Zacapu,19.81809537,-101.78579362
+6267367,Hotel Plaza,Hotel,721112,micro,,,"Calle Francisco I Madero 102, Centro",Zacapu,Zacapu,19.81836841,-101.7919544
+6267368,Hotel Alicia,Hotel,721112,micro,,,"Calle Allende 191, Centro",Zacapu,Zacapu,19.81558599,-101.79270406
+6267369,Hotel Azteca,Hotel,721112,micro,,,"Calle Allende 226, Centro",Zacapu,Zacapu,19.81552906,-101.79285206
+6267372,Hotel Arias de los Reyes,Hotel,721111,micro,,https://www.hotelariasloreyes.com,"Calle Allende Norte 17, Centro",Los Reyes de Salgado,Los Reyes,19.58904291,-102.47299649
+6267375,Hotel Andrade,Hotel,721112,micro,4521209132,,"Avenida Lazaro Cardenas 306, Santo Santiago",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.41570539,-102.12601728
+6267376,Hotel Anguiano,Hotel,721112,micro,,,"Avenida Lazaro Cardenas 1, Santo Santiago",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.4160843,-102.12870064
+6267377,Hotel Victoria,Hotel,721112,micro,,,"Avenida Lazaro Cardenas 26, Santo Santiago",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.41606011,-102.12853782
+6267378,Hotel Nuevo San Juan,Hotel,721112,micro,,,"Calle Americas s/n, Santo Santiago",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.41560336,-102.12856659
+6267382,Hotel Melinda,Hotel,721111,micro,,,"Avenida 20 de Noviembre 239, Centro",Paracho de Verduzco,Paracho,19.64610197,-102.04777008
+6267384,Hotel San Francisco,Hotel,721112,micro,,,"Prolongacion 20 de Noviembre 361, Villa Artesanal",Paracho de Verduzco,Paracho,19.63838417,-102.05321905
+6267389,Hotel Johany,Hotel,721112,micro,,,"Prolongacion Panama 1, Camelinas",Tepalcatepec,Tepalcatepec,19.19514897,-102.84307557
+6267390,Hotel Palmira,Hotel,721112,pequena,3535330091,,"Avenida Presidente Lazaro Cardenas Norte 200, Centro",Jiquilpan de Juárez,Jiquilpan,19.98872476,-102.71716042
+6267391,Posada Martinez,Casa de huéspedes,721311,micro,,,"Calle Ignacio Altamirano 16, Centro",Tepalcatepec,Tepalcatepec,19.19101136,-102.84510043
+6267392,Hotel Bautista,Hotel,721112,micro,,,"Calle Vicente Guerrero s/n, Centro",Coalcomán de Vázquez Pallares,Coalcomán de Vázquez Pallares,18.77835505,-103.15961767
+6267393,Hotel Coalcoman,Hotel,721112,micro,,,"Calle Francisco I Madero 130, Centro",Coalcomán de Vázquez Pallares,Coalcomán de Vázquez Pallares,18.77804385,-103.1582899
+6267398,Hotel Plaza San Jorge,Hotel,721112,micro,,,"Calle Ignacio Zaragoza Norte s/n, Centro",Coalcomán de Vázquez Pallares,Coalcomán de Vázquez Pallares,18.77803439,-103.16010036
+6267399,Hotel Victoria,Hotel,721112,micro,,,"Avenida Melchor Ocampo 4179, Pie de Casa",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.97415713,-102.233958
+6267402,Hotel Maria Elena,Hotel,721112,micro,,,"Calle Alvaro Obregon 143, Centro",Coalcomán de Vázquez Pallares,Coalcomán de Vázquez Pallares,18.77709402,-103.1614175
+6267403,Hotel Villa Victoria,Casa de huéspedes,721311,micro,,,"Calle Emiliano Zapata 7, Centro",Villa Victoria,Chinicuila,18.75881973,-103.36755271
+6267406,Hotel la Dueña,Hotel,721112,micro,,,"Privada Libertad s/n, Los Arcos",Coahuayana de Hidalgo,Coahuayana,18.69176454,-103.66548546
+6267408,Hotel Real de Aguililla,Hotel,721112,micro,3451227571,,"Avenida Benito Juarez 67, Centro",Aguililla,Aguililla,18.73475324,-102.78728243
+6267410,Hotel Posada Navideña,Hotel,721112,micro,,,"Avenida Constitucion Sur s/n, El Ranchito",El Ranchito,Coahuayana,18.68468894,-103.66711389
+6267411,Hotel Caballero,Hotel,721112,micro,4531058623,,"Calle Reforma 46, Centro",Aguililla,Aguililla,18.73528487,-102.78632248
+6267413,Hotel Campestre,Hotel,721112,micro,,,"Calle Genaro Chacon Ramirez 701, El Laurel",Tepalcatepec,Tepalcatepec,19.17441726,-102.84822529
+6267414,Hotel del Centro,Hotel,721112,micro,4531119131,,"Calle Doctor Miguel Silva 268, Centro",Tepalcatepec,Tepalcatepec,19.18880539,-102.84468488
+6267416,Hotel California Plaza,Hotel,721112,micro,,,"Calle Morelos 37, Centro",Pajacuarán,Pajacuarán,20.11671126,-102.56549009
+6267417,Hotel Palacio,Hotel,721112,micro,,,"Calzada Benito Juarez 121, Ramon Farias",Uruapan,Uruapan,19.42606462,-102.05358329
+6267418,Hotel Atzimba,Hotel,721112,micro,4525244153,,"Calle Francisco Villa 89, Centro",Uruapan,Uruapan,19.42018276,-102.05517622
+6267419,Hotel Real Purepecha,Hotel,721111,pequena,,https://www.realpurepecha.com.mx,"Avenida Morelos 39, Centro",Zacapu,Zacapu,19.81839336,-101.79155564
+6267421,Hotel Ecologico los Cedros,Hotel,721112,micro,,,"Calle Libertad 117, Santo Santiago",Uruapan,Uruapan,19.42041822,-102.06979395
+6267423,Hotel Monarca,Hotel,721112,micro,,,"Calle Tejeda 18, Centro",Uruapan,Uruapan,19.42011658,-102.05741432
+6267424,Casa de Huespedes la Montaña,Casa de huéspedes,721311,micro,,,"Calle Joaquin Amaro 61, Vicente Guerrero",Uruapan,Uruapan,19.42822738,-102.05676439
+6267425,Hotel Maria Magdalena,Hotel,721112,micro,,,"Calle 16 de Septiembre 43, Centro",Uruapan,Uruapan,19.42237078,-102.06057949
+6267426,Hotel Maria de la Paz,Hotel,721112,micro,4521648751,,"Calle 16 de Septiembre 21, Centro",Uruapan,Uruapan,19.42272541,-102.06177281
+6267431,Gran Hotel Acosta,Hotel,721112,micro,,,"Calle Leandro Valle 325, El Periodista",Uruapan,Uruapan,19.42579508,-102.04260122
+6267432,Hotel Posada Sandy,Hotel,721112,micro,,,"Calle Leandro Valle 272, El Periodista",Uruapan,Uruapan,19.42573524,-102.04282171
+6267437,Hotel del Parque,Hotel,721112,micro,4525243845,,"Avenida Independencia 124, Santo Santiago",Uruapan,Uruapan,19.42409611,-102.07054062
+6267441,Motel Flamingo,Motel,721113,micro,,,"Calle Carretera Uruapan Patzcuaro 3055, La Cofradia",Uruapan,Uruapan,19.43651705,-102.01768664
+6267444,Hotel Jazmin,Hotel,721112,micro,3515003781,,"Avenida Juarez Ote s/n, Ejidal Sur",Zamora de Hidalgo,Zamora,19.98156657,-102.27539903
+6267445,Casa de Huespedes San Francisco,Casa de huéspedes,721311,micro,4522039187,,"Calle Alvaro Obregon 70, Centro",Uruapan,Uruapan,19.41908853,-102.05746605
+6267446,Hotel Sarabia,Hotel,721112,micro,,,"Prolongacion Acapulco 2, Morelos",Uruapan,Uruapan,19.41822441,-102.05469223
+6267447,Motel Venecia,Motel,721113,micro,,,"Calle Libramiento Oriente 16, Pradera",Uruapan,Uruapan,19.37527546,-102.05163566
+6267449,Plaza Don Gabino Hotel y Restaurante,Hotel,721111,micro,,,"Avenida Insurgentes 147, Segunda el Rescate",Mineral de Angangueo,Angangueo,19.6123798,-100.29511773
+6267450,Hotel Alcatraz,Hotel,721112,micro,,,"Avenida Insurgentes 80, Primera el Rescate",Mineral de Angangueo,Angangueo,19.61439241,-100.29185787
+6267452,Hotel España,Hotel,721112,micro,4525286634,,"Calle Paseo General Lazaro Cardenas 2232, Jardines del Cupatitzio",Uruapan,Uruapan,19.3986378,-102.05651336
+6267455,Hotel los Faroles,Hotel,721111,pequena,,https://www.hotellosfaroles.com,"Calle José María Morelos 120, Morelos",Uruapan,Uruapan,19.41739931,-102.0553544
+6267457,Motel San Carlos Sa de Cv,Motel,721113,micro,,,"Calle Libramiento Oriente 8000, Quirindabara",Uruapan,Uruapan,19.38369269,-102.04391364
+6267461,Hotel Ejecutivo Aeropuerto,Hotel,721111,pequena,,,"Carretera Carretera Federal Libre Morelia Zinapecuaro Km 3+500 s/n, El Alto de Avilés",El Alto de Avilés,Álvaro Obregón,19.83831749,-101.02364909
+6267468,Balneario Doña Celia,Hotel,721111,pequena,4431332808,https://www.donacelia.com,"Carretera Cerretera Federal San Pedro los Azufres s/n, Los Ajolotes de la Granja",Los Ajolotes,Hidalgo,19.78661611,-100.67963861
+6267471,Quinta los Azufres Resort & Spa,Hotel,721111,pequena,4433080940,https://www.quintalosazufrez.com.mx,"Carretera Carretera Federal San Pedro los Azufres s/n, Los Azufres",El Ollero,Hidalgo,19.78083332,-100.65611111
+6267477,Hotel las Peñas,Hotel,721111,micro,,,"Calle Lazaro-manzanillo 18, Centro",Las Peñas,Lázaro Cárdenas,18.02075773,-102.5015459
+6267486,Mansion de Purua,Hotel,721111,micro,7151570114,,"Calle Josefa Ortiz de Domínguez s/n, Lazaro Cardenas",Lázaro Cárdenas,Jungapeo,19.48862289,-100.48641216
+6267498,Hotel Meson de Purua,Hotel,721111,pequena,7151149398,,"Calle Lázaro Cárdenas s/n, Lazaro Cardenas",Lázaro Cárdenas,Jungapeo,19.48902708,-100.48855375
+6267499,Hotel Hacienda Cantalagua Country Club,Hotel,721111,grande,7121089901,https://www.haciendacantalagua.com,"Carretera Carretera Libre Maravatio Atlacomulco s/n, Ex Hacienda Tepetongo",Hacienda de Tepetongo,Contepec,19.89916668,-100.15444445
+6267500,Hotel Casa del Lago,Hotel,721111,pequena,3511616764,,"Otro(especifique) Camino al Lago s/n, Tangancicuaro",Camécuaro (Lago de Camécuaro) [Parque Nacional],Tangancícuaro,19.90035788,-102.20666885
+6267501,Hotel la Estancia Campestre,Hotel,721111,pequena,7121323739,,"Carretera Carretera Tlalpujahua el Oro s/n, Socabon 7 Dos Estrellas",Dos Estrellas,Tlalpujahua,19.79247626,-100.14943645
+6267502,Hotel Canto del Mar,Hotel,721111,micro,7531099836,https://www.hotelcantodelmar.com.mx,"Calle Venustiano Carranza 11, Centro",Playa Azul,Lázaro Cárdenas,17.97916199,-102.33955897
+6267504,Hotel Agua Blanca,Hotel,721111,pequena,,https://www.aguablanca.mx,"Otro(especifique) Las Anonas 1, Agua Blanca",Agua Blanca,Jungapeo,19.47972722,-100.49542
+6267505,Hotel Boutique Casa Madero,Hotel,721111,pequena,,https://www.hotelboutiquecasamadero.mx,"Calzada Francisco I Madero Oriente 137, Centro",Morelia,Morelia,19.7034819,-101.18128031
+6267506,Hotel Oceano,Hotel,721111,pequena,3133271015,,,San Juan de Alima,Aquila,18.58372257,-103.67514036
+6267507,Gamma de Fiesta In Hotel Belo,Hotel,721111,mediana,,,"Circuito Periférico Paseo de la República (Sector Nueva España) (Avenida Camelinas) 2938, 5 de Diciembre",Morelia,Morelia,19.68550666,-101.16391808
+6267508,Hotel Casa del Anticuario,Hotel,721112,micro,,https://www.casadelanticuario.com,"Calle Galeana 319, Centro",Morelia,Morelia,19.70013738,-101.19524807
+6267509,Servicios Ecoturísticos el Ticuiz,Hotel,721111,micro,,,"Otro(especifique) La Mezcala s/n, La Mezcala",Laguna de Mezcala,Coahuayana,18.65178784,-103.69948824
+6267510,Hotel Palacio Rojo,Hotel,721112,micro,4431618085,,"Periferico Paseo de la República (Sector República) 3059, Lago 1",Morelia,Morelia,19.72691292,-101.21332455
+6267511,Hotel Real Campanario,Hotel,721111,micro,,,"Carretera Lazaro Cardenas a Tecoman s/n, Centro",Bahía Bufadero (Caleta de Campos),Lázaro Cárdenas,18.07990952,-102.75366117
+6267513,Hotel & Suites Almar,Hotel,721111,micro,,,"Periferico Periférico a Sicartsa s/n, Independencia",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95838654,-102.21605784
+6267515,Hotel Santa Fe,Hotel,721112,micro,,https://www.hotelsantafeparacho.com,"Calle San Luis 791, Cuauhtémoc Cárdenas",Paracho de Verduzco,Paracho,19.64209756,-102.04947406
+6267517,Hotel Boutique Casa Leal,Hotel,721112,micro,,,"Calle Portugal 1, Centro",Pátzcuaro,Pátzcuaro,19.51321158,-101.60824731
+6267518,Hotel Portón del Cielo,Hotel,721111,pequena,,https://www.portondelcielo,"Calle Francisco Villa 31, El Calvario",Pátzcuaro,Pátzcuaro,19.51548354,-101.6228339
+6267519,Hotel Campo Turistico Chupicuaro,Hotel,721111,micro,,,"Carretera Mexico Guadalajara s/n, Chupicuaro",Chupícuaro,Quiroga,19.67698434,-101.58236149
+6267520,Posada Yolihuani,Casa de huéspedes,721311,micro,,,"Calle Doctor Coss 40, Centro",Pátzcuaro,Pátzcuaro,19.51018338,-101.60977273
+6267521,Mansión San Antonio,Hotel,721111,micro,7122775117,https://www.mansionsanantonio.com,,Tlalpujahua de Rayón,Tlalpujahua,19.80180208,-100.17914256
+6267522,Hotel Restaurante y Cabañas Manolo,Hotel,721111,micro,,,"Calle Carretera Federal Libre Zamora Carapan 20, Noroto (Loma de Noroto)",Noroto (Loma de Noroto),Tangancícuaro,19.86153763,-102.17736351
+6267523,Hotel Don Quijote,Hotel,721111,micro,,,,Toreo Bajo (El Toreo Bajo),Uruapan,19.45343553,-102.00432556
+6267525,Hotel Torres,Hotel,721112,micro,2281263347,,"Carretera Libre Morelia a Quiroga Km 15 +400 s/n, Atzimbo",Atzimbo,Quiroga,19.64897056,-101.4925951
+6267526,Hacienda San Pedro,Hotel,721112,micro,,,"Prolongacion Caracol 28, San Pedro",Uruapan,Uruapan,19.4172045,-102.06936209
+6267527,Hotel Brisas de Verano,Hotel,721111,pequena,3131060772,https://www.hotelbrisasdeverano.com,,La Brisa,Aquila,18.55797572,-103.63924129
+6267528,Auto Hotel Acuario,Motel,721113,pequena,,,"Calle Carrera Nacional Zamora Morelia 2201, Chaparaco",Chaparaco,Zamora,19.95551904,-102.25418309
+6267529,Hotel Boutique la Casa de los Recuerdos,Hotel,721111,pequena,,https://www.lacasdelosrecuerdos.com.mx,"Calle José María Morelos Sur 81, El Calvario",Heróica Zitácuaro,Zitácuaro,19.43213347,-100.36167788
+6267531,Hotel Gambusino Resort,Hotel,721111,pequena,,,"Calle Calle Milan y Palerma s/n, Las Peñas",Las Peñas,Lázaro Cárdenas,18.02075773,-102.50154585
+6267532,Hotel Aeropuerto Morelia,Hotel,721111,pequena,,https://www.hotelaeropuertomorelia.com,,El Alto de Avilés,Álvaro Obregón,19.83924514,-101.02468054
+6267536,Hotel los Reyes,Hotel,721112,micro,,https://www.hotellosreyes.com.mx,"Avenida Revolución 32, Lazaro Cardenas",Los Reyes de Salgado,Los Reyes,19.59465852,-102.4792082
+6267538,Hotel Rincón de Michoacán,Hotel,721111,micro,4521692724,https://www.hoterincondemichoacan.com,"Calle José María Morelos 53, Centro",Uruapan,Uruapan,19.41862474,-102.05943316
+6267540,Hotel Nuevo Cupatitzio,Hotel,721112,micro,,,"Calle Cupatitzio 161, Cupatitzio",Uruapan,Uruapan,19.4122149,-102.06551406
+6267541,Motel Excalibur,Motel,721113,pequena,,,"Calle Gertrudis Bocanegra 16, Ampliacion Revolucion",Uruapan,Uruapan,19.40618006,-102.04724788
+6267543,Motel Tival,Motel,721113,micro,,,"Carretera Carretera a Uruapan s/n, Ibarra",Pátzcuaro,Pátzcuaro,19.53263345,-101.6239524
+6267545,Motel Mediterraneo,Motel,721113,micro,,,"Calle Boulevard Industrial s/n, Caltzontzin",Caltzontzin,Uruapan,19.42436422,-102.01129524
+6267546,Hotel y Restaurant los Yoyos,Hotel,721111,micro,,https://www.hotellosyoyos.com,"Avenida Mártires de Uruapan 350, Centro",Zacapu,Zacapu,19.81139789,-101.79298689
+6267548,Hotel Cast Inn y Restaurate,Hotel,721111,pequena,4535343949,,"Calle Francisco I. Madero Oriente 149, Morelos",Apatzingán de la Constitución,Apatzingán,19.09588796,-102.35956817
+6267549,Hotel Plaza Romana,Hotel,721112,micro,4535311791,,"Calle Loreto y Guadalupe 451, Morelos",Apatzingán de la Constitución,Apatzingán,19.09618997,-102.3622301
+6267550,Estacionamiento del Hotel Morelos,Hotel,721112,micro,,,"Calle General Negrete Sur 49, Centro",Zacapu,Zacapu,19.81456093,-101.78793141
+6267552,Auto Hotel Bar las Vegas,Motel,721113,micro,4535374995,,"Avenida Jose Maria Morelos y Pavon Poniente 1481, Varillero",Apatzingán de la Constitución,Apatzingán,19.08873873,-102.370593
+6267555,Motel la Conquista,Motel,721113,pequena,7531032546,,"Calle Libramiento s/n, Emiliano Zapata",Las Guacamayas,Lázaro Cárdenas,18.01070024,-102.21212166
+6267556,Hotel Mannys,Hotel,721112,micro,,,"Calle Nicolas Bravo 343, Varillero",Apatzingán de la Constitución,Apatzingán,19.08623344,-102.36373159
+6267558,Nuevo Hotel Mexico,Hotel,721112,micro,,,"Calle Francisco J Mugica Poniente 95, B0nifacio Moreno",Apatzingán de la Constitución,Apatzingán,19.08903752,-102.35739178
+6267559,Hotel el Eden,Hotel,721112,micro,,,"Boulevard Lazaro Cardenas 206, La Piedad",La Piedad de Cabadas,La Piedad,20.34514772,-102.02538941
+6267560,Gran Hotel,Hotel,721111,micro,,,"Boulevard Lázaro Cárdenas 146, Centro",La Piedad de Cabadas,La Piedad,20.34339587,-102.02317799
+6267562,Hotel San Luis,Hotel,721112,micro,,,"Calle Licenciado Jose Manuel de Herrera 221, Centro",Apatzingán de la Constitución,Apatzingán,19.0858291,-102.35711432
+6267563,Hotel San Martin,Hotel,721112,micro,,,"Calle Heriberto Jara Poniente 235, Centro",Apatzingán de la Constitución,Apatzingán,19.08556003,-102.35689608
+6267564,Hotel Tarasco,Hotel,721112,micro,4535166468,,"Calle Articulo 27 17, Babilonia",Apatzingán de la Constitución,Apatzingán,19.08489147,-102.3579417
+6267567,Hotel Nuñez,Hotel,721112,micro,,,"Calle Cayetano Andrade Poniente 8, Centro",Apatzingán de la Constitución,Apatzingán,19.08390709,-102.35520573
+6267572,Hotel Capricornio,Hotel,721112,micro,,,"Calle Cenobio Moreno 703, Josefa Ortiz de Dominguez",Apatzingán de la Constitución,Apatzingán,19.10222653,-102.35503382
+6267573,Hotel Apatzingan,Hotel,721112,micro,,,"Prolongacion Remigio de Yarza 234, Nueva",Apatzingán de la Constitución,Apatzingán,19.07495707,-102.35445569
+6267575,Motel San Carlos,Motel,721113,micro,,,"Avenida Corregidora 1388, El Tarepe",Apatzingán de la Constitución,Apatzingán,19.0730908,-102.36501032
+6267576,Hotel Posada del Balsas,Hotel,721112,micro,,,"Avenida Constitucion de 1814 Norte 16, Centro",Apatzingán de la Constitución,Apatzingán,19.08830825,-102.35423357
+6267580,Hotel Moras,Hotel,721112,micro,7531143783,,"Avenida Lazaro Cardenas 10137, Centro",Arteaga,Arteaga,18.36332313,-102.29175749
+6267581,Hotel Rosita,Hotel,721112,micro,,,"Calle Belisario Domínguez s/n, Lazaro Cardenas",Lombardía,Gabriel Zamora,19.15633325,-102.05224062
+6267582,Hotel Avenida,Hotel,721112,micro,4251043542,,"Avenida Revolucion Norte 199, El Pedregal",La Huacana,La Huacana,18.96529791,-101.80824539
+6267583,Hotel Balneario la Cascada,Hotel,721111,pequena,,,"Calle Corregidora s/n, Centro",La Huacana,La Huacana,18.95949229,-101.80655568
+6267584,Hotel Quinto Sol,Hotel,721112,micro,,,,Vista Hermosa de Negrete,Vista Hermosa,20.26606931,-102.47243703
+6267585,Hotel Lindavista,Hotel,721112,micro,3531177176,,,Sahuayo de Morelos,Sahuayo,20.04045367,-102.72659668
+6267587,Hotel Mayra,Hotel,721112,micro,3531103280,,Calle Lazaro Cardenas Norte s/n,Los Remedios,Jiquilpan,19.98165888,-102.67818712
+6267590,Hotel los Reyes,Hotel,721112,micro,,https://www.hotellosreyes.com.mx,"Calle Abasolo Poniente 33, Centro",Los Reyes de Salgado,Los Reyes,19.5906109,-102.47467597
+6267591,Posada Premier,Casa de huéspedes,721311,micro,,,"Calle Alvaro Obregon 50, Centro",Nueva Italia de Ruiz,Múgica,19.02400416,-102.09718382
+6267592,Hotel Cantera Rosa,Hotel,721112,micro,,https://www.hotelcanterarosa.com.mx,"Calle Emiliano Zapata 91, Centro",Morelia,Morelia,19.70538775,-101.19066812
+6267596,Hotel Lago Sol,Hotel,721111,micro,,https://www.lagosol.com.mx,"Avenida Lázaro Cárdenas s/n, Ojo de Agua",Tzintzuntzan,Tzintzuntzan,19.63272977,-101.56003423
+6267598,Hotel Tarasco,Hotel,721112,micro,,,"Calle Segunda de Bravo 645, María Eugenia Sepúlveda González",Acuitzio del Canje,Acuitzio,19.4993147,-101.33823639
+6267601,Hotel Real del Centro,Hotel,721111,pequena,,,"Otro(especifique) Mariano Abasolo 35, Centro",Maravatío de Ocampo,Maravatío,19.89328773,-100.44575252
+6267602,Hotel la Huerta,Hotel,721112,micro,,https://hotellahuertacontepec.com,"Calle Juarez s/n, Segundo",Contepec,Contepec,19.9428597,-100.17290256
+6267604,Hotel Yunuen,Hotel,721112,micro,,,"Calle Ignacio Allende 220, Vasco de Quiroga",La Huacana,La Huacana,18.96091,-101.81026579
+6267606,Hotel la Fuente Bodega,Hotel,721111,micro,,,"Calle California 48, Ramón Farías",Uruapan,Uruapan,19.4190759,-102.05193165
+6267607,Hotel Aries,Hotel,721112,micro,,,"Calzada Benito Juarez 102, Vicente Guerrero",Uruapan,Uruapan,19.42735583,-102.05745837
+6267608,Hotel Reino Purepecha,Hotel,721111,micro,4521213136,,"Calle Emiliano Zapata 10, Angahuan",Angahuan,Uruapan,19.54817294,-102.22626598
+6267609,Hotel Miguel Arcangel,Hotel,721112,micro,,,"Prolongacion 20 de Noviembre 735, Cuauhtémoc Cárdenas",Paracho de Verduzco,Paracho,19.64226308,-102.04930737
+6267610,Hotel Guadalupita,Hotel,721111,pequena,,,"Calle José de San Martín 11, Santo Santiago",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.41571151,-102.12885193
+6267611,Familia Saavedra Hotel,Hotel,721112,micro,4251112289,,"Calle Morelos 59, Centro",Tancítaro,Tancítaro,19.34102044,-102.36304516
+6267615,Hotel Avenida,Hotel,721112,micro,7535410727,,"Avenida Lazaro Cardenas 33, Centro",Arteaga,Arteaga,18.35650434,-102.29100305
+6267616,Hotel Parador,Hotel,721111,micro,,,,San Juan de Alima,Aquila,18.57920194,-103.6682581
+6267625,Alima Palace Hotel y Suites,Hotel,721111,pequena,,,,San Juan de Alima,Aquila,18.5812567,-103.67082679
+6267638,Motel el Angel,Motel,721113,micro,4431551870,,"Periferico Periferico a Sicartsa s/n, Ferrocarrilera",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.96938752,-102.2363103
+6267642,Posada San Pablo,Casa de huéspedes,721311,micro,4251051271,,"Calle Articulo Tercero de la Constitucion s/n, Centro",Nueva Italia de Ruiz,Múgica,19.02340156,-102.09507671
+6267644,Hotel Guerrero,Hotel,721111,pequena,,,"Avenida Madero Sur 99, Centro",La Huacana,La Huacana,18.96172375,-101.80800454
+6267647,Casa del Huesped,Casa de huéspedes,721311,micro,,,"Calle Hidalgo 2, Centro",Tumbiscatío de Ruiz,Tumbiscatío,18.52504853,-102.37532425
+6267648,Hotel Virginia,Hotel,721112,micro,,,"Avenida Lázaro Cárdenas Sur 28, Centro",Nueva Italia de Ruiz,Múgica,19.02384169,-102.09365068
+6267650,Motel Valama,Motel,721113,micro,,,"Calle Vicente Guerrero 133, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.96228582,-102.19544058
+6267652,Hotel Plaza,Hotel,721112,micro,7535321954,,"Calle Nicolas Bravo 148, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95929023,-102.19469251
+6267653,Hotel Sol Princess,Hotel,721112,micro,,,"Calle General Francisco Javier Mina 299, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.96008202,-102.19348171
+6267656,Hotel Viña del Mar,Hotel,721111,pequena,,,"Calle General Francisco Javier Mina 352, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95808534,-102.19600695
+6267657,Hotel Yunuen,Hotel,721112,micro,,,"Calle General Francisco Javier Mina 47, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.9581012,-102.19598465
+6267661,Hotel Fiesta Monarca,Hotel,721111,micro,,,"Carretera Carretera Ciudad Hidalgo Maravatio 7, Jacarandas",Irimbo,Irimbo,19.70196438,-100.46834366
+6267662,Hotel Aguililla,Hotel,721112,micro,7531044200,,"Avenida General Lazaro Cardenas s/n, La Mira",La Mira,Lázaro Cárdenas,18.03631321,-102.32846951
+6267663,Hotel San Jose,Hotel,721112,micro,3525221374,https://www.hotelsanjose.com,"Boulevard Lazaro Cardenas 853, Peña",La Piedad de Cabadas,La Piedad,20.34948029,-102.03659136
+6267664,Hotel Internacional,Hotel,721112,micro,,,"Calle Mariano Matamoros 508, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95795548,-102.19697105
+6267665,Hotel Cipreses,Hotel,721111,micro,,,"Carretera Suprema Junta Nacional Americana s/n, Melchor Ocampo",Heróica Zitácuaro,Zitácuaro,19.43029906,-100.37305613
+6267666,Casa de Huespedes las Brisas,Casa de huéspedes,721311,micro,,,"Calle Quintana Roo 39, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.96094229,-102.19964319
+6267667,Motel Fantasy,Motel,721113,micro,,,"Calle Albaro Obregon 193, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.9525505,-102.19245812
+6267668,Hotel Mirage,Hotel,721111,pequena,,https://www.miragelapiedad.com,"Boulevard Lázaro Cárdenas 808, Tres Estrellas",La Piedad de Cabadas,La Piedad,20.34927461,-102.0343169
+6267670,Hotel Gumexan,Hotel,721112,micro,,,"Calle Corregidora 230, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95882514,-102.193357
+6267674,Hotel Capri,Hotel,721112,micro,7535320551,,"Calle Juan Alvarez 234, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95655635,-102.19207362
+6267676,Hotel Maria Isabel,Hotel,721112,micro,,,"Calle Francisco I Madero s/n, Playa Azul",Playa Azul,Lázaro Cárdenas,17.9819763,-102.34788652
+6267677,Motel San Luis,Motel,721113,micro,,,"Avenida Jose Maria Morelos 419, Ampliacion Aereopuerto",Las Guacamayas,Lázaro Cárdenas,18.00492388,-102.22010218
+6267679,Estacionamiento Hotel Mirage,Hotel,721111,micro,,https://www.miragelapiedad,"Calle Saturno 36, Centro",La Piedad de Cabadas,La Piedad,20.34929919,-102.03411493
+6267680,Hotel Maria Teresa,Hotel,721111,pequena,7531198693,,"Avenida Independencia 626, Centro",Playa Azul,Lázaro Cárdenas,17.9831872,-102.35003299
+6267682,Hotel de Casablanca,Hotel,721111,pequena,,https://www.hporto.com,"Avenida Lázaro Cárdenas (20 de Octubre) 5501, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95197579,-102.19055907
+6267683,Hotel los Arcos,Hotel,721112,micro,4437083557,,"Calle Colegio Militar s/n, Bahia Bufadero",Bahía Bufadero (Caleta de Campos),Lázaro Cárdenas,18.07355329,-102.75607967
+6267685,Hotel Costa de Oro,Hotel,721112,micro,7535360393,,"Calle Venustiano Carranza s/n, Playa Azul",Playa Azul,Lázaro Cárdenas,17.98226476,-102.35129612
+6267686,Hotel del Pacifico,Hotel,721112,micro,7535360106,,"Calle A s/n, Playa Azul",Playa Azul,Lázaro Cárdenas,17.98141164,-102.350776
+6267687,Hotel Playa Azul,Hotel,721112,micro,,,"Calle Venustiano Carranza s/n, Centro",Playa Azul,Lázaro Cárdenas,17.98273862,-102.35352788
+6267688,Hotel Posada San Agustin,Hotel,721112,micro,,,"Calle Portal Benito Juarez 27, Centro",Pátzcuaro,Pátzcuaro,19.51631652,-101.60925783
+6267689,Motel Alex,Motel,721113,micro,7535416694,,"Avenida Jose Maria Morelos 417, Ampliacion Aereopuerto",Las Guacamayas,Lázaro Cárdenas,18.00511134,-102.22002047
+6267692,Gran Hotel,Hotel,721111,pequena,,https://www.granhotelpatzcuaro.com.mx,"Calle Portal Régules 6, Centro",Pátzcuaro,Pátzcuaro,19.51558207,-101.60907724
+6267693,Hotel Mansion Iturbe,Hotel,721111,micro,,https://www.mansioniturbe.com,"Calle Portal de Morelos 59, Centro",Pátzcuaro,Pátzcuaro,19.51408792,-101.60923825
+6267694,Hotel los Escudos,Hotel,721112,pequena,,,"Calle Portal de Hidalgo 73, Centro",Pátzcuaro,Pátzcuaro,19.51389097,-101.60996496
+6267696,Motel Caribe,Motel,721113,micro,4432593695,,"Calle Laguna Verde 34, Lago 1",Morelia,Morelia,19.7278953,-101.2193139
+6267699,Motel Eclipse,Motel,721113,micro,,,"Periferico Periferico a Sicartsa s/n, Linda Vista",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.9879489,-102.23283554
+6267700,Motel Monarca,Motel,721113,micro,7531082007,,"Periferico Periferico a Sicartsa s/n, Linda Vista",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.99121434,-102.23250653
+6267701,Motel Oasis,Motel,721113,micro,4433826229,,"Calle Arboleda 80, Loma Bonita",Morelia,Morelia,19.69828832,-101.25572761
+6267703,Hotel San Fer,Hotel,721112,micro,,,"Calle Licenciado Antonio Arriaga Ochoa 25, Las Palmas",Pátzcuaro,Pátzcuaro,19.50912767,-101.61788395
+6267704,Hotel de los Trigos,Hotel,721112,micro,3835183470,https://www.hoteldelostrigos.mx,"Calle Matamoros 234, Barrio de Abajo",Santiago Tangamandapio,Tangamandapio,19.95995156,-102.43557126
+6267706,Hotel del Centro,Hotel,721112,micro,,,"Avenida Hidalgo 41, Centro",Zinapécuaro de Figueroa,Zinapécuaro,19.86033442,-100.82918142
+6267708,Hotel y Restaurante los Solaches,Hotel,721111,pequena,,,"Privada Ciprés 45, Manga de Clavo",Heróica Zitácuaro,Zitácuaro,19.44292923,-100.35256479
+6267709,Hotel Don Gonzalo,Hotel,721112,micro,4713660354,,"Calle Lazaro Cardenas 419, Centro",Purépero de Echáiz,Purépero,19.9127695,-102.00093114
+6267711,Hotel Gh,Hotel,721112,micro,,,"Calle Morelos s/n, Centro",Tancítaro,Tancítaro,19.34097482,-102.36298034
+6267713,Hotel Villa Tancitaro,Hotel,721112,micro,,,"Calle Francisco I Madero s/n, Centro",Tancítaro,Tancítaro,19.33820415,-102.35932442
+6267714,Hotel Reforma,Hotel,721112,micro,,,"Calle Reforma Norte 67, Centro",Peribán de Ramos,Peribán,19.52154809,-102.41620345
+6267715,Hotel Posada San Fernando,Casa de huéspedes,721311,micro,,,"Calle Libramiento Oriente 4, Lazaro Cardenas",Uruapan,Uruapan,19.41720983,-102.02543802
+6267717,Hotel Florencia Regency,Hotel,721112,micro,,,"Avenida Lazaro Cardenas 1282, Ventura Puente",Morelia,Morelia,19.6939983,-101.18238113
+6267720,Hotel Yuritzi,Hotel,721112,micro,,https://www.hotelyuritzi.com,"Calle Corregidora 10, Centro",Bahía Bufadero (Caleta de Campos),Lázaro Cárdenas,18.07479403,-102.75498628
+6267722,Cabañas Chalamu,Hotel,721111,micro,,,"Calle Carretera a Morelia s/n, Tzurumutaro",Pátzcuaro,Pátzcuaro,19.54503366,-101.60178882
+6267724,Auto Hotel Sol y Arena,Motel,721113,pequena,,,"Carretera La Mira Lazaro Cardenas s/n, La Mira",La Mira,Lázaro Cárdenas,18.02986738,-102.31577391
+6267726,Hotel Kutsari,Hotel,721112,micro,,,"Calle Justo Sierra s/n, Playa Azul",Playa Azul,Lázaro Cárdenas,17.98443661,-102.35259775
+6267727,Hotel Paraiso Real,Hotel,721112,micro,,,"Prolongacion 5 de Mayo 464, 5 de Mayo",Zamora de Hidalgo,Zamora,19.99068851,-102.27931379
+6267729,Hotel Colonial,Hotel,721111,micro,4513857751,,"Calle Morelos 15, Centro",Valle de Juárez (Jeráhuaro),Zinapécuaro,19.88073895,-100.64365206
+6267730,Hotel Jerahuaro,Hotel,721112,micro,4513858101,,"Avenida Morelos 43, Santiago de Juarez Jerahuaro",Valle de Juárez (Jeráhuaro),Zinapécuaro,19.88073956,-100.64372622
+6267733,Hotel Finca de Adobe,Hotel,721112,micro,7535315145,,"Calle Colegio Militar s/n, Bahia Bufadero",Bahía Bufadero (Caleta de Campos),Lázaro Cárdenas,18.07388108,-102.75598375
+6267735,Posada del Sol,Casa de huéspedes,721311,micro,7531378686,,"Calle Francisco Villa s/n, Bahia Bufadero",Bahía Bufadero (Caleta de Campos),Lázaro Cárdenas,18.07425947,-102.75292382
+6267736,Hotel Andrea,Hotel,721112,micro,,,"Calle Librado Rivera Manzano s/n, Playa Azul",Playa Azul,Lázaro Cárdenas,17.98077315,-102.34745597
+6267738,Hotel Posada del Mar,Hotel,721112,micro,4432257959,,"Calle Venustiano Carranza s/n, Centro",Playa Azul,Lázaro Cárdenas,17.98299521,-102.35422888
+6267739,Dayz Hotel,Hotel,721111,micro,,https://www.dayzhotel.com,"Calle Emiliano Zapata s/n, Centro",Bahía Bufadero (Caleta de Campos),Lázaro Cárdenas,18.07719946,-102.75210365
+6267741,Auto Hotel el Paraiso,Motel,721113,micro,7151461335,,"Calle Libramiento Francisco J Mugica s/n, Pueblo Nuevo",Heróica Zitácuaro,Zitácuaro,19.42982281,-100.32723969
+6267750,Hotel Encino,Hotel,721112,micro,,,"Calle J Jesus Romero Flores s/n, Patzcuaro",Pátzcuaro,Pátzcuaro,19.49795739,-101.59993721
+6267751,Hotel Excelencia,Hotel,721112,micro,,,"Calle J Jesus Romero Flores s/n, Patzcuaro",Pátzcuaro,Pátzcuaro,19.49608845,-101.59818531
+6267754,Hotel Real Sta Rosa,Hotel,721112,micro,,,"Avenida Francisco I Madero Poniente 5160, La Esperanza",Morelia,Morelia,19.69916515,-101.24864767
+6267755,Hotel Campanario de San Juan,Hotel,721112,micro,,,"Calle Romero 48, Centro",Pátzcuaro,Pátzcuaro,19.51027973,-101.61133475
+6267760,Hotel Maria Fernanda,Hotel,721111,pequena,,,"Calle Santos Degollado Oriente 34, Cuahutemoc",Heróica Zitácuaro,Zitácuaro,19.43759234,-100.35363538
+6267761,Hotel Ceo,Hotel,721112,micro,,https://www.hotelceo.com,"Circuito Periferico Paseo de la Republica Sector Nueva España Avenida Camelinas 770, La Loma",Morelia,Morelia,19.68098976,-101.18515933
+6267765,Centro Ecoturistico Patzingo,Campamento,721210,micro,,,,Zipo (Las Cruces),Uruapan,19.49517951,-102.19941899
+6267769,Hotel Kalua,Hotel,721112,micro,3525238212,,"Calle Carpio 20, Centro",Yurécuaro,Yurécuaro,20.34361635,-102.28306004
+6267771,Hotel Casa Real de la Aduana,Hotel,721112,micro,,,"Calle Ponce de Leon 16, Centro",Pátzcuaro,Pátzcuaro,19.5132238,-101.610848
+6267773,Hotel Posada Santa Elena,Hotel,721112,micro,,,"Calle Juan Primaria 15, General Pueblita",Pátzcuaro,Pátzcuaro,19.51465479,-101.60140055
+6267774,Hotel los Cuatro Diamantes,Hotel,721112,micro,4525941266,,"Avenida Lazaro Cardenas 271, Santo Santiago",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.41590153,-102.12614196
+6267775,Hotel Farah,Hotel,721112,micro,,,"Avenida Lazaro Cardenas 346, Santo Santiago",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.4156072,-102.12532946
+6267776,Hotel las Flores,Hotel,721112,micro,,,"Calle Las Flores s/n, Santo Santiago",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.41536454,-102.1267305
+6267777,Hotel Michoacan,Hotel,721112,micro,,,"Calle 5 de Mayo Sur 26, Centro",Heróica Zitácuaro,Zitácuaro,19.43621138,-100.35749875
+6267778,Hotel San Clemente,Hotel,721112,micro,,,"Calle Portal Hidalgo s/n, Centro",Tanhuato de Guerrero,Tanhuato,20.28402552,-102.32815186
+6267779,Hotel Posada Camelinas,Hotel,721112,micro,,,"Privada Primera Padre Efren Uricho 17, Centro",Pátzcuaro,Pátzcuaro,19.51718878,-101.6057238
+6267780,La Posadita,Hotel,721112,micro,,,"Calle Benigno Serrato 61, Centro",Pátzcuaro,Pátzcuaro,19.515354,-101.60340029
+6267781,Hotel Casa Graciela,Hotel,721112,micro,4341212927,,"Calle Benigno Serrato 23, Centro",Pátzcuaro,Pátzcuaro,19.51437653,-101.60521604
+6267785,Hotel la Orilla,Hotel,721111,pequena,,,"Calle Romero 52, San Miguel",Erongarícuaro,Erongarícuaro,19.58824235,-101.71925206
+6267786,Hotel Jardin,Hotel,721111,pequena,4343440397,,"Calle Zaragoza 14, San Francisco",Erongarícuaro,Erongarícuaro,19.5884151,-101.72083717
+6267787,Hotel Casa y Jardin,Hotel,721112,micro,4521223181,,"Avenida Benito Juarez 6, San Francisco",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.4194147,-102.1290768
+6267788,Hotel Gran Tradicion,Hotel,721112,micro,,,"Avenida Ahuanitzaro 150, Santo Santiago",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.41523246,-102.12458366
+6267790,Posada Morelos,Casa de huéspedes,721311,micro,7151515377,,"Calle Jose Maria Morelos Norte 28, Cuauhtemoc",Heróica Zitácuaro,Zitácuaro,19.44001068,-100.35765651
+6267792,Hotel Posada Emmanuel,Hotel,721112,micro,,,"Calle Pedro Ignacio Irigoyen 130, Ampliacion Felix Arreguin",Morelia,Morelia,19.72078343,-101.22518582
+6267794,Hotel Ana Isabel,Hotel,721112,micro,,,"Calle Vicente Guerrero Poniente 108, Centro",Zamora de Hidalgo,Zamora,19.98528403,-102.2893189
+6267796,Hotel Uruapense,Hotel,721112,micro,,,"Calle Bellas Uruapenses 12, Centro",Uruapan,Uruapan,19.42004463,-102.05702595
+6267797,Hotel Lupita,Hotel,721112,micro,,,"Calle Benito Juarez s/n, Centro",Tumbiscatío de Ruiz,Tumbiscatío,18.52506559,-102.3769023
+6267798,Motel Autoparador los Angeles,Motel,721113,pequena,4433176797,,"Avenida Morelos Norte 4500, Santa Fe",Morelia,Morelia,19.73874926,-101.17809101
+6267806,Hotel Anguiano,Hotel,721112,micro,4525021282,,"Calle Leandro Valle 334, El Periodista",Uruapan,Uruapan,19.42588021,-102.04230655
+6267807,Cabañas Torremolinos,Cabañas,721190,micro,4341201842,,,Zirahuén,Salvador Escalante,19.44892696,-101.73001501
+6267808,Zirahuen Forest y Soport,Cabañas,721190,pequena,,https://www.zirahuen.com,"Calle Rivera del Lago s/n, Centro",Zirahuén,Salvador Escalante,19.45060171,-101.72922135
+6267811,Posada Diana,Casa de huéspedes,721311,micro,,,"Calle Vicente Guerrero s/n, Zirahuen",Zirahuén,Salvador Escalante,19.45533804,-101.72967143
+6267813,Motel Arboledas,Motel,721113,micro,,,"Boulevard Adrian Peña Soto 51, Arboledas del Rio",Ciudad Hidalgo,Hidalgo,19.68281641,-100.54918782
+6267814,Hotel Pineda,Hotel,721112,micro,4251136926,,"Avenida Heroes de la Revolucion s/n, Centro",Churumuco de Morelos,Churumuco,18.66582177,-101.64726249
+6267815,Hotel el Punito,Hotel,721112,micro,,,"Calle Rio Balsas 10, Centro",Churumuco de Morelos,Churumuco,18.66323692,-101.65147036
+6267823,Eco Hotel,Hotel,721112,pequena,,https://www.eco-hotel.com.mx,"Avenida Virrey de Mendoza Oriente 69, Jardinada",Zamora de Hidalgo,Zamora,19.97542256,-102.28785297
+6267824,Hotel Campestre Hacienda Caracha,Hotel,721111,micro,,,"Calle Guadalupe Victoria 2, Centro",Uruapan,Uruapan,19.41898194,-102.05663462
+6267826,Hotel Alondra,Hotel,721112,micro,,,"Prolongacion 20 de Noviembre 45, Quiritzicua",Panindícuaro,Panindícuaro,19.97992317,-101.7526207
+6267829,Hotel Boulevard,Hotel,721111,micro,,,"Prolongacion California 1387, Clavel",Uruapan,Uruapan,19.41835951,-102.04591058
+6267836,Hotel Markez,Hotel,721112,micro,,,"Avenida Carretera Nacional 3, Barrio del Progreso",Santiago Tangamandapio,Tangamandapio,19.9598817,-102.43664662
+6267842,Hotel y Spa Casa en el Campo,Hotel,721111,pequena,,https://www.casaenelcampo.com.mx,"Calle Camenlina 830, San Jose del Cerrito",Morelia,Morelia,19.66389357,-101.21533053
+6267845,Hotel Miami,Hotel,721112,micro,3511461163,,"Calle Libramiento Sur 1300, El Porvenir",Jacona de Plancarte,Jacona,19.94586541,-102.32826986
+6267849,Hotel Sagaal,Hotel,721112,micro,,https://www.hotelsagaal.jimdo.com,"Avenida Morelos Poniente 99, Los Manantiales",Ciudad Hidalgo,Hidalgo,19.69001981,-100.56524738
+6267860,Motel Madero,Motel,721113,micro,,,"Avenida Francisco I Madero Oriente 4700, Lombardo Toledano",Morelia,Morelia,19.71966492,-101.14972923
+6267862,Auto Hotel Niza,Motel,721113,micro,,,"Calle Calle del Niño 3, El Zapotito",Uruapan,Uruapan,19.38766034,-102.07076162
+6267868,Motel Lisboa,Motel,721113,micro,,,"Calle Francisco Marquez s/n, Juan Alvarez",Nueva Italia de Ruiz,Múgica,19.04093993,-102.08580521
+6267871,Hotel los Faroles,Hotel,721111,micro,,https://www.hotelosfaroles.com.mx,"Calle José María Morelos 110, Morelos",Uruapan,Uruapan,19.41738135,-102.055289
+6267877,Hotel los Pinos,Hotel,721111,micro,3281032029,https://www.hotellospinos.com,"Calle Francisco I. Madero s/n, Centro",Vista Hermosa de Negrete,Vista Hermosa,20.2785359,-102.48872073
+6267878,Bungalows Delfin,Cabañas,721190,micro,,,"Calle Venustiano Carranza s/n, Playa Azul",Playa Azul,Lázaro Cárdenas,17.98196872,-102.35058643
+6267879,Hotel Maria Esther,Hotel,721112,micro,3319064430,,"Boulevard Bulebar Costero del Bicentenario Km 13 s/n, Playa Jardin",Barra de Pichi,Lázaro Cárdenas,17.97601744,-102.32400246
+6267890,Motel el Faro,Motel,721113,micro,,,"Calle Doctor Miguel Silva 73, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95463004,-102.19363516
+6267893,Motel California,Motel,721113,pequena,3515600479,,"Carretera Internacional 1120, Mi Casita",Jacona de Plancarte,Jacona,19.95392549,-102.31653009
+6267897,El Hotel Business Class,Hotel,721111,pequena,,https://www.el-hotel.com.mx,"Calle Vicente Guerrero Oriente 18, Centro",Zamora de Hidalgo,Zamora,19.98421066,-102.2869825
+6267898,Hotel el Meson,Hotel,721111,pequena,,,"Privada Castro 5, Centro",Paracho de Verduzco,Paracho,19.64693593,-102.0473461
+6267901,Hotel Fiesta Nueva Italia Inn,Hotel,721111,pequena,,,"Calle Lázaro Cárdenas Sur 3010, Cuatro Caminos",Cuatro Caminos,Múgica,18.99451271,-102.10403108
+6267902,Hotel Rios,Hotel,721112,micro,,,"Calle General Francisco Javier Mina 313, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.9601153,-102.19343569
+6267903,Hotel Rios,Hotel,721112,micro,,,"Calle Corregidora 334, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95930592,-102.19268816
+6267912,Hotel Balneario los Delfines,Hotel,721111,micro,3512803443,,"Calle Carretera Nacional Morelia Zamora 182, Tanaquillo",Tanaquillo,Chilchota,19.84538489,-102.09956996
+6267913,Centro Turístico Balneario Puentecillas,Hotel,721111,pequena,7861135235,,"Otro(especifique) Los Azufres s/n, Los Azufres",Los Tejamaniles (Rancho Viejo),Hidalgo,19.78268538,-100.66696736
+6267916,Hotel Tzitzuni,Hotel,721112,micro,,,"Calle José María Morelos 148, Centro",Tacámbaro de Codallos,Tacámbaro,19.23662926,-101.45927225
+6267919,Hotel Lait,Hotel,721112,micro,,,"Boulevard Lazaro Cardenas Norte 587, La Limonera",Sahuayo de Morelos,Sahuayo,20.06784531,-102.71629586
+6267920,Hotel Garibaldi,Hotel,721111,micro,,,"Calle Francisco I Madero 292, San Rafael",Vista Hermosa de Negrete,Vista Hermosa,20.27411097,-102.47857162
+6267926,Hotel Destiny,Hotel,721112,micro,,,,Zináparo,Zináparo,20.17509361,-101.99483757
+6267930,Hotel Maria Isabel,Hotel,721112,micro,,,"Calle Independencia s/n, Benito Juarez",Benito Juárez,Juárez,19.3062276,-100.43311067
+6267932,Hotel Dubay,Hotel,721112,micro,,,"Boulevard Suprema Junta Nacional Americana 2, Infonavit",Heróica Zitácuaro,Zitácuaro,19.42997914,-100.37064229
+6267936,Cabañas Rusticas de Zirahuen,Cabañas,721190,micro,4341555865,,"Calle Salida a Santa Clara s/n, Centro",Zirahuén,Salvador Escalante,19.4451423,-101.72681032
+6267937,Hotel Kalaki Atl Tlayekantik,Hotel,721111,micro,3121311925,,,El Faro de Bucerías,Aquila,18.35035453,-103.5098056
+6267942,Hotel Anahi,Hotel,721111,pequena,,,,San Juan de Alima,Aquila,18.58054539,-103.6699421
+6267943,Hotel Miramar,Hotel,721111,micro,,,,San Juan de Alima,Aquila,18.58281112,-103.67363615
+6267947,Hotel Costa Azul,Hotel,721112,micro,1509910040,,,San Juan de Alima,Aquila,18.58372257,-103.67514036
+6267949,Hotel Bellavista,Hotel,721111,pequena,3131390780,,,San Juan de Alima,Aquila,18.57805497,-103.66677258
+6267954,Hotel Hacienda Trinidad,Hotel,721111,micro,,https://www.haciendtrinidad.com.mx,,San Juan de Alima,Aquila,18.5809443,-103.67043824
+6267958,Hotel Gambara,Hotel,721112,micro,,,"Avenida Lazaro Cardenas Sur 15, Agrarista",Nueva Italia de Ruiz,Múgica,19.02403454,-102.09332902
+6267968,Posada Tres Marias,Hotel,721112,micro,7861264155,,"Calle Melchor Ocampo Oriente 106, Centro",Ciudad Hidalgo,Hidalgo,19.69033156,-100.5500002
+6267971,Auto Hotel Venecia,Motel,721113,micro,4431340337,,"Avenida Aquiles Serdan 1431, Adolfo López Mateos",Puruándiro,Puruándiro,20.09134697,-101.50261499
+6267973,Hotel Jade,Hotel,721111,micro,,,"Privada Carretera Nacional Zamora Uruapan 2, Primer Cuartel",Carapan,Chilchota,19.85092926,-102.03162143
+6267975,Hotel Villas Emperador,Hotel,721112,micro,,,"Calle Degollado s/n, Charaquirillo",Chilchota,Chilchota,19.843459,-102.12164302
+6267983,Hotel Borony,Hotel,721111,pequena,4461009307,,"Calle Venustiano Carranza 112, Centro",Zacapu,Zacapu,19.81273733,-101.78949715
+6267988,Hotel Posada del Carmen,Hotel,721112,micro,,,"Avenida Madero Oriente 9, Centro",Tacámbaro de Codallos,Tacámbaro,19.23618544,-101.45836042
+6267989,Hotel Centro Comercial Xaracatan,Hotel,721111,pequena,4521200545,,"Avenida Amado Nervo 776, Guadalupe",Nahuatzen,Nahuatzen,19.65489367,-101.92349959
+6267993,Hotel Morelos,Hotel,721112,micro,,,"Avenida Jose Maria Morelos Poniente 555, Independencia",Santa Ana Maya,Santa Ana Maya,20.01047145,-101.02739659
+6267994,Auto Motel el Palomo,Motel,721113,micro,,,"Calle Ernesto Sanchez s/n, El Chamizal",Huetamo de Núñez,Huetamo,18.62129984,-100.8872303
+6267995,Auto Hotel los Pinos,Motel,721113,micro,,,"Calle 16 de Septiembre s/n, Lombardia",Lombardía,Gabriel Zamora,19.1559543,-102.04817797
+6267997,Hotel Silva,Hotel,721112,micro,4225115002,,"Calle Constitucion 1230, Lazaro Cardenas",Lombardía,Gabriel Zamora,19.15459302,-102.05178892
+6268000,Motel Express,Motel,721113,micro,,,"Carretera Patzcuaro Morelia 250, El Eden",Morelos,Morelia,19.64439914,-101.251522
+6268005,Hotel Camelinas,Hotel,721111,pequena,4532274149,,"Avenida 22 de Octubre s/n, La Florida",Apatzingán de la Constitución,Apatzingán,19.07002463,-102.34194171
+6268006,Auto Hotel la Alameda,Motel,721113,micro,,,"Boulevard Periferico Sur s/n, Tomatlán",Huetamo de Núñez,Huetamo,18.62054164,-100.91183617
+6268007,Hotel Mayra,Hotel,721111,pequena,,,,Huetamo de Núñez,Huetamo,18.61711349,-100.90819785
+6268018,Hotel Maria Isabel Valmar,Hotel,721111,micro,4351033899,,"Calle Santos Degollado s/n, Colonia del Centro",Huetamo de Núñez,Huetamo,18.62532284,-100.90021977
+6268024,Hotel San Miguel,Hotel,721112,micro,,,"Calle Felipe Vardiosabal 105, Varillero",Apatzingán de la Constitución,Apatzingán,19.08780898,-102.36984267
+6268028,Estacionamiento Hotel Nuevo Mexico,Hotel,721112,micro,4535342888,,"Calle Francisco J Mugica Poniente 91, Babilonia",Apatzingán de la Constitución,Apatzingán,19.08913775,-102.35744948
+6268032,Hotel Tiki,Hotel,721112,micro,4591113193,,"Calle Aldama s/n, Ricardo Flores Magón",Tiquicheo,Tiquicheo de Nicolás Romero,18.90314769,-100.73835373
+6268034,Gran Hotel del Centro,Hotel,721112,micro,,,"Avenida Francisco I Madero 2, Centro",Carácuaro de Morelos,Carácuaro,19.01772383,-101.12776334
+6268035,Hotel Morelos,Hotel,721112,micro,,,"Avenida Morelos Sur s/n, Centro",Nocupétaro de Morelos,Nocupétaro,19.04254721,-101.16189727
+6268036,Eco Hotel Ixhi,Hotel,721112,micro,,https://www.ecohotelixhi.com,"Calle Francisco Villa 48, El Calvario",Pátzcuaro,Pátzcuaro,19.51531404,-101.62399193
+6268037,Hotel Mirador del Lago,Hotel,721112,micro,,,"Circuito General Ignacio Zaragoza 729, La Valenciana",Pátzcuaro,Pátzcuaro,19.52408903,-101.61526208
+6268038,Hotel Posada de las Rosas,Hotel,721112,micro,4343423355,,"Calle Silviano Carrillo Cardenas 34, Centro",Pátzcuaro,Pátzcuaro,19.51818678,-101.60740065
+6268041,Hotel Pueblo Magico,Hotel,721112,micro,4343421162,,"Calle Tercera de Ibarra 81, Centro",Pátzcuaro,Pátzcuaro,19.51533406,-101.61419361
+6268043,Hotel Delfin,Hotel,721112,pequena,,,"Avenida Lazaro Cardenas 1633, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95839346,-102.19550432
+6268064,Hotel Señorial,Hotel,721111,micro,,,"Otro(especifique) Santiago Tapia 543, Centro",Morelia,Morelia,19.70480748,-101.19648829
+6268065,Hotel de Atilanos,Hotel,721112,micro,,https://www.morelia-hoteles.com,"Calle La Corregidora 465, Centro",Morelia,Morelia,19.7010254,-101.19593801
+6268066,Hotel San Vicente,Hotel,721112,micro,,,"Avenida Lazaro Cardenas 472, Ventura Puente",Morelia,Morelia,19.6958941,-101.18994975
+6268067,Hotel el Carmen,Hotel,721112,micro,,https://www.hotelelcarmenmorelia.com.mx,"Peatonal Eduardo Ruiz 63, Centro",Morelia,Morelia,19.7051972,-101.19214667
+6268068,Posada Racil,Casa de huéspedes,721311,micro,4434026538,,"Calle Eduardo Ruiz 296, Centro",Morelia,Morelia,19.70564534,-101.19439869
+6268069,Hotel Villa Cipres,Hotel,721112,micro,4432029628,,"Calle Rio Yaqui 87, Ventura Puente",Morelia,Morelia,19.69306439,-101.18651462
+6268070,Hotel Plaza Morelia,Hotel,721112,pequena,4433121163,,"Calle Valentin Gomez Farias 278, Centro",Morelia,Morelia,19.70560409,-101.19602942
+6268072,Posada Ventura Puente,Casa de huéspedes,721311,micro,,,"Calle Lago de Yuriria 64, Ventura Puente",Morelia,Morelia,19.6947702,-101.18859758
+6268075,Hotel Avenida,Hotel,721112,micro,4433122013,https://www.hotelavenidamorelia.com.mx,"Calle Manuel Muñiz 174, Centro",Morelia,Morelia,19.69704286,-101.19580776
+6268088,Hotel Tarasco,Hotel,721112,micro,,https://www.hoteltarascoquiroga.mx,"Avenida Vasco de Quiroga Oriente 49, Centro",Quiroga,Quiroga,19.66458873,-101.52274103
+6268090,Hotel Concordia de Uruapan,Hotel,721111,micro,,https://www.hotelporhe.com,"Avenida Emilio Carranza 8, Centro",Uruapan,Uruapan,19.42076505,-102.06331049
+6268105,Hotel Magisterio,Hotel,721112,micro,3541066579,,"Privada Justo Sierra 35, Magisterial",Peribán de Ramos,Peribán,19.53536687,-102.41885667
+6268113,Hotel Colonial Mendoza,Hotel,721112,micro,3531107576,https://www.hotelcolonialmendoza.com,"Avenida Presidente Lazaro Cardenas Norte 88, Centro",Jiquilpan de Juárez,Jiquilpan,19.99361829,-102.7174575
+6268115,Hotel Posada del Cortijo,Hotel,721112,micro,4438701330,,"Calle Eduardo Ruiz 673, Centro",Morelia,Morelia,19.70550563,-101.19775846
+6268116,Hotel Morelos,Hotel,721112,pequena,,,"Avenida Morelos 520, Centro",Zacapu,Zacapu,19.81620821,-101.7874878
+6268118,Nuevo Hotel Alameda de Uruapan,Hotel,721112,pequena,,,"Calle 5 de Febrero 11, Centro",Uruapan,Uruapan,19.42022519,-102.06179273
+6268152,Motel el Eden,Motel,721113,micro,4433525916,,"Calle Camino al Eden 84, El Ejido",Morelos,Morelia,19.64664144,-101.25086344
+6268165,Hotel Campestre Hacienda Caracha,Hotel,721111,micro,,,,Caracha,Ziracuaretiro,19.43066792,-101.92428357
+6268170,Hotel el Viajero Estacionamiento,Hotel,721112,micro,,,"Calle Arista 75, Centro",Ario de Rosales,Ario,19.20658748,-101.70837096
+6268172,Zirahuen Forest & Resort,Cabañas,721190,pequena,,https://www.zirahuen.com,"Calle Gaspar de Villadiego 117, Agustin Arriaga Rivera",Morelia,Morelia,19.69568703,-101.21565836
+6268174,Hotel Valmar Huetamo,Hotel,721112,micro,,,"Calle Allende 5, Centro",Huetamo de Núñez,Huetamo,18.62645819,-100.90066384
+6268175,Hotel Valladolid,Hotel,721112,micro,4532283782,,"Calle Fray Servando Teresa de Mier 833, Varillero",Apatzingán de la Constitución,Apatzingán,19.08229409,-102.36382772
+6268177,Hotel de Casablanca,Hotel,721111,pequena,,https://www.hzirahuen.com,"Avenida Constitución de 1917 167, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95289369,-102.19345196
+6358201,Hotel Virrey de Mendoza,Hotel,721111,mediana,,https://www.hotelvire.com,"Otro(especifique) Francisco I. Madero Poniente 310, Centro",Morelia,Morelia,19.70294116,-101.19472689
+6358223,Hotel Fenix,Hotel,721112,pequena,,https://www.hotelfenix.com,"Avenida Francisco I Madero Sur 401, Centro",Zamora de Hidalgo,Zamora,19.98285982,-102.28815068
+6358225,Hotel Casino,Hotel,721111,mediana,,https://www.hotelcasino.com.mx,"Avenida Francisco I. Madero Poniente 229, Centro",Morelia,Morelia,19.70302741,-101.19361625
+6358241,Hotel Villa Capri,Hotel,721111,pequena,,,"Avenida Francisco I. Madero Poniente 2069, Tres Puentes",Morelia,Morelia,19.70287176,-101.21397323
+6358304,Hotel Horizon Morelia,Hotel,721111,pequena,,https://www.horizon.mx,"Circuito Periférico Paseo de la República (Sector Nueva España) 3325, Poblado Ocolusen",Morelia,Morelia,19.69277709,-101.14999557
+6358308,Hotel Hernandez,Hotel,721112,micro,,,"Circuito Libramiento Sur 299, San Miguel Curahuango",Maravatío de Ocampo,Maravatío,19.88613837,-100.44129811
+6358309,Hotel Alameda,Hotel,721111,mediana,,https://www.hotelalameda.com,"Avenida Francisco I Madero Poniente 313, Centro",Morelia,Morelia,19.70303992,-101.19433865
+6358381,Hotel Vista Express Morelia,Hotel,721111,pequena,,https://www.hotelesvista.com,"Calle Aquiles Serdán 647, Centro",Morelia,Morelia,19.7038641,-101.18534389
+6358514,Hotel Villa Montaña,Hotel,721111,mediana,,https://www.villamontana.com.mx,"Calle Patzimba 201, Vista Bella",Morelia,Morelia,19.67964149,-101.19584404
+6358531,Hotel Florida,Hotel,721111,pequena,,,"Avenida Morelos Sur 161, Centro",Morelia,Morelia,19.70168991,-101.19158882
+6358532,Hotel Diana del Bosque,Hotel,721111,pequena,4437282190,https://www.hoteldiuanadebosque.com,"Calle Rafael Carrillo 144, Cuahutemoc",Morelia,Morelia,19.69651137,-101.1807953
+6358539,Hotel las Americas,Hotel,721111,pequena,,https://www.lasamericashotel.com.mx,"Circuito Periférico Paseo de la República (Sector Nueva España) 2783, Cinco de Diciembre",Morelia,Morelia,19.68508694,-101.1650337
+6358547,Parque Acuatico Reino de Atzimba,Campamento,721210,pequena,4434102034,https://www.atzimba.com,"Avenida Lazaro Cardenas s/n, Felix Ireta",Zinapécuaro de Figueroa,Zinapécuaro,19.86586323,-100.83953889
+6358549,Hotel Mision Catedral,Hotel,721111,pequena,,https://www.hotelmisioncatedral.com,"Calle Ignacio Zaragoza 37, Centro",Morelia,Morelia,19.70318395,-101.19340316
+6358579,Gran Hotel Clasico,Hotel,721111,micro,,,"Calle Iripan s/n, Zaragoza",Huetamo de Núñez,Huetamo,18.62688567,-100.89903352
+6358584,Hotel Alba,Hotel,721112,micro,4356783639,,"Calle 20 de Noviembre 15, Centro",San Lucas,San Lucas,18.59091307,-100.78681055
+6358600,Hotel Tres Estrellas,Hotel,721112,micro,,,"Avenida Revolucion Sur 23, Centro",Heróica Zitácuaro,Zitácuaro,19.43627643,-100.35661501
+6358606,Hotel Rosales del Valle,Hotel,721112,micro,,https://www.hotelrosalesdelvalle.com,"Boulevard Revolucion Sur 56, Matamoros",Heróica Zitácuaro,Zitácuaro,19.43362543,-100.35785856
+6358635,Hotel Casa Blanca,Hotel,721111,micro,4433260283,https://www.hotelcasablancamorelia.com.mx,"Avenida Francisco I Madero Poniente 2884, La Quemada",Morelia,Morelia,19.70201972,-101.23675636
+6358646,Pension Vallejo,Casa de huéspedes,721311,micro,,,"Calle Constituyentes de 1917 677, Obrera",Morelia,Morelia,19.70991749,-101.1836169
+6358648,Casa del Virrey Hotel y Suites,Hotel,721111,micro,,,"Calle Calle del Trabajo 12, Centro",Morelia,Morelia,19.70616265,-101.19094884
+6358660,Motel la Quinta,Motel,721113,pequena,,,"Calle Licenciado Carlos Galvez Betancourt 1150, Isaac Arriaga",Morelia,Morelia,19.71137308,-101.16895611
+6358666,Hotel Estefania,Hotel,721112,micro,,https://www.hotelestefania.com,"Calle Plan de Ayala 874, Centro",Morelia,Morelia,19.70603144,-101.18116544
+6358672,Auto Hotel las Delicias,Motel,721113,micro,,,"Avenida Atzimba s/n, Felix Ireta",Zinapécuaro de Figueroa,Zinapécuaro,19.86657317,-100.83578494
+6358674,Hotel las Palmas,Hotel,721112,micro,,,"Calle Angelina Prado 205, San Isidro",Sahuayo de Morelos,Sahuayo,20.06830478,-102.71473287
+6358679,Hotel Casa de los Dulces Sueños,Hotel,721112,micro,4433170584,,"Calle Bartolome de las Casas 261, Centro",Morelia,Morelia,19.70194926,-101.18734858
+6358692,Posada del Sol,Casa de huéspedes,721311,micro,4431193644,,"Calle Rey Moctezuma 209, Pascual Ortiz de Ayala",Morelia,Morelia,19.69653832,-101.15070985
+6358694,Estanza Hotel & Suites,Hotel,721111,pequena,,https://www.estanzahotel.com,"Calle Nicaragua 40, Las Americas",Morelia,Morelia,19.69389247,-101.15914682
+6358701,Hostal San Franciskuni,Cabañas,721190,micro,,https://www.hostalfransiskuni.com,"Calle Antonio Alzate 302, Centro Historico",Morelia,Morelia,19.70087891,-101.18919248
+6358707,Hotel Herencia,Hotel,721111,pequena,,https://www.hherencia.com,"Avenida Francisco I. Madero Oriente 94, Centro",Morelia,Morelia,19.70285551,-101.19062457
+6358716,Hotel Portico,Hotel,721111,micro,,https://www.hotel-portico.com.mx,"Calle Aquiles Serdan 744, Centro",Morelia,Morelia,19.70373326,-101.1843329
+6358743,Hotel Meson de los Remedios,Hotel,721112,micro,,https://www.mesondelosremedios.com,"Calle Abasolo 556, Centro",Morelia,Morelia,19.69809138,-101.19439359
+6358746,Hotel Arbol Grande,Hotel,721111,pequena,,,"Avenida Francisco I Madero Poniente 1670, Nueva Valladolid",Morelia,Morelia,19.70177449,-101.21195424
+6358763,Motel Paris,Motel,721113,micro,,,"Calle Jose Rosario Bravo 5, Lago II",Morelia,Morelia,19.72541751,-101.21007279
+6358764,Hotel Mexico,Hotel,721111,mediana,,https://www.hotelmexicozitacuaro.com.mx,"Avenida Revolución Sur 22, Melchor Ocampo",Heróica Zitácuaro,Zitácuaro,19.43607451,-100.35656502
+6358766,Hotel la Casita,Hotel,721112,micro,,,"Calle Pedro Ignacio Irigoyen 230, Ampliacion Felix Arreguin",Morelia,Morelia,19.72035501,-101.22459155
+6358767,Motel Venus,Motel,721113,micro,,,"Avenida Francisco I Madero Poniente 4824, La Quemada",Morelia,Morelia,19.7013513,-101.23957156
+6358768,Hotel Mez Vall,Hotel,721112,micro,,,"Avenida Francisco I Madero Poniente 3517, Guadalupe",Morelia,Morelia,19.70401174,-101.22835307
+6358781,Hotel Baymont,Hotel,721111,mediana,,,"Circuito De las Universidades 60, Segundo Sector de Fidelac",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.96492488,-102.20149083
+6358783,Video Motel la Quinta,Motel,721113,micro,,,"Boulevard Libramiento Norte 16, Tacambaro de Codallos",Tacámbaro de Codallos,Tacámbaro,19.24263575,-101.45683388
+6358789,Holiday Inn,Hotel,721111,mediana,,https://www.hiruapanhotel.com,"Calle Boulevard Industrial 1705, Guadalupe Victoria",Uruapan,Uruapan,19.42269867,-102.03368545
+6358796,Hotel Victoria Morelia,Hotel,721111,pequena,,https://www.hotelvictoriamorelia.com,"Avenida Francisco I Madero Poniente 944, Centro",Morelia,Morelia,19.70288713,-101.20058782
+6358802,Hosteria de San Felipe,Hotel,721111,pequena,,https://www.hosteriasanfelipe.com,"Avenida Lázaro Cárdenas 321, Centro",Pátzcuaro,Pátzcuaro,19.52795082,-101.60879884
+6358803,Villa Patzcuaro Jarden Hotel & Rv Park,Hotel,721112,micro,,https://www.villapatzcuaro.com,"Calle Apolinar Pimentel 506, Los Nogales",Pátzcuaro,Pátzcuaro,19.53397421,-101.61111237
+6358806,Hotel Posada San Alejandro,Hotel,721112,micro,,,"Calle Benigno Serrato 5, Centro",Pátzcuaro,Pátzcuaro,19.51420826,-101.60583837
+6358807,Hotel Meson de San Antonio,Casa de huéspedes,721311,micro,4343422501,https://www.mesondesanantonio.com,"Calle Benigno Serrato 33, Centro",Pátzcuaro,Pátzcuaro,19.51440085,-101.60512229
+6358808,Hotel las Redes,Hotel,721112,micro,,,"Calzada Calzada de las Americas 15, Morelos",Pátzcuaro,Pátzcuaro,19.53968905,-101.616054
+6358811,Hotel Mision San Manuel,Hotel,721112,micro,,,"Calle Ponce de Leon 12, Centro Patzcuaro",Pátzcuaro,Pátzcuaro,19.51305382,-101.60980524
+6358817,Hotel Suites Casa Morelia,Hotel,721112,micro,,https://www.contactohotelcasamorelia.mx,"Calle Galeana 229, Centro",Morelia,Morelia,19.70095947,-101.19523488
+6358819,Hotel San Francisco,Hotel,721112,micro,,,"Carretera José Sixto Verduzco s/n, Centro",Angamacutiro de la Unión,Angamacutiro,20.14725875,-101.71397867
+6358830,Hotel la Salud,Hotel,721112,micro,4381000889,,"Avenida Morelos 216, Centro",Puruándiro,Puruándiro,20.08809565,-101.51336679
+6358835,Hotel Imperial,Hotel,721112,micro,,,"Calle Manuel Villalongin 381, Tabachines",Puruándiro,Puruándiro,20.09075178,-101.51664527
+6358837,Hotel Palacio,Hotel,721111,pequena,,https://www.hotelpalaciopuruandiro.com,"Calle Riva Palacio 146, Centro",Puruándiro,Puruándiro,20.08957467,-101.51254355
+6358863,Hotel Centro,Hotel,721112,micro,,,"Avenida Constitucion de 1814 Sur 65, Centro",Apatzingán de la Constitución,Apatzingán,19.08432207,-102.3548917
+6358864,Hotel Cuatro Caminos,Hotel,721111,micro,,,,Cuatro Caminos,Múgica,18.99354194,-102.10386749
+6358888,Hotel Latino,Hotel,721112,pequena,,https://www.hotellatinosahuayo.com,"Avenida Constitución 205, Centro",Sahuayo de Morelos,Sahuayo,20.05728168,-102.71845456
+6358893,Hotel Margaritas,Hotel,721112,micro,,,"Avenida Zaragoza 21, Centro",Sahuayo de Morelos,Sahuayo,20.05596186,-102.72241014
+6358899,Hotel Imperial,Hotel,721112,micro,3310242761,,"Calle Guadalupe Victoria 79, Centro",Sahuayo de Morelos,Sahuayo,20.0574068,-102.72328155
+6358907,Hotel Plaza,Hotel,721112,micro,,,"Calle Hidalgo 12, Centro",Cotija de la Paz,Cotija,19.81050324,-102.70476526
+6358909,Hotel Plaza Tarasca,Hotel,721112,micro,,,"Peatonal General Jose Maria Arteaga 12, Centro",Jiquilpan de Juárez,Jiquilpan,19.99109781,-102.71957416
+6358911,Hotel Meson de la Calle Real,Hotel,721112,micro,,https://www.hotelmesoncallereal.com,"Calle Benito Juarez 24, La Purísima",Tingüindín,Tingüindín,19.73833505,-102.48296833
+6358914,Hotel el Centenario,Hotel,721112,pequena,,,"Calzada Carretera Libre los Reyes-jacona Km 1 s/n, Jardines de San Juan",Los Reyes de Salgado,Los Reyes,19.59929897,-102.47498352
+6358918,Hotel y Suite Hacienda Montesinos,Hotel,721112,micro,4431967913,https://www.haciendamontesinos.com,"Avenida Francisco I Madero Poniente s/n, San Isidro Itzicuaro",Morelia,Morelia,19.6914537,-101.2786402
+6358919,Hotel Posada Don Chema,Hotel,721112,micro,,,"Calle Morelos 95, Centro",Los Reyes de Salgado,Los Reyes,19.58625979,-102.47350438
+6358930,Hotel Alameda,Hotel,721112,micro,,,"Calle Corregidora Poniente s/n, Centro",Zamora de Hidalgo,Zamora,19.98292271,-102.28668076
+6359019,Hotel Pueblo Nuevo,Hotel,721112,micro,,,"Avenida Lazaro Cardenas s/n, Santo Santiago",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.41558421,-102.12515695
+6359034,Hotel Plaza de Sahuayo,Hotel,721111,pequena,3531841649,https://www.hotelplazasahuayo.com,"Calle Hidalgo 8, Centro",Sahuayo de Morelos,Sahuayo,20.05737105,-102.72273601
+6359086,Hotel Casa San Diego,Hotel,721111,pequena,,,"Calle Fray Antonio de San Miguel (Calzada) 228, Centro",Morelia,Morelia,19.7019428,-101.1806264
+6359091,Hotel de Larios,Hotel,721111,pequena,,,"Calle Reforma s/n, Centro",San José de Gracia,Marcos Castellanos,19.9909265,-103.02248918
+6359092,Hotel Meson del Valle,Hotel,721111,mediana,,https://www.mesondelvalle.com.mx,"Avenida Morelos 515, Centro",Jacona de Plancarte,Jacona,19.96857017,-102.29865968
+6359093,Fundacion la Planta,Campamento,721210,micro,4433014806,,"Retorno Juan Escutia Privada s/n, Chapultepec Norte",Morelia,Morelia,19.69416284,-101.17425706
+6359108,Hotel Ramval,Hotel,721111,micro,,https://www.hotelramval.com.mx,"Calle Amado Nervo Poniente 40, Centro",Zamora de Hidalgo,Zamora,19.98542559,-102.28782674
+6359110,Posada Morelos,Casa de huéspedes,721311,micro,,,"Calle Jose Maria Morelos 30, Centro",Uruapan,Uruapan,19.41879949,-102.06023473
+6359135,Auto Hotel Posada Tzararacua,Motel,721113,micro,4525235362,,"Avenida Paseo General Lazaro Cardenas 115, Pinera",Uruapan,Uruapan,19.37828836,-102.05990062
+6359180,Casa Grande Hotel Boutique,Hotel,721111,pequena,,https://www.casagrandemorelia.com,,Morelia,Morelia,19.7019907,-101.19428493
+6359183,Hotel Irekua,Hotel,721111,pequena,7151358130,https://www.hotelirekua.com,"Avenida Revolucion Sur 44, Melchor Ocampo",Heróica Zitácuaro,Zitácuaro,19.43467484,-100.35730431
+6359185,Hotel Refugio Agustino,Hotel,721112,micro,,,"Calle Aldama 277, Centro",Morelia,Morelia,19.69978926,-101.19402956
+6359191,Hotel San Carlos,Hotel,721111,pequena,,https://www.hotelsancarloszacapu.com.mx,"Avenida Morelos 889, Centro",Zacapu,Zacapu,19.81483453,-101.78447133
+6359194,Hotel la Parroquia,Hotel,721111,pequena,,https://www.hotellaparroquia.com,"Calle Padre Lloreda 24, Centro",Pátzcuaro,Pátzcuaro,19.51669809,-101.60896847
+6359197,Rio Grande Hotel & Suites,Hotel,721111,pequena,,,"Privada 22 de Octubre s/n, Palmira",Apatzingán de la Constitución,Apatzingán,19.07208311,-102.34523139
+6359235,Hotel del Callejon,Hotel,721112,micro,,https://hoteldelcallejon.com,"Calle Abasolo 444, Centro",Morelia,Morelia,19.69904318,-101.19443629
+6359238,Hotel Best Western Plus Gran Hotel,Hotel,721111,grande,,https://www.bwplusmorelia.com.mx,"Calle Pirindas 435, Felix Ireta",Morelia,Morelia,19.68334512,-101.18413539
+6359298,Hotel Loma Linda Inn,Hotel,721111,micro,,https://www.hotellomalinda.mx,"Prolongacion Emilio Carranza 961, La Loma",Puruándiro,Puruándiro,20.09744041,-101.515689
+6359300,Hotel Cerro Grande,Hotel,721111,pequena,,,"Calzada Cerro Grande 217, Jardines del Cerro Grande",La Piedad de Cabadas,La Piedad,20.35575465,-102.04742909
+6359302,Hotel y Restaurant Posada los Nogales,Hotel,721111,pequena,,,"Avenida Lázaro Cárdenas 422, Los Nogales",Pátzcuaro,Pátzcuaro,19.52985266,-101.60987094
+6359310,Hotel la Posada,Hotel,721112,micro,,,"Avenida 5 de Mayo s/n, Centro",Panindícuaro,Panindícuaro,19.98302241,-101.75983303
+6359319,Hotel y Cabañas Mansion del Virrey,Cabañas,721190,micro,4343423692,,"Calle Morelia 3, Revolucion",Pátzcuaro,Pátzcuaro,19.53472144,-101.61389933
+6359321,Hotel Fiesta Kamichin,Hotel,721112,micro,3535332383,,"Calle Martin Castrejon s/n, Maria Isabel",Jiquilpan de Juárez,Jiquilpan,20.00201723,-102.70870077
+6359338,Hotel Casa de la Loma & Suites,Hotel,721111,pequena,,https://www.casadelaloma.com,"Calle Wolfang Amadeus Mozart 380, La Loma",Morelia,Morelia,19.6796811,-101.18242918
+6359340,Cabañas Sta. Maria,Cabañas,721190,micro,,,"Calle Jose Juan Tablada 700, Lomas de Santa Maria",Morelia,Morelia,19.67563178,-101.18670161
+6359341,Auto Hotel Aqua,Motel,721113,micro,,,"Circuito Periferico Paseo de la Republica Sector Republica 7350, La Quemada",Morelia,Morelia,19.70548241,-101.24155994
+6359349,Villa San Jose Hotel & Suites,Hotel,721111,mediana,,https://www.villasanjose.com.mx,"Calle Patzimba 77, Vista Bella",Morelia,Morelia,19.68000702,-101.19591309
+6359351,Hotel Posada Vista Bella,Hotel,721111,pequena,,https://www.moreliahoteles.com,"Avenida Rey Tangaxoan (Rey Tangaxoan Ii) 590, Vista Bella",Morelia,Morelia,19.67910474,-101.19630966
+6359359,Hotel el Castillo,Hotel,721112,micro,,,"Calle General Vicente Guerrero 13, Centro",Yurécuaro,Yurécuaro,20.34199601,-102.28332613
+6359360,Hotel Casa del Refugio,Hotel,721111,micro,,https://www.hotelcasadelrefugio.com,"Calle Portal Régules 9, Centro",Pátzcuaro,Pátzcuaro,19.51564461,-101.6092607
+6359364,Hotel Casa Encantada,Hotel,721112,micro,,https://www.hotelcasaencantada.com,"Calle Doctor Coss 15, Centro",Pátzcuaro,Pátzcuaro,19.51154892,-101.6091543
+6359368,Hotel Erandi,Hotel,721112,micro,,,"Avenida Lazaro Cardenas 90, Santo Santiago",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.41572777,-102.1262077
+6359373,La Casita de Rosi,Hotel,721111,micro,,https://www.lacasitaderosi.com.mx,"Calle Benigno Serrato Portal Pueblita 7, Centro",Pátzcuaro,Pátzcuaro,19.5140725,-101.60631535
+6359385,Posada Magatsi,Casa de huéspedes,721311,micro,,,"Calle Hospital San Cosme 39, Ampliacion Felix Arreguin",Morelia,Morelia,19.72095553,-101.22498451
+6359386,Hotel Pacifico,Hotel,721112,micro,,,,Morelia,Morelia,19.71681363,-101.22886235
+6359415,Hotel Mi Solar,Hotel,721112,pequena,4525240912,,"Calle Juan Delgado 10, Centro",Uruapan,Uruapan,19.42272346,-102.06330627
+6359433,Hotel Mexico,Hotel,721112,micro,3511901434,,"Avenida 5 de Mayo 639, El Duero",Zamora de Hidalgo,Zamora,19.97817432,-102.28403578
+6359447,Hotel Hacienda los Alamos,Hotel,721111,micro,7861236705,,"Otro(especifique) Adrián Peña Soto 74, Arboledas del Rio",Ciudad Hidalgo,Hidalgo,19.6822075,-100.54991562
+6359457,Motel la Conquista,Motel,721113,pequena,,,,Uruapan,Uruapan,19.42119368,-102.00426654
+6359461,Hotel Alejandria,Motel,721113,pequena,,,"Calle Fresno 444, Los Angeles",Morelia,Morelia,19.74398608,-101.17329214
+6359469,El Faro Auto Hotel,Motel,721113,pequena,,,,Morelia,Morelia,19.66135546,-101.23539504
+6359643,Pacifica Resort Ixtapa,Hotel,721111,mediana,,https://www.pacifica.com.mx,"Calle 13 de Septiembre de 1847 131, Chapultepec Norte",Morelia,Morelia,19.6947031,-101.17307819
+6359683,Hotel el Rinconcito,Hotel,721112,micro,7671080042,,"Calle San Judas s/n, Rivapalacio",Vicente Riva Palacio,San Lucas,18.37706092,-100.65702806
+6359708,Auto Hotel la Cascada,Motel,721113,micro,,,"Calle Libramiento Oriente s/n, Zumpimito",Uruapan,Uruapan,19.37185641,-102.05369198
+6359749,Hotel del Parque,Hotel,721112,micro,,,"Calle Alberto T Benitez 60, Centro",Apatzingán de la Constitución,Apatzingán,19.08185163,-102.35580031
+6359766,Hotel Alex Guzman,Hotel,721112,micro,,,"Calle Ana Maria Gallaga 189, Los Presidentes",Puruándiro,Puruándiro,20.09422366,-101.51944523
+6359768,B & B Estancia de la Era,Hotel,721112,micro,,https://www.delaera.com,"Calle Espejo 160, Centro",Pátzcuaro,Pátzcuaro,19.51713391,-101.61296809
+6359971,Hotel San Miguel,Hotel,721111,pequena,,,"Avenida Francisco I Madero Poniente 1036, Centro",Morelia,Morelia,19.70278264,-101.20155221
+6359972,Hotel Mexico,Hotel,721112,micro,,,"Calle Manuel Muñiz 159, Juarez",Morelia,Morelia,19.69690304,-101.19586412
+6359973,Hotel & Hostel Allende,Cabañas,721190,micro,,https://www.allende.com.mx,"Calle Allende 843, Centro",Morelia,Morelia,19.70203582,-101.19962583
+6359975,Hotel la Merced,Hotel,721112,micro,,,"Avenida Francisco I Madero Poniente 670, Centro",Morelia,Morelia,19.70297223,-101.19775429
+6359977,Hotel Plaza Carrillo,Hotel,721112,micro,,,"Calle Abasolo 737, Centro",Morelia,Morelia,19.69641461,-101.19437667
+6359978,Hotel Mintzicuri,Hotel,721112,micro,,,"Calle Vasco de Quiroga 227, Centro Historico",Morelia,Morelia,19.70082232,-101.18988775
+6359979,Casa de Huespedes Ponce,Casa de huéspedes,721311,micro,4433968132,,"Calle Manuel Muñiz 320, Centro",Morelia,Morelia,19.69760473,-101.19723738
+6359981,Hotel Colonial,Hotel,721112,micro,,,"Calle 20 de Noviembre 15, Centro",Morelia,Morelia,19.70477369,-101.19131294
+6359983,Hotel Valladolid Inn,Hotel,721111,pequena,,,"Avenida Francisco I. Madero Poniente 245, Centro",Morelia,Morelia,19.70302803,-101.1936958
+6360016,Estacionamiento del Gran Hotel Clasico,Hotel,721111,micro,,,"Calle Fray Bautista de Moya 32, Colonia del Centro",Huetamo de Núñez,Huetamo,18.62660638,-100.89939692
+6360283,Hotel California,Hotel,721112,micro,,https://www.hotelcaliforniamorelia.com,"Calle Octava 299, Guadalupe",Morelia,Morelia,19.70775315,-101.22373942
+6360334,Hotel Ramval,Hotel,721111,pequena,,https://www.hotelramval.com.mx,"Calle Amado Nervo Poniente 40, Centro",Zamora de Hidalgo,Zamora,19.98551612,-102.287869
+6360519,Celzc Ce Lázaro Cardenas,Hotel,721111,mediana,,https://www.hotelescityexpress.com,"Avenida Rubelinas 1291, Lazaro Cardenas",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.97143087,-102.20719583
+6418467,Hotel la Casa Embrujada,Hotel,721111,micro,,,"Calle Luciano Velázquez s/n, Centro",Nocupétaro de Morelos,Nocupétaro,19.04378802,-101.16313594
+6418496,Hotel Rosa Barroco,Hotel,721111,micro,,https://rosabarroco.com,"Avenida Francisco I. Madero Oriente 830, Centro",Morelia,Morelia,19.70288859,-101.18360187
+6418497,Hotel Gertrudis,Hotel,721112,micro,,https://www.hotelgertrudismorelia.com,"Calle Santiago Tapia 55, Centro",Morelia,Morelia,19.70471415,-101.1919926
+6418498,Hotel Ross,Hotel,721112,micro,,https://www.hotelross.com.mx,"Avenida Francisco I Madero Poniente 4813, Manantiales de Morelia",Morelia,Morelia,19.70090077,-101.23995702
+6420495,Hotel Real Monarca,Hotel,721111,pequena,7151560324,https://www.hotelrealmonarca.com,"Calle Nacional 16, Centro",Mineral de Angangueo,Angangueo,19.61839618,-100.28598149
+6420499,Hotel Posada de Villa,Hotel,721112,micro,,,"Calle Padre Lloreda (Manuel de la Torre) 176, Centro",Morelia,Morelia,19.69914051,-101.18808762
+6420500,Hotel Virreyes,Hotel,721112,micro,,https://www.hotelvirreyes.mx,"Avenida Morelos Oriente 37, Centro",Ciudad Hidalgo,Hidalgo,19.68767758,-100.5514762
+6420501,Hotel Morelia,Hotel,721112,micro,,https://www.hotelmorelia.com,"Avenida Morelos Norte 150, Centro Historico",Morelia,Morelia,19.70443793,-101.19148573
+6420505,Hotel Plaza Churintzio,Hotel,721112,micro,,,"Calle Hidalgo 38, Centro",Churintzio,Churintzio,20.15091986,-102.06612091
+6420515,Housting House Express Hotel,Hotel,721112,micro,,https://www.houstinghouseexpress.com,"Calle Dr Miguel Silva G 276, Centro",Morelia,Morelia,19.70542583,-101.18651131
+6420532,Hotel Posada Don Vasco,Hotel,721112,micro,,,"Calle Vasco de Quiroga 232, Centro Historico",Morelia,Morelia,19.70074141,-101.18997852
+6507556,Hotel Villas,Hotel,721112,micro,,,"Calle Matamoros s/n, Centro",Villa Morelos,Morelos,20.00240999,-101.41267332
+6713082,Hotel Yesenia,Hotel,721112,micro,,,"Avenida Benito Juarez 450, Ejidal Sur",Zamora de Hidalgo,Zamora,19.98268456,-102.27623207
+6721856,Hotel Mansion de los Sueños,Hotel,721111,micro,,https://www.mansiondelossuenos.com.mx,"Calle Primera de Ibarra 15, Centro",Pátzcuaro,Pátzcuaro,19.51437421,-101.6102863
+6735881,Hotel Qualitel Plus,Hotel,721111,micro,,,"Calle Valentín Gómez Farías 328, Centro",Morelia,Morelia,19.70588365,-101.19601828
+6752379,Auto Hotel Habana Suites,Motel,721113,pequena,,,"Circuito Periferico Paseo de la Republica Sector Republica 7100, La Quemada",Morelia,Morelia,19.70599949,-101.2394879
+6758349,Auto Hotel Quijote,Motel,721113,pequena,,,"Avenida Morelos Norte 234, Ampliacion Clara Cordoba",Morelia,Morelia,19.73405386,-101.18268328
+6758424,Auto Hotel Eclipse,Motel,721113,pequena,,,"Calle Juan Jose Moreno 300, Union",Morelia,Morelia,19.71415687,-101.15684613
+6798604,Hotel Terras,Hotel,721111,pequena,,https://www.hotelterrass.com,"Calle Morelos Sur 135, Centro",Zamora de Hidalgo,Zamora,19.98614992,-102.28519958
+6799224,Hotel B Grand,Hotel,721111,pequena,4433147916,https://www.belo.com.mx,"Avenida Acueducto 2800, Lomas de Hidalgo",Morelia,Morelia,19.69568838,-101.15905194
+6800912,Best Placexpress,Hotel,721111,pequena,,https://bestplace.com.mx,"Calle Francisco I Madero Norte 2701, Jardínes de San Joaquin",Zamora de Hidalgo,Zamora,20.0148344,-102.2816253
+6803902,Auto Hotel Bonsai,Motel,721113,micro,4433238194,,,Jesús del Monte (La Capilla),Morelia,19.66214121,-101.15987663
+6805877,Hotel Rios,Hotel,721112,micro,,,"Calle General Francisco Javier Mina 313, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.96005112,-102.19352444
+6861602,Hotel Posada la Basilica,Hotel,721112,micro,,,"Calle Arciga 6, Centro",Pátzcuaro,Pátzcuaro,19.51522786,-101.60692918
+6863508,Estacionamiento Tres Marias,Hotel,721112,micro,,,"Calle Carlos Salazar 6, Centro",Ciudad Hidalgo,Hidalgo,19.68993415,-100.55028491
+6864257,Hotel Portico,Hotel,721111,pequena,,https://www.hotelromance.com.mx,"Calle 20 de Noviembre 1033, Centro",Morelia,Morelia,19.70419374,-101.18158044
+6864317,Hotel Casa del Fraile,Hotel,721112,micro,,https://www.hotelcasadelfrayle.com,"Calle Juan José de Lejarza 52, Centro",Morelia,Morelia,19.70253998,-101.18668823
+6883717,Hotel Parador,Hotel,721112,micro,,,,San Juan de Alima,Aquila,18.57804804,-103.66676441
+6934208,Pension Sin Nombre,Casa de huéspedes,721311,micro,,,"Cerrada Cerrada de Santa Teresa s/n, Balcones",Jacona de Plancarte,Jacona,19.95435838,-102.29659979
+6951765,Hotel Lago,Hotel,721112,micro,4341190925,,"Avenida Lazaro Cardenas 509, Revolucion",Pátzcuaro,Pátzcuaro,19.53412956,-101.61199454
+6951777,Cabañas del Lago,Cabañas,721190,micro,4522191604,,"Avenida Caltzontzin s/n, Morelos",Pátzcuaro,Pátzcuaro,19.54442082,-101.61483908
+6951783,Hotel Villas San Miguel,Hotel,721112,micro,4433783296,,"Calzada Calzada de las Americas s/n, Viveros",Pátzcuaro,Pátzcuaro,19.54313629,-101.6198059
+6951851,Desarrollo Eco Turistico Apupato,Cabañas,721190,micro,4341064311,,,Pátzcuaro,Pátzcuaro,19.54751165,-101.62304954
+6956985,Salon y Auto Mini Hotel el Profe,Motel,721113,micro,,,,Huaniqueo de Morales,Huaniqueo,19.89590339,-101.50419839
+6957434,Hotel Eli,Hotel,721112,micro,,,"Carretera Morelia Zamora s/n, Cuinato",Zacapu,Zacapu,19.80204547,-101.77761292
+6957645,Pension,Casa de huéspedes,721311,micro,,,"Calle Rio Bravo s/n, Obrera",Zacapu,Zacapu,19.80505527,-101.80103096
+6974013,Motel Arizona,Motel,721113,micro,4433344022,,"Avenida Francisco I Madero Poniente 5074, Manantiales Poniente",Morelia,Morelia,19.70041034,-101.24207635
+6976368,Hotel Mansion del Sol,Hotel,721112,micro,,,"Calle Andres Quintana Roo 192, Centro",Morelia,Morelia,19.70131287,-101.19691336
+6976621,Hotel & Suites San Miguel,Hotel,721112,micro,,,"Avenida Morelos Sur 71, Centro Historico",Morelia,Morelia,19.70234473,-101.19154518
+7002598,Pension Sin Nombre,Casa de huéspedes,721311,micro,3531067575,,"Calle Jose Marti 102, Noria del Monte",Sahuayo de Morelos,Sahuayo,20.05203608,-102.72025454
+7002712,Pension Sin Nombre,Casa de huéspedes,721311,micro,,,"Calle 5 de Mayo s/n, Santuario",Sahuayo de Morelos,Sahuayo,20.05957264,-102.72685625
+7002768,Pension Sin Nombre,Casa de huéspedes,721311,micro,,,"Calle 5 de Mayo s/n, Santuario",Sahuayo de Morelos,Sahuayo,20.0598683,-102.72761795
+7002851,Pension Melgar,Casa de huéspedes,721311,micro,3531062652,,"Calle Agustin Melgar 224, Centro",Sahuayo de Morelos,Sahuayo,20.05427259,-102.72614541
+7002852,Pension Sin Nombre,Casa de huéspedes,721311,micro,,,"Calle Agustin Melgar 224, Centro",Sahuayo de Morelos,Sahuayo,20.0544718,-102.72615333
+7002899,Pension Sin Nombre,Casa de huéspedes,721311,micro,,,"Calle Juan Escutia 205, Centro",Sahuayo de Morelos,Sahuayo,20.05433983,-102.72724407
+7003215,Motel Yaretzi,Motel,721113,pequena,,,,Sahuayo de Morelos,Sahuayo,20.03322916,-102.71684196
+7003546,Hotel Meson Posada,Departamento amueblado,721312,micro,,,"Calle Hidalgo 340, Forestal",Sahuayo de Morelos,Sahuayo,20.06323686,-102.72270071
+7014862,Hotel Santa Maria,Hotel,721112,micro,,,"Calle 20 de Noviembre 84, Centro",Lagunillas,Lagunillas,19.56404614,-101.41361739
+7015728,Hotel Colibri Tzintzuntzan,Motel,721113,micro,,,"Calle Aristeo Mercado s/n, Primer",Tzintzuntzan,Tzintzuntzan,19.6315261,-101.58596516
+7025172,Hotel Tejado Rojo,Hotel,721112,micro,,,"Avenida Madero Poniente 9, Centro",Tacámbaro de Codallos,Tacámbaro,19.23606227,-101.45963848
+7044107,Hotel Plaza Valeria,Hotel,721112,micro,4351156098,,"Calle Melchor Ocampo Oriente s/n, Centro",Huetamo de Núñez,Huetamo,18.62595286,-100.89949978
+7044340,Auto Motel,Motel,721113,micro,4351031240,,"Avenida Batallon de Huetamo s/n, El Chamizal",Huetamo de Núñez,Huetamo,18.62431076,-100.88693374
+7044411,Auto Hotel las Estrellas,Motel,721113,micro,,,,Vicente Riva Palacio,San Lucas,18.37210212,-100.6672695
+7044722,Hotel Arias,Motel,721113,micro,,,"Calle La Piedad s/n, Michoacana",Huetamo de Núñez,Huetamo,18.63919206,-100.89444489
+7045341,Hotel Uembekua,Hotel,721112,micro,,,"Calle 16 de Septiembre s/n, San Juan",Tanaco,Cherán,19.74068234,-102.08015441
+7059586,Hotel Maria Fernanda,Hotel,721112,micro,,,"Calle 5 de Mayo s/n, Centro",Susupuato de Guerrero,Susupuato,19.21489001,-100.40829342
+7453082,Pension el Torito,Casa de huéspedes,721311,micro,,,"Calzada Gabriel Cervera 19, Ejercito Mexicano",Uruapan,Uruapan,19.40995686,-102.02221882
+7467731,Hotel Galerias del Angel,Departamento amueblado,721312,micro,,,"Calle 16 de Septiembre 18, Centro",Los Reyes de Salgado,Los Reyes,19.59056246,-102.47416949
+7481968,Eco Hotel,Hotel,721112,micro,,,"Avenida Emilio Carranza 5, Centro",Uruapan,Uruapan,19.42037896,-102.06196263
+7482343,Pension Sin Nombre,Casa de huéspedes,721311,micro,4521364257,,"Calle Primera Privada Pueblita s/n, Centro",Uruapan,Uruapan,19.42148494,-102.05827556
+7482504,Pension o Casa de Huespedes Sin Nombre,Casa de huéspedes,721311,micro,4521984025,,"Calle Guadalupe Victoria 34, Centro",Uruapan,Uruapan,19.42058978,-102.05613014
+7482876,Pension Sin Nombre,Casa de huéspedes,721311,micro,4530896526,,"Calle Coahuila 22, Ramon Farias",Uruapan,Uruapan,19.42098848,-102.05251103
+7496592,Cabañas del Lago,Cabañas,721190,micro,4341882632,,,Zirahuén,Salvador Escalante,19.44898081,-101.72998531
+7497019,Cabañas el Paraiso,Cabañas,721190,micro,,,,Santa Clara del Cobre,Salvador Escalante,19.41189613,-101.63630668
+7508616,Hotel Zicuirancha,Departamento amueblado,721312,micro,7531082346,,"Calle Comonfort 481, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95626082,-102.18956855
+7509334,Hotel Pueblo Nuevo,Hotel,721112,micro,,,"Avenida Ahuanitzaro s/n, Santo Santiago",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.41554204,-102.12501131
+7525424,Posada las Flores,Casa de huéspedes,721311,micro,,,"Calle Pipila s/n, Barrio Primero",Tingambato,Tingambato,19.50463354,-101.85272242
+7557096,Estacionamiento Hotel,Hotel,721111,micro,,,"Calle Heriberto Jara Poniente 95, Centro",Apatzingán de la Constitución,Apatzingán,19.08540563,-102.35546608
+7557271,Motel Gran Paraiso 2,Motel,721113,micro,,,"Calle Insurgentes 485, Miguel Hidalgo",Apatzingán de la Constitución,Apatzingán,19.08159449,-102.36006576
+7557618,Hotel las Palmas,Hotel,721112,micro,4531400368,,"Calle 20 de Noviembre s/n, Centro",Buenavista Tomatlán,Buenavista,19.21093112,-102.58178432
+7557716,Pension y Estacionamiento Sin Nombre,Casa de huéspedes,721311,micro,,,"Calle Articulo 27 66, Centro",Apatzingán de la Constitución,Apatzingán,19.08463591,-102.35678899
+7558206,Hotel Hacienda Santa Cruz,Hotel,721112,micro,,,"Calle Nicolas Bravo s/n, Varillero",Apatzingán de la Constitución,Apatzingán,19.08632205,-102.36343375
+7558260,Hotel el Varillero,Hotel,721112,micro,,,,Apatzingán de la Constitución,Apatzingán,19.08228225,-102.36717497
+7566130,Renta de Habitaciones Sin Nombre,Casa de huéspedes,721311,micro,,,"Avenida Veracruz Poniente 54, Centro",Churumuco de Morelos,Churumuco,18.66440644,-101.64328089
+7584620,Hotel la Gaviota,Hotel,721112,micro,7531001863,,"Calle Aldama s/n, Bahia Bufadero",Bahía Bufadero (Caleta de Campos),Lázaro Cárdenas,18.07385208,-102.75437988
+7585822,Hotel Casa Hidalgo,Hotel,721112,micro,4434859727,,"Calle 5 de Mayo 1, Centro",Ciudad Hidalgo,Hidalgo,19.68975725,-100.55596405
+7593951,Bungalow Pao Pao,Cabañas,721190,micro,4433951888,,"Calle La Rosa s/n, Bahia Bufadero",Bahía Bufadero (Caleta de Campos),Lázaro Cárdenas,18.07526824,-102.75279138
+7616197,Hotel el Paso de la Monarca,Casa de huéspedes,721311,micro,7151006361,,"Calle Nacional 20, Centro",Mineral de Angangueo,Angangueo,19.61827408,-100.28606626
+7616221,Cabañas Esperanza,Cabañas,721190,micro,,,,Tlalpujahua de Rayón,Tlalpujahua,19.80822282,-100.1701458
+7616273,Cabañas Villa Amacalli,Cabañas,721190,micro,,https://www.amacalli.com,"Avenida Jesus del Monte s/n, Jesús del Monte",Tlalpujahua de Rayón,Tlalpujahua,19.80899593,-100.16974165
+7617432,Hotel Paraiso,Hotel,721112,micro,,,"Carretera Carretera Federal s/n, Trigueros",Tlalpujahua de Rayón,Tlalpujahua,19.80529282,-100.16753611
+7617484,Hotel Monarca,Hotel,721112,micro,,,"Calzada Del Carmen s/n, Centro",Tlalpujahua de Rayón,Tlalpujahua,19.80487126,-100.17563371
+7617489,Hotel Restaurant Rincon Minero,Hotel,721112,micro,4471034150,,"Calle Independencia 3, Centro",Tlalpujahua de Rayón,Tlalpujahua,19.80147526,-100.17493636
+7617750,Hotel Zaragoza,Hotel,721112,micro,4471711373,,"Calle Zaragoza 179, Centro",Maravatío de Ocampo,Maravatío,19.89258257,-100.43849245
+7628819,Hotel Tuxpan,Hotel,721112,micro,,,"Calle Miguel Carrillo Sur 139, Avenida Morelos Nte",Tuxpan,Tuxpan,19.56921325,-100.46513133
+7629122,Hotel Imperial,Motel,721113,micro,7151448066,,"Calle Libramiento Francisco J Mujica s/n, La Palma",Heróica Zitácuaro,Zitácuaro,19.44831958,-100.34772693
+7629917,Posada del Centro,Casa de huéspedes,721311,micro,,,"Calle Lerdo de Tejada Poniente 1, Centro",Heróica Zitácuaro,Zitácuaro,19.43606316,-100.35685355
+7630316,Hotel Maria Fernanda Inn,Hotel,721112,micro,7151444356,https://web.mariafernanda.com.mx,"Calle Santos Degollado Oriente 33, Cuahutemoc",Heróica Zitácuaro,Zitácuaro,19.43737064,-100.35332622
+7630380,Mini Hotel de Max,Motel,721113,micro,,,"Calle Ignacio Lopez Rayon Poniente 54, Benito Juarez",Heróica Zitácuaro,Zitácuaro,19.43896898,-100.36140179
+7638296,Pension Sin Nombre,Casa de huéspedes,721311,micro,7151596014,,"Calle Calle de Moctezuma Norte 24, Jose Maria Morelos",Heróica Zitácuaro,Zitácuaro,19.44249031,-100.35410054
+7660931,Hotel Lupita,Hotel,721112,micro,4421718326,,"Privada Ignacio Zaragoza 5, Centro",Ciudad Hidalgo,Hidalgo,19.68748924,-100.5537115
+7825539,Motel Boutique Aqua,Motel,721113,pequena,,,"Calle Boulevard Industrial 599, Eduardo Ruiz",Uruapan,Uruapan,19.41996144,-102.04354574
+7825544,Hotel San Carlos,Motel,721113,micro,,,"Avenida Amado Nervo 1244, Luis Martínez Villicaña",Nahuatzen,Nahuatzen,19.65740439,-101.92752257
+7896915,Hotel Casa Blanca,Hotel,721112,micro,,,"Calle Libramiento General Gildardo Magaña 2, Tocumbo",Tocumbo,Tocumbo,19.70417021,-102.52551307
+7896959,Motel Trebol,Motel,721113,micro,,,"Calle Durazno 30, Buenos Aires",Tepalcatepec,Tepalcatepec,19.19060468,-102.86438998
+8198520,Pension los Pinos,Casa de huéspedes,721311,micro,,,"Calle Tabasco 24, Los Ángeles",Puruándiro,Puruándiro,20.08341928,-101.52853979
+8249015,Hotel Linda Vista,Hotel,721112,micro,3511863578,,"Calle Linda Vista 15, Linda Vista",Zamora de Hidalgo,Zamora,19.99018456,-102.24866774
+8252132,Hotel Tlalpujahua Inn,Hotel,721112,micro,,,"Calle Hermenegildo Galeana 6, Centro",Tlalpujahua de Rayón,Tlalpujahua,19.80403668,-100.1736871
+8300808,Hotel Casa Eugenia,Hotel,721112,micro,,,"Calle 20 de Noviembre 322, Centro",Morelia,Morelia,19.70461808,-101.18853853
+8300866,Hotel Marcella,Hotel,721112,micro,4431203864,https://www.hotelmarcella.mx,"Calle Aquiles Serdan 665, Centro",Morelia,Morelia,19.70386592,-101.18519408
+8301065,Hotel Aries,Hotel,721112,micro,4381061004,,"Calle Rio Sabinas 88, Los Conos",Puruándiro,Puruándiro,20.08872118,-101.49307364
+8349370,Motel Trivago,Motel,721113,micro,,,,Tacámbaro de Codallos,Tacámbaro,19.22294675,-101.45714395
+8349409,Auto Hotel Obregon,Motel,721113,micro,,,"Calle Alvaro Obregon 251, Centro",Pátzcuaro,Pátzcuaro,19.52802804,-101.61012633
+8349601,Hotel Pedernales,Motel,721113,micro,,,"Calle Miguel Hidalgo s/n, Puente Alto",Pedernales,Tacámbaro,19.15321153,-101.45992987
+8408151,Hotel Zamora Ejecutivo Express,Departamento amueblado,721312,micro,3515156278,,"Calle Pino Suarez Sur 101, Centro",Zamora de Hidalgo,Zamora,19.98329793,-102.28959397
+8445408,Centro Ecoturistico Patzingo,Campamento,721210,micro,4521125239,,"Avenida Mariano Matamoros 59, San Mateo",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.42002089,-102.133384
+8445750,La Siranda,Hotel,721111,micro,,https://www.lasiranda.com,"Calle Doctor Coss 17, Centro",Pátzcuaro,Pátzcuaro,19.51148769,-101.60917944
+8580444,Hotel Bugambilias,Hotel,721112,micro,,,"Avenida Circunvalacion 148, El Toreo",Jiquilpan de Juárez,Jiquilpan,19.99066459,-102.70949209
+8734355,Hotel San Miguel Auxiliar,Hotel,721112,micro,,,"Calle Felipe Vardiosabal s/n, Varillero",Apatzingán de la Constitución,Apatzingán,19.08773698,-102.36970196
+8734429,Hotel Lupita,Hotel,721112,micro,,,,Playa Azul,Lázaro Cárdenas,17.97952482,-102.34487509
+8749293,Hotel Don Nicias,Hotel,721112,micro,,,"Calle Hidalgo 7, Segundo",Contepec,Contepec,19.95372848,-100.16351312
+8749356,Centro Cultural Santa Maria de Cotija,Campamento,721210,pequena,,,"Calle Javier Mina 116, Centro",Cotija de la Paz,Cotija,19.80830492,-102.704731
+8750123,Hotel las Palmas,Hotel,721112,micro,7531077024,,"Calle Corregidora s/n, Bahia Bufadero",Bahía Bufadero (Caleta de Campos),Lázaro Cárdenas,18.07385759,-102.75510124
+8917906,Auto Hotel la Feria,Motel,721113,micro,,,,Uruapan,Uruapan,19.41977593,-102.00307486
+8919118,Hotel Arias,Hotel,721112,micro,,,"Calle Carlos Salazar s/n, Centro",Los Reyes de Salgado,Los Reyes,19.58904219,-102.4723293
+8919188,Motel Pasion,Motel,721113,micro,,,"Calle Santa Isabel s/n, Cristobal Colon",Apatzingán de la Constitución,Apatzingán,19.09733654,-102.33208133
+8932312,Hotel Jade,Hotel,721112,micro,,,"Carretera Nacional Zamora Uruapan s/n, Primer Cuartel",Carapan,Chilchota,19.85119334,-102.03226204
+8933218,Casa de Huespedes Sin Nombre,Casa de huéspedes,721311,micro,,,"Calle Francisco I Madero Norte 999, El Salitre",Tuxpan,Tuxpan,19.56565843,-100.45851206
+8933223,Casa de Huespedes Don Chucho,Casa de huéspedes,721311,micro,7151393736,,"Calle Leandro Valle Sur 8, Melchor Ocampo",Heróica Zitácuaro,Zitácuaro,19.43593884,-100.35570836
+8933729,Hotel Mision San Miguel,Departamento amueblado,721312,micro,7151598402,,"Calle Ignacio Zaragoza Poniente 17, Ignacio Zaragoza",Heróica Zitácuaro,Zitácuaro,19.43502054,-100.35870629
+8933730,Posada y Pension San Juan,Casa de huéspedes,721311,micro,7151965663,,"Calle Doctor Emilio Garcia Sur 41, Centro",Heróica Zitácuaro,Zitácuaro,19.43543097,-100.35906549
+8934678,Hotel Villa de Flores,Hotel,721112,pequena,4521355075,,"Avenida Emilio Carranza 15, Centro",Uruapan,Uruapan,19.42144308,-102.06558345
+8941387,Casa Jose Maria Hotel,Hotel,721112,micro,4432751877,https://www.hotelcasajosemaria.com,"Calle Santiago Tapia 688, Centro",Morelia,Morelia,19.70495174,-101.19793352
+8941577,Posada del Lago Cuitzeo,Casa de huéspedes,721311,micro,4431882141,,"Calle Cuitzeo San Agustin del Pulque s/n, Alto",Cuitzeo del Porvenir,Cuitzeo,19.96066725,-101.13677875
+8942196,Auto Hotel Atenas,Motel,721113,pequena,4432122930,,"Calle Indigena Marcelino 16, Sindurio",Morelia,Morelia,19.6954705,-101.2432003
+8951832,Motel Lago de Plata,Motel,721113,micro,,,,Pátzcuaro,Pátzcuaro,19.49675273,-101.6004735
+8952174,Autohotel Samay,Motel,721113,micro,,,"Calle Benito Juarez 90, Centro",Pátzcuaro,Pátzcuaro,19.51736135,-101.61697816
+8952570,Estacionamiento y Hotel Plaza,Hotel,721112,micro,,,"Calle Ponce de Leon s/n, Centro Patzcuaro",Pátzcuaro,Pátzcuaro,19.51296546,-101.60948921
+8952613,Cabañas Monarca,Cabañas,721190,micro,4341064053,,,Janitzio (Isla Janitzio),Pátzcuaro,19.57436467,-101.65392417
+8952725,Pension Sin Nombre,Casa de huéspedes,721311,micro,,,"Calle Francisco Javier Mina 68, Centro",Ciudad Hidalgo,Hidalgo,19.69379198,-100.55210741
+8953129,Hotel Ejecutivo Inn,Hotel,721112,micro,7861544938,https://www.hotelejecutivoinn.com,"Avenida Juarez s/n, Centro",Ciudad Hidalgo,Hidalgo,19.68931526,-100.55223658
+8956458,Motel Diamante,Motel,721113,micro,,,"Calle Albaro Obregon s/n, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95285264,-102.19290969
+8956823,Villas Estrella,Cabañas,721190,micro,7531189038,,"Calle Melchor Ocampo s/n, Bahia Bufadero",Bahía Bufadero (Caleta de Campos),Lázaro Cárdenas,18.07190342,-102.7589605
+8980189,Motel el Puerto,Motel,721113,micro,,,"Calle Melchor Ocampo s/n, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95358088,-102.19123213
+8980191,Estacionamiento del Hotel Sol del Pacifico,Hotel,721111,micro,,,"Calle Francisco I Madero 8, Francisco y Madero",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95731418,-102.19632804
+8980195,Hotel Yunuen,Hotel,721112,micro,,,"Calle General Francisco Javier Mina s/n, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95802033,-102.19609841
+8989120,Hostal Sin Nombre,Cabañas,721190,micro,3525577036,,"Avenida Miguel Hidalgo 238, Centro",La Piedad de Cabadas,La Piedad,20.33761598,-102.01900319
+8989151,Pension Sin Nombre,Casa de huéspedes,721311,micro,,,"Calle Abasolo 460, Centro",Puruándiro,Puruándiro,20.09304886,-101.52346034
+9025596,Hotel Iquimengari,Hotel,721111,pequena,4351126852,,"Calle Leona Vicario s/n, Colonia del Centro",Huetamo de Núñez,Huetamo,18.62654679,-100.90129211
+9067938,Hotel Don Julio,Hotel,721112,micro,4431327819,https://www.hoteldonjuliopuruandiro.com,"Calle Matamoros 252, Centro",Puruándiro,Puruándiro,20.08962648,-101.5182648
+9138469,Hotel Casa de los Dulces Sueños Express,Hotel,721112,pequena,4432639491,,"Calle Bartolome de las Casas 418, Centro",Morelia,Morelia,19.70191769,-101.1860097
+9259504,Hotel Florida,Hotel,721111,micro,,,"Calle Leandro Valle Sur 15, Melchor Ocampo",Heróica Zitácuaro,Zitácuaro,19.43555208,-100.35599342
+9274727,Hotel Hidalgo,Hotel,721111,micro,3511495643,,"Avenida Miguel Hidalgo Sur 45, Centro",Zamora de Hidalgo,Zamora,19.98721586,-102.28332333
+9274728,Hotel la Luz,Hotel,721111,micro,,,"Calle Calle del Trabajo 32, Centro",Morelia,Morelia,19.70607852,-101.19110722
+9275178,Hotel Morelos,Hotel,721111,micro,3521115207,,"Calle Morelos Poniente 114, Centro",Penjamillo de Degollado,Penjamillo,20.10431588,-101.93556407
+9275179,Hotel la Posada,Hotel,721112,micro,,,"Calle General Nicolás de Régules 116, Centro",Tacámbaro de Codallos,Tacámbaro,19.23506024,-101.46052102
+9275185,Quinta Sauz,Hotel,721111,pequena,4595960616,https://www.quintasauz.com.mx,,Canícuaro,Tacámbaro,19.23503576,-101.44292466
+9275186,Hotel Restaurante 10 de Abril,Hotel,721111,micro,4471035352,https://www.hotel10deabril.com,"Callejon El Refugio 8, Centro",Tlalpujahua de Rayón,Tlalpujahua,19.80342836,-100.17411271
+9275187,Hotel el Encanto del Tlalpujahua,Hotel,721111,micro,4471080621,,"Calzada Calzada del Carmen 4, Centro",Tlalpujahua de Rayón,Tlalpujahua,19.80513726,-100.17614669
+9275188,Hotel Nefer,Hotel,721111,pequena,,,"Avenida Revolución Norte 508, Jose Maria Morelos",Heróica Zitácuaro,Zitácuaro,19.43815137,-100.35562252
+9275189,Hotel Jared Alexander,Hotel,721111,pequena,,,"Calle 12 de Febrero de 1917 Poniente s/n, Centro",Tuzantla,Tuzantla,19.20882721,-100.5730159
+9275190,Hotel Zirahuen,Hotel,721111,micro,4431364789,,,Zirahuén,Salvador Escalante,19.45475866,-101.7286927
+9275347,M Hoteles Concepto,Hotel,721112,pequena,,https://www.mhotelesconcepto.mx,"Calle Guerrero 150, Centro",Morelia,Morelia,19.6987174,-101.19388156
+9276102,Hotel y Club Jardines de la Higuera,Hotel,721111,pequena,,,"Calle Rocío s/n, Las Higueras",Coalcomán de Vázquez Pallares,Coalcomán de Vázquez Pallares,18.79183768,-103.16435527
+9276504,Hotel Americas,Hotel,721112,micro,4521225630,,"Calle Américas 262, Santiago",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.41522216,-102.12650554
+9276560,Hotel Casa del Naranjo,Hotel,721111,pequena,,https://www.hotelcasadelnaranjo.com,"Calle Ponce de León s/n, Centro",Pátzcuaro,Pátzcuaro,19.51295688,-101.60945854
+9276561,Hotel Plaza Ucareo,Hotel,721111,pequena,4431716980,,"Calle Portal Allende 47, Ucareo",Ucareo,Zinapécuaro,19.89677539,-100.68504984
+9276562,Hotel Gm Soria,Hotel,721111,pequena,4431049900,,"Calle Bordo del Río s/n, Isaac Arriaga",Queréndaro,Queréndaro,19.80831607,-100.88565358
+9276563,Hotel la Estacion,Hotel,721111,pequena,,,"Calle Constitución 45, Ferrocarril",Los Reyes de Salgado,Los Reyes,19.58777038,-102.47796744
+9277044,Estacionamiento Hotel el Eden,Hotel,721111,pequena,,,"Boulevard Carretera Federal Tecoman-playa Azul (Lázaro Cárdenas) s/n, Centro",La Piedad de Cabadas,La Piedad,20.34529175,-102.02562833
+9284197,Hotel Rancho Tabachines,Hotel,721111,micro,,,"Cerrada Cerrada de los García 13, Las Jacarandas",Heróica Zitácuaro,Zitácuaro,19.42965347,-100.36544376
+9288284,Hotel Damip,Hotel,721111,pequena,7531426878,https://www.hoteldamip.com,"Calle 20 de Noviembre s/n, Caleta de Campos",Bahía Bufadero (Caleta de Campos),Lázaro Cárdenas,18.07473717,-102.75878924
+9289269,Hotel Valmar,Hotel,721112,micro,,,"Calle Allende 5, Colonia del Centro",Huetamo de Núñez,Huetamo,18.62668612,-100.90068142
+9293595,Auto Hotel Dubai,Motel,721113,micro,4432568109,,"Calle Jose Ignacio Izaguirre 33, Manantiales Poniente",Morelia,Morelia,19.6940045,-101.23985564
+9296828,Hotel Plaza,Hotel,721112,micro,4251034556,,"Avenida Madero Norte s/n, Centro",La Huacana,La Huacana,18.96357489,-101.80750403
+9296829,Hotel Plaza la Glorieta,Hotel,721112,micro,7535410376,,"Avenida Lázaro Cárdenas 570, Centro",Arteaga,Arteaga,18.3614249,-102.29203162
+9296830,Hotel del Balsas,Hotel,721111,pequena,,,"Calle Las Truchas s/n, Rio Balsas",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.97021338,-102.19918268
+9298986,Hotel el Velser,Hotel,721111,pequena,4474781929,,"Calle Leona Vicario 20, Cristo Rey",Maravatío de Ocampo,Maravatío,19.90110123,-100.45208881
+9306735,Hotel Posada San Marcos,Hotel,721112,micro,,,"Calle Aquiles Serdán 125, San José",Cherán,Cherán,19.67595297,-101.95268248
+9308855,Hotel Rymma,Hotel,721111,pequena,,https://www.hotelrymma.com,"Avenida Guadalupe Victoria 26, Centro",Morelia,Morelia,19.70327217,-101.19842024
+9308856,La Posada Salvador Sin Nombre,Hotel,721111,micro,,,,Tzintzuntzan,Tzintzuntzan,19.62759026,-101.57727584
+9315157,Hotel Mirador del Lago,Hotel,721112,micro,,,"Circuito General Ignacio Zaragoza 720, La Valenciana",Pátzcuaro,Pátzcuaro,19.52408826,-101.61526213
+9315642,Hotel Casahi,Hotel,721112,micro,,,,Sahuayo de Morelos,Sahuayo,20.03402067,-102.71683154
+9317603,Maja Hotel Boutique,Hotel,721111,mediana,,,"Calle Manuel Carpio 21, Balcones de Santa Maria",Morelia,Morelia,19.67853986,-101.19169443
+9330305,Estacionamiento del Hotel la Soledad,Hotel,721111,micro,,https://www.hoteldelasoledad.com,"Calle Ignacio Zaragoza 385, Centro",Morelia,Morelia,19.70635614,-101.19331793
+9332240,Hotel Marina San Jorge,Hotel,721111,pequena,,,"Calle Hidalgo Oriente 21, Melchor Ocampo",Heróica Zitácuaro,Zitácuaro,19.43670274,-100.35399257
+9336500,Hotel Janny,Hotel,721111,pequena,7151193956,,"Calle General Pueblita Norte 4, Heroes Ferrocarrileros",Heróica Zitácuaro,Zitácuaro,19.43393973,-100.34658234
+9345916,Hotel el Conquistador,Hotel,721111,micro,,https://www.conquistadormonarca.com.mx,"Calle Leandro Valle Sur 2, Melchor Ocampo",Heróica Zitácuaro,Zitácuaro,19.43679186,-100.35526732
+9346214,Hotel America,Hotel,721111,pequena,,,"Avenida Revolución Sur 8, Melchor Ocampo",Heróica Zitácuaro,Zitácuaro,19.43663139,-100.35627088
+9349436,Auto Hotel Exxibixion,Motel,721113,micro,,,"Circuito Periferico Paseo de la Republica (Sector Republica) 2927, Lago 1",Morelia,Morelia,19.72685911,-101.21288794
+9349496,Bungalows Days,Hotel,721112,micro,7531602926,,"Calle Francisco I. Madero s/n, Playa Azul",Playa Azul,Lázaro Cárdenas,17.98358657,-102.35474716
+9374367,Hotel Ibarra,Hotel,721111,pequena,,,"Avenida Revolucion Sur 20, Melchor Ocampo",Heróica Zitácuaro,Zitácuaro,19.43612221,-100.35653982
+9393673,Club Tejamaniles,Hotel,721111,pequena,,https://www.clubtejamaniles.com,"Carretera Camino a los Lobos 31, Los Tejamaniles",Los Ajolotes,Hidalgo,19.78678183,-100.67972836
+9402677,Hotel & Suites Almar,Hotel,721112,micro,,,"Periferico Periférico a Sicartsa 60954, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95842,-102.21607879
+9407429,Hotel Casa del Refugio,Hotel,721111,micro,,,"Avenida Guadalupe Victoria 260, Centro",Morelia,Morelia,19.70539108,-101.1980966
+9424885,Auto Hotel Hennesys,Motel,721113,micro,,https://www.autohotelhennesys.mx,"Calzada La Huerta 4301, La Huerta",Morelia,Morelia,19.66892044,-101.22302359
+9432245,Hotel el Eden,Hotel,721112,micro,,,"Boulevard Lázaro Cárdenas 206, Centro",La Piedad de Cabadas,La Piedad,20.34517553,-102.02539273
+9458344,Meson Maracuya,Hotel,721111,micro,4341088300,https://www.mesonmaracuya.com.mx,"Callejon Maracuyá s/n, Loma de Tembucharo de las Trancas",Zirahuén,Salvador Escalante,19.45598237,-101.7454705
+9462033,Camila Palace,Hotel,721111,pequena,3137301394,,,San Juan de Alima,Aquila,18.58387038,-103.67538429
+9463373,Hostal Mich,Cabañas,721190,micro,,https://www.hostalmich.com,"Avenida Francisco I Madero Poniente 485, Centro",Morelia,Morelia,19.70307809,-101.19623212
+9500536,Hotel la Huerta,Motel,721113,micro,4265720422,,"Calle 20 de Noviembre 280, Loma Bonita",Buenavista Tomatlán,Buenavista,19.21106351,-102.58189991
+9507661,Hotel Boutique Casa Colorada,Hotel,721111,micro,,https://www.hotelcasacolorada.com,"Calle Villa Tanganxhuan Calle Mexico 52, Los Nogales",Pátzcuaro,Pátzcuaro,19.52797013,-101.60649597
+9508671,Hotel Familiar los Arcos,Hotel,721112,micro,,,"Avenida Hidalgo Sur s/n, Centro",Coahuayana de Hidalgo,Coahuayana,18.70116115,-103.66123735
+9510064,Casa de Huespedes Mondragon,Casa de huéspedes,721311,micro,,,"Calle Leandro Valle Sur 21, Melchor Ocampo",Heróica Zitácuaro,Zitácuaro,19.43526256,-100.35614311
+9517523,Hotel del Centro,Hotel,721112,micro,4521039235,,"Calle Fray Juan de San Miguel 57, San Mateo",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.41691894,-102.13035294
+9517911,Hotelito las Diosas del Mar,Hotel,721112,micro,7531431824,,"Calle Francisco Villa s/n, Bahia Bufadero",Bahía Bufadero (Caleta de Campos),Lázaro Cárdenas,18.07692621,-102.75092897
+9518695,Hotel Lombardia,Motel,721113,micro,4251182380,,"Calle Joaquin Amaro s/n, Emiliano Zapata",Lombardía,Gabriel Zamora,19.15829587,-102.04820698
+9519940,Motel Mi Ranchito,Motel,721113,micro,,,,Ario de Rosales,Ario,19.21160461,-101.6873579
+9535427,Renta de Cabañas el Recuerdo,Cabañas,721190,micro,4341049656,,"Calle Salida a Copandaro s/n, Tembucharo",Zirahuén,Salvador Escalante,19.45449671,-101.74484534
+9560432,Hotel del Parque,Hotel,721112,micro,,,"Calle Alberto T Benitez s/n, Centro",Apatzingán de la Constitución,Apatzingán,19.0818492,-102.35577198
+9569624,Casa Rayita,Hotel,721112,micro,7861000549,https://www.hotelcasarayita.com,"Calle Reforma 2, Centro",Aporo,Aporo,19.6694988,-100.41110964
+9583643,Renta de Cabañas Espejo de los Dioses,Cabañas,721190,micro,4433888890,,"Calle Salida a Copandaro s/n, Cuarto",Zirahuén,Salvador Escalante,19.45508002,-101.74404381
+9589415,Motel a Donde Tu Quieras,Motel,721113,micro,,,"Avenida Avenida de la Ceiba s/n, Los Encinos",Morelia,Morelia,19.66549297,-101.18001852
+9664739,Hotel Mia Bonita,Hotel,721112,micro,4431096226,,"Calle Cuitzeo San Agustin del Pulque s/n, El Embarcadero",Cuitzeo del Porvenir,Cuitzeo,19.96145643,-101.1375807
+9665426,Suites San Basilio,Departamento amueblado,721312,micro,4432287918,,"Calle Articulo 123 110, Centro",Tacámbaro de Codallos,Tacámbaro,19.2349208,-101.45711654
+9669307,Nanys Posada,Casa de huéspedes,721311,micro,,,"Calle Tamaulipas s/n, Centro",Churumuco de Morelos,Churumuco,18.66725609,-101.6462268
+9673195,Hotel Casa de la Catrina,Hotel,721111,micro,4431984324,,"Calle Jose Maria Morelos s/n, San Miguel",Capula,Morelia,19.6743048,-101.3932857
+9681293,Hotel Oseguera,Hotel,721112,micro,,,"Calle Constitucion s/n, 16 de Septiembre",Uruapan,Uruapan,19.42044326,-102.06168989
+9689750,Hotel Capital o Bulevar,Hotel,721112,micro,4437322936,,"Calle Leona Vicario 995, Cristo Rey",Maravatío de Ocampo,Maravatío,19.90044346,-100.45154422
+9691340,Rojotel,Motel,721113,micro,,,"Calle Diputado Ricardo Adalid s/n, Elias Perez Avalos",Morelia,Morelia,19.71149998,-101.16545462
+9726308,Auto Hotel Castello,Motel,721113,micro,,,,Tacámbaro de Codallos,Tacámbaro,19.22022757,-101.45874741
+9732526,Motel Chocolate Boutique,Motel,721113,pequena,,,,Uruapan,Uruapan,19.42116135,-102.00418834
+9843270,Hotel Jp,Hotel,721112,micro,,,"Calle Brisas 134, Jose Grill",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.96809625,-102.2023204
+9855251,Hotel Don Carlos,Hotel,721112,micro,,,"Calle 20 de Noviembre 120, Centro",Morelia,Morelia,19.70467405,-101.19043297
+9855858,Hotel Real Acuitzio,Hotel,721112,micro,,,"Calle Nicolas Bravo 8, Centro",Acuitzio del Canje,Acuitzio,19.49650895,-101.33359862
+9886495,Hotel las Fuentes,Hotel,721112,micro,,,"Calle Martinez de Navarrete 514, Las Fuentes",Zamora de Hidalgo,Zamora,19.97783323,-102.27953528
+9897019,Hotel Boutique Nacional Pool y Comfort,Hotel,721112,micro,,,"Avenida Rodilla del Diablo 954, Santo Santiago",Uruapan,Uruapan,19.42909561,-102.07344003
+9944184,Hotel Casa Xola,Cabañas,721190,micro,,https://www.casaxola.com,"Calle Abasolo 408, Centro",Morelia,Morelia,19.69929696,-101.19444584
+9987142,Hotel San Benito,Hotel,721112,micro,,,"Calle Dolores 49, Centro",Tlalpujahua de Rayón,Tlalpujahua,19.80574762,-100.17172153
+9990662,Hotel Nuevo Urecho,Hotel,721112,micro,,,"Calle Nacional 4, Centro",Nuevo Urecho,Nuevo Urecho,19.16701486,-101.86913648
+10009970,Motel Mazatl,Motel,721113,micro,,,"Avenida Independencia s/n, Unidad Deportiva",Tiquicheo,Tiquicheo de Nicolás Romero,18.90959376,-100.74015414
+10017325,Hotel Panda,Hotel,721112,micro,,,"Calle Francisco Javier Mina s/n, Colonia del Centro",Huetamo de Núñez,Huetamo,18.62702492,-100.90051634
+10025572,Hotel la Parroquia,Hotel,721112,micro,,,"Avenida Jose Maria Morelos Oriente 631, Centro",Pedernales,Tacámbaro,19.14473882,-101.46379106
+10038865,Hotel Real Meson,Hotel,721112,micro,,,"Avenida Constitucion 48, Centro",Yurécuaro,Yurécuaro,20.34308434,-102.28111557
+10056373,Hotel la Cañada del Pintor,Hotel,721112,micro,,,"Calle Ocampo s/n, Tercero",Contepec,Contepec,19.95446267,-100.16472462
+10155432,Hotel San Agustin,Hotel,721112,micro,4434706389,,"Avenida Morelos Poniente 633, Centro",Indaparapeo,Indaparapeo,19.7896112,-100.96927951
+10174625,Hotel Ha Boutique,Hotel,721112,micro,,,"Calle Abasolo 452, Centro",Morelia,Morelia,19.69902505,-101.19443604
+10189042,Hotel del Carmen,Hotel,721112,micro,7156082515,,"Calle Leandro Valle Norte 11, Cuauhtemoc",Heróica Zitácuaro,Zitácuaro,19.43793662,-100.35467588
+10200598,Hotel Real Bedolla,Hotel,721112,micro,4433429998,,,Coeneo de la Libertad,Coeneo,19.8131758,-101.59097646
+10223821,Plaza Pali,Departamento amueblado,721312,micro,,,"Avenida Jose Maria Morelos y Pavon Sur s/n, Centro",Buenavista Tomatlán,Buenavista,19.20781977,-102.58682693
+10226046,Hotel Monarca,Hotel,721112,micro,7861042929,,,Senguio,Senguio,19.73362396,-100.35824996
+10226393,Hotel Mr,Hotel,721112,micro,,https://www.booking.mx,"Avenida Lazaro Cardenas 41, San Pedro Jácuaro (Las Joyas)",San Pedro Jácuaro (Las Joyas),Hidalgo,19.71441621,-100.64287735
+10253964,Casa Vieja Hotel Boutique,Hotel,721112,pequena,4434947074,https://www.casaviejahb.com,"Calle Abasolo 325, Centro",Morelia,Morelia,19.70002134,-101.19433144
+10274481,Motel Monarca,Motel,721113,pequena,,,Carretera Carretera Jiquilpan Sahuayo s/n,Jiquilpan de Juárez,Jiquilpan,20.01052888,-102.71707669
+10278747,Posada de la Asuncion,Casa de huéspedes,721311,micro,4341327431,,"Calle Benigno Serrato s/n, Centro",Pátzcuaro,Pátzcuaro,19.51441071,-101.6050843
+10284785,Thiagos Hotel,Hotel,721112,micro,4432439461,,"Calle Revolucion 654, Centro",Morelia,Morelia,19.70376085,-101.18536706
+10297063,Suites Don Fernando,Departamento amueblado,721312,micro,3531036177,,"Peatonal 5 de Mayo Oriente 42, Centro",Jiquilpan de Juárez,Jiquilpan,19.99125584,-102.71919853
+10308192,Los Olivos,Hotel,721112,micro,3511199160,,"Avenida Doctor Miguel Silva Norte 616, El Santuario",Tangancícuaro de Arista,Tangancícuaro,19.89254362,-102.20633381
+10317996,Mi Hotel Clud,Hotel,721111,pequena,,,"Calle Rio Tepalcatepec s/n, 20 de Agosto",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.98846939,-102.22741651
+10323556,Hotel la Morita,Hotel,721112,micro,4611409133,,"Avenida Morelos Oriente s/n, Centro",Ciudad Hidalgo,Hidalgo,19.68693691,-100.55026048
+10341888,Hotel Capri,Hotel,721112,micro,,,"Calle Constitucion 6, 16 de Septiembre",Uruapan,Uruapan,19.42060516,-102.06163807
+10361219,Hotel Paseo Real Boutique,Hotel,721111,micro,,,"Avenida Independencia 101, Santo Santiago",Uruapan,Uruapan,19.42363076,-102.06929082
+10365441,Hotel Barem,Hotel,721112,micro,,,"Calle 5 de Mayo 23, Centro",Tlalpujahua de Rayón,Tlalpujahua,19.80451307,-100.17266538
+10365999,Hotel Boutique el Eden,Hotel,721111,micro,,,"Calle Doctor Coss 8, Centro Patzcuaro",Pátzcuaro,Pátzcuaro,19.5122578,-101.60894931
+10388484,Hotel Gilton Yestig,Hotel,721112,micro,,,"Calle Carpio 15, Centro",Yurécuaro,Yurécuaro,20.34197389,-102.28347791
+10394181,Hotel la Casa Don Vasco,Hotel,721111,micro,,,"Calle Benigno Serrato 2, Centro",Pátzcuaro,Pátzcuaro,19.51397965,-101.60664327
+10402155,Hostal Casa Don Eri,Cabañas,721190,micro,,,"Calle Francisco I Madero 77, Centro",Santa Clara del Cobre,Salvador Escalante,19.40491385,-101.63915025
+10423715,Renta de Cabañas Madelyn,Cabañas,721190,micro,,,"Calle Rivera del Lago s/n, Centro",Zirahuén,Salvador Escalante,19.450852,-101.7295476
+10424837,Hotel Lupita,Hotel,721112,micro,4251107004,,"Calle Obregon s/n, Centro",La Huacana,La Huacana,18.96029208,-101.81014263
+10436705,Hotel Camelinas Express,Hotel,721112,micro,7531040507,,"Avenida Lazaro Cardenas 421, Melchor Ocampo",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.96692126,-102.20251611
+10459820,Hotel Vista Hermosa,Hotel,721111,micro,7531432930,,"Calle Melchor Ocampo s/n, Bahia Bufadero",Bahía Bufadero (Caleta de Campos),Lázaro Cárdenas,18.07328023,-102.75853309
+10474159,Renta de Cabañas Tembucharo,Cabañas,721190,micro,4341073396,,"Calle Salida a Copandaro s/n, Tembucharo",Zirahuén,Salvador Escalante,19.4549393,-101.74414711
+10483739,Hotel Mission,Hotel,721112,micro,,,"Avenida Francisco I Madero Norte s/n, Cutzeo",Huetamo de Núñez,Huetamo,18.64727123,-100.89764508
+10498762,Hotel Marilux,Hotel,721112,micro,,,"Calle Articulo 27 52, Centro",Apatzingán de la Constitución,Apatzingán,19.08461596,-102.35659762
+10538735,Pension Sin Nombre,Casa de huéspedes,721311,micro,,,"Calle Bravo 186, Centro",Sahuayo de Morelos,Sahuayo,20.06212495,-102.71877791
+10551031,Auto Hotel Amore Mio,Motel,721113,micro,4361042120,,"Calle Ventura Puente s/n, Los Lemus",Puruándiro,Puruándiro,20.09628149,-101.52796439
+10575831,Hotel las Fuentes,Hotel,721112,micro,,,,Huetamo de Núñez,Huetamo,18.65374126,-100.90543428
+10580111,Hotel Colonial,Hotel,721112,micro,,,"Prolongacion Francisco I Madero 1935, Maravatio",Maravatío de Ocampo,Maravatío,19.8934708,-100.42407045
+10623349,Motel Love,Motel,721113,micro,,,"Calle Ingeniero Lauro Gallardo 147, Elias Perez Avalos",Morelia,Morelia,19.71314769,-101.16857825
+10636901,Auto Hotel la Playa,Motel,721113,micro,4433344165,,"Calle Tecuen s/n, Manantiales",Morelia,Morelia,19.68902854,-101.23997556
+10715910,Motel la Conquista,Motel,721113,micro,,,"Carretera Carretera Zamora Morelia 1803, Zamora Morelia",Chaparaco,Zamora,19.96669736,-102.26317106
+10736924,Hotel Casa Iturbe,Hotel,721112,micro,,,"Calle Jose Maria Morelos Norte 64, Sergio Jairo Gonzalezz Correa",Heróica Zitácuaro,Zitácuaro,19.44216922,-100.35644974
+10748924,Hotel Villa,Hotel,721112,micro,,,"Calle Militar s/n, Altamira",Quiroga,Quiroga,19.66920365,-101.51514747
+10756917,Hotel Roberto,Hotel,721112,micro,,,"Avenida Madero 373, El Llano",Cotija de la Paz,Cotija,19.80901147,-102.69692274
+10788532,Posada Santa Rosa,Casa de huéspedes,721311,micro,,,"Avenida Morelos 26, Los Álamos",Irimbo,Irimbo,19.69745129,-100.48176939
+10806055,Small Hotel Ciclovia,Hotel,721112,micro,,,"Calle Ignacio Zaragoza Oriente 1, Matamoros",Heróica Zitácuaro,Zitácuaro,19.43434899,-100.35739878
+10806992,Hotel Real de Briseñas,Hotel,721112,micro,3936881277,,,Paso de Hidalgo (Paso de Álamos),Briseñas,20.2600765,-102.55350502
+10819752,Hotel Apo Pau,Hotel,721112,micro,,,"Avenida Lazaro Cardenas 95, Centro",Pátzcuaro,Pátzcuaro,19.5242504,-101.60734669
+10824463,Hotel Boutique Rayon Cincuenta,Hotel,721112,micro,,,"Calle Rayon 50, Centro",Morelia,Morelia,19.70273143,-101.19608537
+10835112,La Revancha,Hotel,721112,micro,5510035089,,"Calle Abasolo 6, Centro",Aporo,Aporo,19.66899463,-100.41204338
+10872614,Renta de Habitaciones,Departamento amueblado,721312,micro,7531092826,,"Calle 5 de Mayo 266, Centro",Ciudad Lázaro Cárdenas,Lázaro Cárdenas,17.95620515,-102.19156551
+10876050,Hotel la Hacienda,Hotel,721112,micro,4431983643,,"Privada Francisco J Mugica 118, Lázaro Cárdenas",Indaparapeo,Indaparapeo,19.79547139,-100.96992393
+10883877,Hospedaje para Damas Gonzalez,Casa de huéspedes,721311,micro,,,"Calle Amado Nervo Poniente 136, Centro",Zamora de Hidalgo,Zamora,19.98629754,-102.2894748
+10948960,Pension Sin Nombre,Casa de huéspedes,721311,micro,4432664959,,"Calle Jose Ignacio Izaguirre s/n, Manantiales Poniente",Morelia,Morelia,19.69411281,-101.23987711
+10958562,Hotel el Peregrino,Hotel,721112,micro,,,"Avenida Hidalgo s/n, Centro",Carácuaro de Morelos,Carácuaro,19.01728576,-101.12858309
+10964016,Hotel Boutique Maria Morelia,Hotel,721112,micro,,https://hotelboutiquemorelia.com,"Calle Guerrero 153, Centro",Morelia,Morelia,19.69867215,-101.19412421
+10994328,Hotel el Turista,Hotel,721112,micro,,,"Avenida Revolucion Sur 4, Melchor Ocampo",Heróica Zitácuaro,Zitácuaro,19.43730973,-100.35591259
+10994539,Motel Campestre,Motel,721113,micro,,,"Calzada San Juan s/n, Libertad",Los Reyes de Salgado,Los Reyes,19.61249809,-102.4820282
+10999338,Hotel Sin Nombre,Hotel,721112,micro,,,"Prolongacion Lazaro Cardenas s/n, Lazaro Cardenas",Huandacareo,Huandacareo,19.98217976,-101.28266369
+11003009,Hotel y Estacionamiento Re,Hotel,721112,micro,4432248815,,"Calle Benedicto Lopez 315, Centro",Morelia,Morelia,19.69621991,-101.1951053
+11016029,Hotel Pindecua Inn,Hotel,721112,micro,4521004787,,"Calle Galeana s/n, Morelos",Paracho de Verduzco,Paracho,19.65181386,-102.04872671
+11029886,Hotel Ario Economico,Hotel,721112,micro,4431872368,,"Calle Hidalgo 30, Centro",Ario de Rosales,Ario,19.20696628,-101.70713188
+11035136,Hotel la Loma,Hotel,721112,micro,3132138087,,"Avenida Constitucion Sur 1432, Ana Maria Rendon",Coahuayana de Hidalgo,Coahuayana,18.7019001,-103.66989283
+11052625,Hotel Irma,Departamento amueblado,721312,micro,7142251821,,,Vista Hermosa de Negrete,Vista Hermosa,20.26609407,-102.47118799
+11054421,Motel la Escondida,Motel,721113,micro,4433776430,,"Carretera Arroyo s/n, San Marcos",Tarímbaro,Tarímbaro,19.79381516,-101.16305159
+11056422,Pension Sin Nombre,Casa de huéspedes,721311,micro,4433632594,,"Calle Salvador Allende s/n, Centro",Zacapu,Zacapu,19.81485857,-101.78211353
+11067916,Posada Tabachines,Casa de huéspedes,721311,micro,4381067199,,"Privada Jose Natividad Cisneros 187, Tabachines",Puruándiro,Puruándiro,20.09054691,-101.51841664
+11089097,Hotel Palacio,Hotel,721112,micro,,,"Calle Insurgentes 1, Centro",Yurécuaro,Yurécuaro,20.34182104,-102.28254312
+11102503,Hotel las Palmas,Hotel,721112,micro,,,"Calle Leona Vicario 175, Las Palmas",Apatzingán de la Constitución,Apatzingán,19.07865351,-102.35039021
+11119863,Hotel Sr,Hotel,721112,micro,,,"Avenida Gardenia s/n, La Higuerita",Peribán de Ramos,Peribán,19.53305967,-102.42446608
+11156474,Hotel Portal,Hotel,721112,micro,,,"Calle Hidalgo 16, Centro",Ciudad Hidalgo,Hidalgo,19.69011151,-100.55579323
+11183758,Hotel Diana,Hotel,721112,micro,4522722014,,"Avenida 20 de Noviembre 8, San Francisco",Nuevo San Juan Parangaricutiro,Nuevo Parangaricutiro,19.41723967,-102.12816778
+11215711,Posada el Palomar Patzcuaro,Casa de huéspedes,721311,micro,,,"Calle Portal Arteaga 6, Centro",Pátzcuaro,Pátzcuaro,19.51381215,-101.61121514
+11220907,Hotel Casa Mentxaka,Hotel,721112,micro,,https://www.hotelcasamentxaka.com,"Calle Robledo s/n, Vista Alegre",Tlalpujahua de Rayón,Tlalpujahua,19.80621913,-100.17318098
+11242234,Hotel Casa San Francisco,Hotel,721112,micro,,,,San Francisco de los Reyes,Tlalpujahua,19.77286133,-100.22703768
+11243775,Cabaña la Luciernaga,Cabañas,721190,micro,,,,San Francisco de los Reyes,Tlalpujahua,19.76855318,-100.22758211
+11253374,Ibarra 14 Hotel y Restaurante,Hotel,721111,pequena,,https://www.ibarra14.com,"Calle Primera de Ibarra 14, Centro",Pátzcuaro,Pátzcuaro,19.51444787,-101.61095886
+11283299,Auto Hotel la Alberca,Motel,721113,micro,,,"Calle Jesus Alcaraz s/n, Ejido J. Jesús Alcaraz",Tacámbaro de Codallos,Tacámbaro,19.21590378,-101.45908351
+11295122,Hotel Loma Dorada,Hotel,721112,micro,3521254311,,"Avenida Jose Sixto Verduzco s/n, Loma Bonita",Angamacutiro de la Unión,Angamacutiro,20.15696657,-101.71796114
+11298902,Hotel Emmanuel,Hotel,721112,micro,4266880595,,"Avenida Jose Maria Morelos y Pavon Norte s/n, Centro",Buenavista Tomatlán,Buenavista,19.20995386,-102.58755384
+11312741,Hotel Texas,Hotel,721112,micro,,,"Avenida Lazaro Cardenas 97, Barrio Segundo",Cherán,Cherán,19.68056446,-101.95943673
+11322726,Hotel Fernandos,Hotel,721112,micro,,,,Tlalpujahua de Rayón,Tlalpujahua,19.80943535,-100.18346575
+11338879,Cabañas el Ultimo Refugio,Cabañas,721190,micro,4471089826,,,Tlalpujahua de Rayón,Tlalpujahua,19.80750215,-100.17819659
+11359410,Hotel Gran Elegante,Hotel,721112,micro,,,"Calle Javier Mina 17, Centro",Cotija de la Paz,Cotija,19.80972142,-102.70441764
+11400459,Fraccionamiento Quinta Lia,Cabañas,721190,micro,4431376408,,,Ihuatzio,Tzintzuntzan,19.57063713,-101.62951038
+11430030,Estacionamiento Agrarismo,Casa de huéspedes,721311,micro,,,"Calle Agrarismo s/n, Cuarto Cuartel",Carapan,Chilchota,19.85802339,-102.03989807
+11479535,Motel Sg,Motel,721113,micro,3541245731,,"Carretera Carretera Pavimentada los Reyes Oruscato s/n, La Providencia",Los Reyes de Salgado,Los Reyes,19.57938266,-102.45122745
+11483887,Hotel Pueblo Grande,Hotel,721112,micro,,,"Calle Padre Lloreda 20, Centro Patzcuaro",Pátzcuaro,Pátzcuaro,19.51628884,-101.60769446
+11504475,Hotel el Rey,Hotel,721112,micro,,,"Avenida Independencia s/n, Unidad Deportiva",Tiquicheo,Tiquicheo de Nicolás Romero,18.91150129,-100.74078107
+11512750,Hotel Eloisa,Hotel,721112,micro,,,,Tingambato,Tingambato,19.50724394,-101.85566357
+11526051,Hotel Sesi Irekan el Buen Vivir,Hotel,721112,micro,,,"Calle Tariacuri s/n, Cuarto",Tzintzuntzan,Tzintzuntzan,19.62635656,-101.57539451
+11527192,Hotel Chulavista,Hotel,721112,micro,4531203544,,"Calle Heriberto Jara Poniente 52, Centro",Apatzingán de la Constitución,Apatzingán,19.08554965,-102.35681053
+11551516,Hotel Don Juan,Motel,721113,micro,,,"Calle Margaritas s/n, Bosques del Prado (Colonia el Yonke)",San Pedro Cahro,Venustiano Carranza,20.10451811,-102.66936787
+11582027,Pension,Casa de huéspedes,721311,micro,4434081143,,"Calle Guillermo Prieto 575, Centro",Zacapu,Zacapu,19.81610715,-101.78337825
+11595609,Motel Venus,Motel,721113,micro,4225211657,,"Carretera Ario a Huacana s/n, Cuauhtemoc",Ario de Rosales,Ario,19.20613206,-101.71859517
+11605574,Auto Hotel,Motel,721113,micro,,,"Calle Fray Juan Bautista Moya s/n, Higway",Capula,Morelia,19.6640112,-101.39752399
+11608927,Motel Boutique Velvet,Motel,721113,micro,,,"Avenida Paseo de la Revolucion 31, Emiliano Zapata",Uruapan,Uruapan,19.3895761,-102.05908232
+11620990,Hotel la Escalerita,Hotel,721112,micro,,,"Calle Articulo 27 86, Centro",Apatzingán de la Constitución,Apatzingán,19.08464779,-102.35690296
+11644755,Hotel Pabellon,Hotel,721112,micro,,,"Calle Alvaro Obregon 112, Centro",Maravatío de Ocampo,Maravatío,19.89262677,-100.44429884
+11646092,Hotel el Rodeo,Hotel,721112,micro,4251140825,,"Avenida Zicuiran s/n, Bachilleres",Zicuirán,La Huacana,18.86985912,-101.95666464
+11648444,Hotel Moderno,Hotel,721112,micro,,,"Calle Constitucion 4, 16 de Septiembre",Uruapan,Uruapan,19.42054205,-102.06165827
+11682037,Hotel & Suites Casa Mara,Hotel,721112,micro,4432273081,,,Huandacareo,Huandacareo,19.98622762,-101.27932227
+11702457,Hotel Colonial,Hotel,721111,pequena,4471299856,,"Prolongacion Francisco I Madero 1935, Del Panteon",Maravatío de Ocampo,Maravatío,19.89400751,-100.42178286
+11722497,Hotel Sin Nombre,Hotel,721112,micro,,,"Calle Morelos s/n, Centro",Aquila,Aquila,18.5987979,-103.50389613
+11724840,Hotel Magno,Hotel,721112,micro,4361151000,,"Calle Lázaro Cárdenas 1710, Centro",Purépero de Echáiz,Purépero,19.91284252,-102.02093822
+11773506,Villas Cristal,Hotel,721112,pequena,7531671578,,"Calle Malecon Emiliano Zapata s/n, Playa Azul",Playa Azul,Lázaro Cárdenas,17.98063786,-102.34940351
+11780934,Hotel Comfort Inn,Hotel,721112,pequena,,,"Avenida Periodismo Jose Tocaven Lavin 2111, Jardines de Torremolino",Morelia,Morelia,19.68065489,-101.22564363
+11791988,Casa del Estudiante Visionario,Casa de huéspedes,721311,pequena,4525186848,,"Calle Garcia Obeso 337, Centro",Morelia,Morelia,19.69887868,-101.19250241
+11792050,Hotel Cantera Real,Hotel,721112,micro,,https://www.hotelcanterarosa.com.mx,"Calle Emiliano Zapata 67, Centro",Morelia,Morelia,19.70539055,-101.19079246
+11832047,Villa Tropical,Hotel,721112,micro,7531393917,,"Calle Melchor Ocampo s/n, Bahia Bufadero",Bahía Bufadero (Caleta de Campos),Lázaro Cárdenas,18.0722468,-102.75882737
+11836336,Hotel los Arcos,Hotel,721112,micro,4433250435,,"Avenida Acueducto 680, Chapultepec Norte",Morelia,Morelia,19.69842813,-101.17756887
+12288653,Hotel Mansion Solis y Spa,Hotel,721111,grande,,,"Avenida Acueducto 344, Chapultepec Norte",Morelia,Morelia,19.69798222,-101.17559309
+12288658,Grand Maria Hotel Boutique,Hotel,721111,pequena,,https://www.grandmaria.mx,"Calle P Casals 70, La Loma",Morelia,Morelia,19.67818918,-101.17937992
+12288670,Hotel Casa Baez,Hotel,721111,micro,,,"Calle Portal de Hidalgo s/n, Centro",Pátzcuaro,Pátzcuaro,19.51370117,-101.61000572
+12288692,Casa Lucia,Hotel,721111,pequena,,,"Calle Codallos 1, Centro",Pátzcuaro,Pátzcuaro,19.51413852,-101.61172717
+12288702,Añoranza Hotel Boutique,Hotel,721111,micro,7862441375,,"Calle Nicolas Bravo 46, Centro",Ciudad Hidalgo,Hidalgo,19.69287687,-100.55401061
+12288752,Hotel Yahver Forever,Hotel,721111,pequena,4431000952,,"Periferico Paseo de la Republica Sector Independencia 5435, La Quemada",Morelia,Morelia,19.6941581,-101.24116357
+12288802,Villa Italia Hotel Belo,Hotel,721111,mediana,4432987525,https://www.gammahoteles.com,"Calle Patzimba 171, Vista Bella",Morelia,Morelia,19.67913072,-101.19583459
+12288823,Hotel Balneario Mirador los Angeles,Hotel,721111,micro,4431055981,,,Los Baños,Chucándiro,19.88454212,-101.34254814
+12288947,Estacionamiento,Hotel,721111,micro,,,"Calle Ignacio Zaragoza 436, Centro",Morelia,Morelia,19.70658603,-101.19322351
+12288949,Hotel One Morelia Acueducto,Hotel,721111,pequena,,,"Avenida Insurgentes 83, Lomas de Hidalgo",Morelia,Morelia,19.69595839,-101.15894304
+12289034,Administracion del Hotel Villas Zacapu,Hotel,721111,micro,,,"Calle Colorines s/n, Manantiales",Zacapu,Zacapu,19.83200797,-101.77799532
+12289068,Hotel Portozul,Hotel,721111,pequena,,,"Calle Trinidad Montes 464, Noria de Montes",Sahuayo de Morelos,Sahuayo,20.04982312,-102.71725845
+12289079,Hotel los Arcos,Hotel,721111,pequena,4553580179,,,Huandacareo,Huandacareo,19.97723942,-101.2772419
+12289160,Portozul Hotel Sahuayo,Hotel,721112,micro,,,"Calle Trinidad Montes 465, Centro",Sahuayo de Morelos,Sahuayo,20.04982467,-102.71737919

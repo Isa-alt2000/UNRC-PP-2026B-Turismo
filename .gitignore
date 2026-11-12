@@ -11,6 +11,9 @@ data_science/ml/artifacts/*
 backend/artifacts/*
 !backend/artifacts/.gitkeep
 
+# DENUE completo de Michoacan de 160MB~
+data_science/datos/crudos/inegi/denue_inegi_*.csv
+
 # Entorno y configuración local
 .env
 

@@ -49,8 +49,12 @@ Leen `procesados/encuesta_procesada.csv`, separan entrenamiento y prueba por per
    uv run python -m ml.arbol_regresion       # minutos (solo intencion=1)  -> minutos
    ```
 
-4. **Hoteles:** 
-Pendiente.
+4. **Hoteles (DENUE):**
+Requiere descargar el DENUE de Michoacán a `datos/crudos/inegi/` (no está en git; ver `docs/fuentes_datos.md`). Filtra el hospedaje y deja el CSV con las mismas columnas que la tabla `hoteles` del backend.
+
+   ```bash
+   uv run python -m pipeline.denue.hoteles   # crudos/inegi/ -> procesados/hoteles.csv
+   ```
 
 ## Entrega al backend
 `ml/artefactos.py` guarda cada modelo como `<nombre>.joblib` + `<nombre>.json` (versión de
