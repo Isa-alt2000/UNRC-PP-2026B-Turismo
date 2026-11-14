@@ -6,7 +6,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlmodel import Session, SQLModel, select
 
 from app.core.db import crear_engine
-from app.models import Gusto, PuntoPartida, Recinto, RecintoValores
+from app.models import Gusto, Hotel, PuntoPartida, Recinto, RecintoValores
 from app.models.recintos import CODIGOS_GUSTOS
 
 VALORES_PARICUTIN = {
@@ -115,5 +115,53 @@ def test_rechaza_coordenadas_fuera_de_rango(
     session: Session, coordenadas: dict[str, float]
 ) -> None:
     session.add(morelia(**coordenadas))
+    with pytest.raises(IntegrityError):
+        session.commit()
+
+
+# Hoteles
+
+def hotel(**cambios: Any) -> Hotel:
+    return Hotel(
+        **{
+            "id": 2576300,
+            "nombre": "Hotel Posada Refugio",
+            "tipo": "Casa de huéspedes",
+            "codigo_scian": 721311,
+            "tamano": "micro",
+            "localidad": "Morelia",
+            "municipio": "Morelia",
+            "latitud": 19.695,
+            "longitud": -101.189,
+        }
+        | cambios
+    )
+
+
+def test_guarda_un_hotel_con_el_id_del_denue(session: Session) -> None:
+    session.add(hotel(telefono="4433121955"))
+    session.commit()
+
+    guardado = session.get(Hotel, 2576300)
+    assert guardado.nombre == "Hotel Posada Refugio"
+    assert guardado.telefono == "4433121955"
+    assert guardado.sitio_web is None
+
+
+def test_rechaza_dos_hoteles_con_el_mismo_id(session: Session) -> None:
+    session.add(hotel())
+    session.commit()
+    session.add(hotel(nombre="Otro"))
+    with pytest.raises(IntegrityError):
+        session.commit()
+
+
+@pytest.mark.parametrize(
+    "cambios",
+    [{"tamano": "enorme"}, {"latitud": 91}, {"longitud": -181}],
+    ids=["tamano-desconocido", "latitud", "longitud"],
+)
+def test_rechaza_hoteles_invalidos(session: Session, cambios: dict[str, Any]) -> None:
+    session.add(hotel(**cambios))
     with pytest.raises(IntegrityError):
         session.commit()

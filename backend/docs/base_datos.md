@@ -39,6 +39,20 @@ erDiagram
         float longitud
         int orden UK
     }
+    hoteles {
+        int id PK
+        str nombre
+        str tipo
+        int codigo_scian
+        str tamano
+        str telefono
+        str sitio_web
+        str direccion
+        str localidad
+        str municipio
+        float latitud
+        float longitud
+    }
 ```
 
 ## Diccionario de datos
@@ -84,3 +98,21 @@ Ciudades desde las que sale el turista. No se visitan ni se recomiendan, solo si
 | `latitud` | decimal, -90 a 90 | Ubicación de salida | Migración: punto medio entre el centro y la central de autobuses (OpenStreetMap). |
 | `longitud` | decimal, -180 a 180 | Ubicación de salida | Migración: punto medio entre el centro y la central de autobuses (OpenStreetMap). |
 | `orden` | entero, único | Posición en la que se muestra | Migración. |
+
+### hoteles
+Establecimientos de hospedaje de Michoacán tomados del DENUE de INEGI (hoteles, moteles, cabañas, casas de huéspedes, departamentos amueblados y campamentos). No se relacionan con otras tablas pues se buscan por cercanía a la última parada de cada día. El índice `ix_hoteles_latitud_longitud` permite filtrar primero por un recuadro de coordenadas.
+
+| Columna | Tipo | Para qué sirve | Cómo se puebla |
+|---|---|---|---|
+| `id` | entero, PK | Identifica el establecimiento. Es el `id` del DENUE, no uno propio, para poder recargar una edición nueva sin duplicar | `data_science/datos/procesados/hoteles.csv` |
+| `nombre` | texto | Nombre que se muestra | DENUE, de mayúsculas a mayúsculas iniciales |
+| `tipo` | texto | Hotel, Motel, Cabañas, Casa de huéspedes, Departamento amueblado o Campamento | Derivado de `codigo_scian` |
+| `codigo_scian` | entero | Actividad económica del SCIAN, como 721112 (hoteles sin otros servicios integrados) | DENUE |
+| `tamano` | texto: micro, pequena, mediana o grande | Tamaño por personal ocupado (micro 0 a 10, pequeña 11 a 50, mediana 51 a 100, grande 101 o más). Sirve para dar prioridad a los negocios pequeños | Derivado del rango de personal del DENUE |
+| `telefono` | texto, opcional | 10 dígitos. Se guarda como texto para no perder ceros ni convertirlo en número | DENUE |
+| `sitio_web` | texto, opcional | Con `https://` | DENUE |
+| `direccion` | texto, opcional | Calle, número y colonia, como "Calle Ponce de León 12, Centro" | Armada a partir de las columnas del DENUE |
+| `localidad` | texto | Localidad donde está | DENUE |
+| `municipio` | texto | Municipio donde está | DENUE |
+| `latitud` | decimal, -90 a 90 | Ubicación | DENUE |
+| `longitud` | decimal, -180 a 180 | Ubicación | DENUE |
