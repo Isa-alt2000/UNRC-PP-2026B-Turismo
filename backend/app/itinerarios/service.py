@@ -4,6 +4,7 @@ from collections.abc import Sequence
 from sqlmodel import Session
 
 from app.core.exceptions import RecursoNoEncontrado, SolicitudInvalida
+from app.hoteles.service import hoteles_cercanos
 from app.itinerarios.optimizador import planear
 from app.itinerarios.rutas import (
     Coordenada,
@@ -142,6 +143,9 @@ def armar_itinerario(
             tramos_dia.append(tramos[paso])
             paso += 1
 
+        # Se duerme cerca de la última parada del día
+        ultima = paradas[-1]
+        hoteles, radio_hoteles = hoteles_cercanos(session, ultima.latitud, ultima.longitud)
         traslado = sum(p.minutos_traslado for p in paradas)
         en_visitas = sum(p.minutos_visita for p in paradas)
         dias.append(
@@ -156,6 +160,8 @@ def armar_itinerario(
                     minutos_jornada=traslado + en_visitas,
                 ),
                 excede_jornada=excedidos[numero - 1],
+                hoteles=hoteles,
+                radio_hoteles_km=radio_hoteles,
             )
         )
 

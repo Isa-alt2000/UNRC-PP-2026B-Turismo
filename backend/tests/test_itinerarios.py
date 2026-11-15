@@ -23,7 +23,7 @@ from app.ml.modelo_minutos import (
     leer_modelo,
     modelo_minutos,
 )
-from app.models import PuntoPartida, Recinto, RecintoValores
+from app.models import Hotel, PuntoPartida, Recinto, RecintoValores
 from app.models.recintos import CODIGOS_GUSTOS
 
 URL = f"{settings.api_prefix}/itinerarios"
@@ -296,3 +296,34 @@ def test_cada_parada_trae_su_imagen_o_sin_imagen(
         "credito": "Foto: Autora",
     }
     assert imagenes["R0002"] == "sin_imagen"
+
+
+# Hoteles
+
+def test_cada_dia_trae_hoteles_cerca_de_su_ultima_parada(
+    client: TestClient, db: Session, usar: Any
+) -> None:
+    # Uno junto a Uruapan (R0002) y otro junto a Pátzcuaro (R0001); 300 min por lugar: un día cada uno.
+    for id_, nombre, latitud, longitud in [
+        (1, "Hotel Uruapan", 19.4250, -102.0520),
+        (2, "Posada Pátzcuaro", 19.5120, -101.6130),
+    ]:
+        db.add(
+            Hotel(
+                id=id_, nombre=nombre, tipo="Hotel", codigo_scian=721112, tamano="micro",
+                localidad="x", municipio="x", latitud=latitud, longitud=longitud,
+            )
+        )
+    db.commit()
+    usar([300, 300])
+
+    dias = pedir(client, ["R0001", "R0002"]).json()["dias"]
+
+    for dia in dias:
+        ultima = dia["paradas"][-1]["nombre"]
+        esperado = {"Uruapan": "Hotel Uruapan", "Pátzcuaro": "Posada Pátzcuaro"}[ultima]
+        assert [h["nombre"] for h in dia["hoteles"]] == [esperado]
+        assert dia["hoteles"][0]["es_local"] is True
+        assert dia["hoteles"][0]["distancia_km"] < 1
+        # Solo uno a menos de 10 km: se amplió la búsqueda a 25.
+        assert dia["radio_hoteles_km"] == 25

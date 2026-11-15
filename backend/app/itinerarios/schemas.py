@@ -2,6 +2,7 @@ from typing import Annotated, Literal
 
 from pydantic import AfterValidator, BaseModel, ConfigDict, Field, StringConstraints
 
+from app.hoteles.schemas import HotelCercano
 from app.puntos_partida.schemas import PuntoPartidaPublico
 from app.recintos.imagenes import Imagen, SinImagen
 from app.recintos.schemas import PATRON_CLAVE
@@ -69,6 +70,13 @@ class Dia(BaseModel):
     totales: TotalesDia
     excede_jornada: bool = Field(
         description="El día pasa del límite, solo ocurre con un lugar que por sí solo no cabe"
+    )
+    hoteles: list[HotelCercano] = Field(
+        description="Hasta 5 alojamientos cerca de la última parada, por distancia; al menos 3 "
+        "son negocios locales cuando los hay"
+    )
+    radio_hoteles_km: int = Field(
+        description="10, o 25 si a 10 km había menos de 3 alojamientos"
     )
 
 
