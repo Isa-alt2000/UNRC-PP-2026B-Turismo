@@ -1,0 +1,19 @@
+id,nombre,descripcion,latitud,longitud,tamano,es_apto_dependientes,historia,artes_artesanias,arquitectura,gastronomia,naturaleza,aventura
+1,Volcán Paricutín y templo sepultado de San Juan Parangaricutiro,"Volcán que nació en 1943 en medio de un campo de cultivo. Se llega a caballo o caminando desde Angahuan, por campos de lava, hasta la torre del templo que quedó sepultada.",19.493,-102.251,3,false,2,0,1,0,3,3
+2,Zona Arqueológica de Tzintzuntzan con museo de sitio,"Antigua capital del pueblo purépecha, a orillas del lago de Pátzcuaro. Sus yácatas, basamentos de piedra de forma semicircular, se recorren a pie y tienen vista al lago. Cuenta con museo de sitio.",19.62349,-101.57325,3,true,3,0,2,0,2,0
+3,Santa Clara del Cobre,"Pueblo mágico conocido por el cobre martillado a mano. Se pueden visitar talleres artesanales y el museo del cobre, y comprar piezas directamente a los artesanos.",19.40573,-101.63901,2,true,1,3,1,1,0,0
+4,"Museo Regional Michoacano ""Dr. Nicolás León Calderón""","Museo en el centro de Morelia, dentro de un edificio virreinal. Reúne piezas arqueológicas, objetos y pinturas que cuentan la historia de Michoacán.",19.70173,-101.19443,2,true,3,1,2,0,0,0
+5,Centro Histórico de Morelia,"Centro de la ciudad declarado Patrimonio de la Humanidad, con catedral, plazas y edificios de cantera rosa. Se recorre a pie, con cafés y comida típica en los portales.",19.70242,-101.19232,3,true,2,1,3,2,0,0
+6,Lago de Zirahuén,"Lago rodeado de bosque, con actividades como kayak, paseos en lancha y tirolesa. En la orilla hay restaurantes que sirven trucha y comida local.",19.45065,-101.73325,2,true,0,0,0,2,3,2
+7,Zona Arqueológica de Tingambato,"Zona arqueológica pequeña entre Pátzcuaro y Uruapan, rodeada de vegetación. Tiene un juego de pelota y basamentos que se recorren en poco tiempo.",19.49451,-101.85884,1,true,3,0,1,0,2,0
+8,Quiroga,"Pueblo a orillas del lago de Pátzcuaro, famoso por sus carnitas y por su mercado de artesanías de madera, barro y textiles.",19.66489,-101.52338,2,true,1,2,1,3,0,0
+9,Santuario de la Mariposa Monarca El Rosario,"Bosque de oyamel donde millones de mariposas monarca pasan el invierno, más o menos de noviembre a marzo. Se sube caminando o a caballo por un sendero de montaña.",19.58824,-100.26749,3,false,0,0,0,0,3,2
+10,Museo de Artes e Industrias Populares,"Museo en un antiguo colegio del siglo XVI. Exhibe artesanías tradicionales de Michoacán: lacas, textiles, cerámica y trabajos en madera.",19.51361,-101.60714,1,true,1,3,1,0,0,0
+11,Museo de la Estampa Ex Convento de Santa María Magdalena,"Convento agustino del siglo XVI con una fachada labrada en piedra, junto al lago de Cuitzeo. En su interior está el Museo de la Estampa, dedicado al grabado.",19.96845,-101.13818,2,true,3,1,3,0,1,0
+12,Tlalpujahua,Pueblo mágico minero con calles empedradas. Se puede recorrer la antigua Mina Dos Estrellas y visitar los talleres donde se fabrican esferas navideñas.,19.80365,-100.1732,2,true,2,2,2,1,1,1
+13,Museo Casa de Morelos,,19.69997,-101.19139,1,true,3,0,2,0,0,0
+14,Templo de Tupátaro,,19.50198,-101.49284,1,true,2,3,3,0,0,0
+15,Zona Arqueológica de Ihuatzio,,19.57827,-101.62078,2,false,3,0,2,0,2,0
+16,Zona Arqueológica de San Felipe los Alzati,,19.50685,-100.39096,1,true,3,0,1,0,2,0
+17,Zona Arqueológica de Huandacareo,,19.99495,-101.28851,1,true,3,0,1,0,1,0
+18,Zona Arqueológica de Tres Cerritos,,19.96085,-101.1053,1,true,3,0,1,0,1,0

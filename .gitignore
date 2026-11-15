@@ -11,6 +11,11 @@ data_science/ml/artifacts/*
 backend/artifacts/*
 !backend/artifacts/.gitkeep
 
+# CSV con los datos iniciales de la base. No se versionan aquí: los copia copiar_al_backend.py
+# desde data_science/datos/procesados/, que es donde sí viven.
+backend/datos_iniciales/*
+!backend/datos_iniciales/.gitkeep
+
 # DENUE completo de Michoacan de 160MB~
 data_science/datos/crudos/inegi/denue_inegi_*.csv
 
