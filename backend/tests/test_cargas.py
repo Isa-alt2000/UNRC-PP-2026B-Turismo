@@ -3,7 +3,7 @@ from pathlib import Path
 import pytest
 from sqlmodel import Session, func, select
 
-from app.cargas import ErrorCarga, cargar
+from app.cargas.service import ErrorCarga, cargar
 from app.models import Hotel, PuntoPartida, Recinto
 
 ENCABEZADO_RECINTOS = (
@@ -155,7 +155,7 @@ def test_rechaza_tablas_desconocidas(db: Session, tmp_path: Path) -> None:
 
 def test_los_csv_publicados_son_validos() -> None:
     """Los CSV de datos_iniciales/, si ya se copiaron, pasan la validación (sin escribir)."""
-    from app.cargas import CARPETA, TABLAS, leer
+    from app.cargas.service import CARPETA, TABLAS, leer
 
     if not all((CARPETA / tabla.archivo).is_file() for tabla in TABLAS.values()):
         pytest.skip("Sin CSV en datos_iniciales/: python3 copiar_al_backend.py datos")

@@ -4,7 +4,7 @@ from pathlib import Path
 
 from sqlmodel import Session
 
-from app.cargas import CARPETA, TABLAS, ErrorCarga, cargar
+from app.cargas.service import CARPETA, TABLAS, ErrorCarga, cargar
 from app.core.db import engine
 
 
