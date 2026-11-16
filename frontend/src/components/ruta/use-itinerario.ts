@@ -10,6 +10,25 @@ export interface SolicitudItinerario {
   gustos: Record<string, number>
 }
 
+/** micro y pequena son negocios locales; mediana y grande, no. */
+export type TamanoHotel = 'micro' | 'pequena' | 'mediana' | 'grande'
+
+/** Alojamiento del DENUE (INEGI) cerca de la última parada de un día. */
+export interface HotelCercano {
+  id: number
+  nombre: string
+  tipo: string
+  tamano: TamanoHotel
+  es_local: boolean
+  /** En línea recta desde la última parada del día. */
+  distancia_km: number
+  telefono: string | null
+  sitio_web: string | null
+  direccion: string | null
+  latitud: number
+  longitud: number
+}
+
 export interface ImagenRecinto {
   /** Ruta servida por el backend, como /api/v1/static/recintos/R0002.webp. */
   url: string
@@ -47,6 +66,10 @@ export interface Dia {
   }
   /** El día pasa del límite: un lugar que por sí solo no cabe en una jornada. */
   excede_jornada: boolean
+  /** Hasta 5 alojamientos cerca de la última parada, por distancia; al menos 3 locales si los hay. */
+  hoteles: HotelCercano[]
+  /** 10, o 25 si a 10 km había menos de 3 alojamientos. */
+  radio_hoteles_km: number
 }
 
 export interface Itinerario {

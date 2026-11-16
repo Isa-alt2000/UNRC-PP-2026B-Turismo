@@ -3,6 +3,7 @@ export { RutaVista } from './ruta-vista'
 export {
   armarSolicitudItinerario,
   type Dia,
+  type HotelCercano,
   type ImagenRecinto,
   type Itinerario,
   itinerarioQuery,

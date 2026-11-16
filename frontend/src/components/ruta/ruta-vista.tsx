@@ -73,7 +73,8 @@ export function RutaVista({ itinerario, onEditar }: RutaVistaProps) {
             <p className="source">
               Orden y días calculados para jornadas de {duracion(itinerario.minutos_por_dia)},
               durmiendo cerca del último lugar de cada día. Tiempos de visita estimados por nuestro
-              modelo.
+              modelo. Alojamientos: Directorio Estadístico Nacional de Unidades Económicas (DENUE),
+              INEGI, mayo de 2026. Sin precios ni disponibilidad.
             </p>
             <Button variant="secondary" className="w-full" onClick={onEditar}>
               Volver y editar lugares

@@ -1,6 +1,7 @@
-import { BedDouble, Car, Clock, TriangleAlert } from 'lucide-react'
+import { Car, Clock, TriangleAlert } from 'lucide-react'
 import { distancia, duracion } from '@/lib/formato'
 import { colorDia } from './colores'
+import { HotelesDia } from './hoteles'
 import { type Dia } from './use-itinerario'
 
 interface DiaCardProps {
@@ -85,16 +86,7 @@ export function DiaCard({ dia, desde, minutosPorDia }: DiaCardProps) {
         </div>
       )}
 
-      <div className="hoteles">
-        <h4 className="hoteles-title">
-          <BedDouble size={18} strokeWidth={1.7} aria-hidden="true" />
-          Dónde dormir cerca de {ultima.nombre}
-        </h4>
-        <div className="empty">
-          <p className="font-semibold">Sin datos de alojamientos</p>
-          <p className="help">Pronto mostraremos los hoteles cercanos a esta parada.</p>
-        </div>
-      </div>
+      <HotelesDia dia={dia} cerca={ultima.nombre} />
     </section>
   )
 }
