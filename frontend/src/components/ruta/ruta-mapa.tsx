@@ -1,21 +1,24 @@
 import { useState } from 'react'
-import { divIcon, type LatLngBoundsExpression, type LatLngExpression, latLngBounds } from 'leaflet'
-import { MapContainer, Marker, Polyline, Popup, TileLayer } from 'react-leaflet'
+import { divIcon, type LatLngExpression, latLngBounds } from 'leaflet'
+import { MapContainer, Marker, Polygon, Polyline, Popup, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import { colorDia } from './colores'
 import { FichaParada } from './ficha-parada'
 import { FichaHotel } from './hoteles'
+import michoacan from './michoacan.json'
 import { type Itinerario } from './use-itinerario'
 
 const ATRIBUCION =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · rutas: <a href="https://openrouteservice.org/">openrouteservice</a>'
 
-// Michoacán va de 17.9° a 20.4° N y de 103.7° a 100.1° O. El margen, unos 30 km, evita que los
-// recintos cerca del borde (Paricutín, Tlalpujahua) queden pegados a la orilla del mapa.
-const LIMITES_MICHOACAN: LatLngBoundsExpression = [
-  [17.6, -104.1], // suroeste
-  [20.7, -99.7], // noreste
-]
+/** Contorno del estado en [latitud, longitud]; de aquí salen la sombra y los límites del mapa. */
+const CONTORNO_MICHOACAN: [number, number][] = michoacan.geometry.coordinates[0].map(
+  ([longitud, latitud]) => [latitud, longitud]
+)
+
+// El rectángulo que encierra el contorno más un 10 % por lado (unos 25 a 40 km): así los recintos
+// cerca del borde (Paricutín, Tlalpujahua) no quedan pegados a la orilla del mapa.
+const LIMITES_MICHOACAN = latLngBounds(CONTORNO_MICHOACAN).pad(0.1)
 // En el zoom 7 cabe el estado completo aun en un celular; alejarse más no aporta nada.
 const ZOOM_MINIMO = 7
 const ZOOM_MAXIMO = 18
@@ -50,6 +53,16 @@ const MARGEN_POPUP: [number, number] = [12, 12]
 
 /** GeoJSON trae [longitud, latitud]; Leaflet espera [latitud, longitud]. */
 const aLeaflet = ([longitud, latitud]: [number, number]): LatLngExpression => [latitud, longitud]
+
+// Sombra fuera del estado: un rectángulo del tamaño del mundo con Michoacán como hueco. Se arma
+// una sola vez al cargar el módulo; Leaflet recorta y simplifica el trazo según el zoom.
+const MUNDO: LatLngExpression[] = [
+  [-85, -180],
+  [-85, 180],
+  [85, 180],
+  [85, -180],
+]
+const MASCARA_MICHOACAN: LatLngExpression[][] = [MUNDO, CONTORNO_MICHOACAN]
 
 interface RutaMapaProps {
   itinerario: Itinerario
@@ -102,6 +115,19 @@ export function RutaMapa({ itinerario }: RutaMapaProps) {
           bounds={LIMITES_MICHOACAN}
           minZoom={ZOOM_MINIMO}
           maxZoom={ZOOM_MAXIMO}
+        />
+        {/* Antes que los trazos para quedar debajo; no interactiva, así no roba clics al mapa. */}
+        <Polygon
+          positions={MASCARA_MICHOACAN}
+          interactive={false}
+          pathOptions={{
+            color: '#691c32', // guinda: el contorno del estado
+            weight: 2,
+            opacity: 0.7,
+            fillColor: '#232f3f', // marino: la sombra de fuera
+            fillOpacity: 0.28,
+            fillRule: 'evenodd',
+          }}
         />
         {dias.map((dia) => (
           <Polyline
