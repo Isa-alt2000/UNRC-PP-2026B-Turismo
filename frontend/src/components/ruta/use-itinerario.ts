@@ -81,6 +81,18 @@ export interface Itinerario {
   totales: { km: number; minutos_traslado: number; minutos_visita: number; dias: number }
 }
 
+/**
+ * Todo lo que el mapa debe abarcar al abrirse, en [latitud, longitud]: la salida, el trazo de cada
+ * día y los alojamientos, para que se vean aunque estén lejos de la parada.
+ */
+export function puntosDeRuta({ salida, dias }: Itinerario): [number, number][] {
+  return [
+    [salida.latitud, salida.longitud],
+    ...dias.flatMap((d) => d.trazo.coordinates.map(([lon, lat]) => [lat, lon] as [number, number])),
+    ...dias.flatMap((d) => d.hoteles.map((h) => [h.latitud, h.longitud] as [number, number])),
+  ]
+}
+
 /** Sin punto de partida o sin lugares no hay itinerario que pedir. */
 export function armarSolicitudItinerario(
   { niveles, salida }: Preferencias,

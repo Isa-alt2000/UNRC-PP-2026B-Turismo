@@ -5,20 +5,12 @@ import 'leaflet/dist/leaflet.css'
 import { colorDia } from './colores'
 import { FichaParada } from './ficha-parada'
 import { FichaHotel } from './hoteles'
-import michoacan from './michoacan.json'
-import { type Itinerario } from './use-itinerario'
+import { CONTORNO_MICHOACAN, LIMITES_MICHOACAN } from './michoacan'
+import { type Itinerario, puntosDeRuta } from './use-itinerario'
 
 const ATRIBUCION =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · rutas: <a href="https://openrouteservice.org/">openrouteservice</a>'
 
-/** Contorno del estado en [latitud, longitud]; de aquí salen la sombra y los límites del mapa. */
-const CONTORNO_MICHOACAN: [number, number][] = michoacan.geometry.coordinates[0].map(
-  ([longitud, latitud]) => [latitud, longitud]
-)
-
-// El rectángulo que encierra el contorno más un 10 % por lado (unos 25 a 40 km): así los recintos
-// cerca del borde (Paricutín, Tlalpujahua) no quedan pegados a la orilla del mapa.
-const LIMITES_MICHOACAN = latLngBounds(CONTORNO_MICHOACAN).pad(0.1)
 // En el zoom 7 cabe el estado completo aun en un celular; alejarse más no aporta nada.
 const ZOOM_MINIMO = 7
 const ZOOM_MAXIMO = 18
@@ -73,12 +65,7 @@ export function RutaMapa({ itinerario }: RutaMapaProps) {
   const { salida, dias, aproximada } = itinerario
   const [conHoteles, setConHoteles] = useState(true)
   const hayHoteles = dias.some((dia) => dia.hoteles.length > 0)
-  const puntos = [
-    [salida.latitud, salida.longitud] as [number, number],
-    ...dias.flatMap((d) => d.trazo.coordinates.map(([lon, lat]) => [lat, lon] as [number, number])),
-    // Los alojamientos también, para que se vean al abrir aunque estén lejos de la parada.
-    ...dias.flatMap((d) => d.hoteles.map((h) => [h.latitud, h.longitud] as [number, number])),
-  ]
+  const puntos = puntosDeRuta(itinerario)
 
   return (
     <div className="mapa" role="region" aria-label="Mapa de la ruta">
@@ -111,6 +98,8 @@ export function RutaMapa({ itinerario }: RutaMapaProps) {
         <TileLayer
           attribution={ATRIBUCION}
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+          // Con CORS, como las pide el PDF: así reutiliza las teselas que el navegador ya guardó.
+          crossOrigin=""
           // Tampoco se piden teselas de fuera del estado: menos peticiones a los servidores de OSM.
           bounds={LIMITES_MICHOACAN}
           minZoom={ZOOM_MINIMO}

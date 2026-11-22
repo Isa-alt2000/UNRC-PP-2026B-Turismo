@@ -1,29 +1,11 @@
 import { useState } from 'react'
 import { BedDouble, Globe, Phone } from 'lucide-react'
 import { distancia } from '@/lib/formato'
-import { type Dia, type HotelCercano, type TamanoHotel } from './use-itinerario'
+import { dominio, TEXTO_TAMANO, telefonoLegible } from './texto-hotel'
+import { type Dia, type HotelCercano } from './use-itinerario'
 
 /** Hoteles a la vista en cada día; el resto se despliega. */
 const VISIBLES = 3
-
-/** Estratificación por personal ocupado de INEGI. */
-const TEXTO_TAMANO: Record<TamanoHotel, string> = {
-  micro: 'Microempresa',
-  pequena: 'Pequeña empresa',
-  mediana: 'Mediana empresa',
-  grande: 'Gran empresa',
-}
-
-/** 4433121955 → 443 312 1955 */
-const telefonoLegible = (telefono: string) =>
-  `${telefono.slice(0, 3)} ${telefono.slice(3, 6)} ${telefono.slice(6)}`
-
-/** El dominio sin https:// ni www., para mostrarlo corto. */
-const dominio = (sitio: string) =>
-  sitio
-    .replace(/^https?:\/\//, '')
-    .replace(/^www\./, '')
-    .replace(/\/$/, '')
 
 export function InsigniaLocal() {
   return <span className="insignia-local">Negocio local</span>

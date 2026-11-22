@@ -4,6 +4,7 @@ import { Button } from '@/components/ui'
 import { useFocusOnMount } from '@/hooks/use-focus-on-mount'
 import { distancia, duracion } from '@/lib/formato'
 import { DiaCard } from './dia-card'
+import { BotonPdf } from './pdf/boton-pdf'
 import { RutaMapa } from './ruta-mapa'
 import { type Itinerario } from './use-itinerario'
 import './ruta.css'
@@ -34,6 +35,7 @@ export function RutaVista({ itinerario, onEditar }: RutaVistaProps) {
         <div className="ruta-grid">
           <div className="ruta-mapa">
             <RutaMapa itinerario={itinerario} />
+            <BotonPdf itinerario={itinerario} />
             <dl className="resumen">
               <div>
                 <dt>Días</dt>
