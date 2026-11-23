@@ -90,8 +90,8 @@ export async function mapaEstatico(
     return [x - origen.x, y - origen.y]
   }
 
-  // Fondo arena, como el del mapa mientras cargan las teselas.
-  ctx.fillStyle = '#f8f2ed'
+  // Fondo blanco ala, como el del mapa mientras cargan las teselas.
+  ctx.fillStyle = '#faf4e8'
   ctx.fillRect(0, 0, ancho, alto)
 
   const limite = 2 ** zTeselas
@@ -125,7 +125,7 @@ export async function mapaEstatico(
     else ctx.lineTo(x, y)
   })
   ctx.closePath()
-  ctx.fillStyle = 'rgb(35 47 63 / 0.28)'
+  ctx.fillStyle = 'rgb(31 26 23 / 0.28)'
   ctx.fill('evenodd')
   ctx.beginPath()
   CONTORNO_MICHOACAN.forEach((p, i) => {
@@ -134,7 +134,7 @@ export async function mapaEstatico(
     else ctx.lineTo(x, y)
   })
   ctx.closePath()
-  ctx.strokeStyle = 'rgb(105 28 50 / 0.7)'
+  ctx.strokeStyle = 'rgb(160 83 26 / 0.7)'
   ctx.lineWidth = 2 * k
   ctx.stroke()
 
@@ -172,18 +172,18 @@ export async function mapaEstatico(
     }
   }
 
-  // Salida: círculo blanco con aro y punto rojos.
+  // Salida: círculo blanco con aro y punto naranjas.
   const [sx, sy] = enLienzo([itinerario.salida.latitud, itinerario.salida.longitud])
   ctx.beginPath()
   ctx.arc(sx, sy, 13 * k, 0, 2 * Math.PI)
   ctx.fillStyle = '#ffffff'
   ctx.fill()
   ctx.lineWidth = 2.5 * k
-  ctx.strokeStyle = '#9f2241'
+  ctx.strokeStyle = '#e5711b'
   ctx.stroke()
   ctx.beginPath()
   ctx.arc(sx, sy, 4 * k, 0, 2 * Math.PI)
-  ctx.fillStyle = '#9f2241'
+  ctx.fillStyle = '#e5711b'
   ctx.fill()
 
   // Paradas numeradas.
@@ -194,12 +194,12 @@ export async function mapaEstatico(
     const [x, y] = enLienzo([parada.latitud, parada.longitud])
     ctx.beginPath()
     ctx.arc(x, y, 14 * k, 0, 2 * Math.PI)
-    ctx.fillStyle = '#9f2241'
+    ctx.fillStyle = '#e5711b'
     ctx.fill()
     ctx.lineWidth = 2 * k
     ctx.strokeStyle = '#ffffff'
     ctx.stroke()
-    ctx.fillStyle = '#ffffff'
+    ctx.fillStyle = '#1f1a17'
     ctx.fillText(String(parada.orden), x, y + 0.5 * k)
   }
 
@@ -209,7 +209,7 @@ export async function mapaEstatico(
   const anchoTexto = ctx.measureText(atribucion).width
   ctx.fillStyle = 'rgb(255 255 255 / 0.8)'
   ctx.fillRect(ancho - anchoTexto - 12 * k, alto - 18 * k, anchoTexto + 12 * k, 18 * k)
-  ctx.fillStyle = '#232f3f'
+  ctx.fillStyle = '#1f1a17'
   ctx.textAlign = 'right'
   ctx.fillText(atribucion, ancho - 6 * k, alto - 9 * k)
 

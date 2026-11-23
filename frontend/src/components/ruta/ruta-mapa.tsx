@@ -110,10 +110,10 @@ export function RutaMapa({ itinerario }: RutaMapaProps) {
           positions={MASCARA_MICHOACAN}
           interactive={false}
           pathOptions={{
-            color: '#691c32', // guinda: el contorno del estado
+            color: '#a0531a', // naranja oscuro: el contorno del estado
             weight: 2,
             opacity: 0.7,
-            fillColor: '#232f3f', // marino: la sombra de fuera
+            fillColor: '#1f1a17', // negro laca: la sombra de fuera
             fillOpacity: 0.28,
             fillRule: 'evenodd',
           }}

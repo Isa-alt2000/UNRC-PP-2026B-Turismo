@@ -1,12 +1,8 @@
+import logo from '@/assets/logo-ruta.svg'
+
 /**
- * Logo de la cabecera del PDF. Mientras sea null, el PDF muestra un recuadro punteado en su lugar.
- *
- * Cuando exista: guárdalo en src/assets/ (PNG con fondo transparente, unos 600 × 300 px) y cambia
- * esta línea por
- *
- *   import logo from '@/assets/logo.png'
- *   export const LOGO: string | null = logo
- *
- * Se ajusta solo al recuadro de 40 × 20 mm sin deformarse.
+ * Logo de la cabecera del PDF: la monarca con su ruta de tres paradas (src/assets/logo-ruta.svg).
+ * Para cambiarlo, reemplaza ese archivo o importa otro aquí. Con null, el PDF muestra un recuadro
+ * punteado en su lugar. Se ajusta solo a su recuadro sin deformarse.
  */
-export const LOGO: string | null = null
+export const LOGO: string | null = logo

@@ -12,20 +12,22 @@ const MARGEN = 14
 const ANCHO_UTIL = HOJA.ancho - 2 * MARGEN
 // Debajo de esto se pasa a otra hoja; deja sitio al pie de página.
 const FONDO = HOJA.alto - 18
-const LOGO_CAJA = { ancho: 40, alto: 20 }
+// El logo es casi cuadrado (380 × 400): un recuadro de 24 × 25 mm junto al título.
+const LOGO_CAJA = { ancho: 24, alto: 25 }
 // Píxeles del mapa: 16:9, unos 220 ppp a lo ancho de la hoja.
 const MAPA_PX = { ancho: 1600, alto: 900 }
 
 const COLOR = {
-  marino: '#232f3f',
-  guinda: '#691c32',
-  rojo: '#9f2241',
-  oro: '#bc955c',
-  texto2: '#616975',
-  borde: '#e2e4e6',
-  arena50: '#f8f2ed',
-  dorado50: '#f4eee3',
-  verde: '#1e7b4a',
+  tinta: '#1f1a17',
+  naranja: '#e5711b',
+  naranjaOscuro: '#a0531a', // texto naranja: títulos y enlaces
+  naranja50: '#fdf1e8',
+  cempasuchil: '#f5a623',
+  texto2: '#5e5a58',
+  borde: '#e1dfde',
+  ala: '#faf4e8',
+  cantera50: '#f3e4dc',
+  oyamel: '#2f5a3c',
 }
 
 export const FUENTES =
@@ -59,7 +61,7 @@ class Hoja {
     }
   }
 
-  fuente(tamano: number, estilo: 'normal' | 'bold' = 'normal', color = COLOR.marino) {
+  fuente(tamano: number, estilo: 'normal' | 'bold' = 'normal', color = COLOR.tinta) {
     this.doc.setFont('helvetica', estilo)
     this.doc.setFontSize(tamano)
     this.doc.setTextColor(color)
@@ -74,17 +76,24 @@ class Hoja {
   }
 }
 
-function cabecera(h: Hoja, itinerario: Itinerario, logo: HTMLImageElement | null, fecha: Date) {
+/** Logo ya convertido a PNG, con sus proporciones. */
+export interface LogoPdf {
+  png: string
+  ancho: number
+  alto: number
+}
+
+function cabecera(h: Hoja, itinerario: Itinerario, logo: LogoPdf | null, fecha: Date) {
   const { doc } = h
   const caja = { x: MARGEN, y: MARGEN, ...LOGO_CAJA }
   if (logo) {
     // Cabe en el recuadro sin deformarse, alineado a la izquierda.
-    const escala = Math.min(caja.ancho / logo.naturalWidth, caja.alto / logo.naturalHeight)
-    const ancho = logo.naturalWidth * escala
-    const alto = logo.naturalHeight * escala
-    doc.addImage(logo, 'PNG', caja.x, caja.y + (caja.alto - alto) / 2, ancho, alto)
+    const escala = Math.min(caja.ancho / logo.ancho, caja.alto / logo.alto)
+    const ancho = logo.ancho * escala
+    const alto = logo.alto * escala
+    doc.addImage(logo.png, 'PNG', caja.x, caja.y + (caja.alto - alto) / 2, ancho, alto)
   } else {
-    doc.setDrawColor(COLOR.oro)
+    doc.setDrawColor(COLOR.cempasuchil)
     doc.setLineWidth(0.3)
     doc.setLineDashPattern([1.5, 1.2], 0)
     doc.roundedRect(caja.x, caja.y, caja.ancho, caja.alto, 2, 2, 'S')
@@ -96,20 +105,22 @@ function cabecera(h: Hoja, itinerario: Itinerario, logo: HTMLImageElement | null
     })
   }
 
-  const x = caja.x + caja.ancho + 8
-  h.fuente(18, 'bold', COLOR.guinda)
-  doc.text('Tu ruta por Michoacán', x, caja.y + 6, { baseline: 'middle' })
+  const x = caja.x + caja.ancho + 6
+  // El bloque de texto (unos 12 mm) va centrado a la altura del logo.
+  const y = caja.y + caja.alto / 2 - 6
+  h.fuente(18, 'bold', COLOR.naranjaOscuro)
+  doc.text('Tu ruta por Michoacán', x, y, { baseline: 'middle' })
   const dias = itinerario.totales.dias === 1 ? '1 día' : `${itinerario.totales.dias} días`
   h.fuente(10)
-  doc.text(`Salida desde ${itinerario.salida.nombre} · ${dias}`, x, caja.y + 13, {
+  doc.text(`Salida desde ${itinerario.salida.nombre} · ${dias}`, x, y + 7, {
     baseline: 'middle',
   })
   h.fuente(8.5, 'normal', COLOR.texto2)
   const hoy = new Intl.DateTimeFormat('es-MX', { dateStyle: 'long' }).format(fecha)
-  doc.text(`Generada el ${hoy}`, x, caja.y + 18, { baseline: 'middle' })
+  doc.text(`Generada el ${hoy}`, x, y + 12, { baseline: 'middle' })
 
   h.y = caja.y + caja.alto + 4
-  doc.setDrawColor(COLOR.guinda)
+  doc.setDrawColor(COLOR.naranjaOscuro)
   doc.setLineWidth(0.6)
   doc.line(MARGEN, h.y, HOJA.ancho - MARGEN, h.y)
   h.y += 5
@@ -121,7 +132,7 @@ function mapa(h: Hoja, imagen: string | null) {
   if (imagen) {
     doc.addImage(imagen, 'JPEG', MARGEN, h.y, ANCHO_UTIL, alto)
   } else {
-    doc.setFillColor(COLOR.arena50)
+    doc.setFillColor(COLOR.ala)
     doc.rect(MARGEN, h.y, ANCHO_UTIL, alto, 'F')
     h.fuente(10, 'normal', COLOR.texto2)
     doc.text(
@@ -195,11 +206,11 @@ function dia(h: Hoja, d: Dia, desde: string, minutosPorDia: number) {
   doc.setFillColor(colorDia(d.dia))
   // Solo a la izquierda: a todo lo ancho se asomaría como contorno en las esquinas derechas.
   doc.roundedRect(MARGEN, h.y, 6, ALTO_BANDA, 1.8, 1.8, 'F')
-  doc.setFillColor(COLOR.arena50)
+  doc.setFillColor(COLOR.ala)
   doc.roundedRect(MARGEN + 1.4, h.y, ANCHO_UTIL - 1.4, ALTO_BANDA, 1.8, 1.8, 'F')
   doc.rect(MARGEN + 1.4, h.y, 2, ALTO_BANDA, 'F') // borde izquierdo recto junto a la franja
   const medio = h.y + ALTO_BANDA / 2
-  h.fuente(11.5, 'bold', COLOR.guinda)
+  h.fuente(11.5, 'bold', COLOR.naranjaOscuro)
   const titulo = `Día ${d.dia}`
   doc.text(titulo, MARGEN + 5, medio, { baseline: 'middle' })
   const paradas = d.paradas.length === 1 ? '1 parada' : `${d.paradas.length} paradas`
@@ -230,7 +241,7 @@ function dia(h: Hoja, d: Dia, desde: string, minutosPorDia: number) {
     return fila
   })
 
-  doc.setDrawColor('#d9a7b3')
+  doc.setDrawColor('#f2b98b')
   doc.setLineWidth(0.5)
   doc.setLineDashPattern([0.9, 0.9], 0)
   doc.line(riel, yCentroSalida, riel, filas.at(-1)!.yCentro)
@@ -238,10 +249,10 @@ function dia(h: Hoja, d: Dia, desde: string, minutosPorDia: number) {
 
   // Salida: aro rojo con punto, como en el mapa.
   doc.setFillColor('#ffffff')
-  doc.setDrawColor(COLOR.rojo)
+  doc.setDrawColor(COLOR.naranja)
   doc.setLineWidth(0.6)
   doc.circle(riel, yCentroSalida, 2.2, 'FD')
-  doc.setFillColor(COLOR.rojo)
+  doc.setFillColor(COLOR.naranja)
   doc.circle(riel, yCentroSalida, 0.8, 'F')
   h.fuente(9, 'bold')
   doc.text(`Salida desde ${desde}`, x, yCentroSalida, { baseline: 'middle' })
@@ -255,19 +266,19 @@ function dia(h: Hoja, d: Dia, desde: string, minutosPorDia: number) {
       { baseline: 'top' }
     )
 
-    doc.setFillColor(COLOR.rojo)
+    doc.setFillColor(COLOR.naranja)
     doc.circle(riel, yCentro, 2.6, 'F')
-    h.fuente(7.5, 'bold', '#ffffff')
+    h.fuente(7.5, 'bold', COLOR.tinta)
     doc.text(String(parada.orden), riel, yCentro + 0.1, { align: 'center', baseline: 'middle' })
 
     h.fuente(10, 'bold')
     doc.text(nombre, x, yNombre, { baseline: 'top', lineHeightFactor: 1.25 })
 
     // Tiempo de visita en una pastilla a la derecha.
-    h.fuente(7.5, 'bold', COLOR.rojo)
+    h.fuente(7.5, 'bold', COLOR.naranjaOscuro)
     const visita = `Visita ${duracion(parada.minutos_visita)}`
     const anchoPastilla = doc.getTextWidth(visita) + 4
-    doc.setFillColor('#f6e9ec')
+    doc.setFillColor(COLOR.naranja50)
     doc.roundedRect(derecha - anchoPastilla, yCentro - 2.2, anchoPastilla, 4.4, 2.2, 2.2, 'F')
     doc.text(visita, derecha - anchoPastilla / 2, yCentro + 0.1, {
       align: 'center',
@@ -278,13 +289,13 @@ function dia(h: Hoja, d: Dia, desde: string, minutosPorDia: number) {
 
   if (d.excede_jornada) {
     h.y += 1.5
-    h.fuente(8.5, 'normal', COLOR.marino)
+    h.fuente(8.5, 'normal', COLOR.tinta)
     const texto = `Este día pasa de ${duracion(minutosPorDia)}: el lugar queda lejos y su visita es larga. Considera salir temprano.`
     const lineas: string[] = doc.splitTextToSize(texto, ANCHO_UTIL - 6)
     const alto = lineas.length * h.interlinea + 3.5
     h.asegurar(alto)
-    doc.setFillColor(COLOR.dorado50)
-    doc.setDrawColor('#ddc9a3')
+    doc.setFillColor(COLOR.cantera50)
+    doc.setDrawColor('#d8a58c')
     doc.setLineWidth(0.25)
     doc.roundedRect(MARGEN, h.y, ANCHO_UTIL, alto, 1.5, 1.5, 'FD')
     h.y += 1.75
@@ -330,7 +341,7 @@ function hoteles(h: Hoja, d: Dia) {
   if (d.radio_hoteles_km > 10) {
     h.fuente(8, 'normal', COLOR.texto2)
     h.parrafo(
-      `No encontramos alojamientos a menos de 10 km; estos están a menos de ${d.radio_hoteles_km} km.`
+      `No encontramos alojamientos a menos de 10 km. Estos están a menos de ${d.radio_hoteles_km} km.`
     )
     h.y += 1
   }
@@ -343,7 +354,7 @@ function hoteles(h: Hoja, d: Dia) {
     h.asegurar(alto)
     fila.forEach((hotel, j) => {
       const x = MARGEN + j * (ANCHO_TARJETA + SEPARACION)
-      doc.setFillColor('#fbf9f6')
+      doc.setFillColor('#fdfbf7')
       doc.setDrawColor(COLOR.borde)
       doc.setLineWidth(0.25)
       doc.roundedRect(x, h.y, ANCHO_TARJETA, alto, 1.8, 1.8, 'FD')
@@ -389,7 +400,7 @@ function tarjetaHotel(h: Hoja, hotel: HotelCercano, x: number, y: number, alto: 
     // jsPDF descarta los espacios en los extremos de un texto: el hueco se suma a la x.
     const local = '· Negocio local'
     const finMeta = doc.getTextWidth(meta.at(-1)!) + 1.2
-    h.fuente(7.5, 'bold', COLOR.verde)
+    h.fuente(7.5, 'bold', COLOR.oyamel)
     const cabe = finMeta + doc.getTextWidth(local) <= ancho
     if (cabe) {
       if (dibujar)
@@ -435,7 +446,7 @@ function contacto(
     if (dibujar) doc.text('Sin teléfono ni sitio web en el directorio', x, y, { baseline: 'top' })
     return h.interlinea
   }
-  h.fuente(8, 'normal', COLOR.rojo)
+  h.fuente(8, 'normal', COLOR.naranjaOscuro)
   const tel = telefono ? `Tel. ${telefonoLegible(telefono)}` : null
   const web = sitio ? dominio(sitio) : null
   const anchoTel = tel ? doc.getTextWidth(tel) + 5 : 0
@@ -465,11 +476,7 @@ function pies(doc: jsPDF) {
 export function armarPdf(
   doc: jsPDF,
   itinerario: Itinerario,
-  {
-    mapa: imagenMapa,
-    logo,
-    fecha,
-  }: { mapa: string | null; logo: HTMLImageElement | null; fecha: Date }
+  { mapa: imagenMapa, logo, fecha }: { mapa: string | null; logo: LogoPdf | null; fecha: Date }
 ) {
   const h = new Hoja(doc)
   doc.setProperties({ title: 'Tu ruta por Michoacán', subject: 'Itinerario de viaje' })
@@ -478,7 +485,7 @@ export function armarPdf(
   resumen(h, itinerario)
 
   h.asegurar(20)
-  h.fuente(14, 'bold', COLOR.guinda)
+  h.fuente(14, 'bold', COLOR.naranjaOscuro)
   h.parrafo('Itinerario')
   h.y += 2
   itinerario.dias.forEach((d, i) => {
@@ -493,10 +500,24 @@ export function armarPdf(
   return doc
 }
 
-function cargarImagen(url: string) {
-  return new Promise<HTMLImageElement>((resolve, reject) => {
+/**
+ * Carga el logo (SVG o PNG) y lo pasa a PNG en un lienzo: jsPDF no incrusta SVG. Se dibuja a
+ * 600 px de alto, unos 600 ppp en los 25 mm de la cabecera, para que se vea nítido al imprimir.
+ */
+function cargarLogo(url: string) {
+  return new Promise<LogoPdf>((resolve, reject) => {
     const img = new Image()
-    img.onload = () => resolve(img)
+    img.onload = () => {
+      const alto = 600
+      const ancho = Math.round((alto * img.naturalWidth) / img.naturalHeight)
+      const lienzo = document.createElement('canvas')
+      lienzo.width = ancho
+      lienzo.height = alto
+      const ctx = lienzo.getContext('2d')
+      if (!ctx) return reject(new Error('El navegador no permite dibujar en un lienzo'))
+      ctx.drawImage(img, 0, 0, ancho, alto)
+      resolve({ png: lienzo.toDataURL('image/png'), ancho, alto })
+    }
     img.onerror = () => reject(new Error(`No se pudo cargar ${url}`))
     img.src = url
   })
@@ -508,7 +529,8 @@ export async function descargarPdf(itinerario: Itinerario) {
     import('jspdf'),
     // Sin mapa (sin red, o el navegador bloqueó el lienzo) el itinerario sigue siendo útil.
     mapaEstatico(itinerario, MAPA_PX).catch(() => null),
-    LOGO ? cargarImagen(LOGO).catch(() => null) : Promise.resolve(null),
+    // Sin logo el PDF sale igual, con el recuadro punteado en su lugar.
+    LOGO ? cargarLogo(LOGO).catch(() => null) : Promise.resolve(null),
   ])
   const fecha = new Date()
   const doc = new jsPDF({ unit: 'mm', format: 'a4', compress: true })

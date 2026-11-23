@@ -4,19 +4,48 @@
     position: relative;
     min-height: 100dvh;
     overflow: hidden;
-    background: var(--color-crema);
+    background: var(--color-ala);
     display: flex;
     flex-direction: column;
-    --t-nombre: 0.8s;
-    --t-lema: 0.8s;
-    --t-paisaje: 0.8s;
-    --inicio-paisaje: calc(var(--t-nombre) + var(--t-lema));
+    /* Lo que tarda la mariposa en llegar al tule; el título aparece cuando se posa. */
+    --t-llegada: 3.2s;
   }
+  /* Escena en planos. Las capas animadas se colocan con la cuenta de preserveAspectRatio
+     "xMidYMax slice": una unidad del viewBox mide --u, el centro x = 720 va a la mitad y el borde
+     de abajo (y = 900) va abajo. Así coinciden al píxel con los planos fijos. */
   .hero-art {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    container-type: size;
+  }
+  .hero-plano {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
+  }
+  .hero-capa {
+    --u: max(100cqw / 1440, 100cqh / 900);
+    position: absolute;
+    left: calc(50% + (var(--x) - 720) * var(--u));
+    top: calc(100% - (900 - var(--y)) * var(--u));
+    width: calc(var(--w) * var(--u));
+    height: calc(var(--h) * var(--u));
+  }
+  /* Las alas y las ondas se repintan sin parar. En su propia capa (pequeña) ese repintado no
+     arrastra al paisaje entero; sin esto, al terminar el vuelo la mariposa volvería a pintarse
+     junto con el fondo en cada cuadro. */
+  .mariposa-llegada,
+  .ondas {
+    will-change: transform;
+  }
+  .hero-capa > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
   }
   .hero-in {
     position: relative;
@@ -26,26 +55,45 @@
     margin: 0 auto;
     padding: min(64px, 7.6dvh) 20px 0;
   }
-  /* El título también se limita por la altura: en pantallas anchas y bajas la catedral sube y lo alcanzaría. */
+  /* Título en vitral, con la misma letra redondeada del lema (Fredoka). Se limita por la altura,
+     para no alcanzar a la mariposa en pantallas bajas, y por el ancho, para no partirse en celular. */
   .hero-title {
-    font-family: var(--font-display);
-    font-size: min(54px, 9dvh);
-    line-height: 0.98;
-    letter-spacing: -0.04em;
+    font-family: 'Fredoka', var(--font-display);
+    font-size: min(68px, 9dvh, 17vw);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    /* El peso más grueso: deja más superficie para los vidrios. */
     font-weight: 700;
-    color: var(--color-guinda);
+    color: var(--color-tinta);
   }
+  /* Vidrios en los naranjas del ala monarca, separados por plomo negro laca. Sigue siendo texto:
+     se selecciona y lo leen los lectores de pantalla. El mosaico escala con la letra (em). */
   .hero-nombre {
     display: block;
-    animation: desde-izquierda var(--t-nombre) var(--ease-portada) both;
+    background-image: url('./vitral.svg');
+    background-size: 3.6em;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 0.03em var(--color-tinta);
+    animation: aparece 0.9s var(--ease-portada) var(--t-llegada) both;
   }
   .hero-lema {
     display: block;
-    margin-top: 0.14em;
-    font-size: 0.75em;
-    line-height: 1.04;
-    color: var(--color-rojo);
-    animation: desde-derecha var(--t-lema) var(--ease-portada) var(--t-nombre) both;
+    margin-top: 0.18em;
+    font-family: 'Fredoka', var(--font-display);
+    font-weight: 600;
+    font-size: 0.42em;
+    line-height: 1.1;
+    letter-spacing: 0;
+    animation: aparece 0.9s var(--ease-portada) calc(var(--t-llegada) + 0.35s) both;
+  }
+  /* Dos colores de la paleta; ambos pasan 4.5:1 sobre el cielo claro. */
+  .hero-lema-estado {
+    color: var(--color-patzcuaro);
+  }
+  .hero-lema-historias {
+    color: var(--color-naranja-oscuro);
   }
   .hero-acciones {
     position: absolute;
@@ -60,16 +108,16 @@
     min-height: 48px;
     padding: 0 18px 0 22px;
     border: 0;
-    border-radius: 999px;
+    border-radius: var(--radius-control);
     background: #ffffff;
-    color: var(--color-rojo);
+    color: var(--color-naranja-oscuro);
     font-weight: 600;
     font-size: 15px;
     display: inline-flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
-    box-shadow: 0 8px 28px rgba(35, 47, 63, 0.22);
+    box-shadow: 0 8px 28px rgba(31, 26, 23, 0.22);
     transition:
       scale var(--dur-1) var(--ease-salida),
       background-color var(--dur-1) var(--ease-salida);
@@ -81,34 +129,44 @@
     animation: nudge 1.6s ease-in-out infinite alternate;
   }
 
-  /* Paisaje: las montañas suben desde detrás de la ciudad y el sol arranca después para asomar tras ellas. */
-  .mountains {
-    --desde: 270px;
-    animation: asoma var(--t-paisaje) var(--ease-portada) var(--inicio-paisaje) both;
+  /* Portada: la monarca llega volando y se posa en el tule. Solo se animan transform y opacity. */
+  /* El giro sale del mismo punto que antes: 80 % del ancho y la base del dibujo de la mariposa
+     (x 263, y 302 de su viewBox de 380 × 330). */
+  .mariposa-llegada {
+    transform-origin: 69.26% 91.52%;
+    animation: llegada var(--t-llegada) cubic-bezier(0.33, 0.1, 0.25, 1) 0.2s both;
   }
-  .sun {
-    --desde: 400px;
-    animation: asoma calc(var(--t-paisaje) * 2 / 3) var(--ease-portada)
-      calc(var(--inicio-paisaje) + var(--t-paisaje) / 3) both;
+  /* De perfil, abrir las alas las acerca al cuerpo: se achatan hacia la base. */
+  .hero-art .ala-delantera,
+  .hero-art .ala-trasera {
+    animation:
+      aleteo-vuelo 0.16s ease-in-out 0.2s 20 alternate,
+      aleteo-reposo 5.2s ease-in-out calc(var(--t-llegada) + 0.2s) infinite;
   }
-  .sun-ring {
+  .hero-art .ala-trasera {
+    /* Un poco después que la delantera, como un ala real. */
+    animation-delay: 0.24s, calc(var(--t-llegada) + 0.28s);
+  }
+  .onda {
     transform-box: fill-box;
     transform-origin: center;
-    animation: spin 140s linear infinite;
+    opacity: 0;
+    animation: onda 4.2s cubic-bezier(0.2, 0.6, 0.35, 1) infinite;
   }
-  .sun-ring.r2 {
-    animation-duration: 200s;
-    animation-direction: reverse;
+  .reflejo {
+    transform-origin: 50% 0;
+    animation: tiembla 5s ease-in-out infinite alternate;
   }
-  .clouds {
-    animation: drift 38s ease-in-out infinite alternate;
+  .brillos {
+    opacity: 0.5;
+    animation: brilla 9s ease-in-out infinite alternate;
   }
-  .birds {
-    animation: drift 26s ease-in-out infinite alternate;
-  }
-  .hero-pausada .sun-ring,
-  .hero-pausada .clouds,
-  .hero-pausada .birds,
+  .hero-pausada .mariposa-llegada,
+  .hero-pausada .hero-art .ala-delantera,
+  .hero-pausada .hero-art .ala-trasera,
+  .hero-pausada .onda,
+  .hero-pausada .reflejo,
+  .hero-pausada .brillos,
   .hero-pausada .hero-cue svg {
     animation-play-state: paused;
   }
@@ -119,7 +177,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    background: var(--color-dorado-50);
+    background: var(--color-cantera-50);
     overflow: clip;
   }
   .arma > .wrap {
@@ -138,13 +196,22 @@
     align-items: flex-start;
     gap: 18px;
   }
+  /* Cada frase del título en su propia línea: la letra se ajusta al ancho de la columna (cqi) para
+     que la más larga (unas 12.6 veces el tamaño de letra) quepa sin partirse. */
+  .arma-copia {
+    container-type: inline-size;
+  }
   .arma-title {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: min(32px, 7.6cqi);
     line-height: 1.08;
     letter-spacing: -0.03em;
     font-weight: 700;
-    color: var(--color-guinda);
+    color: var(--color-naranja-oscuro);
+  }
+  .arma-title-linea {
+    display: block;
+    white-space: nowrap;
   }
   .pasos {
     display: flex;
@@ -261,21 +328,21 @@
   }
   .bar-track {
     height: 10px;
-    border-radius: 999px;
-    background: var(--color-marino-50);
+    border-radius: var(--radius-barra);
+    background: var(--color-tinta-50);
     overflow: hidden;
   }
   .bar {
     height: 100%;
-    border-radius: 999px;
+    border-radius: var(--radius-barra);
     min-width: 10px;
-    box-shadow: inset 0 0 0 1px rgba(35, 47, 63, 0.28);
+    box-shadow: inset 0 0 0 1px rgba(31, 26, 23, 0.28);
   }
   .compare-find {
     font-size: 15px;
     line-height: 1.45;
     padding-top: 14px;
-    border-top: 1px solid var(--color-dorado-50);
+    border-top: 1px solid var(--color-cantera-50);
   }
 
   @keyframes nudge {
@@ -283,20 +350,91 @@
       transform: translateY(3px);
     }
   }
-  @keyframes asoma {
+  @keyframes aparece {
     from {
-      transform: translateY(var(--desde));
+      opacity: 0;
+      transform: translateY(14px);
     }
   }
-  @keyframes drift {
+  /* Entra por la izquierda (mira a la derecha), sube y baja como vuelan las monarcas. */
+  @keyframes llegada {
+    0% {
+      opacity: 0;
+      transform: translate(-444.44%, -255.89%) rotate(-10deg);
+    }
+    8% {
+      opacity: 1;
+    }
+    30% {
+      transform: translate(-304.09%, -168.35%) rotate(6deg);
+    }
+    52% {
+      transform: translate(-175.44%, -202.02%) rotate(-6deg);
+    }
+    74% {
+      transform: translate(-64.33%, -80.81%) rotate(5deg);
+    }
+    90% {
+      transform: translate(-9.36%, -17.51%) rotate(-2deg);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  /* Posada: casi quieta, con un par de aleteos cortos y una pausa larga e irregular. */
+  @keyframes aleteo-reposo {
+    0%,
+    100% {
+      transform: none;
+    }
+    6% {
+      transform: scaleY(0.84);
+    }
+    12% {
+      transform: none;
+    }
+    17% {
+      transform: scaleY(0.92);
+    }
+    22% {
+      transform: none;
+    }
+    58% {
+      transform: none;
+    }
+    63% {
+      transform: scaleY(0.88);
+    }
+    69% {
+      transform: none;
+    }
+  }
+  @keyframes onda {
+    0% {
+      opacity: 0.75;
+      transform: scale(0.08);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+  @keyframes tiembla {
     to {
-      transform: translateX(64px);
+      transform: scaleX(1.02) scaleY(0.96);
+    }
+  }
+  @keyframes brilla {
+    to {
+      opacity: 0.25;
+      transform: translateX(2.5%); /* 24 unidades de la escena */
     }
   }
 
   @media (hover: hover) and (pointer: fine) {
     .hero-cue:hover {
-      background: var(--color-rojo-50);
+      background: var(--color-naranja-50);
     }
   }
 
@@ -305,7 +443,7 @@
       padding: min(96px, 10.7dvh) 32px 0;
     }
     .hero-title {
-      font-size: min(96px, 10.7dvh);
+      font-size: min(150px, 15dvh, 11.5vw);
     }
     .arma-grid {
       grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
@@ -316,7 +454,7 @@
       padding-bottom: 0;
     }
     .arma-title {
-      font-size: 48px;
+      font-size: min(48px, 7.6cqi);
     }
     .arma-espacio {
       display: block;
@@ -339,12 +477,26 @@
     }
   }
 
+  @supports not ((background-clip: text) or (-webkit-background-clip: text)) {
+    .hero-nombre {
+      color: var(--color-naranja-oscuro);
+      -webkit-text-stroke: 0;
+    }
+  }
+  @media (forced-colors: active) {
+    .hero-nombre {
+      background: none;
+      color: CanvasText;
+      -webkit-text-stroke: 0;
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
-    .sun,
-    .mountains,
-    .sun-ring,
-    .clouds,
-    .birds,
+    .mariposa-llegada,
+    .hero-art .ala-delantera,
+    .hero-art .ala-trasera,
+    .reflejo,
+    .brillos,
     .hero-cue svg,
     .revelar-pasos .huella {
       animation: none;
@@ -352,6 +504,15 @@
     .hero-nombre,
     .hero-lema {
       animation: fade-in var(--dur-1) linear both;
+    }
+    /* Sin movimiento: la mariposa ya posada y una sola onda quieta. */
+    .onda {
+      animation: none;
+      opacity: 0.35;
+      transform: scale(0.6);
+    }
+    .onda + .onda {
+      opacity: 0;
     }
     .hero-cue:active {
       scale: none;

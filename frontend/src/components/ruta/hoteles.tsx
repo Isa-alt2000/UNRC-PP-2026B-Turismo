@@ -86,7 +86,7 @@ export function HotelesDia({ dia, cerca }: HotelesDiaProps) {
         <>
           {radio > 10 && (
             <p className="help">
-              No encontramos alojamientos a menos de 10 km; estos están a menos de {radio} km.
+              No encontramos alojamientos a menos de 10 km. Estos están a menos de {radio} km.
             </p>
           )}
           <ul id={listaId} className="hotel-list">

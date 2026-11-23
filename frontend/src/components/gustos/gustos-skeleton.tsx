@@ -24,10 +24,10 @@ export function GustosSkeleton() {
                     <div className="gusto-s-head">
                       <Skeleton className="size-[38px] rounded-[10px]" />
                       <Skeleton className="h-4 flex-1" />
-                      <Skeleton className="h-[26px] w-24 rounded-full" />
+                      <Skeleton className="h-[26px] w-24 rounded-etiqueta" />
                     </div>
                     <div className="flex h-11 items-center px-3.5">
-                      <Skeleton className="h-1.5 w-full rounded-full" />
+                      <Skeleton className="h-1.5 w-full rounded-barra" />
                     </div>
                     <Skeleton className="mx-2 h-3" />
                   </div>

@@ -18,10 +18,10 @@
     border-radius: 20px;
   }
   .recs-afines {
-    background: var(--color-rojo-50);
+    background: var(--color-naranja-50);
   }
   .recs-extra {
-    background: var(--color-dorado-50);
+    background: var(--color-cantera-50);
   }
 
   /* Leyenda de afinidad en la esquina inferior derecha de la tarjeta, con color de semáforo */
@@ -48,7 +48,7 @@
     color: var(--color-semaforo-naranja);
   }
   .afinidad-roja {
-    color: var(--color-rojo);
+    color: var(--color-semaforo-rojo);
   }
 
   /* Tarjeta de un lugar: toda la tarjeta es la casilla */
@@ -72,15 +72,15 @@
     transform: scale(0.985);
   }
   .lugar.is-on {
-    border-color: var(--color-rojo);
-    box-shadow: inset 0 0 0 1px var(--color-rojo);
+    border-color: var(--color-naranja);
+    box-shadow: inset 0 0 0 1px var(--color-naranja);
   }
   .lugar.is-off {
     opacity: 0.55;
     cursor: not-allowed;
   }
   .lugar:has(.lugar-input:focus-visible) {
-    outline: 2px solid var(--color-rojo);
+    outline: 2px solid var(--color-naranja);
     outline-offset: 2px;
   }
   .lugar-input {
@@ -121,7 +121,7 @@
     border: 1.5px solid var(--color-borde-fuerte);
     display: grid;
     place-items: center;
-    color: #ffffff;
+    color: var(--color-tinta);
     background: #ffffff;
     transition:
       background-color var(--dur-1) var(--ease-salida),
@@ -135,8 +135,8 @@
       transform var(--dur-1) var(--ease-salida);
   }
   .lugar.is-on .checkmark {
-    background: var(--color-rojo);
-    border-color: var(--color-rojo);
+    background: var(--color-naranja);
+    border-color: var(--color-naranja);
   }
   .lugar.is-on .checkmark svg {
     opacity: 1;
@@ -147,8 +147,8 @@
     align-items: center;
     min-height: 28px;
     padding: 0 10px;
-    border-radius: 999px;
-    background: var(--color-dorado-50);
+    border-radius: var(--radius-etiqueta);
+    background: var(--color-cantera-50);
     font-size: 13px;
     font-weight: 500;
   }
@@ -159,7 +159,7 @@
       box-shadow: var(--shadow-suave);
     }
     .lugar.is-on:hover {
-      border-color: var(--color-rojo);
+      border-color: var(--color-naranja);
     }
   }
 

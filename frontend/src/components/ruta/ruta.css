@@ -26,7 +26,7 @@
     height: var(--mapa-alto);
     border-radius: 16px;
     border: 1px solid var(--color-borde);
-    background: var(--color-arena-50);
+    background: var(--color-ala);
     overflow: hidden;
     /* Leaflet usa z-index altos; así no tapa la barra superior al desplazar. */
     isolation: isolate;
@@ -42,24 +42,24 @@
     border-radius: 999px;
     display: grid;
     place-items: center;
-    background: var(--color-rojo);
-    color: #ffffff;
+    background: var(--color-naranja);
+    color: var(--color-tinta);
     font-size: 13px;
     font-weight: 700;
     border: 2px solid #ffffff;
-    box-shadow: 0 1px 3px rgba(35, 47, 63, 0.3);
+    box-shadow: 0 1px 3px rgba(31, 26, 23, 0.3);
     font-variant-numeric: tabular-nums;
   }
   .ruta-pin-salida {
     background: #ffffff;
-    border: 2.5px solid var(--color-rojo);
+    border: 2.5px solid var(--color-naranja);
   }
   .ruta-pin-salida::after {
     content: '';
     width: 8px;
     height: 8px;
     border-radius: 999px;
-    background: var(--color-rojo);
+    background: var(--color-naranja);
   }
 
   /* Ficha de una parada, dentro del popup de Leaflet */
@@ -79,7 +79,7 @@
     font: inherit;
     font-size: 14px;
     line-height: 1.45;
-    color: var(--color-marino);
+    color: var(--color-tinta);
   }
   /* La ✕ queda sobre la imagen: un círculo blanco la hace legible sobre cualquier foto. */
   .mapa .leaflet-popup-close-button {
@@ -87,12 +87,12 @@
     right: 6px;
     width: 28px;
     height: 28px;
-    border-radius: 999px;
+    border-radius: var(--radius-control);
     background: rgb(255 255 255 / 0.9);
     box-shadow: var(--shadow-suave);
     font-size: 18px;
     line-height: 27px;
-    color: var(--color-marino);
+    color: var(--color-tinta);
   }
   .ficha-img {
     display: block;
@@ -102,7 +102,7 @@
     /* La foto llena el recuadro sin deformarse: se recorta lo que sobre, centrada. */
     object-fit: cover;
     object-position: center;
-    background: var(--color-dorado-50);
+    background: var(--color-cantera-50);
   }
   .ficha-credito {
     margin-top: 2px;
@@ -113,7 +113,7 @@
   .ficha-img-vacia {
     display: grid;
     place-items: center;
-    color: var(--color-oro);
+    color: var(--color-cempasuchil);
   }
   .ficha-cuerpo {
     display: flex;
@@ -124,12 +124,12 @@
   .ficha-banda {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background: rgb(221 201 163 / 0.3);
-    border-bottom: 1px solid var(--color-dorado);
+    background: rgb(216 165 140 / 0.3);
+    border-bottom: 1px solid var(--color-cantera);
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.02em;
-    color: var(--color-guinda);
+    color: var(--color-naranja-oscuro);
   }
   .ficha-banda > span {
     display: flex;
@@ -139,17 +139,17 @@
     padding: 7px 8px;
   }
   .ficha-banda > span + span {
-    border-left: 1px solid var(--color-dorado);
+    border-left: 1px solid var(--color-cantera);
   }
   .ficha-banda-color {
     width: 12px;
     height: 4px;
-    border-radius: 999px;
+    border-radius: var(--radius-barra);
   }
   .ficha-nombre {
     /* Línea dorada suave entre el título y la descripción */
     padding-bottom: 6px;
-    border-bottom: 1px solid rgb(188 149 92 / 0.45);
+    border-bottom: 1px solid rgb(245 166 35 / 0.45);
     font-family: var(--font-display);
     font-size: 16px;
     font-weight: 650;
@@ -183,7 +183,7 @@
     font-weight: 600;
   }
   .leaflet-marker-icon:focus-visible .ruta-pin {
-    outline: 2px solid var(--color-rojo);
+    outline: 2px solid var(--color-naranja);
     outline-offset: 2px;
   }
 
@@ -224,20 +224,23 @@
   }
 
   /* Avisos */
+  /* Nota sobria, sin forma de píldora: esquinas casi rectas y una franja naranja a la izquierda que
+     marca que es un aviso sin competir con el contenido. */
   .notice {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     align-items: flex-start;
-    padding: 14px 16px;
-    border-radius: 14px;
-    background: var(--color-dorado-50);
-    border: 1px solid var(--color-dorado);
+    padding: 12px 14px 12px 12px;
+    border-radius: var(--radius-etiqueta);
+    background: var(--color-ala);
+    border-left: 3px solid var(--color-naranja);
     font-size: 14px;
     line-height: 1.45;
   }
   .notice-ico {
     flex: none;
     margin-top: 1px;
+    color: var(--color-naranja-oscuro);
   }
   .empty {
     display: flex;
@@ -266,8 +269,8 @@
     justify-content: space-between;
     gap: 12px;
     padding: 14px 16px;
-    background: var(--color-arena-50);
-    border-bottom: 1px solid var(--color-dorado-50);
+    background: var(--color-ala);
+    border-bottom: 1px solid var(--color-cantera-50);
   }
   .dia-title {
     display: flex;
@@ -277,12 +280,12 @@
     font-size: 18px;
     font-weight: 650;
     letter-spacing: -0.015em;
-    color: var(--color-guinda);
+    color: var(--color-naranja-oscuro);
   }
   .dia-color {
     width: 14px;
     height: 4px;
-    border-radius: 999px;
+    border-radius: var(--radius-barra);
   }
   .dia-meta {
     font-size: 13px;
@@ -311,7 +314,11 @@
     flex: 1;
     width: 2px;
     min-height: 12px;
-    background: repeating-linear-gradient(to bottom, var(--color-rojo) 0 4px, transparent 4px 8px);
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--color-naranja) 0 4px,
+      transparent 4px 8px
+    );
     opacity: 0.55;
   }
   .tl-dot {
@@ -321,22 +328,22 @@
     border-radius: 999px;
     display: grid;
     place-items: center;
-    background: var(--color-rojo);
-    color: #ffffff;
+    background: var(--color-naranja);
+    color: var(--color-tinta);
     font-size: 13px;
     font-weight: 700;
     font-variant-numeric: tabular-nums;
   }
   .tl-dot.salida {
     background: #ffffff;
-    border: 2.5px solid var(--color-rojo);
+    border: 2.5px solid var(--color-naranja);
   }
   .tl-dot.salida::after {
     content: '';
     width: 8px;
     height: 8px;
     border-radius: 999px;
-    background: var(--color-rojo);
+    background: var(--color-naranja);
   }
   .tl-body {
     padding-bottom: 16px;
@@ -369,7 +376,7 @@
   /* Alojamientos */
   .hoteles {
     padding: 16px;
-    border-top: 1px dashed var(--color-dorado);
+    border-top: 1px dashed var(--color-cantera);
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -428,7 +435,7 @@
     align-items: center;
     gap: 6px;
     min-height: 40px;
-    color: var(--color-rojo);
+    color: var(--color-naranja-oscuro);
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
@@ -450,8 +457,8 @@
     align-items: center;
     min-height: 24px;
     padding: 0 9px;
-    border-radius: 999px;
-    background: rgb(30 123 74 / 0.1);
+    border-radius: var(--radius-etiqueta);
+    background: rgb(47 90 60 / 0.1);
     color: var(--color-semaforo-verde);
     font-size: 12px;
     font-weight: 600;
@@ -466,12 +473,12 @@
     place-items: center;
     color: #ffffff;
     border: 2px solid #ffffff;
-    box-shadow: 0 1px 3px rgba(35, 47, 63, 0.3);
+    box-shadow: 0 1px 3px rgba(31, 26, 23, 0.3);
   }
   .ficha-hotel .ficha-eyebrow {
     font-size: 12px;
     font-weight: 600;
-    color: var(--color-guinda);
+    color: var(--color-naranja-oscuro);
   }
   .ficha-hotel .hotel-link {
     min-height: 32px;
@@ -487,7 +494,7 @@
     gap: 8px;
     min-height: 40px;
     padding: 0 12px 0 8px;
-    border-radius: 999px;
+    border-radius: var(--radius-control);
     background: rgb(255 255 255 / 0.92);
     box-shadow: var(--shadow-tarjeta);
     font-size: 13px;
@@ -511,7 +518,7 @@
     transition: transform var(--dur-1) var(--ease-salida);
   }
   .mapa-toggle[aria-checked='true'] .mapa-toggle-track {
-    background: var(--color-rojo);
+    background: var(--color-naranja);
   }
   .mapa-toggle[aria-checked='true'] .mapa-toggle-thumb {
     transform: translateX(12px);
@@ -530,7 +537,7 @@
     height: 16px;
     border-radius: 999px;
     border: 2px solid var(--color-borde);
-    border-top-color: var(--color-rojo);
+    border-top-color: var(--color-naranja);
     animation: spin 0.8s linear infinite;
   }
   .sk-card {

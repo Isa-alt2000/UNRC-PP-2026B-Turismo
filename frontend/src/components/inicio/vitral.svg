@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="230" height="230" viewBox="0 0 230 230">
+<!-- Vidrios del vitral de la portada: los naranjas del ala monarca separados por plomo negro laca. Se repite en mosaico. -->
+<g stroke="#1F1A17" stroke-width="1.8" stroke-linejoin="round">
+<polygon points="0,0 47,0 0,41" fill="#E5711B"/>
+<polygon points="47,0 42,33 0,41" fill="#E07B1F"/>
+<polygon points="0,41 42,33 0,82" fill="#F0A04B"/>
+<polygon points="42,33 46,78 0,82" fill="#E07B1F"/>
+<polygon points="0,82 46,78 0,142" fill="#E5711B"/>
+<polygon points="46,78 44,125 0,142" fill="#F5A623"/>
+<polygon points="0,142 44,125 34,182 0,171" fill="#C9621A"/>
+<polygon points="0,171 34,182 56,230" fill="#E8A65A"/>
+<polygon points="0,171 56,230 0,230" fill="#F5A623"/>
+<polygon points="47,0 81,0 42,33" fill="#E5711B"/>
+<polygon points="81,0 84,50 42,33" fill="#F0A04B"/>
+<polygon points="42,33 84,50 105,94 46,78" fill="#E5711B"/>
+<polygon points="46,78 105,94 44,125" fill="#F5A623"/>
+<polygon points="105,94 89,152 44,125" fill="#F0A04B"/>
+<polygon points="44,125 89,152 79,195" fill="#C9621A"/>
+<polygon points="44,125 79,195 34,182" fill="#E5711B"/>
+<polygon points="34,182 79,195 56,230" fill="#F5A623"/>
+<polygon points="79,195 86,230 56,230" fill="#E5711B"/>
+<polygon points="81,0 128,0 127,40" fill="#F0A04B"/>
+<polygon points="81,0 127,40 84,50" fill="#E07B1F"/>
+<polygon points="84,50 127,40 105,94" fill="#E8A65A"/>
+<polygon points="127,40 147,83 105,94" fill="#E5711B"/>
+<polygon points="105,94 147,83 140,142" fill="#F0A04B"/>
+<polygon points="105,94 140,142 89,152" fill="#E07B1F"/>
+<polygon points="89,152 140,142 134,185 79,195" fill="#F0A04B"/>
+<polygon points="79,195 134,185 125,230 86,230" fill="#E8A65A"/>
+<polygon points="128,0 171,0 127,40" fill="#E07B1F"/>
+<polygon points="171,0 175,51 127,40" fill="#C9621A"/>
+<polygon points="127,40 175,51 182,87" fill="#E8A65A"/>
+<polygon points="127,40 182,87 147,83" fill="#F5A623"/>
+<polygon points="147,83 182,87 187,137" fill="#E07B1F"/>
+<polygon points="147,83 187,137 140,142" fill="#E8A65A"/>
+<polygon points="140,142 187,137 178,193 134,185" fill="#C9621A"/>
+<polygon points="134,185 178,193 190,230 125,230" fill="#F5A623"/>
+<polygon points="171,0 230,0 230,38 175,51" fill="#E5711B"/>
+<polygon points="175,51 230,38 230,94 182,87" fill="#F5A623"/>
+<polygon points="182,87 230,94 230,139" fill="#E5711B"/>
+<polygon points="182,87 230,139 187,137" fill="#E8A65A"/>
+<polygon points="187,137 230,139 178,193" fill="#E5711B"/>
+<polygon points="230,139 230,195 178,193" fill="#C9621A"/>
+<polygon points="178,193 230,195 230,230" fill="#F5A623"/>
+<polygon points="178,193 230,230 190,230" fill="#E5711B"/>
+</g>
+</svg>

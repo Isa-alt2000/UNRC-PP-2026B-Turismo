@@ -11,17 +11,17 @@ const PASOS = [
   {
     titulo: 'Elige tus gustos',
     ayuda: 'Historia, naturaleza, gastronomía y más.',
-    color: 'bg-rojo text-white',
+    color: 'bg-naranja text-tinta',
   },
   {
     titulo: 'Descubre lugares con espacio',
     ayuda: 'Ordenados de menos a más concurridos en tu mes.',
-    color: 'bg-oro text-marino',
+    color: 'bg-cempasuchil text-tinta',
   },
   {
     titulo: 'Recibe tu ruta y dónde dormir',
     ayuda: 'Con tiempos aproximados y alojamientos cercanos.',
-    color: 'bg-marino text-white',
+    color: 'bg-patzcuaro text-white',
   },
 ]
 
@@ -42,7 +42,8 @@ export function ArmaSeccion({ ref, tituloRef, onEmpezar }: ArmaSeccionProps) {
       <div className="wrap arma-grid">
         <div className={cn('arma-copia', copiaClase)} ref={copiaRef}>
           <h2 id="arma-title" className="arma-title" tabIndex={-1} ref={tituloRef}>
-            ¿Planeas viajar a Michoacán? Arma tu ruta personalizada.
+            <span className="arma-title-linea">¿Planeas viajar a Michoacán?</span>{' '}
+            <span className="arma-title-linea">Arma tu ruta personalizada.</span>
           </h2>
           <p className="lead">
             Recomendamos lugares igual de valiosos según tus gustos, empezando por los menos

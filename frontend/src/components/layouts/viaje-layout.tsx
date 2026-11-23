@@ -1,6 +1,8 @@
+import { type CSSProperties } from 'react'
 import { ChevronLeft } from 'lucide-react'
 import { Outlet, useLocation, useNavigate } from 'react-router'
 import { Greca } from '@/components/shared'
+import { MariposaFiguras } from '@/components/shared/mariposa'
 import { NAVEGACION_ATRAS } from '@/config/constants'
 import { cn } from '@/lib/utils'
 
@@ -40,21 +42,35 @@ export function ViajeLayout() {
               </strong>{' '}
               · {paso.nombre}
             </p>
-            <ol className="progress-track">
-              {PASOS.map((p, i) => (
-                <li
-                  key={p.path}
-                  className={cn('seg', i <= actual && 'seg-on')}
-                  aria-current={i === actual ? 'step' : undefined}
-                >
-                  <span className="sr-only">
-                    {p.nombre}
-                    {i < actual && ' (completado)'}
-                    {i === actual && ' (actual)'}
-                  </span>
-                </li>
-              ))}
-            </ol>
+            {/* La barra es la ruta y la mariposa avanza por ella; key reinicia el aleteo al moverse. */}
+            <div
+              className="progress-ruta"
+              style={{ '--avance': (actual + 1) / PASOS.length } as CSSProperties}
+            >
+              <ol className="progress-track">
+                {PASOS.map((p, i) => (
+                  <li
+                    key={p.path}
+                    className={cn('seg', i <= actual && 'seg-on')}
+                    aria-current={i === actual ? 'step' : undefined}
+                  >
+                    <span className="sr-only">
+                      {p.nombre}
+                      {i < actual && ' (completado)'}
+                      {i === actual && ' (actual)'}
+                    </span>
+                  </li>
+                ))}
+              </ol>
+              <svg
+                key={actual}
+                className="progress-mariposa"
+                viewBox="24 9 300 300"
+                aria-hidden="true"
+              >
+                <MariposaFiguras />
+              </svg>
+            </div>
           </nav>
         </div>
       </header>

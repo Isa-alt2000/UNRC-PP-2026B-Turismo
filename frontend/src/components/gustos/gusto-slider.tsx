@@ -63,9 +63,15 @@ export function GustoSlider({ gusto, valor, onChange }: GustoSliderProps) {
           {gusto.pregunta}
         </span>
       </div>
+      {/* Tocar un número elige ese nivel: es el atajo táctil, ya que la barra solo se mueve
+          arrastrando el círculo. Teclado y lectores de pantalla usan el deslizador. */}
       <div className="rango-scale" aria-hidden="true">
         {NIVELES.map((n) => (
-          <span key={n} className={cn(n === valor && 'cur')}>
+          <span
+            key={n}
+            className={cn('rango-num', n === valor && 'cur')}
+            onClick={() => onChange(n)}
+          >
             {n}
           </span>
         ))}

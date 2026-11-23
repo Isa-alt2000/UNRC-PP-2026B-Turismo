@@ -2,7 +2,7 @@ import { useLayoutEffect, type CSSProperties } from 'react'
 import { useRevelarUnaVez } from '@/hooks/use-revelar-una-vez'
 import { cn } from '@/lib/utils'
 
-const COLOR_HUELLA = '#232F3F'
+const COLOR_HUELLA = '#1F1A17'
 const PASO = 30
 const TOTAL_HUELLAS = 90
 const AMPLITUD = 16

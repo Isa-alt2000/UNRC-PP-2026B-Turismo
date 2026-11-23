@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import { ChevronDown } from 'lucide-react'
-import { Greca } from '@/components/shared'
 import { cn } from '@/lib/utils'
 import { HeroArt } from './hero-art'
 
@@ -25,11 +24,13 @@ export function Hero({ onBajar }: { onBajar: () => void }) {
       aria-labelledby="hero-title"
     >
       <HeroArt />
-      <Greca />
       <div className="hero-in">
         <h1 id="hero-title" className="hero-title">
           <span className="hero-nombre">Michoacán.</span>{' '}
-          <span className="hero-lema">Un estado, mil historias</span>
+          <span className="hero-lema">
+            <span className="hero-lema-estado">Un estado,</span>{' '}
+            <span className="hero-lema-historias">mil historias</span>
+          </span>
         </h1>
       </div>
       <div className="hero-acciones">

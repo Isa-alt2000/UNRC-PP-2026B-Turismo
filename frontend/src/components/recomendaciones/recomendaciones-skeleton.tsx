@@ -25,8 +25,8 @@ export function RecomendacionesSkeleton() {
                   <Skeleton className="h-3.5 w-full" />
                   <Skeleton className="h-3.5 w-3/4" />
                   <div className="lugar-foot">
-                    <Skeleton className="h-7 w-24 rounded-full" />
-                    <Skeleton className="h-7 w-32 rounded-full" />
+                    <Skeleton className="h-7 w-24 rounded-etiqueta" />
+                    <Skeleton className="h-7 w-32 rounded-etiqueta" />
                   </div>
                 </div>
               ))}

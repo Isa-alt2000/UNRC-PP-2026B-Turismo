@@ -1,4 +1,4 @@
-import { fireEvent, screen } from '@testing-library/react'
+import { fireEvent, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { apiFetch } from '@/lib/api/client'
 import { GustosPage } from '@/pages/gustos-page'
@@ -63,6 +63,17 @@ describe('GustosPage', () => {
       '¿Te interesa la historia?'
     )
     expect(screen.getAllByRole('slider')).toHaveLength(2)
+  })
+
+  it('tocar un número de la escala elige ese nivel', async () => {
+    responderCatalogos()
+    renderApp(<GustosPage />)
+    const historia = await screen.findByRole('slider', { name: 'Historia' })
+    const tarjeta = historia.closest('.gusto-s') as HTMLElement
+
+    await userEvent.click(within(tarjeta).getByText('4'))
+
+    expect(historia).toHaveValue('4')
   })
 
   it('el botón se habilita cuando están el gusto, el mes y la salida', async () => {

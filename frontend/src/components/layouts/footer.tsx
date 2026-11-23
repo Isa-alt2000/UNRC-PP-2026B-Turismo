@@ -38,7 +38,7 @@ function Red({ nombre, url, icono }: (typeof REDES)[number]) {
     </svg>
   )
   const clases =
-    'text-marino grid size-11 place-items-center rounded-full bg-white shadow-suave transition-colors'
+    'text-tinta grid size-11 place-items-center rounded-control bg-white shadow-suave transition-colors'
 
   if (!url) {
     return (
@@ -53,7 +53,7 @@ function Red({ nombre, url, icono }: (typeof REDES)[number]) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`${nombre} (se abre en otra pestaña)`}
-      className={`${clases} hover:bg-rojo hover:text-white`}
+      className={`${clases} hover:bg-naranja-boton hover:text-white`}
     >
       {svg}
     </a>
@@ -63,10 +63,10 @@ function Red({ nombre, url, icono }: (typeof REDES)[number]) {
 export function Footer() {
   return (
     <footer className="wrap w-full pt-0">
-      <div className="flex flex-col gap-4 rounded-[20px] bg-dorado px-5 py-5 sm:px-7">
+      <div className="flex flex-col gap-4 rounded-[20px] bg-tinta px-5 py-5 text-ala sm:px-7">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="flex flex-col">
-            <span className="font-display text-lg font-semibold text-guinda">
+            <span className="font-display text-lg font-semibold text-cempasuchil">
               ¿Sabías que también estamos en redes?
             </span>
             <span className="text-sm">Síguenos y descubre más rincones de Michoacán.</span>
@@ -77,7 +77,7 @@ export function Footer() {
             ))}
           </div>
         </div>
-        <p className="border-t border-marino/15 pt-4 text-xs">
+        <p className="border-t border-ala/15 pt-4 text-xs">
           Proyecto prototípico de estudiantes de 5to semestre de la carrera de Licenciatura en
           Ciencia de Datos para Negocios. No es un sitio oficial.
         </p>

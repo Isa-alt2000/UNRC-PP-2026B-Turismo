@@ -1,0 +1,38 @@
+<svg width="380" height="400" viewBox="0 0 380 400" role="img" xmlns="http://www.w3.org/2000/svg"><title>Monarca con ruta</title><desc>Mariposa monarca de perfil con una ruta punteada de tres paradas numeradas.</desc>
+<defs><polygon id="d" points="0,-3 3,0 0,3 -3,0" fill="#FFFFFF"/></defs>
+<path d="M350,235 C300,250 240,240 180,235 C100,230 20,240 20,290 C20,330 90,345 170,345 C250,345 300,360 335,370" fill="none" stroke="#C15F3C" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round"/>
+<polygon points="62,18 84,16 236,210 60,162 46,112 44,60" fill="#1F1A17" stroke="#1F1A17" stroke-width="4" stroke-linejoin="round"/>
+<g stroke="#1F1A17" stroke-width="4" stroke-linejoin="round">
+<polygon points="214,198 165,140 155,148 154,164 159,179" fill="#C9621A"/>
+<polygon points="165,140 92,52 66,72 155,148" fill="#E07B1F"/>
+<polygon points="155,148 66,72 64,112 154,164" fill="#F0A04B"/>
+<polygon points="154,164 64,112 76,150 159,179" fill="#E8A65A"/>
+</g>
+<polygon points="240,216 205,200 150,180 90,155 50,160 30,190 28,230 40,265 65,290 95,302 140,300 180,285 215,260 238,236" fill="#1F1A17" stroke="#1F1A17" stroke-width="4" stroke-linejoin="round"/>
+<g stroke="#1F1A17" stroke-width="4" stroke-linejoin="round">
+<polygon points="212,224 160,201 142,210 139,226 144,241 154,251 172,254 189,248" fill="#E07B1F"/>
+<polygon points="160,201 96,172 56,192 142,210" fill="#F0A04B"/>
+<polygon points="142,210 56,192 50,228 139,226" fill="#E8A65A"/>
+<polygon points="139,226 50,228 60,262 144,241" fill="#F0A04B"/>
+<polygon points="144,241 60,262 84,284 154,251" fill="#E8A65A"/>
+<polygon points="154,251 84,284 122,290 172,254" fill="#F0A04B"/>
+<polygon points="172,254 122,290 160,278 189,248" fill="#E8A65A"/>
+<polygon points="189,248 160,278 192,256 212,224" fill="#F0A04B"/>
+</g>
+<g>
+<use href="#d" x="70" y="28"/><use href="#d" x="58" y="40"/><use href="#d" x="52" y="58"/><use href="#d" x="50" y="78"/><use href="#d" x="51" y="98"/><use href="#d" x="53" y="118"/><use href="#d" x="57" y="138"/><use href="#d" x="64" y="154"/>
+<use href="#d" x="82" y="40"/><use href="#d" x="70" y="56"/><use href="#d" x="100" y="48"/><use href="#d" x="118" y="70"/>
+<use href="#d" x="40" y="200"/><use href="#d" x="38" y="228"/><use href="#d" x="44" y="255"/><use href="#d" x="58" y="276"/><use href="#d" x="78" y="292"/><use href="#d" x="104" y="297"/><use href="#d" x="132" y="296"/><use href="#d" x="160" y="288"/><use href="#d" x="70" y="166"/>
+</g>
+<polygon points="225,204 256,204 266,224 250,246 228,240" fill="#1F1A17"/>
+<polygon points="262,210 281,214 286,228 271,237 258,230" fill="#1F1A17"/>
+<g><use href="#d" x="240" y="214"/><use href="#d" x="252" y="226"/><use href="#d" x="272" y="222"/></g>
+<polyline points="280,214 296,196 310,176 318,158" fill="none" stroke="#1F1A17" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="274,212 286,192 294,172 298,152" fill="none" stroke="#1F1A17" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="315,151 322,151 322,158 315,158" fill="#1F1A17"/><polygon points="295,145 302,145 302,152 295,152" fill="#1F1A17"/>
+<polyline points="246,244 244,258 248,272" fill="none" stroke="#1F1A17" stroke-width="2"/>
+<polyline points="256,240 258,256 262,270" fill="none" stroke="#1F1A17" stroke-width="2"/>
+<g><circle cx="350" cy="235" r="14" fill="#E07B1F" stroke="#FFFFFF" stroke-width="3"/><text x="350" y="240" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">1</text></g>
+<g><circle cx="170" cy="345" r="14" fill="#E07B1F" stroke="#FFFFFF" stroke-width="3"/><text x="170" y="350" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">2</text></g>
+<g><circle cx="335" cy="370" r="14" fill="#E07B1F" stroke="#FFFFFF" stroke-width="3"/><text x="335" y="375" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700">3</text></g>
+</svg>
