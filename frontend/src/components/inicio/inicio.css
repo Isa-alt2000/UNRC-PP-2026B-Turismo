@@ -250,7 +250,7 @@
     display: none;
   }
 
-  /* Rastros de huellas (solo escritorio ancho): bajan desde el borde superior por los costados del contenido. */
+  /* Rastros de huellas (solo pantallas amplias, ver media query): bajan desde el borde superior por los costados del contenido. */
   .huellas {
     display: none;
     position: absolute;
@@ -470,8 +470,12 @@
     }
   }
 
-  /* Debajo de este ancho no queda espacio libre a los costados del contenido. */
-  @media (min-width: 1200px) {
+  /* Solo en pantallas amplias. El rastro mide unos 60px de ancho y va centrado en la mitad del
+     espacio libre: a 1440px ese espacio es de 192px por lado y le deja ~66px de aire contra la
+     orilla y el contenido; más angosto se ve amontonado. Las media queries usan px CSS, así que
+     al hacer zoom el viewport "se encoge" y las huellas desaparecen solas. La altura mínima las
+     oculta en ventanas bajas (o con mucho zoom), donde el contenido llena la sección. */
+  @media (min-width: 1440px) and (min-height: 720px) {
     .huellas {
       display: block;
     }
