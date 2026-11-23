@@ -21,7 +21,7 @@ GRUPOS = {
         destino=RAIZ / "backend" / "datos_iniciales",
         archivos={
             "puntos_partida.csv": "catálogo fijo, versionado en data_science/datos/procesados/",
-            "recintos.csv": "catálogo de recintos, versionado en data_science/datos/procesados/",
+            "recintos.csv": "export CSV de la hoja \"Catalogo de recintos\" de Google Sheets, guardado en data_science/datos/procesados/recintos.csv",
             "hoteles.csv": "cd data_science && uv run python -m pipeline.denue.hoteles",
         },
     ),

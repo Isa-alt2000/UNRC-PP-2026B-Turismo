@@ -92,6 +92,34 @@ def test_recargar_actualiza_los_valores(db: Session, tmp_path: Path) -> None:
     assert paricutin.valores.artes_artesanias == 1
 
 
+def test_acepta_el_export_de_google_sheets(db: Session, tmp_path: Path) -> None:
+    """Claves R0001, casillas VERDADERO/FALSO, columnas de trabajo, CRLF y filas vacías al final."""
+    escribir(tmp_path)
+    (tmp_path / "recintos.csv").write_bytes(
+        (
+            ENCABEZADO_RECINTOS + ',notas,,fuente_imagen,"autor (si no se sabe, agregar desconocido)"\r\n'
+            'R0001,Paricutín,"Volcán, de 1943",19.493,-102.251,3,FALSO,2,0,1,0,3,3,"Sin servicios",,,\r\n'
+            "R0012,Tlalpujahua,,19.80,-100.17,2,VERDADERO,2,2,2,1,1,1,,,https://x.org,Desconocido\r\n"
+            ",,,,,,,,,,,,,,,,\r\n"
+        ).encode("utf-8")
+    )
+
+    resultados = cargar(db, tmp_path, ["recintos"])
+
+    assert resultados["recintos"].nuevos == 2
+    paricutin = db.get(Recinto, 1)
+    assert paricutin.descripcion == "Volcán, de 1943"
+    assert paricutin.es_apto_dependientes is False
+    assert db.get(Recinto, 12).es_apto_dependientes is True
+
+
+def test_casilla_desconocida_es_error(db: Session, tmp_path: Path) -> None:
+    escribir(tmp_path, recintos="R0003,Malo,,19.5,-101.5,2,QUIZA,1,1,1,1,1,1\n")
+
+    with pytest.raises(ErrorCarga, match="es_apto_dependientes"):
+        cargar(db, tmp_path)
+
+
 def test_puede_cargar_solo_algunas_tablas(db: Session, tmp_path: Path) -> None:
     resultados = cargar(db, escribir(tmp_path), ["hoteles"])
 

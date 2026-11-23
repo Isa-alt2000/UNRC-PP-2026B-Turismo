@@ -26,10 +26,25 @@ class ErrorCarga(Exception):
 
 # Conversión de fila a modelo
 
+COLUMNAS_RECINTO = (
+    "id",
+    "nombre",
+    "descripcion",
+    "latitud",
+    "longitud",
+    "tamano",
+    "es_apto_dependientes",
+)
+
+
 def recinto_desde_fila(fila: dict[str, Any]) -> dict[str, Any]:
-    """El CSV trae los valores como columnas sueltas; el esquema los espera agrupados."""
-    valores = {codigo: fila.pop(codigo, None) for codigo in CODIGOS_GUSTOS}
-    return {**fila, "valores": valores}
+    """El CSV trae los valores como columnas sueltas; el esquema los espera agrupados.
+
+    Las columnas de trabajo de la hoja (notas, fuente_imagen, autor…) no van a la base y se
+    ignoran; así el CSV puede ser el export directo de Google Sheets."""
+    datos = {columna: fila[columna] for columna in COLUMNAS_RECINTO if columna in fila}
+    valores = {codigo: fila.get(codigo) for codigo in CODIGOS_GUSTOS}
+    return {**datos, "valores": valores}
 
 
 def recinto_a_modelo(datos: RecintoCarga) -> Recinto:
@@ -76,6 +91,9 @@ def leer(tabla: Tabla, carpeta: Path) -> tuple[list[BaseModel], list[str]]:
         for linea, fila in enumerate(csv.DictReader(archivo), start=2):
             # Una celda vacía es un dato que falta.
             crudo = {clave: (valor if valor != "" else None) for clave, valor in fila.items()}
+            # Las hojas de cálculo suelen exportar filas vacías al final.
+            if all(valor is None for valor in crudo.values()):
+                continue
             try:
                 datos = tabla.esquema.model_validate(tabla.armar(crudo))
             except ValidationError as error:
