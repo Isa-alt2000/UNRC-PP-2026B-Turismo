@@ -1,11 +1,19 @@
-import { useState } from 'react'
-import { divIcon, type LatLngExpression, latLngBounds } from 'leaflet'
-import { MapContainer, Marker, Polygon, Polyline, Popup, TileLayer } from 'react-leaflet'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import {
+  divIcon,
+  type LatLngExpression,
+  type LatLngTuple,
+  latLngBounds,
+  type Map as MapaLeaflet,
+} from 'leaflet'
+import { MapContainer, Marker, Polygon, Polyline, TileLayer, useMapEvents } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import { colorDia } from './colores'
 import { FichaParada } from './ficha-parada'
 import { FichaHotel } from './hoteles'
 import { CONTORNO_MICHOACAN, LIMITES_MICHOACAN } from './michoacan'
+import { PanelFicha } from './panel-ficha'
+import { esHotel, esParada, type Seleccion } from './seleccion'
 import { type Itinerario, puntosDeRuta } from './use-itinerario'
 
 const ATRIBUCION =
@@ -16,10 +24,13 @@ const ZOOM_MINIMO = 7
 const ZOOM_MAXIMO = 18
 
 // Marcadores con HTML y CSS propios: los íconos de imagen de Leaflet no cargan bien con Vite.
-const pin = (texto: string, salida = false) =>
+// El marcador elegido lleva un aro (ruta-pin-activo): así se ve a qué punto corresponde el panel.
+const activo = (elegido: boolean) => (elegido ? ' ruta-pin-activo' : '')
+
+const pin = (texto: string, salida = false, elegido = false) =>
   divIcon({
     className: '',
-    html: `<span class="ruta-pin${salida ? ' ruta-pin-salida' : ''}">${texto}</span>`,
+    html: `<span class="ruta-pin${salida ? ' ruta-pin-salida' : ''}${activo(elegido)}">${texto}</span>`,
     iconSize: [28, 28],
     iconAnchor: [14, 14],
   })
@@ -31,17 +42,22 @@ const CAMA =
   '<path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M12 4v6"/><path d="M2 18h20"/></svg>'
 
 /** Alojamiento: cuadrado redondeado y más chico que las paradas, en el color de su día. */
-const pinHotel = (dia: number) =>
+const pinHotel = (dia: number, elegido = false) =>
   divIcon({
     className: '',
-    html: `<span class="ruta-pin-hotel" style="background:${colorDia(dia)}">${CAMA}</span>`,
+    html: `<span class="ruta-pin-hotel${activo(elegido)}" style="background:${colorDia(dia)}">${CAMA}</span>`,
     iconSize: [22, 22],
     iconAnchor: [11, 11],
   })
 
-// Ficha de ancho fijo y separada del borde del mapa al acomodarse.
-const ANCHO_FICHA = 240
-const MARGEN_POPUP: [number, number] = [12, 12]
+// Separación entre el punto elegido y el borde del mapa o del panel al acomodarlo.
+const HOLGURA = 24
+
+/** Tocar el mapa (no un marcador) cierra el panel, como en cualquier app de mapas. */
+function CerrarAlTocarElMapa({ onCerrar }: { onCerrar: () => void }) {
+  useMapEvents({ click: onCerrar })
+  return null
+}
 
 /** GeoJSON trae [longitud, latitud]; Leaflet espera [latitud, longitud]. */
 const aLeaflet = ([longitud, latitud]: [number, number]): LatLngExpression => [latitud, longitud]
@@ -58,14 +74,52 @@ const MASCARA_MICHOACAN: LatLngExpression[][] = [MUNDO, CONTORNO_MICHOACAN]
 
 interface RutaMapaProps {
   itinerario: Itinerario
+  /** Lo abierto en el panel; lo comparte con el itinerario. */
+  seleccion: Seleccion | null
+  onSeleccion: (seleccion: Seleccion | null) => void
 }
 
 /** Mapa de OpenStreetMap con el trazo de cada día en su color y las paradas numeradas con su ficha. */
-export function RutaMapa({ itinerario }: RutaMapaProps) {
+export function RutaMapa({ itinerario, seleccion, onSeleccion }: RutaMapaProps) {
   const { salida, dias, aproximada } = itinerario
   const [conHoteles, setConHoteles] = useState(true)
+  const [mapa, setMapa] = useState<MapaLeaflet | null>(null)
+  const panel = useRef<HTMLElement>(null)
   const hayHoteles = dias.some((dia) => dia.hoteles.length > 0)
+  // Abrir un alojamiento desde el itinerario lo muestra aunque el interruptor esté apagado.
+  const verHoteles = conHoteles || seleccion?.tipo === 'hotel'
   const puntos = puntosDeRuta(itinerario)
+  const cerrar = useCallback(() => onSeleccion(null), [onSeleccion])
+
+  const posicion: LatLngTuple | null = !seleccion
+    ? null
+    : seleccion.tipo === 'parada'
+      ? [seleccion.parada.latitud, seleccion.parada.longitud]
+      : seleccion.tipo === 'hotel'
+        ? [seleccion.hotel.latitud, seleccion.hotel.longitud]
+        : [salida.latitud, salida.longitud]
+
+  // Si el punto elegido quedó debajo del panel o fuera de vista, el mapa se mueve lo justo para
+  // mostrarlo, sin cambiar el zoom. El panel va abajo a todo el ancho (celular) o a la izquierda.
+  useEffect(() => {
+    if (!mapa || !posicion || !panel.current) return
+    const p = panel.current.getBoundingClientRect()
+    const c = mapa.getContainer().getBoundingClientRect()
+    const abajo = p.width > c.width * 0.7
+    mapa.panInside(posicion, {
+      paddingTopLeft: abajo ? [HOLGURA, HOLGURA] : [p.right - c.left + HOLGURA, HOLGURA],
+      paddingBottomRight: abajo ? [HOLGURA, c.bottom - p.top + HOLGURA] : [HOLGURA, HOLGURA],
+    })
+    // Al abrir, el foco va al panel para que el lector de pantalla lo anuncie.
+    panel.current.focus({ preventScroll: true })
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- posicion se deriva de seleccion
+  }, [mapa, seleccion])
+
+  // Al ocultar los alojamientos, un alojamiento abierto se cierra con ellos.
+  const mostrarHoteles = (mostrar: boolean) => {
+    setConHoteles(mostrar)
+    if (!mostrar && seleccion?.tipo === 'hotel') onSeleccion(null)
+  }
 
   return (
     <div className="mapa" role="region" aria-label="Mapa de la ruta">
@@ -74,8 +128,8 @@ export function RutaMapa({ itinerario }: RutaMapaProps) {
           type="button"
           className="mapa-toggle"
           role="switch"
-          aria-checked={conHoteles}
-          onClick={() => setConHoteles(!conHoteles)}
+          aria-checked={verHoteles}
+          onClick={() => mostrarHoteles(!verHoteles)}
         >
           <span className="mapa-toggle-track" aria-hidden="true">
             <span className="mapa-toggle-thumb" />
@@ -94,7 +148,9 @@ export function RutaMapa({ itinerario }: RutaMapaProps) {
         minZoom={ZOOM_MINIMO}
         maxZoom={ZOOM_MAXIMO}
         className="mapa-leaflet"
+        ref={setMapa}
       >
+        <CerrarAlTocarElMapa onCerrar={cerrar} />
         <TileLayer
           attribution={ATRIBUCION}
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -133,32 +189,23 @@ export function RutaMapa({ itinerario }: RutaMapaProps) {
         ))}
         <Marker
           position={[salida.latitud, salida.longitud]}
-          icon={pin('', true)}
+          icon={pin('', true, seleccion?.tipo === 'salida')}
           title={`Salida: ${salida.nombre}`}
-        >
-          <Popup offset={[0, -10]} autoPanPadding={MARGEN_POPUP}>
-            <p className="ficha-salida">Salida desde {salida.nombre}</p>
-          </Popup>
-        </Marker>
+          eventHandlers={{ click: () => onSeleccion({ tipo: 'salida' }) }}
+        />
         {/* Antes que las paradas, para que los números queden encima si se enciman. */}
-        {conHoteles &&
+        {verHoteles &&
           dias.flatMap((dia) =>
             dia.hoteles.map((hotel) => (
               <Marker
                 key={`${dia.dia}-${hotel.id}`}
                 position={[hotel.latitud, hotel.longitud]}
-                icon={pinHotel(dia.dia)}
+                icon={pinHotel(dia.dia, esHotel(seleccion, hotel.id))}
                 title={`Alojamiento: ${hotel.nombre}`}
-              >
-                <Popup
-                  offset={[0, -8]}
-                  minWidth={ANCHO_FICHA}
-                  maxWidth={ANCHO_FICHA}
-                  autoPanPadding={MARGEN_POPUP}
-                >
-                  <FichaHotel hotel={hotel} dia={dia.dia} />
-                </Popup>
-              </Marker>
+                eventHandlers={{
+                  click: () => onSeleccion({ tipo: 'hotel', hotel, dia: dia.dia }),
+                }}
+              />
             ))
           )}
         {dias.flatMap((dia) =>
@@ -166,23 +213,39 @@ export function RutaMapa({ itinerario }: RutaMapaProps) {
             <Marker
               key={parada.id}
               position={[parada.latitud, parada.longitud]}
-              icon={pin(String(parada.orden))}
+              icon={pin(String(parada.orden), false, esParada(seleccion, parada.id))}
               // Los marcadores también se abren con el teclado: Tab y luego Enter.
               title={`Parada ${parada.orden}: ${parada.nombre}`}
-            >
-              {/* Se abre al tocar el número y se cierra con la ✕ o tocando el mapa. */}
-              <Popup
-                offset={[0, -10]}
-                minWidth={ANCHO_FICHA}
-                maxWidth={ANCHO_FICHA}
-                autoPanPadding={MARGEN_POPUP}
-              >
-                <FichaParada parada={parada} dia={dia.dia} />
-              </Popup>
-            </Marker>
+              // Leaflet apila los marcadores por su altura en el mapa: un alojamiento más al sur
+              // taparía el número. Con este desfase las paradas siempre quedan al frente.
+              zIndexOffset={1000}
+              eventHandlers={{
+                click: () => onSeleccion({ tipo: 'parada', parada, dia: dia.dia }),
+              }}
+            />
           ))
         )}
       </MapContainer>
+      {/* Fuera del mapa de Leaflet: así no lo recorta ni se mueve con él. */}
+      {seleccion && (
+        <PanelFicha titulo={tituloDe(seleccion, salida.nombre)} onCerrar={cerrar} ref={panel}>
+          {seleccion.tipo === 'parada' && (
+            <FichaParada parada={seleccion.parada} dia={seleccion.dia} />
+          )}
+          {seleccion.tipo === 'hotel' && <FichaHotel hotel={seleccion.hotel} dia={seleccion.dia} />}
+          {seleccion.tipo === 'salida' && (
+            <p className="ficha-salida">Salida desde {salida.nombre}</p>
+          )}
+        </PanelFicha>
+      )}
     </div>
   )
+}
+
+function tituloDe(seleccion: Seleccion, salida: string) {
+  if (seleccion.tipo === 'parada') {
+    return `Parada ${seleccion.parada.orden}: ${seleccion.parada.nombre}`
+  }
+  if (seleccion.tipo === 'hotel') return `Alojamiento: ${seleccion.hotel.nombre}`
+  return `Salida desde ${salida}`
 }

@@ -194,12 +194,12 @@ export async function mapaEstatico(
     const [x, y] = enLienzo([parada.latitud, parada.longitud])
     ctx.beginPath()
     ctx.arc(x, y, 14 * k, 0, 2 * Math.PI)
-    ctx.fillStyle = '#e5711b'
+    ctx.fillStyle = '#b9560f'
     ctx.fill()
     ctx.lineWidth = 2 * k
     ctx.strokeStyle = '#ffffff'
     ctx.stroke()
-    ctx.fillStyle = '#1f1a17'
+    ctx.fillStyle = '#ffffff'
     ctx.fillText(String(parada.orden), x, y + 0.5 * k)
   }
 

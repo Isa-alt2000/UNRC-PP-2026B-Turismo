@@ -42,8 +42,9 @@
     border-radius: 999px;
     display: grid;
     place-items: center;
-    background: var(--color-naranja);
-    color: var(--color-tinta);
+    /* El mismo naranja quemado y texto blanco de los botones: 4.8:1, como ellos. */
+    background: var(--color-naranja-boton);
+    color: #ffffff;
     font-size: 13px;
     font-weight: 700;
     border: 2px solid #ffffff;
@@ -62,37 +63,100 @@
     background: var(--color-naranja);
   }
 
-  /* Ficha de una parada, dentro del popup de Leaflet */
-  /* Algo translúcida (85 %), para que el mapa apenas se asome detrás. */
-  .mapa .leaflet-popup-content-wrapper,
-  .mapa .leaflet-popup-tip {
-    background: rgb(255 255 255 / 0.85);
-  }
-  .mapa .leaflet-popup-content-wrapper {
-    padding: 0;
-    border-radius: 14px;
-    overflow: hidden;
+  /* Ficha anclada al mapa (panel-ficha): no flota sobre el punto, así nunca queda cortada.
+     En celular va abajo a todo el ancho; desde 640 px, en la esquina inferior izquierda. */
+  .mapa-panel {
+    position: absolute;
+    z-index: 1000;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    max-height: calc(100% - 16px);
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: var(--radius-control);
     box-shadow: var(--shadow-tarjeta);
-  }
-  .mapa .leaflet-popup-content {
-    margin: 0;
-    font: inherit;
     font-size: 14px;
     line-height: 1.45;
     color: var(--color-tinta);
+    overflow: hidden;
+    /* Entra desde su borde de anclaje (abajo); al cambiar de punto solo cambia el contenido. */
+    transition:
+      transform 220ms var(--ease-salida),
+      opacity 220ms var(--ease-salida);
+    @starting-style {
+      transform: translateY(16px);
+      opacity: 0;
+    }
   }
-  /* La ✕ queda sobre la imagen: un círculo blanco la hace legible sobre cualquier foto. */
-  .mapa .leaflet-popup-close-button {
+  /* Si la ficha es más alta que el espacio, se desplaza por dentro sin arrastrar la página. */
+  .mapa-panel-contenido {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  /* La ✕ queda sobre la foto: un fondo blanco la hace legible sobre cualquier imagen. */
+  .mapa-panel-cerrar {
+    position: absolute;
+    z-index: 1;
     top: 6px;
     right: 6px;
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
     border-radius: var(--radius-control);
-    background: rgb(255 255 255 / 0.9);
+    background: rgb(255 255 255 / 0.92);
     box-shadow: var(--shadow-suave);
-    font-size: 18px;
-    line-height: 27px;
     color: var(--color-tinta);
+    cursor: pointer;
+  }
+  .mapa-panel-cerrar::before {
+    /* Área de toque de 44 × 44 px sin agrandar el botón. */
+    content: '';
+    position: absolute;
+    inset: -6px;
+  }
+  /* En celular el panel es compacto para dejar ver el mapa: como mucho 60 % de su alto, foto baja
+     (4:1), sin el recuadro vacío cuando no hay foto y la descripción en 2 líneas. */
+  @media (max-width: 639px) {
+    .mapa-panel {
+      max-height: 60%;
+    }
+    .mapa-panel .ficha-img {
+      aspect-ratio: 4 / 1;
+    }
+    .mapa-panel .ficha-img-vacia {
+      display: none;
+    }
+    .mapa-panel .ficha-desc {
+      -webkit-line-clamp: 2;
+    }
+  }
+  @media (min-width: 640px) {
+    .mapa-panel .ficha-img {
+      aspect-ratio: 2 / 1;
+    }
+    .mapa-panel {
+      right: auto;
+      width: 272px;
+      transform-origin: bottom left;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .mapa-panel {
+      transition: opacity 150ms linear;
+      @starting-style {
+        transform: none;
+      }
+    }
+  }
+  /* Marcador elegido: un aro de su color alrededor, para unir el punto con el panel. */
+  .ruta-pin.ruta-pin-activo,
+  .ruta-pin-hotel.ruta-pin-activo {
+    box-shadow:
+      0 0 0 3px #ffffff,
+      0 0 0 6px var(--color-naranja);
   }
   .ficha-img {
     display: block;
@@ -257,8 +321,10 @@
     flex-direction: column;
     gap: 16px;
   }
+  /* Cada día se reconoce de un vistazo: franja superior del color de su trazo en el mapa (--dia),
+     texto blanco encima (todos los colores de día pasan 4.5:1) y un borde del mismo tono, suave. */
   .dia {
-    border: 1px solid var(--color-borde);
+    border: 1px solid color-mix(in srgb, var(--dia) 35%, #ffffff);
     border-radius: 18px;
     overflow: hidden;
     background: #ffffff;
@@ -269,27 +335,18 @@
     justify-content: space-between;
     gap: 12px;
     padding: 14px 16px;
-    background: var(--color-ala);
-    border-bottom: 1px solid var(--color-cantera-50);
+    background: var(--dia);
+    color: #ffffff;
   }
   .dia-title {
-    display: flex;
-    align-items: center;
-    gap: 8px;
     font-family: var(--font-display);
     font-size: 18px;
     font-weight: 650;
     letter-spacing: -0.015em;
-    color: var(--color-naranja-oscuro);
-  }
-  .dia-color {
-    width: 14px;
-    height: 4px;
-    border-radius: var(--radius-barra);
   }
   .dia-meta {
     font-size: 13px;
-    color: var(--color-texto-2);
+    font-weight: 500;
     text-align: right;
   }
   .dia-aviso {
@@ -316,7 +373,7 @@
     min-height: 12px;
     background: repeating-linear-gradient(
       to bottom,
-      var(--color-naranja) 0 4px,
+      var(--dia, var(--color-naranja)) 0 4px,
       transparent 4px 8px
     );
     opacity: 0.55;
@@ -328,8 +385,9 @@
     border-radius: 999px;
     display: grid;
     place-items: center;
-    background: var(--color-naranja);
-    color: var(--color-tinta);
+    /* Igual que los números del mapa: naranja quemado de los botones y texto blanco (4.8:1). */
+    background: var(--color-naranja-boton);
+    color: #ffffff;
     font-size: 13px;
     font-weight: 700;
     font-variant-numeric: tabular-nums;
@@ -382,11 +440,78 @@
     gap: 12px;
   }
   .hoteles-title {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  /* Encabezado desplegable de "Dónde dormir": toda la fila se toca (mínimo 44 px de alto). */
+  .hoteles-plegar {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 15px;
-    font-weight: 600;
+    width: 100%;
+    min-height: 44px;
+    margin: -10px 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+  .hoteles-plegar-ico {
+    flex: none;
+    color: var(--color-texto-2);
+    transition: transform var(--dur-1) var(--ease-salida);
+  }
+  .hoteles-plegar[aria-expanded='false'] .hoteles-plegar-ico {
+    transform: rotate(-90deg);
+  }
+  .hoteles-cuerpo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  /* Nombres del itinerario que abren su ficha en el mapa. */
+  .ver-en-mapa {
+    display: inline;
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .ver-en-mapa-ico {
+    display: inline;
+    margin-left: 5px;
+    vertical-align: -1px;
+    color: var(--color-naranja-oscuro);
+    opacity: 0.55;
+    transition: opacity var(--dur-1) ease;
+  }
+  /* El abierto en el mapa se marca igual que su punto: en naranja. */
+  .ver-en-mapa.is-elegido {
+    color: var(--color-naranja-oscuro);
+  }
+  .ver-en-mapa.is-elegido .ver-en-mapa-ico {
+    opacity: 1;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .ver-en-mapa:hover {
+      text-decoration-line: underline;
+    }
+    .ver-en-mapa:hover .ver-en-mapa-ico {
+      opacity: 1;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hoteles-plegar-ico {
+      transition: none;
+    }
   }
 
   .hotel-list {

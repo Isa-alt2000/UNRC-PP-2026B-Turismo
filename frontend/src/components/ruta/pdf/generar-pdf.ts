@@ -20,6 +20,7 @@ const MAPA_PX = { ancho: 1600, alto: 900 }
 const COLOR = {
   tinta: '#1f1a17',
   naranja: '#e5711b',
+  naranjaBoton: '#b9560f', // fondo de los números de parada, con texto blanco (4.8:1)
   naranjaOscuro: '#a0531a', // texto naranja: títulos y enlaces
   naranja50: '#fdf1e8',
   cempasuchil: '#f5a623',
@@ -266,9 +267,9 @@ function dia(h: Hoja, d: Dia, desde: string, minutosPorDia: number) {
       { baseline: 'top' }
     )
 
-    doc.setFillColor(COLOR.naranja)
+    doc.setFillColor(COLOR.naranjaBoton)
     doc.circle(riel, yCentro, 2.6, 'F')
-    h.fuente(7.5, 'bold', COLOR.tinta)
+    h.fuente(7.5, 'bold', '#ffffff')
     doc.text(String(parada.orden), riel, yCentro + 0.1, { align: 'center', baseline: 'middle' })
 
     h.fuente(10, 'bold')

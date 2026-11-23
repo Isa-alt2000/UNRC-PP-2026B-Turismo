@@ -2,6 +2,7 @@ import { screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Route, Routes } from 'react-router'
 import { type HotelCercano, type Itinerario } from '@/components/ruta'
+import { type Seleccion } from '@/components/ruta/seleccion'
 import { apiFetch } from '@/lib/api/client'
 import { RutaPage } from '@/pages/ruta-page'
 import { preferenciasIniciales, useViajeStore } from '@/stores'
@@ -10,7 +11,30 @@ import { renderApp } from '../test-utils'
 vi.mock('@/lib/api/client', () => ({ apiFetch: vi.fn() }))
 // Leaflet necesita un navegador real; aquí basta con saber que el mapa se muestra.
 vi.mock('@/components/ruta/ruta-mapa', () => ({
-  RutaMapa: () => <div role="region" aria-label="Mapa de la ruta" />,
+  // Muestra lo abierto en su panel, para comprobar que el itinerario lo abre.
+  RutaMapa: ({
+    itinerario,
+    seleccion,
+    onSeleccion,
+  }: {
+    itinerario: Itinerario
+    seleccion: Seleccion | null
+    onSeleccion: (s: Seleccion) => void
+  }) => (
+    <div role="region" aria-label="Mapa de la ruta">
+      {/* Como tocar el punto del primer alojamiento del día 1. */}
+      <button
+        type="button"
+        onClick={() =>
+          onSeleccion({ tipo: 'hotel', hotel: itinerario.dias[0]!.hoteles[0]!, dia: 1 })
+        }
+      >
+        Punto del alojamiento
+      </button>
+      {seleccion?.tipo === 'parada' && `Abierta: ${seleccion.parada.nombre}`}
+      {seleccion?.tipo === 'hotel' && `Abierto: ${seleccion.hotel.nombre}`}
+    </div>
+  ),
 }))
 const mockApiFetch = vi.mocked(apiFetch)
 
@@ -79,6 +103,11 @@ function responder(itinerario: Itinerario | Promise<never>) {
   mockApiFetch.mockImplementation((ruta) =>
     ruta === '/gustos' ? Promise.resolve(GUSTOS) : Promise.resolve(itinerario)
   )
+}
+
+/** "Dónde dormir" empieza plegado: lo despliega para revisar los alojamientos. */
+async function desplegarDormir(dia: HTMLElement) {
+  await userEvent.click(within(dia).getByRole('button', { name: /^Dónde dormir/ }))
 }
 
 function renderPagina() {
@@ -160,12 +189,54 @@ describe('RutaPage', () => {
     expect(within(dia2).getByText('Salida desde Pátzcuaro')).toBeInTheDocument()
   })
 
+  it('tocar una parada o un alojamiento del itinerario lo abre en el mapa', async () => {
+    responder(ITINERARIO)
+    renderPagina()
+    const dia1 = await screen.findByRole('region', { name: 'Día 1' })
+    const mapa = screen.getByRole('region', { name: 'Mapa de la ruta' })
+
+    await userEvent.click(within(dia1).getByRole('button', { name: /Tzintzuntzan/ }))
+    expect(mapa).toHaveTextContent('Abierta: Tzintzuntzan')
+
+    await desplegarDormir(dia1)
+    await userEvent.click(within(dia1).getByRole('button', { name: /^Hotel 2/ }))
+    expect(mapa).toHaveTextContent('Abierto: Hotel 2')
+  })
+
+  it('abrir un alojamiento en el mapa despliega su sección', async () => {
+    responder(ITINERARIO)
+    renderPagina()
+    const dia1 = await screen.findByRole('region', { name: 'Día 1' })
+    const plegar = within(dia1).getByRole('button', { name: 'Dónde dormir cerca de Pátzcuaro' })
+    expect(plegar).toHaveAttribute('aria-expanded', 'false')
+
+    await userEvent.click(screen.getByRole('button', { name: 'Punto del alojamiento' }))
+
+    expect(plegar).toHaveAttribute('aria-expanded', 'true')
+    expect(within(dia1).getByText('Hotel 1')).toBeVisible()
+  })
+
+  it('"Dónde dormir" empieza plegado y se despliega', async () => {
+    responder(ITINERARIO)
+    renderPagina()
+    const dia1 = await screen.findByRole('region', { name: 'Día 1' })
+    const plegar = within(dia1).getByRole('button', { name: 'Dónde dormir cerca de Pátzcuaro' })
+    expect(plegar).toHaveAttribute('aria-expanded', 'false')
+    expect(within(dia1).getByText('Hotel 1')).not.toBeVisible()
+
+    await userEvent.click(plegar)
+
+    expect(plegar).toHaveAttribute('aria-expanded', 'true')
+    expect(within(dia1).getByText('Hotel 1')).toBeVisible()
+  })
+
   it('muestra 3 alojamientos y despliega el resto', async () => {
     responder(ITINERARIO)
     renderPagina()
 
     const dia1 = await screen.findByRole('region', { name: 'Día 1' })
     expect(within(dia1).getByText('Dónde dormir cerca de Pátzcuaro')).toBeInTheDocument()
+    await desplegarDormir(dia1)
     expect(
       within(dia1)
         .getAllByRole('listitem')
@@ -188,7 +259,8 @@ describe('RutaPage', () => {
     responder(ITINERARIO)
     renderPagina()
 
-    const item = (await screen.findByText('Hotel 1')).closest('li')!
+    await desplegarDormir(await screen.findByRole('region', { name: 'Día 1' }))
+    const item = screen.getByText('Hotel 1').closest('li')!
     expect(within(item).getByText('Hotel · Microempresa')).toBeInTheDocument()
     expect(within(item).getByText('a 0.4 km')).toBeInTheDocument()
     expect(within(item).getByText('Calle Ponce de León 12, Centro')).toBeInTheDocument()

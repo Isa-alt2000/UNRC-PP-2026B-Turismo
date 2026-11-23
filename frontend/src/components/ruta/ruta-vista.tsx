@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react'
 import { Info, Pencil } from 'lucide-react'
 import { Screen } from '@/components/layouts'
 import { Button } from '@/components/ui'
@@ -6,6 +7,7 @@ import { distancia, duracion } from '@/lib/formato'
 import { DiaCard } from './dia-card'
 import { BotonPdf } from './pdf/boton-pdf'
 import { RutaMapa } from './ruta-mapa'
+import { type Seleccion } from './seleccion'
 import { type Itinerario } from './use-itinerario'
 import './ruta.css'
 
@@ -18,6 +20,19 @@ interface RutaVistaProps {
 export function RutaVista({ itinerario, onEditar }: RutaVistaProps) {
   const titulo = useFocusOnMount<HTMLHeadingElement>()
   const { dias, totales, salida, aproximada } = itinerario
+  const [seleccion, setSeleccion] = useState<Seleccion | null>(null)
+  const mapa = useRef<HTMLDivElement>(null)
+
+  // Tocar un lugar en el itinerario lo abre en el mapa. En celular el mapa queda arriba de la
+  // lista: si no se ve, la página sube hasta él (sin animar si se pidió reducir movimiento).
+  const verEnMapa = (elegido: Seleccion) => {
+    setSeleccion(elegido)
+    const caja = mapa.current?.getBoundingClientRect()
+    if (caja && (caja.top < 0 || caja.bottom > window.innerHeight)) {
+      const reducir = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      mapa.current!.scrollIntoView({ block: 'start', behavior: reducir ? 'auto' : 'smooth' })
+    }
+  }
 
   return (
     <Screen conCintillo>
@@ -33,8 +48,8 @@ export function RutaVista({ itinerario, onEditar }: RutaVistaProps) {
         </div>
 
         <div className="ruta-grid">
-          <div className="ruta-mapa">
-            <RutaMapa itinerario={itinerario} />
+          <div className="ruta-mapa" ref={mapa}>
+            <RutaMapa itinerario={itinerario} seleccion={seleccion} onSeleccion={setSeleccion} />
             <BotonPdf itinerario={itinerario} />
             <dl className="resumen">
               <div>
@@ -70,6 +85,8 @@ export function RutaVista({ itinerario, onEditar }: RutaVistaProps) {
                 dia={dia}
                 desde={i === 0 ? salida.nombre : dias[i - 1]!.paradas.at(-1)!.nombre}
                 minutosPorDia={itinerario.minutos_por_dia}
+                seleccion={seleccion}
+                onVerEnMapa={verEnMapa}
               />
             ))}
             <p className="source">

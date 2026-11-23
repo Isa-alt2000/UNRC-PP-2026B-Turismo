@@ -1,6 +1,8 @@
 import { useState } from 'react'
-import { BedDouble, Globe, Phone } from 'lucide-react'
+import { BedDouble, ChevronDown, Globe, MapPin, Phone } from 'lucide-react'
 import { distancia } from '@/lib/formato'
+import { cn } from '@/lib/utils'
+import { esHotel, type Seleccion } from './seleccion'
 import { dominio, TEXTO_TAMANO, telefonoLegible } from './texto-hotel'
 import { type Dia, type HotelCercano } from './use-itinerario'
 
@@ -35,12 +37,27 @@ export function ContactoHotel({ hotel }: { hotel: HotelCercano }) {
   )
 }
 
-function HotelItem({ hotel }: { hotel: HotelCercano }) {
+interface HotelItemProps {
+  hotel: HotelCercano
+  elegido: boolean
+  onVerEnMapa: () => void
+}
+
+function HotelItem({ hotel, elegido, onVerEnMapa }: HotelItemProps) {
   return (
     <li className="hotel">
       <div className="hotel-top">
         <div className="min-w-0">
-          <p className="hotel-nombre">{hotel.nombre}</p>
+          {/* Solo el nombre es botón: el teléfono y el sitio web siguen siendo enlaces propios. */}
+          <button
+            type="button"
+            className={cn('hotel-nombre ver-en-mapa', elegido && 'is-elegido')}
+            onClick={onVerEnMapa}
+          >
+            {hotel.nombre}
+            <MapPin className="ver-en-mapa-ico" size={14} strokeWidth={2} aria-hidden="true" />
+            <span className="sr-only"> (ver en el mapa)</span>
+          </button>
           <p className="hotel-meta">
             {hotel.tipo} · {TEXTO_TAMANO[hotel.tamano]}
           </p>
@@ -58,55 +75,91 @@ interface HotelesDiaProps {
   dia: Dia
   /** Nombre de la última parada, donde se duerme. */
   cerca: string
+  seleccion: Seleccion | null
+  onVerEnMapa: (hotel: HotelCercano) => void
 }
 
 /** Dónde dormir al final de un día: los primeros 3 a la vista y el resto desplegable. */
-export function HotelesDia({ dia, cerca }: HotelesDiaProps) {
+export function HotelesDia({ dia, cerca, seleccion, onVerEnMapa }: HotelesDiaProps) {
+  // La sección empieza plegada; aparte, ya abierta, la lista muestra 3 y despliega el resto.
+  const [seccionAbierta, setSeccionAbierta] = useState(false)
+  // Si se abre en el mapa un alojamiento de este día, la sección se despliega para mostrarlo.
+  const elegidoAqui =
+    seleccion?.tipo === 'hotel' && dia.hoteles.some((h) => h.id === seleccion.hotel.id)
+      ? seleccion.hotel.id
+      : null
+  const [ultimoElegido, setUltimoElegido] = useState<number | null>(null)
+  if (elegidoAqui !== ultimoElegido) {
+    setUltimoElegido(elegidoAqui)
+    if (elegidoAqui !== null) setSeccionAbierta(true)
+  }
   const [abierto, setAbierto] = useState(false)
   const { hoteles, radio_hoteles_km: radio } = dia
   const visibles = abierto ? hoteles : hoteles.slice(0, VISIBLES)
   const listaId = `hoteles-dia-${dia.dia}`
+  const seccionId = `dormir-dia-${dia.dia}`
 
   return (
     <div className="hoteles">
       <h4 className="hoteles-title">
-        <BedDouble size={18} strokeWidth={1.7} aria-hidden="true" />
-        Dónde dormir cerca de {cerca}
+        <button
+          type="button"
+          className="hoteles-plegar"
+          aria-expanded={seccionAbierta}
+          aria-controls={seccionId}
+          onClick={() => setSeccionAbierta(!seccionAbierta)}
+        >
+          <BedDouble size={18} strokeWidth={1.7} aria-hidden="true" />
+          <span className="flex-1">Dónde dormir cerca de {cerca}</span>
+          <ChevronDown
+            className="hoteles-plegar-ico"
+            size={18}
+            strokeWidth={2}
+            aria-hidden="true"
+          />
+        </button>
       </h4>
 
-      {hoteles.length === 0 ? (
-        <div className="empty">
-          <p className="font-semibold">Sin alojamientos registrados a menos de {radio} km</p>
-          <p className="help">
-            Considera dormir en una ciudad más grande del camino o cambiar los lugares para que el
-            día termine en otro punto.
-          </p>
-        </div>
-      ) : (
-        <>
-          {radio > 10 && (
+      <div id={seccionId} className="hoteles-cuerpo" hidden={!seccionAbierta}>
+        {hoteles.length === 0 ? (
+          <div className="empty">
+            <p className="font-semibold">Sin alojamientos registrados a menos de {radio} km</p>
             <p className="help">
-              No encontramos alojamientos a menos de 10 km. Estos están a menos de {radio} km.
+              Considera dormir en una ciudad más grande del camino o cambiar los lugares para que el
+              día termine en otro punto.
             </p>
-          )}
-          <ul id={listaId} className="hotel-list">
-            {visibles.map((hotel) => (
-              <HotelItem key={hotel.id} hotel={hotel} />
-            ))}
-          </ul>
-          {hoteles.length > VISIBLES && (
-            <button
-              type="button"
-              className="btn btn-secondary btn-sm w-full"
-              aria-expanded={abierto}
-              aria-controls={listaId}
-              onClick={() => setAbierto(!abierto)}
-            >
-              {abierto ? 'Ver menos' : `Ver los ${hoteles.length} alojamientos`}
-            </button>
-          )}
-        </>
-      )}
+          </div>
+        ) : (
+          <>
+            {radio > 10 && (
+              <p className="help">
+                No encontramos alojamientos a menos de 10 km. Estos están a menos de {radio} km.
+              </p>
+            )}
+            <ul id={listaId} className="hotel-list">
+              {visibles.map((hotel) => (
+                <HotelItem
+                  key={hotel.id}
+                  hotel={hotel}
+                  elegido={esHotel(seleccion, hotel.id)}
+                  onVerEnMapa={() => onVerEnMapa(hotel)}
+                />
+              ))}
+            </ul>
+            {hoteles.length > VISIBLES && (
+              <button
+                type="button"
+                className="btn btn-secondary btn-sm w-full"
+                aria-expanded={abierto}
+                aria-controls={listaId}
+                onClick={() => setAbierto(!abierto)}
+              >
+                {abierto ? 'Ver menos' : `Ver los ${hoteles.length} alojamientos`}
+              </button>
+            )}
+          </>
+        )}
+      </div>
     </div>
   )
 }
