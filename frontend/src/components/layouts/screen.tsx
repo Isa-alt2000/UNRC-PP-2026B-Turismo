@@ -11,17 +11,22 @@ interface ScreenProps {
   conCintillo?: boolean
 }
 
-/** Zona desplazable de una pantalla. La entrada indica si se avanzó o se volvió atrás. */
+/**
+ * Zona desplazable de una pantalla. La entrada indica si se avanzó o se volvió atrás. La primera
+ * pantalla al abrir el sitio (React Router le da la clave 'default') no anima la entrada: no hay
+ * de dónde venir, y empezar en opacidad 0 retrasaba el primer contenido visible.
+ */
 export function Screen({ children, ref, conCintillo = false }: ScreenProps) {
-  const { state } = useLocation()
+  const { state, key } = useLocation()
   const volviendo =
     (state as { direccion?: string } | null)?.direccion === NAVEGACION_ATRAS.state.direccion
+  const entrada = key === 'default' ? undefined : volviendo ? 'enter-back' : 'enter-fwd'
 
   return (
     <div className="flex-1 overflow-y-auto overscroll-contain" ref={ref}>
       <main
         className={cn(
-          volviendo ? 'enter-back' : 'enter-fwd',
+          entrada,
           // En columna flex, el margen automático de .wrap la encogería a su contenido.
           conCintillo && 'flex min-h-full flex-col [&>.wrap]:w-full'
         )}

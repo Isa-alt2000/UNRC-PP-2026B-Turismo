@@ -3,8 +3,9 @@
 /* Tokens de diseño. Tailwind genera clases a partir de ellos (bg-naranja, text-texto-2, font-display…).
    static: se emiten todos como variables CSS, porque los estilos de cada sección también los usan. */
 @theme static {
-  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-display: 'Inter Tight', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-sans:
+    'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Inter Tight Variable', 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
 
   /* Paleta base: la mariposa monarca y Michoacán. Contraste sobre blanco entre paréntesis. */
   --color-naranja: #e5711b; /* naranja monarca: acción principal, foco (3.1:1, solo fondos e íconos) */

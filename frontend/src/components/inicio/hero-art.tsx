@@ -1,5 +1,6 @@
 import { type CSSProperties, type ReactNode } from 'react'
 import { MariposaFiguras } from '@/components/shared/mariposa'
+import { HierbasEsquinas } from './hierbas-esquina'
 
 // Punta de la espiga del tule donde se posa la mariposa, y base del tallo en el agua (ondas).
 const PERCHA = { x: 700, y: 530 }
@@ -247,6 +248,9 @@ export function HeroArt() {
         <rect x="111" y="600" width="16" height="64" rx="8" fill="#7A4A2A" />
         <rect x="1322" y="652" width="16" height="60" rx="8" fill="#7A4A2A" />
       </Plano>
+
+      {/* Fuera del paisaje: van pegadas a las esquinas de la pantalla, que la escena recorta en celular. */}
+      <HierbasEsquinas />
     </div>
   )
 }

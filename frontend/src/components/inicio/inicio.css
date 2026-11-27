@@ -55,28 +55,85 @@
     margin: 0 auto;
     padding: min(64px, 7.6dvh) 20px 0;
   }
-  /* Título en vitral, con la misma letra redondeada del lema (Fredoka). Se limita por la altura,
+  /* Título en ala monarca, con la misma letra redondeada del lema (Fredoka). Se limita por la altura,
      para no alcanzar a la mariposa en pantallas bajas, y por el ancho, para no partirse en celular. */
   .hero-title {
     font-family: 'Fredoka', var(--font-display);
     font-size: min(68px, 9dvh, 17vw);
     line-height: 1;
     letter-spacing: -0.01em;
-    /* El peso más grueso: deja más superficie para los vidrios. */
+    /* El peso más grueso: deja más superficie para las celdas del ala. */
     font-weight: 700;
     color: var(--color-tinta);
   }
-  /* Vidrios en los naranjas del ala monarca, separados por plomo negro laca. Sigue siendo texto:
-     se selecciona y lo leen los lectores de pantalla. El mosaico escala con la letra (em). */
+  /* Ala monarca: venas y borde negro con lunares (NombreMonarca en hero.tsx).
+     El texto real queda en sr-only para los lectores de pantalla. */
   .hero-nombre {
     display: block;
-    background-image: url('./vitral.svg');
-    background-size: 3.6em;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-stroke: 0.03em var(--color-tinta);
     animation: aparece 0.9s var(--ease-portada) var(--t-llegada) both;
+  }
+  /* El viewBox mide 0.8em de alto: así escala con el font-size del título como lo hacía el texto. */
+  .hero-nombre-svg {
+    display: block;
+    height: 0.8em;
+    width: auto;
+    max-width: 100%;
+    overflow: visible;
+  }
+  /* Hierbas en las esquinas superiores (hierbas-esquina.tsx). La derecha es la izquierda en espejo. */
+  /* Hasta 1279px solo el fleco de arriba: termina antes del título (el mismo padding de .hero-in)
+     y se desvanece para que no se note el corte. */
+  .hierbas {
+    position: absolute;
+    top: 0;
+    width: 170px;
+    height: min(60px, 7.6dvh);
+    mask-image: linear-gradient(to bottom, #000 55%, transparent);
+  }
+  .hierbas-izq {
+    left: 0;
+  }
+  .hierbas-der {
+    right: 0;
+    transform: scaleX(-1);
+  }
+  /* Frases flotantes. Se colocan con la misma cuenta que .hero-capa (unidades del viewBox de la
+     escena, 1440 × 900), así quedan junto al sol y a la mariposa en cualquier pantalla. */
+  .hero-frases {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    container-type: size;
+  }
+  .hero-frase {
+    --u: max(100cqw / 1440, 100cqh / 900);
+    position: absolute;
+    margin: 0;
+    font-family: 'Fredoka', var(--font-display);
+    font-weight: 500;
+    font-size: clamp(17px, 28 * var(--u), 34px);
+    line-height: 1.15;
+    color: var(--color-tinta);
+    animation: aparece 0.9s var(--ease-portada) calc(var(--t-llegada) + 0.4s) both;
+  }
+  .hero-frase > span {
+    display: block;
+  }
+  .hero-frase-acento {
+    color: var(--color-naranja-oscuro);
+  }
+  /* En celular el sol y la mariposa quedan fuera del recorte: las dos van en el cielo, entre el
+     lema y la mariposa, una a cada lado. */
+  .hero-frase-sol {
+    right: 20px;
+    top: calc(100% - (900 - 215) * var(--u));
+    text-align: right;
+  }
+  .hero-frase-mariposa {
+    left: 20px;
+    top: calc(100% - (900 - 300) * var(--u));
+    animation-delay: calc(var(--t-llegada) + 0.8s);
   }
   .hero-lema {
     display: block;
@@ -438,9 +495,44 @@
     }
   }
 
+  /* En celular la portada no hace esperar: la mariposa vuela más rápido y el título aparece desde
+     el inicio, sin esperar a que se pose. Menos aleteos de vuelo, para que terminen al llegar. */
+  @media (max-width: 899px) {
+    .hero {
+      --t-llegada: 1.2s;
+    }
+    .hero-nombre {
+      animation-delay: 0.1s;
+    }
+    .hero-lema {
+      animation-delay: 0.3s;
+    }
+    .hero-art .ala-delantera,
+    .hero-art .ala-trasera {
+      animation-iteration-count: 8, infinite;
+    }
+  }
+
   @media (min-width: 900px) {
     .hero-in {
       padding: min(96px, 10.7dvh) 32px 0;
+    }
+    /* Centrada sobre el sol (x 1080, borde de arriba en y 422). */
+    .hero-frase-sol {
+      right: auto;
+      left: calc(50% + (1080 - 720) * var(--u));
+      top: calc(100% - (900 - 330) * var(--u));
+      translate: -50% 0;
+      text-align: center;
+      white-space: nowrap;
+    }
+    /* A la izquierda de la mariposa (empieza en x 585), con aire entre ambas, a la altura de sus alas. */
+    .hero-frase-mariposa {
+      left: auto;
+      right: calc(50% + (720 - 510) * var(--u));
+      top: calc(100% - (900 - 400) * var(--u));
+      text-align: right;
+      white-space: nowrap;
     }
     .hero-title {
       font-size: min(150px, 15dvh, 11.5vw);
@@ -470,6 +562,16 @@
     }
   }
 
+  /* Hierbas completas solo con margen a la izquierda del título: el contenido mide 1120px y
+     empieza 32px adentro, así que desde 1280px queda a más de 110px de la orilla. */
+  @media (min-width: 1280px) {
+    .hierbas {
+      width: 300px;
+      height: 300px;
+      mask-image: none;
+    }
+  }
+
   /* Solo en pantallas amplias. El rastro mide unos 60px de ancho y va centrado en la mitad del
      espacio libre: a 1440px ese espacio es de 192px por lado y le deja ~66px de aire contra la
      orilla y el contenido; más angosto se ve amontonado. Las media queries usan px CSS, así que
@@ -481,17 +583,10 @@
     }
   }
 
-  @supports not ((background-clip: text) or (-webkit-background-clip: text)) {
-    .hero-nombre {
-      color: var(--color-naranja-oscuro);
-      -webkit-text-stroke: 0;
-    }
-  }
+  /* Con colores forzados el dibujo no respeta el tema: se muestra el texto real (forced-colors:not-sr-only en hero.tsx). */
   @media (forced-colors: active) {
-    .hero-nombre {
-      background: none;
-      color: CanvasText;
-      -webkit-text-stroke: 0;
+    .hero-nombre-svg {
+      display: none;
     }
   }
 
@@ -506,7 +601,8 @@
       animation: none;
     }
     .hero-nombre,
-    .hero-lema {
+    .hero-lema,
+    .hero-frase {
       animation: fade-in var(--dur-1) linear both;
     }
     /* Sin movimiento: la mariposa ya posada y una sola onda quieta. */
