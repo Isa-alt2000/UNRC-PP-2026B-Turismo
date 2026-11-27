@@ -1,4 +1,10 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    {
+      "source": "/api/v1/:path*",
+      "destination": "https://unrc-pp-2026-b-turismo-mvun-nu.vercel.app/api/v1/:path*"
+    },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
