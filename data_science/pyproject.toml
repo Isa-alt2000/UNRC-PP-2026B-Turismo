@@ -2,7 +2,7 @@
 name = "turismo-data-science"
 version = "0.1.0"
 description = "Datos, pipeline y modelos del recomendador turístico de Michoacán"
-requires-python = ">=3.15"
+requires-python = ">=3.14"
 dependencies = [
     "joblib>=1.6.0",
     "pandas>=3.1.1",

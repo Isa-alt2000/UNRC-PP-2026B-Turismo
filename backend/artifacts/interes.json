@@ -1,0 +1,20 @@
+{
+  "version_sklearn": "1.9.1",
+  "variables": [
+    "gusto_historia",
+    "gusto_artes_artesanias",
+    "gusto_arquitectura",
+    "gusto_gastronomia",
+    "gusto_naturaleza",
+    "gusto_aventura",
+    "afinidad_historia",
+    "afinidad_artes_artesanias",
+    "afinidad_arquitectura",
+    "afinidad_gastronomia",
+    "afinidad_naturaleza",
+    "afinidad_aventura"
+  ],
+  "fecha_entrenamiento": "2026-11-16",
+  "datos": "encuesta_procesada.csv",
+  "umbral": 0.4
+}

@@ -1,0 +1,20 @@
+{
+  "version_sklearn": "1.9.1",
+  "variables": [
+    "gusto_historia",
+    "gusto_artes_artesanias",
+    "gusto_arquitectura",
+    "gusto_gastronomia",
+    "gusto_naturaleza",
+    "gusto_aventura",
+    "recinto_historia",
+    "recinto_artes_artesanias",
+    "recinto_arquitectura",
+    "recinto_gastronomia",
+    "recinto_naturaleza",
+    "recinto_aventura",
+    "recinto_tamano"
+  ],
+  "fecha_entrenamiento": "2026-11-15",
+  "datos": "encuesta_procesada.csv"
+}

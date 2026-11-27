@@ -2,7 +2,8 @@
 name = "turismo-backend"
 version = "0.1.0"
 description = "API del recomendador turístico de Michoacán"
-requires-python = ">=3.15"
+# 3.14 es la más nueva que soporta Vercel. En local se usa 3.15 porque data_science la exige.
+requires-python = ">=3.14"
 dependencies = [
     "alembic>=1.20.1",
     "fastapi[standard]>=0.162.0",
@@ -20,6 +21,13 @@ dev = [
 
 [tool.uv]
 package = false
+
+[tool.vercel]
+entrypoint = "app.main:app"
+
+[tool.vercel.scripts]
+# Arma turismo.db dentro del deploy. En Vercel la base queda de solo lectura.
+build = "python vercel_build.py"
 
 [tool.pytest]
 pythonpath = ["."]
